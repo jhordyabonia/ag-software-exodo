@@ -1,17 +1,62 @@
+@title-Color: #1b1b1f;
+@parrafoColor: #7b88a8;
+@ColorAzul: #6a35ff;
+@fontFamily: Montserrat, sans-serif;
 //
 //  Common
 //  _____________________________________________
-
 & when (@media-common = true) {
-    body{
-        //background-color: #1a1a1a!important;
+    .bloqueUno{
+        text-align: center;
+        .contBloqueuno{
+            background-image: url("https://uploads-ssl.webflow.com/5ff9f08ad0f45f13b2c0e743/5ff9f08a3928de6bc9400858_Pattern.svg");
+
+            .container1{
+                .titulo1 {
+                    font-family: @fontFamily;
+                    font-size: 36px;
+                    color: @title-Color;
+                    line-height: 1.2;
+                    font-weight: 700;
+                    margin-bottom: 24px;
+                }
+                .parrafo1{
+                    font-family: @fontFamily;
+                    color: @parrafoColor;
+                    max-width: 700px;
+                    font-size: 19px;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    margin-bottom: 30px;
+                }
+                .botton1{
+                    font-size: 16px;
+                    color: @ColorAzul;
+                    padding: 12px 40px;
+                    border-radius: 6px;
+                    border: 1px solid @ColorAzul;
+                    background-color: transparent;
+                    margin-bottom: 20px;
+                }
+            }
+            .containerImg{
+                .imgIzquierda{
+                    display: none;
+                }
+                .imgPrincipal {
+                    margin: 43px 0;
+                }
+                .imgDerecha{
+                    display: none;
+                }
+            }
+        }
     }
 }
 
 //
 //  Mobile
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 
 }
