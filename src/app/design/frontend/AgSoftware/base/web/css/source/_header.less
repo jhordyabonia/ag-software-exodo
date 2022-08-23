@@ -24,10 +24,6 @@
                         display: inline-block;
                         max-width: 50%;
                         margin: 28px 0;
-                        img {
-                            width: 170px;
-                            height: 114px;
-                        }
                     }
                 }
             }
@@ -65,30 +61,27 @@
                         top: auto;
                         right: auto;
                         left: auto;
-                        margin: 10px 0;
                         float: right;
                         .action.showcart {
                             &:before {
-                                color: @color-primario
+                                color: @color-primario;
+                                content: '\F408';
+                                font-family: 'bootstrap-icons';
                             }
                         }
                     }
-
                     .iconNav {
-                        text-decoration: none;
-                        cursor: pointer;
-                        display: block;
-                        font-size: 0;
-                        float: right;
-                        line-height: 60px;
-                        margin-right: 20px;
-                        position: relative;
+                        position: absolute;
+                        right: 7%;
+                        margin: 10px 0;
+                        line-height: 40px;
+                        margin-right: 10px;
                         &:before {   
-                            font-size: 22px;
+                            font-size: 21px;
                             line-height: 28px;
                             color: @color-primario;
-                            content: '\e611';
-                            font-family: 'luma-icons';
+                            content: '\e5d2';
+                            font-family: 'Material Icons';
                             margin: 0;
                             padding-left: 1px;
                             vertical-align: top;
@@ -99,9 +92,10 @@
                             text-align: center;
                         }
                     }
-
                     .block-search {
-                        float: right;
+                        position: absolute;
+                        right: 13%;
+                        top: 0;
                         margin: 10px 0;
                         line-height: 40px;
                         margin-right: 10px;
@@ -116,8 +110,8 @@
                                             font-size: 22px;
                                             line-height: 28px;
                                             color: @color-primario;
-                                            content: '\e611';
-                                            font-family: 'luma-icons';
+                                            content: '\e8b6';
+                                            font-family: 'Material Icons';
                                             margin: 0;
                                             padding-left: 1px;
                                             vertical-align: top;
@@ -134,22 +128,6 @@
                     }
                 }
             }
-            .nav-sections {
-                .section-items {
-                    .section-item-content {
-                        .navigation {
-                            .ui-menu {
-                                li {
-                                    a {
-                                        &:hover {
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }   
-                }
-            }
         }
     }
 }
@@ -157,7 +135,7 @@
 //
 //  Espacial para BLOQUE DE BUSAQUEDA
 //  _____________________________________________
-.media-width(@extremum, @break) when (@extremum = '991px') and (@break = @screen__m) {
+.media-width(@extremum, @break) when (@extremum = 'normal') and (@break = @screen__m) {
     .page-layout-1column {
         .page-wrapper {
             .page-header {
@@ -241,6 +219,9 @@
                         margin-top: -20px;
                         .action.showcart {
                             &:before {
+                                color: @color-primario;
+                                content: '\F408';
+                                font-family: 'bootstrap-icons';
                             }
                         }
                     }
