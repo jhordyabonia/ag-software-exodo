@@ -52,6 +52,173 @@
             }
         }
     }
+
+    .bloqueCuatro{
+        .content-servicio{
+        padding: 100px 3%;
+        background-color: transparent;
+        font-family: Montserrat, sans-serif;
+        padding-bottom: 80px;
+        padding-top: 80px;
+
+                .title-wrap{
+                    
+                    display: flex;
+                    margin-right: auto;
+                    margin-bottom: 30px;
+                    margin-left: auto;
+                    justify-content: center;
+                    align-items: center;
+                    color: #1b1b1f;
+                    text-align: center;
+                    
+                        .heading-9{
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                            font-size: 34px;
+                            line-height: 1.1;
+                            font-weight: 500;
+                            letter-spacing: -0.03em 
+                        }
+                }
+
+            .container-card{
+                width: 100%;
+                max-width: 1280px;
+                margin-right: auto;
+                margin-left: auto;
+
+                .w-layout-grid{
+                    .feature-card{
+                        padding-right: 24px;
+                        padding-left: 24px;
+                        padding-top: 36px;
+                        padding-bottom: 36px;
+
+                        .value-icon{
+                            width: 60px;
+                            margin-bottom: 10px;
+                        }
+
+                        .value-icon-large{
+                            width: 90px;
+                            margin-bottom: 10px;
+                        }
+
+                        .paragraph-large.paragraph-bold {
+                            margin-bottom: 12px;
+                            font-family: Montserrat, sans-serif;
+                            color: #1b1b1f;
+                            font-size: 28px;
+                            font-weight: 700;
+                        }
+
+                        .paragraph {
+                            font-family: Montserrat, sans-serif;
+                            font-size: 18px;
+                            line-height: 1.6;
+                            font-weight: 400;
+                            margin-bottom: 10px;
+                            color: #7b88a8;
+                        }
+
+                        .link-arrow{
+                            display: flex;
+                            margin-top: 20px;
+                            padding-top: 18px;
+                            padding-bottom: 18px;
+                            -webkit-align-items: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            color: #6a35ff;
+                            font-size: 18px;
+                            font-weight: 600;
+                            text-decoration: none;
+    
+                        }
+                    }
+                }  
+            }   
+        }
+
+    }
+
+    .bloqueCinco{
+        
+            .feature-section-blue{
+                background-repeat: no-repeat;
+                padding: 100px 3% 120px;
+                
+                .container-small{
+                    
+        
+    
+                    .title-wrap-large-centre{
+                        margin-bottom: 40px;
+                        text-align: center;
+        
+                        .heading-9 {
+                            font-family: Montserrat, sans-serif;
+                            font-size: 34px;
+                            margin-bottom: 10px;
+                            line-height: 1.1;
+                            letter-spacing: -0.03em;
+                            font-weight: 500;
+                        }
+        
+                    }
+    
+                    .w-layout-grid{
+                        .feature-block-white{
+                            
+                            max-width: 400px;
+                            margin-right: auto;
+                            margin-left: auto;
+                            -webkit-box-align: center;
+                            -webkit-align-items: center;
+                            -ms-flex-align: center;
+                            align-items: center;
+                            padding: 24px 32px 32px;
+                            margin: 0;
+
+                            .content-img{
+                                text-align: center;
+                                width: 100%;
+                            }
+
+                            .icon-medium{
+                                width: 64px;
+                                margin-bottom: 24px;
+                            }
+
+                            .paragraph-large{
+                                margin-bottom: 4px;
+                                font-family: Montserrat, sans-serif;
+                                color: #1b1b1f;
+                                font-size: 22px;
+                                line-height: 30px;
+                                font-weight: 500;
+                                letter-spacing: -0.01em;
+                                text-decoration: none;
+                            }
+
+                            .paragraph {
+                                font-family: Montserrat, sans-serif;
+                                font-size: 18px;
+                                line-height: 1.6;
+                                font-weight: 400;
+                                margin-bottom: 10px;
+                                color: #7b88a8;
+                            }
+                        }
+                    }
+        
+                    
+                }
+                }
+                
+        
+        }
 }
 
 //
@@ -66,5 +233,37 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .bloqueCuatro{
+      .content-servicio{
+        .title-wrap{
+            .heading-9 {
+                font-family: Montserrat, sans-serif;
+                color: #1b1b1f;
+                font-weight: 500;
+            }
+        }
+        .container-card{
 
+           .w-layout-grid{
+            display: grid;
+            -ms-grid-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            -ms-grid-rows: auto auto;
+            grid-template-rows: auto auto;
+            grid-row-gap: 16px;
+            grid-column-gap: 16px;
+           } 
+
+           .content-feature {
+            -ms-grid-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            -ms-grid-rows: auto;
+            grid-template-rows: auto;
+        }
+        
+        }
+      }
+    }
+
+    
 }
