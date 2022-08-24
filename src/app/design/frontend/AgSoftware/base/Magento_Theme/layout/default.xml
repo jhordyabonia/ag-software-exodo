@@ -18,8 +18,6 @@
             
             <block name="iconLogo" template="Magento_Theme::iconLogo.phtml" before="-"/>
 
-            <block name="miniCart" template="Magento_Theme::miniCart.phtml"/>
-
             <block name="iconNav" template="Magento_Theme::iconNav.phtml"/>
 
 
@@ -29,10 +27,6 @@
         </referenceBlock>
         <referenceBlock name="logo" remove="true">
         </referenceBlock>
-        <referenceBlock name="minicart" remove="false">
-        </referenceBlock>
-
-      
 
     </body>
 </page>
