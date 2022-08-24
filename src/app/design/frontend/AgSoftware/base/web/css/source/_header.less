@@ -135,17 +135,9 @@
 //
 //  Espacial para BLOQUE DE BUSAQUEDA
 //  _____________________________________________
-.media-width(@extremum, @break) when (@extremum = 'normal') and (@break = @screen__m) {
-    .page-layout-1column {
-        .page-wrapper {
-            .page-header {
-                .panel.wrapper {
-                    .block-search {
+@media (min-width: 769px) and (max-width: 991px) {
+    .page-layout-1column .page-wrapper .page-header .header.content .block-search {
                         max-width: 240px;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -242,17 +234,30 @@
                                             background-color: #fff;
                                             color: #777;
                                             border-color: #dbe0e2;
+                                            font-size: 13px;
                                             position: static;
                                             margin: 0;
                                             height: 40px;
                                             border-radius: 20px;
                                             padding: 10px 50px 10px 20px;
-                                        &:focus {
-                                            box-shadow: 0 0 3px 1px #68a8e0;
-                                        }
+                                            &:focus {
+                                                box-shadow: 0 0 3px 1px #68a8e0;
+                                            }
+                                            &::-webkit-input-placeholder {
+                                                color: #8d8d8d;
+                                            }
                                         }
                                     }
                                 }
+                            }
+                        }
+                        .actions {
+                            .action.search {
+                                position: absolute;
+                                right: 2px;
+                                border-left: 1px solid #ccc;
+                                padding: 0 13px;
+                                height: 40px;
                             }
                         }
                     }
