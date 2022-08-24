@@ -115,7 +115,7 @@
                         .paragraph-large.paragraph-bold {
                             margin-bottom: 12px;
                             font-family: Montserrat, sans-serif;
-                            color: #1b1b1f;
+                            color: #16161d;
                             font-size: 28px;
                             font-weight: 700;
                         }
@@ -126,7 +126,7 @@
                             line-height: 1.6;
                             font-weight: 400;
                             margin-bottom: 10px;
-                            color: #7b88a8;
+                            color: @parrafoColor;
                         }
 
                         .link-arrow{
@@ -137,10 +137,14 @@
                             -webkit-align-items: center;
                             -ms-flex-align: center;
                             align-items: center;
-                            color: #6a35ff;
+                            color:@ColorSecundario;
                             font-size: 18px;
                             font-weight: 600;
                             text-decoration: none;
+
+                            .arrow{
+                                margin-left: 14px;  
+                            }
     
                         }
                     }
@@ -157,15 +161,14 @@
                 padding: 100px 3% 120px;
                 
                 .container-small{
-                    
-        
+                   
     
                     .title-wrap-large-centre{
                         margin-bottom: 40px;
                         text-align: center;
         
                         .heading-9 {
-                            font-family: Montserrat, sans-serif;
+                            font-family: @fontFamily;
                             font-size: 34px;
                             margin-bottom: 10px;
                             line-height: 1.1;
@@ -175,18 +178,20 @@
         
                     }
     
-                    .w-layout-grid{
+                    .w-layout-grid {
+                        display: grid;
+
                         .feature-block-white{
                             
                             max-width: 400px;
                             margin-right: auto;
                             margin-left: auto;
-                            -webkit-box-align: center;
-                            -webkit-align-items: center;
-                            -ms-flex-align: center;
-                            align-items: center;
                             padding: 24px 32px 32px;
-                            margin: 0;
+                            display: flex;
+                            flex-direction: column;
+                            text-align: left;
+                            align-items: flex-start;
+                            justify-content: center;
 
                             .content-img{
                                 text-align: center;
@@ -200,8 +205,8 @@
 
                             .paragraph-large{
                                 margin-bottom: 4px;
-                                font-family: Montserrat, sans-serif;
-                                color: #1b1b1f;
+                                font-family: @fontFamily;
+                                color: @title-Color;
                                 font-size: 22px;
                                 line-height: 30px;
                                 font-weight: 500;
@@ -210,12 +215,12 @@
                             }
 
                             .paragraph {
-                                font-family: Montserrat, sans-serif;
+                                font-family: @fontFamily;
                                 font-size: 18px;
                                 line-height: 1.6;
                                 font-weight: 400;
                                 margin-bottom: 10px;
-                                color: #7b88a8;
+                                color: @parrafoColor;
                             }
                         }
                     }
@@ -225,6 +230,47 @@
                 }
                 
         
+        }
+
+        .bloqueSeis{
+            .content-compania{
+                padding: 100px 3%;
+                background-color: transparent;
+                font-family: @fontFamily;
+
+                .contecnt-conectados{
+                    width: 100%;
+                    max-width: 1280px;
+                    margin-right: auto;
+                    margin-left: auto; 
+
+                    .bg-container-conectados{
+                        display: flex;
+                        position: relative;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: stretch;
+
+
+                       .w-layout-grid{
+                        display: grid;
+                        grid-auto-columns: 1fr;
+                        grid-row-gap: 16px;
+                        grid-column-gap: 16px;
+
+                        .integration-wrap{
+                            position: relative;
+                            height: 490px;
+                            display: flex;
+                            width: 100%;
+                            max-width: 600px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                       }
+                    }
+                }
+            }
         }
 
     .contBloqueDos {
@@ -308,7 +354,28 @@
 //  Mobile
 //  _____________________________________________
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .bloqueCinco{
+        .feature-section-blue{
+            .container-small{
+               
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
 
+
+                
+
+                .w-layout-grid {
+                    grid-template-columns: 1fr ;
+
+                    
+                }
+
+            }
+
+
+        }
+    }
 }
 
 //
@@ -320,8 +387,8 @@
       .content-servicio{
         .title-wrap{
             .heading-9 {
-                font-family: Montserrat, sans-serif;
-                color: #1b1b1f;
+                font-family: @fontFamily;
+                color: @title-Color;
                 font-weight: 500;
             }
         }
@@ -335,6 +402,8 @@
             grid-template-rows: auto auto;
             grid-row-gap: 16px;
             grid-column-gap: 16px;
+
+            
            } 
 
            .content-feature {
@@ -348,5 +417,54 @@
       }
     }
 
-    
+    .bloqueCinco{
+        .feature-section-blue{
+            .container-small{
+                max-width: 1200px;
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+
+
+                .title-wrap-large-centre{
+
+                    margin-bottom: 40px;
+                    text-align: center;
+                    max-width: 620px;
+                    margin-right: auto;
+                    margin-left: auto;
+
+                    .heading-9{
+                        font-family: Montserrat, sans-serif;
+                        color: @title-Color;
+                        font-weight: 500;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        font-size: 34px;
+                        line-height: 1.1;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                    }
+                }
+
+                .w-layout-grid {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-column-gap: 21px;
+
+                    .feature-block-white{
+                        .content-img{
+                            text-align: left;
+                            width: 100%;
+                        }
+                    }
+                
+                }
+
+
+
+            }
+
+
+        }
+    }
 }
