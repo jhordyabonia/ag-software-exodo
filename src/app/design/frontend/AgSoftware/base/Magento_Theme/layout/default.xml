@@ -7,6 +7,13 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+     <referenceBlock name="footer_links" remove="true"/>
+     <referenceContainer name="content">
+
+      <referenceContainer name="footer-container">
+            <block name="discleimer" template="Magento_Theme::discleimer.phtml"/>
+      </referenceContainer>
+     </referenceContainer>
 
         <referenceContainer name="header.panel.wrapper">
             
@@ -31,8 +38,6 @@
         </referenceBlock>
         <referenceBlock name="minicart" remove="false">
         </referenceBlock>
-
-      
 
     </body>
 </page>
