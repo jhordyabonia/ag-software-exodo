@@ -25,7 +25,7 @@
             
             <block name="iconLogo" template="Magento_Theme::iconLogo.phtml" before="-"/>
 
-            <block name="miniCart" template="Magento_Theme::miniCart.phtml"/>
+            <!-- <block name="miniCart" template="Magento_Theme::miniCart.phtml"/> -->
 
             <block name="iconNav" template="Magento_Theme::iconNav.phtml"/>
 
