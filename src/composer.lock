@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4faae4ed2c04821cd438e8b4f680e52",
+    "content-hash": "53d6615c164a4f9a62c82ca4eb731b6f",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -16648,6 +16648,50 @@
                 "source": "https://github.com/magento/zf1/tree/1.15.1"
             },
             "time": "2022-06-21T01:22:39+00:00"
+        },
+        {
+            "name": "mercadopago/magento2-plugin",
+            "version": "3.17.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mercadopago/cart-magento2.git",
+                "reference": "40cde6a243b16e5ebd2b898cab0111df7c11661d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mercadopago/cart-magento2/zipball/40cde6a243b16e5ebd2b898cab0111df7c11661d",
+                "reference": "40cde6a243b16e5ebd2b898cab0111df7c11661d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "src/MercadoPago/Core/registration.php"
+                ],
+                "psr-4": {
+                    "MercadoPago\\Core\\": "src/MercadoPago/Core"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Mercado Pago",
+                    "email": "plugins.dev@mercadopago.com"
+                }
+            ],
+            "description": "Mercado Pago Magento 2 Plugin",
+            "support": {
+                "source": "https://github.com/mercadopago/cart-magento2/tree/v3.17.1"
+            },
+            "time": "2022-08-15T17:55:25+00:00"
         },
         {
             "name": "monolog/monolog",
