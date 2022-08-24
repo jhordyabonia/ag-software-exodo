@@ -9,6 +9,7 @@
     .bloqueUno{
         text-align: center;
         align-items: center;
+
         .contBloqueuno{
             background-image: url("https://uploads-ssl.webflow.com/5ff9f08ad0f45f13b2c0e743/5ff9f08a3928de6bc9400858_Pattern.svg");
             background-repeat: no-repeat;
@@ -17,8 +18,10 @@
             background-position-y: 153px;
             width: 100%;
             text-align: center;
+
             .container1{
                 margin-bottom: 45px;
+
                 .titulo1 {
                     font-family: @fontFamily;
                     font-size: 36px;
@@ -28,15 +31,17 @@
                     margin-bottom: 24px;
                     letter-spacing: -0.03em;
                 }
+
                 .parrafo1{
                     font-family: @fontFamily;
                     color: @parrafoColor;
                     //max-width: 700px;
-                    font-size: 19px;
+                    font-size: 18px;
                     line-height: 1.5;
                     font-weight: 400;
                     margin-bottom: 30px;
                 }
+
                 .botton1{
                     font-size: 16px;
                     color: @ColorSecundario;
@@ -48,10 +53,12 @@
                     min-height: 60px;
                 }
             }
+
             .containerImg{
                 .imgIzquierda{
                     display: none;
                 }
+
                 .imgDerecha{
                     display: none;
                 }
@@ -69,7 +76,7 @@
         padding-top: 80px;
 
                 .title-wrap{
-                    
+
                     display: flex;
                     margin-right: auto;
                     margin-bottom: 30px;
@@ -78,14 +85,14 @@
                     align-items: center;
                     color: #1b1b1f;
                     text-align: center;
-                    
+
                         .heading-9{
                             margin-top: 20px;
                             margin-bottom: 20px;
                             font-size: 34px;
                             line-height: 1.1;
                             font-weight: 500;
-                            letter-spacing: -0.03em 
+                            letter-spacing: -0.03em
                         }
                 }
 
@@ -115,7 +122,7 @@
                         .paragraph-large.paragraph-bold {
                             margin-bottom: 12px;
                             font-family: Montserrat, sans-serif;
-                            color: #1b1b1f;
+                            color: #16161d;
                             font-size: 28px;
                             font-weight: 700;
                         }
@@ -126,7 +133,7 @@
                             line-height: 1.6;
                             font-weight: 400;
                             margin-bottom: 10px;
-                            color: #7b88a8;
+                            color: @parrafoColor;
                         }
 
                         .link-arrow{
@@ -137,56 +144,61 @@
                             -webkit-align-items: center;
                             -ms-flex-align: center;
                             align-items: center;
-                            color: #6a35ff;
+                            color:@ColorSecundario;
                             font-size: 18px;
                             font-weight: 600;
                             text-decoration: none;
-    
+
+                            .arrow{
+                                margin-left: 14px;
+                            }
+
                         }
                     }
-                }  
-            }   
+                }
+            }
         }
 
     }
 
     .bloqueCinco{
-        
+
             .feature-section-blue{
                 background-repeat: no-repeat;
                 padding: 100px 3% 120px;
-                
+
                 .container-small{
-                    
-        
-    
+
+
                     .title-wrap-large-centre{
                         margin-bottom: 40px;
                         text-align: center;
-        
+
                         .heading-9 {
-                            font-family: Montserrat, sans-serif;
+                            font-family: @fontFamily;
                             font-size: 34px;
                             margin-bottom: 10px;
                             line-height: 1.1;
                             letter-spacing: -0.03em;
                             font-weight: 500;
                         }
-        
+
                     }
-    
-                    .w-layout-grid{
+
+                    .w-layout-grid {
+                        display: grid;
+
                         .feature-block-white{
-                            
+
                             max-width: 400px;
                             margin-right: auto;
                             margin-left: auto;
-                            -webkit-box-align: center;
-                            -webkit-align-items: center;
-                            -ms-flex-align: center;
-                            align-items: center;
                             padding: 24px 32px 32px;
-                            margin: 0;
+                            display: flex;
+                            flex-direction: column;
+                            text-align: left;
+                            align-items: flex-start;
+                            justify-content: center;
 
                             .content-img{
                                 text-align: center;
@@ -200,8 +212,8 @@
 
                             .paragraph-large{
                                 margin-bottom: 4px;
-                                font-family: Montserrat, sans-serif;
-                                color: #1b1b1f;
+                                font-family: @fontFamily;
+                                color: @title-Color;
                                 font-size: 22px;
                                 line-height: 30px;
                                 font-weight: 500;
@@ -210,33 +222,77 @@
                             }
 
                             .paragraph {
-                                font-family: Montserrat, sans-serif;
+                                font-family: @fontFamily;
                                 font-size: 18px;
                                 line-height: 1.6;
                                 font-weight: 400;
                                 margin-bottom: 10px;
-                                color: #7b88a8;
+                                color: @parrafoColor;
                             }
                         }
                     }
-        
-                    
+
+
                 }
                 }
-                
-        
+
+
+        }
+
+        .bloqueSeis{
+            .content-compania{
+                padding: 100px 3%;
+                background-color: transparent;
+                font-family: @fontFamily;
+
+                .contecnt-conectados{
+                    width: 100%;
+                    max-width: 1280px;
+                    margin-right: auto;
+                    margin-left: auto;
+
+                    .bg-container-conectados{
+                        display: flex;
+                        position: relative;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: stretch;
+
+
+                       .w-layout-grid{
+                        display: grid;
+                        grid-auto-columns: 1fr;
+                        grid-row-gap: 16px;
+                        grid-column-gap: 16px;
+
+                        .integration-wrap{
+                            position: relative;
+                            height: 490px;
+                            display: flex;
+                            width: 100%;
+                            max-width: 600px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                       }
+                    }
+                }
+            }
         }
 
     .contBloqueDos {
         text-align: center;
         padding: 242px 0;
+
         .titulo2{
+            font-family: @fontFamily;
             color: @title-Color;
             font-size: 34px;
             line-height: 1.3em;
             margin: 10px 0 24px;
             font-weight: 500;
         }
+
         .parrafo2 {
             font-family: @fontFamily;
             color: @parrafoColor;
@@ -245,13 +301,16 @@
             font-weight: 400;
             margin-bottom: 30px;
         }
+
         .containerImg2{
             display: grid;
             gap: 16px;
+
             .cont_Img {
                 min-height: 100px;
                 max-width: 260px;
                 margin: auto;
+
                 ._Img {
                     width: 143px;
                 }
@@ -261,8 +320,11 @@
     }
 
     .contBloqueTres{
+        padding: 80px 0;
+
         .cont1-blocTres{
             padding: 10px;
+
             .titulo2 {
                 font-size: 36px;
                 font-family: @fontFamily;
@@ -272,18 +334,21 @@
                 margin: 20px 0;
                 letter-spacing: -0.03em;
             }
+
             .parrafo2 {
                 font-family: Montserrat, sans-serif;
                 font-size: 18px;
                 line-height: 1.6;
                 font-weight: 400;
-                color: @title-Color;
+                color: @parrafoColor;
             }
+
             .cont-link {
                 display: flex;
                 margin: 20px 0 0 0;
                 padding: 18px 0;
                 align-items: center;
+
                 .a-link {
                     margin-right: 14px;
                     font-family: @fontFamily;
@@ -294,21 +359,91 @@
                 }
             }
         }
+
         .cont2-blocTres{
+            position: relative;
+
             img {
                 border-radius: 24px;
+            }
+
+            .cont-shadow {
+                position: absolute;
+                left: 0;
+                top: -35%;
+                right: -10%;
+                bottom: -35%;
+                z-index: -1;
+                width: 88%;
+                max-width: 850px;
+                min-height: 401px;
+                margin-right: auto;
+                margin-left: auto;
+                border-radius: 32px;
+                background-color: #fff7f2;
             }
         }
 
     }
-
 }
-
 //
 //  Mobile
 //  _____________________________________________
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .bloqueCinco{
+        .feature-section-blue{
+            .container-small{
 
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+
+
+
+
+                .w-layout-grid {
+                    grid-template-columns: 1fr ;
+
+
+                }
+
+            }
+
+
+        }
+    }
+}
+//
+// Tablet
+// ----------------------------------------------
+@media (min-width: 480px) {
+    .bloqueUno {
+        .contBloqueuno {
+            .container1 {
+                .titulo1 {
+                    font-size: 52px;
+                }
+            }
+        }
+    }
+    .containerImg2{
+        grid-template-columns: 1fr 1fr;
+        .cont_Img {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .contBloqueTres{
+        display: flex;
+        flex-direction: column;
+        .cont1-blocTres{
+            order: 2;
+        }
+        .cont2-blocTres{
+            order: 1;
+        }
+    }
 }
 
 //
@@ -316,17 +451,58 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .bloqueUno{
+        .contBloqueuno{
+            .containerImg {
+                position: relative;
+                .imgIzquierda {
+                    display: block;
+                    position: absolute;
+                    top: -23%;
+                    left: 13%;
+                }
+
+                .imgDerecha {
+                    display: block;
+                    position: absolute;
+                    right: 14%;
+                    top: -32%;
+                }
+            }
+        }
+    }
+    .contBloqueDos{
+        padding: 187px 0 166px;
+        .containerImg2{
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            .cont_Img {
+                padding: 15px;
+            }
+        }
+    }
+    .bloqueTres{
+        .contBloqueTres{
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            align-items: center;
+            .cont1-blocTres{
+                order: 1;
+            }
+            .cont2-blocTres{
+                order: 2;
+            }
+        }
+    }
     .bloqueCuatro{
       .content-servicio{
         .title-wrap{
             .heading-9 {
-                font-family: Montserrat, sans-serif;
-                color: #1b1b1f;
+                font-family: @fontFamily;
+                color: @title-Color;
                 font-weight: 500;
             }
         }
         .container-card{
-
            .w-layout-grid{
             display: grid;
             -ms-grid-columns: 1fr 1fr;
@@ -335,7 +511,9 @@
             grid-template-rows: auto auto;
             grid-row-gap: 16px;
             grid-column-gap: 16px;
-           } 
+
+
+           }
 
            .content-feature {
             -ms-grid-columns: 1fr 1fr 1fr;
@@ -343,10 +521,59 @@
             -ms-grid-rows: auto;
             grid-template-rows: auto;
         }
-        
+
         }
       }
     }
 
-    
+    .bloqueCinco{
+        .feature-section-blue{
+            .container-small{
+                max-width: 1200px;
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+
+
+                .title-wrap-large-centre{
+
+                    margin-bottom: 40px;
+                    text-align: center;
+                    max-width: 620px;
+                    margin-right: auto;
+                    margin-left: auto;
+
+                    .heading-9{
+                        font-family: Montserrat, sans-serif;
+                        color: @title-Color;
+                        font-weight: 500;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        font-size: 34px;
+                        line-height: 1.1;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                    }
+                }
+
+                .w-layout-grid {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-column-gap: 21px;
+
+                    .feature-block-white{
+                        .content-img{
+                            text-align: left;
+                            width: 100%;
+                        }
+                    }
+
+                }
+
+
+
+            }
+
+
+        }
+    }
 }
