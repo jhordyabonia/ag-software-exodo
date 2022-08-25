@@ -16,20 +16,24 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-   
+
+    body{
+        //background-color: #090090!important;
+    }
+
 }
 //
 //  Mobile
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-
+ 
 }
 
 //
-//  Desktop
+//  Deskto
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-
+  
 }
