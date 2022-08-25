@@ -21,18 +21,7 @@
 
         </referenceContainer>
 
-        <referenceContainer name="header-wrapper">
-            
-            <block name="iconLogo" template="Magento_Theme::iconLogo.phtml" before="-"/>
-
-            <block name="iconNav" template="Magento_Theme::iconNav.phtml"/>
-
-
-        </referenceContainer>
-
         <referenceBlock name="header.panel" remove="true">
-        </referenceBlock>
-        <referenceBlock name="logo" remove="true">
         </referenceBlock>
 
     </body>
