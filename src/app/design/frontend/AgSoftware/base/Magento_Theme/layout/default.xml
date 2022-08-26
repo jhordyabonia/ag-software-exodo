@@ -15,14 +15,11 @@
       </referenceContainer>
      </referenceContainer>
 
-        <referenceContainer name="header.panel.wrapper">
+        <referenceContainer name="header.panel">
             
-            <block name="links" template="Magento_Theme::topLinks.phtml" after="-"/>
+            <block name="links" template="Magento_Theme::topLinks.phtml"/>
 
         </referenceContainer>
-
-        <referenceBlock name="header.panel" remove="true">
-        </referenceBlock>
 
     </body>
 </page>

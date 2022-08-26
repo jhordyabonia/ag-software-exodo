@@ -19,10 +19,14 @@
             border-top: 3px solid @color-primario;
             .panel.wrapper {
                 font-size: 11px;
+                color: @color-variante;
+                font-family: @Fuente1;
+                font-weight: 400;
+                line-height: 1.4;
             }
             .header.content {
                 padding: 0 15px;
-                .iconLogo {
+                .logo {
                     display: inline-block;
                     max-width: 50%;
                     margin: 28px 0;
@@ -44,7 +48,7 @@
             border-bottom: none;
             margin-bottom: none;
             .panel.wrapper {
-                display: none;
+                
             }
             .header.content {
                 max-width: 540px;
@@ -57,7 +61,6 @@
                         width: 255px;
                     }
                 }
-
                 .minicart-wrapper {
                     .action.showcart {
                         &:before {
@@ -70,6 +73,9 @@
                     }
                 }
                 .nav-toggle {
+                    right: 45px;
+                    margin-right: 20px;
+                    left: auto;
                     &:before {   
                         color: @color-primario;
                     }
@@ -81,8 +87,11 @@
                                 .control {
                                 }
                                 .label {
+                                    margin-right: 10px;
+                                    margin-top: 10px;
+                                    padding-right: 40px;
                                     &:before {
-                                        font-size: 28px;
+                                        font-size: 21px;
                                         line-height: 28px;
                                         color: @color-primario;
                                     }
@@ -93,6 +102,69 @@
                 }
             }
         } 
+        .nav-sections {
+            background-color: #f6f6f6;
+            .nav-sections-items {
+                .nav-sections-item-title.active {
+                    background-color: transparent;
+                    height: 63px;
+                    a {
+                        color: #01007f;
+                    }
+                }
+                .nav-sections-item-title {
+                    background-color: #01007f;
+                    height: 63px;
+                    a {
+                        color: #FFF;
+                    }
+                }
+                .nav-sections-item-content {
+                    padding: 0;
+                    margin-top: 63px;
+                    .navigation {
+                        background: transparent;
+                        .ui-menu {
+                            li {
+                                border-top: 0; 
+                                font-family: @Fuente1;
+                                font-size: 13px;
+                                line-height: 16px;
+                                a {
+                                    padding: 13px 36px 13px 15px;
+                                    color: #777;
+                                    border-color: none;
+                                    border-style: none;
+                                    border-width: none;
+                                    span {
+                                        margin-left: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .header.links {
+                        border-bottom: 1px solid #d1d1d1;
+                        li {
+                            border-top: none;
+                            padding: 12px 20px;
+                            font-size: 13px;
+                            font-weight: 400;
+                            a {
+                                color: #777;
+                                padding: 0;
+                            }
+                        }
+                        .greet.welcome {
+                            span {
+                                color: #000;
+                            }    
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }
 
@@ -101,7 +173,7 @@
 //  Espacial para BLOQUE DE BUSAQUEDA
 //  _____________________________________________
 @media (min-width: 769px) and (max-width: 991px) {
-    .page-layout-1column .page-wrapper .page-header .header.content .block-search {
+    .page-wrapper .page-header .header.content .block-search {
                         max-width: 240px;
     }
 }
@@ -121,23 +193,23 @@
                 width: 100%;
                 height: 45px;
                 background-color: @color-secundario;
-                .panel-header {
+                .panel.header {
                     max-width: 1280px;
-                    margin: 0 auto;
-                    padding-bottom: 11px;
-                    padding-top: 10px;
-                    .header-links {
+                    height: 25px;
+                    margin: 0 auto; 
+                    padding: 10px 15px 11px 15px;
+                    .header.links {
                         display: flex;
                         float: right;
+                        margin: 0;
+                        padding: 0;
                         li {
-                            color: @color-variante;
+                            font-size: 11px;
                             font-family: @Fuente1;
-                            font-family: @Fuente1;
-                            font-weight: 400;
-                            line-height: 1.4;
-                            font-size: 14px;
                             text-transform: uppercase;
                             list-style: none;
+                            margin: 0;
+                            padding: 0;
                             a {
                                 display: inline-block;
                                 padding: 0 15px;
@@ -151,13 +223,20 @@
                                 }
                             }
                         }
-                        .greet-welcome {
+                        .greet.welcome {
                             padding: 0 15px;
+                        }
+                        .link-image {
+                            margin-right: 15px;
+                        }
+                        .authorization-link {
+                            &::after {
+                                content: none;
+                            }
                         }
                     }
                 }
             }
-
             .header.content {
                 padding: 0 15px;
                 .logo {
@@ -187,8 +266,8 @@
                 }
 
                 .block-search {
-                    position: absolute;
-                    top: calc(50% - 20px);
+                    position: relative;
+                    top: 64px;
                     display: inline-block;
                     margin-left: 55px;
                     width: 450px;
