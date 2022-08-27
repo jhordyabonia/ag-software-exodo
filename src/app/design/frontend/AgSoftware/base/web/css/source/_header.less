@@ -70,6 +70,14 @@
                             content: '\F408';
                             font-family: 'bootstrap-icons';
                         }
+                        .counter.qty {
+                            position: absolute;
+                            right: 6px;
+                            top: 7px;
+                            background: none;
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
                     }
                 }
                 .nav-toggle {
@@ -109,14 +117,30 @@
                     background-color: transparent;
                     height: 63px;
                     a {
-                        color: #01007f;
+                        color: @color-primario;
+                        
+                    }
+                    &[aria-controls="store.menu"] {
+                        &::before {
+                            content: '\e609';
+                            font-family: 'luma-icons';
+                            color: @color-primario;
+                        }
                     }
                 }
                 .nav-sections-item-title {
-                    background-color: #01007f;
+                    background-color: @color-primario;
                     height: 63px;
                     a {
                         color: #FFF;
+                        
+                    }
+                    &[aria-controls="store.menu"] {
+                        &::before {
+                            content: '\e609';
+                            font-family: 'luma-icons';
+                            color: #FFF;
+                        }
                     }
                 }
                 .nav-sections-item-content {
@@ -144,13 +168,17 @@
                         }
                     }
                     .header.links {
-                        border-bottom: 1px solid #d1d1d1;
+                        display: flex;
+                        flex-direction: column;
                         li {
                             border-top: none;
+                            border-bottom: 1px solid #ddd;
                             padding: 12px 20px;
                             font-size: 13px;
                             font-weight: 400;
+                            border-bottom: 1px solid #d1d1d1;
                             a {
+                                border-top: none;
                                 color: #777;
                                 padding: 0;
                             }
@@ -159,6 +187,9 @@
                             span {
                                 color: #000;
                             }    
+                        }
+                        .link-image {
+                            order: 1;
                         }
                     }
                 }
@@ -228,10 +259,36 @@
                         }
                         .link-image {
                             margin-right: 15px;
+                            order: 1;
                         }
                         .authorization-link {
                             &::after {
                                 content: none;
+                            }
+                        }
+                        .customer-welcome {
+                            padding: 0 15px;
+                            .customer-name {
+                                .action.switch{
+                                    color: @color-primario;
+                                }
+                                
+                            }
+                            .customer-menu {
+                                .header.links {
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-top: 7px;
+                                    li {
+                                        a {
+                                            color: #777;
+                                            padding: 8px;
+                                        }
+                                    }
+                                    .link-image {
+                                        display: none;
+                                    }
+                                }
                             }
                         }
                     }
@@ -260,7 +317,15 @@
                             content: '\F408';
                             font-family: 'bootstrap-icons';
                             font-size: 35px;
-                            line-height: 33px;
+                            line-height: 35px;
+                        }
+                        .counter.qty {
+                            position: absolute;
+                            right: 6px;
+                            top: 7px;
+                            background: none;
+                            font-size: 18px;
+                            font-weight: bold;
                         }
                     }
                 }
