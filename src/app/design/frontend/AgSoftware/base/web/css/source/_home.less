@@ -403,11 +403,25 @@
                 .titulo1 {
                     font-size: 52px;
                 }
-
-                .w-layout-grid {
-                    grid-template-columns: 1fr;
-                }
             }
+        }
+    }
+    .containerImg2{
+        grid-template-columns: 1fr 1fr;
+        .cont_Img {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .contBloqueTres{
+        display: flex;
+        flex-direction: column;
+        .cont1-blocTres{
+            order: 2;
+        }
+        .cont2-blocTres{
+            order: 1;
         }
     }
 }

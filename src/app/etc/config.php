@@ -324,7 +324,8 @@ return [
         'Magento_Wishlist' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
-        'MercadoPago_Core' => 1,
+        'AgSofware_Checkout' => 1,
+        'AgSofware_Vendor' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1
