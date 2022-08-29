@@ -36,8 +36,7 @@
                 .parrafo1 {
                     font-family: @fontFamily;
                     color: @parrafoColor;
-                    //max-width: 700px;
-                    font-size: 19px;
+                    font-size: 18px;
                     line-height: 1.5;
                     font-weight: 400;
                     margin-bottom: 30px;
@@ -273,6 +272,7 @@
         padding: 242px 0;
 
         .titulo2 {
+            font-family: @fontFamily;
             color: @title-Color;
             font-size: 34px;
             line-height: 1.3em;
@@ -307,6 +307,8 @@
     }
 
     .contBloqueTres {
+        padding: 80px 0;
+
         .cont1-blocTres {
             padding: 10px;
 
@@ -346,6 +348,25 @@
         }
 
         .cont2-blocTres {
+            position: relative;
+            img {
+                border-radius: 24px;
+            }
+            .cont-shadow {
+                position: absolute;
+                left: 0;
+                top: -35%;
+                right: -10%;
+                bottom: -35%;
+                z-index: -1;
+                width: 88%;
+                max-width: 850px;
+                min-height: 401px;
+                margin-right: auto;
+                margin-left: auto;
+                border-radius: 32px;
+                background-color: #fff7f2;
+            }
             img {
                 border-radius: 24px;
             }
@@ -372,12 +393,89 @@
         }
     }
 }
-
+//
+// Tablet
+// ----------------------------------------------
+@media (min-width: 480px) {
+    .bloqueUno {
+        .contBloqueuno {
+            .container1 {
+                .titulo1 {
+                    font-size: 52px;
+                }
+            }
+        }
+    }
+    .containerImg2{
+        grid-template-columns: 1fr 1fr;
+        .cont_Img {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .contBloqueTres{
+        display: flex;
+        flex-direction: column;
+        .cont1-blocTres{
+            order: 2;
+        }
+        .cont2-blocTres{
+            order: 1;
+        }
+    }
+}
 //
 //  Desktop
 //  _____________________________________________
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .bloqueUno {
+        .contBloqueuno {
+            .containerImg {
+                position: relative;
 
-.media-width(@extremum, @break) when (@extremum ='min') and (@break =768px) {
+                .imgIzquierda {
+                    display: block;
+                    position: absolute;
+                    top: -23%;
+                    left: 13%;
+                }
+
+                .imgDerecha {
+                    display: block;
+                    position: absolute;
+                    right: 14%;
+                    top: -32%;
+                }
+            }
+        }
+    }
+    .contBloqueDos {
+        padding: 187px 0 166px;
+
+        .containerImg2 {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+            .cont_Img {
+                padding: 15px;
+            }
+        }
+    }
+    .bloqueTres {
+        .contBloqueTres {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            align-items: center;
+
+            .cont1-blocTres {
+                order: 1;
+            }
+
+            .cont2-blocTres {
+                order: 2;
+            }
+        }
+    }
+
     .bloqueCinco {
         .feature-section-blue {
             .container-small {
@@ -407,18 +505,15 @@
                 }
 
 
-
             }
 
 
         }
     }
 }
-
 //
 //  Desktop
 //  _____________________________________________
-
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
     .bloqueCuatro {
         .content-servicio {
@@ -444,8 +539,6 @@
             }
         }
     }
-
-
     .bloqueCinco {
         .feature-section-blue {
             .container-small {
@@ -461,8 +554,9 @@
                 }
 
                 .w-layout-grid {
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-template-columns: 1fr 1fr;
                     grid-column-gap: 21px;
+                    grid-row-gap: 32px;
 
                     .feature-block-white {
                         .content-img {
