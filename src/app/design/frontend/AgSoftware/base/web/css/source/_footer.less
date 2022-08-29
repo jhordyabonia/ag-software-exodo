@@ -2,16 +2,15 @@
 //  Common
 //  _____________________________________________
 
-& when (@media-common = true) {
+& when (@media-common =true) {
 
-  
-    .foother{
+    .foother {
         background-color: #01007f;
-         
-        .contenedor-espacio{
+
+        .contenedor-espacio {
             padding-top: 4rem;
 
-            .contenedor-espacio1{
+            .contenedor-espacio1 {
                 margin-bottom: 3rem;
                 display: flex;
                 flex-wrap: wrap;
@@ -19,8 +18,8 @@
                 margin-left: 6px;
                 box-sizing: border-box;
 
-                .colunna1{
-                    margin-bottom: 3rem!important;
+                .colunna1 {
+                    margin-bottom: 3rem !important;
                     flex: -8 0 100%;
                     max-width: 100%;
                     position: relative;
@@ -28,74 +27,81 @@
                     padding-right: 15px;
                     padding-left: 15px;
 
-                    .imagen1{
+                    .imagen1 {
                         margin-left: -1rem;
                         width: 150px;
                         height: 100px;
                     }
-                    .tres{
+
+                    .tres {
                         display: grid;
                         margin-bottom: 1.5rem;
 
-                        .a-numerom{
+                        .a-numerom {
                             margin-bottom: 2rem;
-                            color: rgba(255,255,255,.7);
+                            color: rgba(255, 255, 255, .7);
                             text-decoration: none;
-                            font-size: .875rem;
+                            font-size: -0.125rem;
+                            font-family: 'Outfit';
 
-                            &:hover{
+                            &:hover {
                                 color: white;
                             }
                         }
-                        .footer-img{
+
+                        .footer-img {
                             margin-left: -10px;
                         }
                     }
-                    .img-two{
+
+                    .img-two {
                         margin-left: -1rem;
                     }
                 }
-               
 
-                .colunna2{
+
+                .colunna2 {
                     margin-bottom: 3rem;
                     flex: 0 0 50%;
                     max-width: 50%;
                     position: relative;
                     width: 100%;
 
-                    .h4-texto{
+                    .h4-texto {
                         color: #fff;
                     }
-                   
-                    .listas{
+
+                    .listas {
                         padding: 0px;
 
-                        .li-2{
+                        .li-2 {
                             margin-left: 13px;
                         }
 
-                        li{
+                        li {
                             list-style: none;
-                            margin-bottom: 20px; 
+                            margin-bottom: 20px;
                             margin: 13px;
 
-                            .a-numerom2{
+                            .a-numerom2 {
                                 margin-bottom: 2rem;
-                                color: rgba(255,255,255,.7);
+                                color: rgba(255, 255, 255, .7);
                                 list-style: none;
                                 text-decoration: none;
                                 font-size: -0.125rem;
 
-                                &:hover{
+                                font-family: 'Outfit';
+
+                                &:hover {
                                     color: white;
                                 }
-                             }
+                            }
                         }
                     }
                 }
-                .rojo{
-                    background-color: white;    
+
+                .rojo {
+
                     position: relative;
                     width: 76%;
                     padding-right: 17px;
@@ -103,18 +109,16 @@
                     margin-left: 7px;
                     top: -16px;
 
-                  .lista-redes{
-                   
+                    .lista-redes {
 
-                    .list-li{
-                        
-                        
+
+                        .list-li {}
                     }
-                  }
-                    
+
                 }
             }
-            .contenedor-dos{
+
+            .contenedor-dos {
                 padding-bottom: 2rem;
                 padding-top: 2rem;
                 align-items: center;
@@ -122,7 +126,7 @@
                 margin-right: -15px;
                 margin-left: -15px;
 
-                .corto{
+                .corto {
                     flex: 0 0 41.66667%;
                     max-width: 41.66667%;
                     position: relative;
@@ -130,7 +134,7 @@
                     padding-right: 15px;
                     padding-left: 15px;
 
-                    .dentro{
+                    .dentro {
                         color: #77838f;
                         font-size: 85%;
                         font-weight: 400;
@@ -138,17 +142,17 @@
                     }
                 }
 
-                .largo{
+                .largo {
                     color: #77838f;
                     font-size: 85%;
                     font-weight: 400;
-                    
+
                     position: relative;
                     width: 100%;
                     padding-right: 15px;
                     padding-left: 15px;
 
-                    .dentro{
+                    .dentro {
                         color: #77838f;
                         font-size: 85%;
                         font-weight: 400;
@@ -157,51 +161,116 @@
                 }
             }
         }
-       
+
 
     }
 
-} 
+}
 
 
 //
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {}
 
-
-    
-
-}
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
     .one {
-   
+
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
     }
 
-    .contenedor-espacio1{
+    .contenedor-espacio1 {
         flex-wrap: nowrap;
     }
 }
+
 //
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
 
-    .contenedor-espacio{
-        padding-top: 4rem;
+    .foother {
 
-        .contenedor-espacio1{
-            margin-bottom: 3rem;
-            display: flex;
-            margin-right: -15px;
-           margin-left: 42px;
+
+        .newsletter {
+            position: relative;
+            top: 106px;
+        }
+
+        .contenedor-espacio {
+            padding-top: 4rem;
+
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+
+
+            .contenedor-espacio1 {
+                width: 89%;
+                margin-bottom: 3rem;
+                display: flex;
+                flex-wrap: nowrap;
+                margin-right: -7px;
+                margin-left: 73px;
+                box-sizing: border-box;
+
+
+                .colunna1 {
+                    margin-bottom: 3rem !important;
+                    flex: -8 0 100%;
+                    max-width: 100%;
+                    position: relative;
+                    width: 100%;
+                    padding-right: -54px;
+                    padding-left: 15px;
+
+                }
+
+                .colunna2 {
+
+                    margin-bottom: 3rem;
+                    flex: 0 0 50%;
+                    max-width: 21%;
+                    position: relative;
+                    width: 51%;
+
+
+                    .colunna1 {
+                        margin-bottom: 3rem !important;
+                        flex: -8 0 100%;
+                        max-width: 100%;
+                        position: relative;
+                        width: 100%;
+                        padding-right: 15px;
+                        padding-left: 15px;
+
+                    }
+
+
+                }
+
+                
+
+
+
+            }
+            .contenedor-dos {
+                width: 91%;
+                padding-bottom: 2rem;
+                padding-top: 2rem;
+                align-items: center;
+                display: flex;
+                margin-right: 41px;
+                margin-left: 62px;
+
+                
+                
+            }
         }
 
     }
-
-   
 }
