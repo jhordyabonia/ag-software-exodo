@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+     <referenceBlock name="footer_links" remove="true"/>
+     <referenceContainer name="content">
+
+      <referenceContainer name="footer-container">
+            <block name="discleimer" template="Magento_Theme::discleimer.phtml"/>
+      </referenceContainer>
+     </referenceContainer>
+
+        <referenceContainer name="header.panel.wrapper">
+            
+            <block name="links" template="Magento_Theme::topLinks.phtml" after="-"/>
+
+        </referenceContainer>
+
+        <referenceContainer name="header-wrapper">
+            
+            <block name="iconLogo" template="Magento_Theme::iconLogo.phtml" before="-"/>
+
+            <!-- <block name="miniCart" template="Magento_Theme::miniCart.phtml"/> -->
+
+            <block name="iconNav" template="Magento_Theme::iconNav.phtml"/>
+
+
+        </referenceContainer>
+
+        <referenceBlock name="header.panel" remove="true">
+        </referenceBlock>
+        <referenceBlock name="logo" remove="true">
+        </referenceBlock>
+        <referenceBlock name="minicart" remove="false">
+        </referenceBlock>
+
+    </body>
+</page>
