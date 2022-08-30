@@ -57,9 +57,6 @@
                 .logo {
                     height: auto;
                     margin: 10px 0;
-                    img {
-                        width: 255px;
-                    }
                 }
                 .minicart-wrapper {
                     .action.showcart {
@@ -93,6 +90,12 @@
                         .form.minisearch {
                             .field.search {
                                 .control {
+                                    input {
+                                        padding: 20px;
+                                        border-radius: 30px;
+                                        width: 75%;
+                                        margin-left: 12%;
+                                    }
                                 }
                                 .label {
                                     margin-right: 10px;
@@ -207,6 +210,7 @@
 @media (min-width: 769px) and (max-width: 991px) {
     .page-wrapper .page-header .header.content .block-search {
                         max-width: 240px;
+                        margin-left: 20%;
     }
 }
 
@@ -249,7 +253,7 @@
                                 text-transform: uppercase;
                                 cursor: pointer;
                                 color: @color-primario;    
-                                img {
+                                span {
                                     width: 20px;
                                     height: 20px;
                                 }
