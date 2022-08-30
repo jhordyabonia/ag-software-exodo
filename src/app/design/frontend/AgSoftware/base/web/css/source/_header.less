@@ -51,7 +51,7 @@
                 
             }
             .header.content {
-                max-width: 540px;
+                max-width: none;
                 margin: 0 auto;
                 padding: 0 15px;
                 .logo {
@@ -73,9 +73,9 @@
                         .counter.qty {
                             position: absolute;
                             right: 6px;
-                            top: 7px;
+                            top: 9px;
                             background: none;
-                            font-size: 18px;
+                            font-size: 16px;
                             font-weight: bold;
                         }
                     }
@@ -150,6 +150,7 @@
                         background: transparent;
                         .ui-menu {
                             li {
+                                border-bottom: 1px solid #d1d1d1;
                                 border-top: 0; 
                                 font-family: @Fuente1;
                                 font-size: 13px;
@@ -324,9 +325,9 @@
                         .counter.qty {
                             position: absolute;
                             right: 6px;
-                            top: 7px;
+                            top: 9px;
                             background: none;
-                            font-size: 18px;
+                            font-size: 15px;
                             font-weight: bold;
                         }
                     }
@@ -336,7 +337,7 @@
                     position: relative;
                     top: 64px;
                     display: inline-block;
-                    margin-left: 55px;
+                    margin-left: 15%;
                     width: 450px;
                     color: #777;
                     float: none;
@@ -394,7 +395,6 @@
                             background-color: @color-secundario;
                             border-radius: 5px;
                             li {
-                                border-bottom: 1px solid #d1d1d1;
                                 a {
                                     text-transform: uppercase;
                                     color: @color-primario;
@@ -405,6 +405,14 @@
                                     }
                                 }
                             }
+                        }
+                        .level0.active {
+                            .level-top {
+                                border-color: @color-primario;
+                                &:hover {
+                                    border-color: #DDD;
+                                }
+                            }  
                         }
                     }
                 }   
