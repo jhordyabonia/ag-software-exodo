@@ -100,7 +100,10 @@
 
                     .feature-card {
                         padding: 24px 36px;
-
+                        background-color: #ffffff;
+                        border-radius: 32px;
+                        box-shadow: 1px 1px 10px 2px #7b88a814;
+                       
                         .value-icon {
                             width: 60px;
                             margin-bottom: 10px;
@@ -187,6 +190,9 @@
                         text-align: left;
                         align-items: flex-start;
                         justify-content: center;
+                        background-color: #ffffff;
+                        border-radius: 32px;
+                        box-shadow: 1px 1px 10px 2px #7b88a814;
 
                         .content-img {
                             text-align: center;
@@ -229,9 +235,8 @@
 
     .bloqueSeis {
         .content-compania {
-            padding: 100px 3%;
-            background-color: transparent;
-            font-family: @fontFamily;
+            padding: 0px 3% 80px;
+            font-family: Montserrat, sans-serif;
 
             .contecnt-conectados {
                 width: 100%;
@@ -246,20 +251,52 @@
                     align-items: stretch;
 
 
-                    .w-layout-grid {
+                    .grid-integrations{
                         display: grid;
-                        grid-auto-columns: 1fr;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: auto auto;
                         grid-row-gap: 16px;
-                        grid-column-gap: 16px;
 
                         .integration-wrap {
-                            position: relative;
-                            height: 490px;
-                            display: flex;
-                            width: 100%;
-                            max-width: 600px;
-                            justify-content: center;
-                            align-items: center;
+                        position: relative; 
+                        display: flex;
+                        max-width: 600px;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 490px;
+
+                        .img-tablet{
+                            display: none;
+                        }
+                        div{
+                            display: none;
+                        }
+
+                        }
+                        .content-text-wrapper{
+                            padding: 10px;
+
+                            .content-h1{
+                                font-size: 36px;
+                                line-height: 1.3em;
+                                font-family: Montserrat, sans-serif;
+                                letter-spacing: -0.03em;
+                                color: #1b1b1f;
+                                margin: 20px 0;
+                                font-weight: 500;
+                            }
+
+                            .paragraph {
+                                font-family: Montserrat, sans-serif;
+                                font-size: 18px;
+                                line-height: 1.6;
+                                font-weight: 400;
+                                margin-bottom: 10px;
+                                color: #7b88a8;
+                            }
+
+
                         }
                     }
                 }
@@ -476,40 +513,6 @@
         }
     }
 
-    .bloqueCinco {
-        .feature-section-blue {
-            .container-small {
-                max-width: 1200px;
-                width: 100%;
-                margin: 0 auto;
-
-
-                .title-wrap-large-centre {
-                    margin: 0 auto 40px;
-                    text-align: center;
-                    max-width: 620px;
-                }
-
-                .w-layout-grid {
-                    grid-template-columns: 1fr 1fr;
-                    grid-column-gap: 21px;
-                    grid-row-gap: 32px;
-
-                    .feature-block-white {
-                        .content-img {
-                            text-align: left;
-                            width: 100%;
-                        }
-                    }
-
-                }
-
-
-            }
-
-
-        }
-    }
 }
 //
 //  Desktop
@@ -534,11 +537,93 @@
                     grid-template-columns: 1fr 1fr 1fr;
                     -ms-grid-rows: auto;
                     grid-template-rows: auto;
+                    
+                    
                 }
 
             }
         }
     }
+    .bloqueCinco {
+        .feature-section-blue {
+            .container-small {
+                max-width: 1200px;
+                width: 100%;
+                margin: 0 auto;
+
+
+                .title-wrap-large-centre {
+                    margin: 0 auto 40px;
+                    text-align: center;
+                    max-width: 620px;
+                }
+
+                .w-layout-grid {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-column-gap: 21px;
+
+                    .feature-block-white {
+                        .content-img {
+                            text-align: left;
+                            width: 100%;
+                        }
+                    }
+
+                }
+
+
+
+            }
+
+
+        }
+    }
+
+
+
+.bloqueSeis{
+    .content-compania{
+        .contecnt-conectados{
+            .bg-container-conectados{
+                .grid-integrations{
+                    grid-template-columns: 1.3fr 1fr;
+                    grid-template-rows: auto;
+                    grid-row-gap: 16px;
+                    grid-column-gap: 16px;
+                    .integration-wrap{
+                        height: 670px;
+                        margin: 0 auto;
+                        .img-mobile{
+                            display: none;
+                        }
+
+                        .img-tablet{
+                            display: block;
+                        }
+
+                        div{
+                            display: none;
+                        }
+                    }
+
+
+                }
+                .content-text-wrapper{
+                    padding: 20px;
+                    height: 151px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =768px) {
     .bloqueCinco {
         .feature-section-blue {
             .container-small {
@@ -572,6 +657,35 @@
             }
 
 
+        }
+    }
+}
+
+.bloqueSeis{
+    .content-compania{
+        padding: 100px 3%;
+        background-color: transparent;
+        font-family: Montserrat, sans-serif;
+        .contecnt-conectados{
+            .bg-container-conectados{
+                .grid-integrations{
+                    .integration-wrap{
+                        height: 670px;
+                        margin: 0 auto;
+                        .img-mobile{
+                            display: none;
+                        }
+
+                        .img-tablet{
+                            display: block;
+                        }
+
+                        div{
+                            display: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
