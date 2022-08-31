@@ -4,6 +4,9 @@
 
 & when (@media-common =true) {
 
+
+
+
     .foother {
         background-color: #01007f;
 
@@ -107,7 +110,37 @@
                     padding-right: 17px;
                     padding-left: 18px;
                     margin-left: 7px;
-                    top: -16px;
+                    top: 78px;
+
+
+
+                    .tex-subs {
+                        color: #fff;
+                        font-size: -0.125rem;
+                        position: relative;
+                        bottom: 80px;
+                    }
+
+                    .titulo-lista {
+                        color: rgba(255, 255, 255, .7);
+                        font-size: -0.125rem;
+
+                    }
+
+                    .redes-sociales {
+                        display: flex;
+
+
+                        .bi {
+                            color: rgb(181, 178, 178);
+                            margin-right: 20px;
+
+                            &:hover {}
+
+                        }
+
+                    }
+
 
                     .lista-redes {
 
@@ -125,6 +158,7 @@
                 display: flex;
                 margin-right: -15px;
                 margin-left: -15px;
+                margin-top: 66px;
 
                 .corto {
                     flex: 0 0 41.66667%;
@@ -172,9 +206,140 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {}
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .page-footer {
+        .footer {
+            position: absolute;
+            top: 125rem;
+            border-top: none;
+
+            .newsletter {
+
+
+                #newsletter {
+                    background: #ffffff;
+                    background-clip: padding-box;
+                    border-top-left-radius: 8px 8px;
+                    border-bottom-left-radius: 8px 8px;
+                    border: -1px solid #c2c2c2;
+
+                    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                    font-size: 14px;
+                    height: 50px;
+                    line-height: 1.42857143;
+                    padding: 0 9px;
+                    vertical-align: baseline;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .field {
+
+
+                    .control {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+
+
+                .content {
+
+
+                    .subscribe {
+                        background-color: #39e070;
+                        border-radius: 8px;
+
+                    }
+
+                    .icon-subscribe {
+                        height: 50px;
+                        border: none;
+                    }
+                }
+
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+
+    .contenedor-espacio1 {
+
+
+        .rojo {
+
+            margin-left: -4px;
+            top: 47px;
+        }
+
+    }
+}
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .page-footer {
+
+        .newsletter {
+
+            #newsletter {
+                background: #ffffff;
+                background-clip: padding-box;
+                border-top-left-radius: 8px 8px;
+                border-bottom-left-radius: 8px 8px;
+                border: -1px solid #c2c2c2;
+
+                font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                height: 50px;
+                line-height: 1.42857143;
+                padding: 0 9px;
+                vertical-align: baseline;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .field {
+
+
+                .control {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+
+
+            .content {
+                position: relative;
+                top: 136px;
+                right: 50px;
+
+                .subscribe {
+                    background-color: #39e070;
+                    border-radius: 8px;
+
+                }
+
+                .icon-subscribe {
+                    height: 50px;
+                    border: none;
+                }
+            }
+
+        }
+    }
+
+
+
     .one {
 
         flex: 0 0 33.33333%;
@@ -192,13 +357,21 @@
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
 
-    .foother {
-
+    .page-footer {
 
         .newsletter {
-            position: relative;
-            top: 106px;
+
+
+            #newsletter {}
+
+            .field {}
+
+            .actions {}
         }
+    }
+
+    .foother {
+
 
         .contenedor-espacio {
             padding-top: 4rem;
@@ -240,7 +413,7 @@
 
 
                     .colunna1 {
-                        margin-bottom: 3rem !important;
+                        margin-bottom: 3rem;
                         flex: -8 0 100%;
                         max-width: 100%;
                         position: relative;
@@ -249,15 +422,39 @@
                         padding-left: 15px;
 
                     }
-
-
                 }
 
-                
+                .rojo {
+
+                    position: relative;
+                    width: 15%;
+                    padding-right: 21px;
+                    padding-left: 18px;
+                    margin-left: -31px;
+                    top: 81px;
+                    height: 100px;
+
+                    .titulo-lista {
+                        color: rgba(255, 255, 255, .7);
+                        font-size: -0.125rem;
+
+                    }
+
+                    .redes-sociales {
+                        display: flex;
 
 
+                        .bi {
+                            color: gray;
+                            margin-right: 20px;
+
+                        }
+
+                    }
+                }
 
             }
+
             .contenedor-dos {
                 width: 91%;
                 padding-bottom: 2rem;
@@ -267,9 +464,9 @@
                 margin-right: 41px;
                 margin-left: 62px;
 
-                
-                
             }
+
+
         }
 
     }
