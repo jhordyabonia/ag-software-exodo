@@ -159,7 +159,7 @@
 
         .feature-section-blue {
             background-repeat: no-repeat;
-            padding: 100px 3% 120px;
+            padding: 80px 3% 100px;
 
             .container-small {
                 .title-wrap-large-centre {
@@ -191,7 +191,6 @@
                         align-items: flex-start;
                         justify-content: center;
                         background-color: #ffffff;
-                        border-radius: 32px;
                         box-shadow: 1px 1px 10px 2px #7b88a814;
 
                         .content-img {
@@ -223,6 +222,18 @@
                             margin-bottom: 10px;
                             color: @parrafoColor;
                         }
+                    }
+
+                    .fix{
+                        background-color: #f3efff;
+                        transition: width 1s, height 1s;
+                    }
+
+                    .fix:hover{
+                        background-color: #dcd1ff;
+                        transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                        opacity: 1;
+                        transform-style: preserve-3d;
                     }
                 }
 
