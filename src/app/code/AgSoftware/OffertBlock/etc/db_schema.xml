@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	 <table name="cms_block" resource="default" engine="innodb" >
+         <column xsi:type="smallint" name="is_offert" comment="is Offert Block" default="0"/>
+         <column xsi:type="varchar" length="30" name="offert_start_at" comment="OffertBlock Start At" default="CURRENT_TIMESTAMP"/>
+         <column xsi:type="varchar" length="30" name="offert_end_at" nullable="false" comment="OffertBlock End At" default="CURRENT_TIMESTAMP"/>
+         <column xsi:type="text" name="offert_end_message" nullable="false" comment="Offert End Message" />
+         <column xsi:type="text" name="offert_timmer_css" nullable="false" comment="OffertBlock styles"/>
+         <column xsi:type="smallint" name="offert_show_days" comment="Mostrar dias" default="1"/>
+         <column xsi:type="smallint" name="offert_hidden_block" comment="Ocultar Bloque" default="0"/>
+    </table>
+</schema>

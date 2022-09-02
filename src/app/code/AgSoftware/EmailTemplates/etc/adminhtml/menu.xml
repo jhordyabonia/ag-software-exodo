@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add action="email_template/test" id="AgSoftware_EmailTemplates::AgSoftware_EmailTemplates_emailtemplates"
+             module="AgSoftware_EmailTemplates" parent="Magento_Backend::marketing_communications"
+             resource="Magento_Backend::marketing_communications" sortOrder="15" title="Email Templates Test"/>
+    </menu>
+</config>

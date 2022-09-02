@@ -1,0 +1,43 @@
+<?php
+/**
+ * @var  \Magento\Framework\View\Element\Template $block
+ *
+ */
+?>
+<div class="vendor-product-grid">
+    <div class="actions">
+        <button class="prymary action" type="submit" onclick="location.href='<?=$block->getUrl('vendor/products/create')?>'">
+            <span ><?=__("Add Procuct")?></span>
+        </button>
+    </div>
+    <table class="content-table">
+        <tr class="row-table">
+            <th class="title-table id"><?=__('Id')?></th>
+            <th class="title-table name"><?=__('Name')?></th>
+            <th class="title-table status"><?=__('status')?></th>
+            <th class="title-table price"><?=__('Price')?></th>
+            <th class="title-table special-price"><?=__('Special Price')?></th>
+            <th class="title-table"><?=__('...')?></th>
+            <th class="title-table sales"><?=__('Sales')?></th>
+            <th class="title-table actions"><?=__('Actions')?></th>
+        </tr>
+        <?php $count=0;foreach ($block->getCollection() as $product):?>
+        <!--<pre>
+            <?php //echo print_r($product->getData());?>
+        </pre>-->
+            <tr class="row-table">
+                <td class="value-table id"><?=++$count?></td>
+                <td class="value-table name"><?=$product->getName()?><br/>(<?=$product->getSku()?>)</td>
+                <td class="title-table status"><?=__($product->getStatus()==1?'Enabled':'Disabled');?></td>
+                <td class="value-table price"><?=$product->getPrice()?></td>
+                <td class="value-table special-price"><?=$product->getSpecialPrice()?></td>
+                <td class="value-table"><?=__('...')?></td>
+                <td class="value-table"><?=$product->getQty()-1000?></td>
+                <td class="value-table actions">
+                    <a class="vendor-products-grid-edit" href="<?=$block->getUrl('vendor/products/edit/',["product"=>$product->getSku()])?>"><?=__('Edit')?></a> /
+                    <a class="vendor-products-grid-delete" href="<?=$block->getUrl('vendor/products/delete/',["product"=>$product->getSku()])?>"><?=__('Delete')?></a>
+                </td>
+            </tr>
+        <?php endforeach;?>
+    </table>
+</div>

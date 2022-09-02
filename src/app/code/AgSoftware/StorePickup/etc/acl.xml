@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="AgSoftware_StorePickup::store_pickup" sortOrder="10" title="store_pickup">
+					<resource id="AgSoftware_StorePickup::store_pickup_save" sortOrder="10" title="Save store_pickup"/>
+					<resource id="AgSoftware_StorePickup::store_pickup_delete" sortOrder="20" title="Delete store_pickup"/>
+					<resource id="AgSoftware_StorePickup::store_pickup_update" sortOrder="30" title="Update store_pickup"/>
+					<resource id="AgSoftware_StorePickup::store_pickup_view" sortOrder="40" title="View store_pickup"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

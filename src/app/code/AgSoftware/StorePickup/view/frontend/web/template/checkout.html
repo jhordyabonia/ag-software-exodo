@@ -1,0 +1,46 @@
+<div class="storepickup-list-wrapper" data-bind="afterRender:loadStores, loading: loading(),visible: isActive()">
+    <div class="title-container" >
+        <h2 class="title" data-bind="text: $t('Recoger en tienda')"></h2>
+    </div>
+    <div class="content columns">
+        <div class="column">
+            <div class="content-select">
+                <select required name="list-stores"
+                        class="select"
+                        autocomplete="false"
+                        data-bind=" optionsCaption: 'Seleccionar Centro Comercial',value: selectedStore">
+                    <option text="'Seleccionar tienda'" value="" selected="true"></option>
+                    <!-- ko foreach: stores  -->
+                        <option text="label" data-bind="attr:{value:store_pickup_id,'data-lat':latitude,'data-lng':length}"></option>
+                    <!-- /ko -->
+                </select>
+               <input type="checkbox" data-bind="attr:{id:'store-pickup-filters'},checked:filters">
+               <label data-bind="attr:{for:'store-pickup-filters'}" text="'Mostar todas las regiones'"></label>
+            </div>
+
+            <!-- ko if: getStore() -->
+            <div class="store-selected-information">
+                <div class="store-info-container">
+                    <div class="store-info">
+                        <h3 data-bind="text: $t('Horarios de atención')"></h3>
+                        <div class="store-address" data-bind="html: getStore().schedule"></div>
+                    </div>
+                    <div class="store-info">
+                        <h3 data-bind="text: $t('Dirección')"></h3>
+                        <div class="store-address" data-bind="html: fullAddress()"></div>
+                    </div>
+                    <!-- ko if: getStore().extra -->
+                        <div class="store-info">
+                            <h3 data-bind="text: $t('Extra')"></h3>
+                            <div class="store-address" data-bind="html: getStore().extra"></div>
+                        </div>
+                    <!-- /ko-->
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+        <div class="column map">
+            <div id="container_map"></div>
+        </div>
+    </div>
+</div>

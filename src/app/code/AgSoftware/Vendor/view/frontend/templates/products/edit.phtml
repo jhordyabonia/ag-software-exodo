@@ -1,0 +1,22 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template  $block
+ * @var \Magento\Catalog\Model\Product $product;
+ */
+$product = $block->getProduct();
+?>
+<div class="vendor-product-form">
+    <form action="<?=$block->getUrl('vendor/products/save')?>" method="POST">
+
+        <?=$block->getChildHtml('products.edit.actions') ?>
+
+        <?=$block->getChildBlock('products.edit.general')
+                 ->setProduct($product)
+                 ->toHtml() ?>
+
+        <?=$block->getChildHtml('products.edit.gallery') ?>
+
+        <?=$block->getChildHtml('products.edit.file_uploader') ?>
+
+    </form>
+</div>

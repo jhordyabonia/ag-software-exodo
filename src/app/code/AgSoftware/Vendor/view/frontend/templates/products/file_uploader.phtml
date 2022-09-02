@@ -1,0 +1,30 @@
+<?php
+/**
+ * @var  \Magento\Framework\View\Element\Template $block
+ */
+?>
+<fieldset>
+    <h2><?=__('File Uploader')?></h2>
+    <div class="upload-wrapper" data-bind="scope: 'file-uploader'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+    <script type="text/x-magento-init">
+        {
+           ".upload-wrapper": {
+               "Magento_Ui/js/core/app": {
+                   "components": {
+                       "file-uploader": {
+                           "component":"Magento_Ui/js/form/element/file-uploader",
+                           "template": "ui/form/element/uploader/uploader",
+                           "previewTmpl":"AgSoftware_Vendor/file-preview",
+                           "dataScope" : "file-product",
+                           "uploaderConfig": {
+                                "url": "<?php echo $block->getUrl('vendor/products/upload/type/file-product/'); ?>"
+                           }
+                       }
+                   }
+               }
+           }
+        }
+    </script>
+</fieldset>

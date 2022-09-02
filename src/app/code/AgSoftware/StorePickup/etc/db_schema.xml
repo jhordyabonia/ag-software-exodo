@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="agsoftware_storepickup" resource="default" engine="innodb" comment="agsoftware_storepickup Table">
+		<column xsi:type="smallint" name="store_pickup_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="store_pickup_id"/>
+		</constraint>
+        <column name="country_id" nullable="true" xsi:type="varchar" comment="country_id" length="2"/>
+        <column name="name" nullable="false" xsi:type="varchar" comment="name"  length="100"/>
+        <column name="active" nullable="true" xsi:type="smallint" comment="active"/>
+        <column name="schedule" nullable="true" xsi:type="varchar" comment="schedule" length="255"/>
+        <column name="street" nullable="true" xsi:type="text" comment="street"/>
+        <column name="distrito" nullable="true" xsi:type="varchar" comment="distrito" length="100"/>
+        <column name="departamento" nullable="true" xsi:type="int" comment="departamento"/>
+        <column name="provincia" nullable="true" xsi:type="varchar" comment="provincia"  length="100"/>
+        <column name="postcode" nullable="true" xsi:type="int" comment="postcode"/>
+        <column name="stores" nullable="true" xsi:type="varchar" comment="stores" length="255"/>
+        <column name="extra" nullable="true" xsi:type="varchar" comment="Extra"  length="300"/>
+        <column name="telephone" nullable="true" xsi:type="varchar" comment="telephone"  length="50"/>
+        <column name="email" nullable="true" xsi:type="varchar" comment="email"  length="150"/>
+        <column name="latitude" nullable="true" xsi:type="varchar" comment="latitude" length="15"/>
+        <column name="length" nullable="true" xsi:type="varchar" comment="length" length="15"/>
+        <column name="price" nullable="true" xsi:type="varchar" comment="price" length="20"/>
+	</table>
+</schema>

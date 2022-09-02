@@ -1,0 +1,22 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template  $block
+ * @var \Magento\Catalog\Model\Product $product;
+ */
+$product = $block->getProduct();
+?>
+<fieldset class="main-data">
+    <h2><?=__('General Information');?></h2>
+    <div class="input-text">
+        <label for="vendor-product-form-name"><?=__("Name")?></label>
+        <input name="name" class="input-text" id="vendor-product-form-name" value="<?=$product->getName()?>">
+    </div>
+    <div class="input-text">
+        <label for="vendor-product-form-sku"><?=__("Sku")?></label>
+        <input name="sku" class="input-text" id="vendor-product-form-sku" value="<?=$product->getSku()?>">
+    </div>
+    <div class="input-text">
+        <label for="vendor-product-form-price"><?=__("Price")?></label>
+        <input name="price" class="input-text" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+    </div>
+</fieldset>

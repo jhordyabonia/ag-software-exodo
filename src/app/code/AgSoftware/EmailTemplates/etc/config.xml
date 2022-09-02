@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <custom>
+            <email>
+                <header_template_email_1>design_email_header_template</header_template_email_1>
+                <header_template_email_2>design_email_header_template</header_template_email_2>
+                <footer_template_email_1>design_email_footer_template</footer_template_email_1>
+                <footer_template_email_2>design_email_footer_template</footer_template_email_2>
+
+                <order_detail_maui>custom_email_order_detail_maui</order_detail_maui>
+                <order_information_maui>custom_email_order_information_maui</order_information_maui>
+                <order_trakking_information_maui>custom_email_order_trakking_information_maui</order_trakking_information_maui>
+
+
+                <order_footer_help_maui>custom_email_order_footer_help_maui</order_footer_help_maui>
+                <order_shipping_method_maui>custom_email_order_shipping_method_maui</order_shipping_method_maui>
+            </email>
+        </custom>
+        <sales_email>
+            <order_confirm>
+                <enabled>1</enabled>
+                <template>sales_email_order_confirm_template</template>
+                <guest_template>sales_email_order_confirm_guest_template</guest_template>
+                <identity>sales</identity>
+                <copy_method>bcc</copy_method>
+            </order_confirm>
+            <general_trakking>
+                <url_trakking>htt</url_trakking>
+
+            </general_trakking>
+        </sales_email>
+        <sales_email>
+            <order_canceled>
+                <enabled>1</enabled>
+                <template>sales_email_order_cancel_template</template>
+                <guest_template>sales_email_order_canceled_guest_template</guest_template>
+                <identity>sales</identity>
+                <copy_to>user@email.com</copy_to>
+                <copy_method>bcc</copy_method>
+            </order_canceled>
+        </sales_email>
+    </default>
+</config>

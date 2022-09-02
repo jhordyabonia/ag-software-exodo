@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="vendor_index"/>
+    <head>
+        <title>My Products</title>
+    </head>
+    <body>
+		<referenceContainer name="content">
+			<block name="products.index" class="AgSoftware\Vendor\Block\Products\Index" template="AgSoftware_Vendor::products/index.phtml"/>
+		</referenceContainer>
+	</body>
+</page>

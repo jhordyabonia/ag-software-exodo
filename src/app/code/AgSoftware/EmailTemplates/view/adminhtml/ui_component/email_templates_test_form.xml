@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+         </item>
+        <item name="label" translate="true" xsi:type="string">General Information</item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+            <item name="namespace" xsi:type="string">email_templates_test_form</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+        <item name="buttons" xsi:type="array">
+            <item name="test" xsi:type="array">
+                <item name="name" xsi:type="string">Test</item>
+                <item name="label" xsi:type="string" translate="true">Test</item>
+                <item name="class" xsi:type="string">primary</item>
+                <item name="url" xsi:type="string">email_templat/test</item>
+            </item>
+        </item>
+    </argument>
+    <!--<fieldset name="general">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string"/>
+            </item>
+        </argument>
+        <fieldset name="email_template">
+              <field name="store_code">
+                 <argument name="data" xsi:type="array">
+                     <item name="config" xsi:type="array">
+                         <item name="dataType" xsi:type="string">text</item>
+                         <item name="label" xsi:type="string">Select Store</item>
+                         <item name="dataScope" xsi:type="string">store_code</item>
+                         <item name="formElement" xsi:type="string">select</item>
+                     </item>
+                     <item name="options" xsi:type="object">Magento\Config\Model\Config\Source\Email\Template\Header</item>
+                 </argument>
+             </field>
+        <field name="email_template_test" formElement="select">
+                 <settings>
+                     <notice translate="true">Select EmailTemplate to test</notice>
+                     <dataType>text</dataType>
+                     <label translate="true">Select EmailTemplate to test</label>
+                 </settings>
+                 <formElements>
+                     <select>
+                         <settings>
+                             <options class="Magento\Config\Model\Config\Source\Email\Template\Header"/>
+                         </settings>
+                     </select>
+                 </formElements>
+             </field>
+        </fieldset>
+    </fieldset>-->
+</form>

@@ -1,0 +1,73 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block \Magento\Email\Block\Adminhtml\Template\Edit */
+
+/**
+ * Imagenes
+ * Customers
+ * Ordenes
+ * @var
+ */
+$collection =  \Magento\Framework\App\ObjectManager::getInstance()
+    ->get('\Magento\Email\Model\ResourceModel\Template\Collection');
+
+$options = $collection->toOptionArray();
+array_walk(
+    $options,
+    function (&$item) {
+        $item['__disableTmpl'] = true;
+    }
+);
+
+$dataPersistor =  \Magento\Framework\App\ObjectManager::getInstance()
+    ->get('\Magento\Framework\App\Request\DataPersistorInterface');
+$incrementId = $dataPersistor->get('increment_id');
+$templateId = $dataPersistor->get('template_id');
+$entity = $dataPersistor->get('entity');
+?>
+<?php if (!$block->getEditMode()) : ?>
+<form action="<?= $block->getUrl('email_template/test/send') ?>" method="post" id="email_template_load_form">
+    <?= $block->getBlockHtml('formkey') ?>
+    <fieldset class="admin__fieldset form-inline">
+        <legend class="admin__legend"><span><?= $block->escapeHtml(__('Load Template to Test')) ?></span></legend><br>
+        <div class="admin__field required">
+            <label class="admin__field-label" for="template_select"><span><?= $block->escapeHtml(__('Entity')) ?></span></label>
+            <div class="admin__field-control">
+                <select value="<?=$entity?>" id="entity_select" name="entity" class="admin__control-select required-entry">
+                    <option value="rma" disabled><?= __('Rma') ?></option>
+                    <option value="order"><?= __('Order') ?></option>
+                </select>
+            </div>
+        </div>
+        <div class="admin__field required">
+            <label class="admin__field-label" for="template_select"><span><?= $block->escapeHtml(__('Template')) ?></span></label>
+            <div class="admin__field-control">
+                <select id="template_select" name="template_id" class="admin__control-select required-entry" size="3">
+                    <?php foreach ($options as $group => $option) : ?>
+                            <option <?=$templateId==$option['value']?'selected':''?>
+                                value="<?= $block->escapeHtmlAttr($option['value']) ?>"><?= $block->escapeHtml($option['label']) ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+        <div class="admin__field required">
+            <label class="admin__field-label" for="increment_id"><span><?= $block->escapeHtml(__('Increment Id')) ?></span></label>
+            <div class="admin__field-control">
+                <input id="increment_id" value="<?=$incrementId?>" name="increment_id" maxlength="15" size="15" class=" input-text admin__control-text required-entry _required" style="width: 30%">
+            </div>
+        </div>
+        <div class="admin__field required">
+            <span class="admin__field-label"></span>
+            <div class="admin__field-control">
+                <button class="action primary">
+                    <span><?=__("Enviar Email")?></span>
+                </button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+<?php endif ?>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+        <add id="AgSoftware::top_level" module="AgSoftware_StorePickup" resource="Magento_Backend::content" sortOrder="15" title="AgSoftware"/>
+        <add action="agsoftware/storepickup/index" id="AgSoftware_StorePickup::agsoftware_storepickup" module="AgSoftware_StorePickup" parent="AgSoftware::top_level" resource="Magento_Backend::content" sortOrder="10" title="Recoger en Tienda"/>
+        <add action="system_config/edit/section/carriers" id="AgSoftware_StorePickup::agsoftware_storepickup_settings" module="AgSoftware_StorePickup" parent="AgSoftware::top_level" resource="Magento_Backend::content" sortOrder="15" title="Recoger en Tienda Settings"/>
+    </menu>
+</config>

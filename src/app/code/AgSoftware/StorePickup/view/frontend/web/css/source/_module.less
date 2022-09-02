@@ -1,0 +1,86 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .checkout-index-index{
+        dd#store_name{
+            color: #92238b!important;
+        }
+        #store-pickup-info{
+            color: #92238b;
+            cursor: pointer;
+            &.red{
+                color: red;
+            }
+        }
+    }
+   .storepickup-list-wrapper {
+       .title-container{
+           display: block;
+           width: 100%;
+           margin-bottom: 10px;
+       }
+       .content{
+             display: block;
+             width: 100%;
+             .column{
+                 display:inline-block;
+                 width: 44%;
+                 vertical-align: top;
+
+                 .content-select{
+                     border: 1px solid #c3c3c3;
+                     padding: 0px 10px;
+                     border-radius: 2px;
+                     background: url(../images/theme/select.svg);
+                     background-position: right;
+                     select{
+                         border: 0;
+                         padding: 0 2px;
+                         color: #343A40;
+                         margin-top: 10px;
+                         background: transparent;
+                     }
+                 }
+                 &.map{
+                     width: 54%;
+                     padding-left: 10px;
+                 }
+             }
+       }
+       .store-selected-information{
+           .store-info-container{
+
+               .store-info {
+                   padding-top: 10px;
+                   .store-address {
+                       padding-top: 5px;
+                       font-size: 12px;
+                       text-align: justify;
+                   }
+               }
+           }
+       }
+        #container_map {
+            width: 100%;
+            min-height: 400px;
+        }
+    }
+}
+
+//  Mobile (styles-m.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+    .storepickup-list-wrapper .content.columns .column {
+        width: 100%;
+    }
+    #container_map {
+        display: none;
+    }
+}

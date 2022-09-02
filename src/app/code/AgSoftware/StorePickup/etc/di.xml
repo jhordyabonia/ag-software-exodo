@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="AgSoftware\StorePickup\Api\StorePickupRepositoryInterface" type="AgSoftware\StorePickup\Model\StorePickupRepository"/>
+	<preference for="AgSoftware\StorePickup\Api\Data\StorePickupInterface" type="AgSoftware\StorePickup\Model\StorePickup"/>
+	<preference for="AgSoftware\StorePickup\Api\Data\StorePickupSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="AgSoftware\StorePickup\Model\ResourceModel\StorePickup\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">agsoftware_storepickup</argument>
+			<argument name="resourceModel" xsi:type="string">AgSoftware\StorePickup\Model\ResourceModel\StorePickup\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="storepickup_listing_data_source" xsi:type="string">AgSoftware\StorePickup\Model\ResourceModel\StorePickup\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="store_pickup_order_plugin" type="AgSoftware\StorePickup\Plugin\OrderRepository"/>
+    </type>
+    <type name="AgSoftware\StorePickup\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">EmailTemplates</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="handler" xsi:type="object">AgSoftware\StorePickup\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

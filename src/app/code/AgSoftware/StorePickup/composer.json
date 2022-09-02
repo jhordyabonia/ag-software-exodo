@@ -1,0 +1,18 @@
+{
+    "name": "agsoftware/module-storepickup",
+    "description": "",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "AgSoftware\\StorePickup\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

@@ -1,0 +1,254 @@
+<?xml version="1.0" ?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+	<argument name="data" xsi:type="array">
+		<item name="js_config" xsi:type="array">
+			<item name="provider" xsi:type="string">agsoftware_storepickup_store_pickup_listing.agsoftware_storepickup_store_pickup_grid_data_source</item>
+			<item name="deps" xsi:type="string">agsoftware_storepickup_store_pickup_listing.agsoftware_storepickup_store_pickup_grid_data_source</item>
+		</item>
+		<item name="spinner" xsi:type="string">agsoftware_storepickup_store_pickup_columns</item>
+		<item name="buttons" xsi:type="array">
+			<item name="add" xsi:type="array">
+				<item name="name" xsi:type="string">add</item>
+				<item name="label" translate="true" xsi:type="string">Add new Store</item>
+				<item name="class" xsi:type="string">primary</item>
+				<item name="url" xsi:type="string">*/*/new</item>
+			</item>
+		</item>
+	</argument>
+	<dataSource name="agsoftware_storepickup_store_pickup_grid_data_source">
+		<argument name="dataProvider" xsi:type="configurableObject">
+			<argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
+			<argument name="name" xsi:type="string">agsoftware_storepickup_store_pickup_grid_data_source</argument>
+			<argument name="primaryFieldName" xsi:type="string">store_pickup_id</argument>
+			<argument name="requestFieldName" xsi:type="string">id</argument>
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+					<item name="update_url" path="mui/index/render" xsi:type="url"/>
+					<item name="storageConfig" xsi:type="array">
+						<item name="indexField" xsi:type="string">store_pickup_id</item>
+					</item>
+				</item>
+			</argument>
+		</argument>
+	</dataSource>
+	<listingToolbar name="listing_top">
+		<argument name="data" xsi:type="array">
+			<item name="config" xsi:type="array">
+				<item name="sticky" xsi:type="boolean">true</item>
+			</item>
+		</argument>
+		<bookmark name="bookmarks"/>
+		<columnsControls name="columns_controls"/>
+		<filters name="listing_filters"/>
+		<paging name="listing_paging"/>
+	</listingToolbar>
+
+	<columns name="agsoftware_storepickup_store_pickup_columns">
+		<argument name="data" xsi:type="array">
+			<item name="config" xsi:type="array">
+				<item name="editorConfig" xsi:type="array">
+					<item name="selectProvider" xsi:type="string">agsoftware_storepickup_store_pickup_listing.agsoftware_storepickup_store_pickup_listing.agsoftware_storepickup_store_pickup_columns.ids</item>
+					<item name="enabled" xsi:type="boolean">true</item>
+					<item name="indexField" xsi:type="string">store_pickup_id</item>
+					<item name="clientConfig" xsi:type="array">
+						<item name="saveUrl" path="agsoftware_storepickup/storepickup/inlineEdit" xsi:type="url"/>
+						<item name="validateBeforeSave" xsi:type="boolean">false</item>
+					</item>
+				</item>
+				<item name="childDefaults" xsi:type="array">
+					<item name="fieldAction" xsi:type="array">
+						<item name="provider" xsi:type="string">agsoftware_storepickup_store_pickup_listing.agsoftware_storepickup_store_pickup_listing.agsoftware_storepickup_store_pickup_columns_editor</item>
+						<item name="target" xsi:type="string">startEdit</item>
+						<item name="params" xsi:type="array">
+							<item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
+							<item name="1" xsi:type="boolean">true</item>
+						</item>
+					</item>
+				</item>
+			</item>
+		</argument>
+		<selectionsColumn name="ids">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="indexField" xsi:type="string">store_pickup_id</item>
+				</item>
+			</argument>
+		</selectionsColumn>
+		<column name="store_pickup_id">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">text</item>
+					<item name="sorting" xsi:type="string">asc</item>
+					<item name="label" translate="true" xsi:type="string">ID</item>
+				</item>
+			</argument>
+		</column>
+		<actionsColumn class="AgSoftware\StorePickup\Ui\Component\Listing\Column\StorepickupActions" name="actions">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="indexField" xsi:type="string">store_pickup_id</item>
+				</item>
+			</argument>
+		</actionsColumn>
+		<column name="name">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Name</item>
+					<item name="editor" xsi:type="array">
+						<item name="editorType" xsi:type="string">text</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</column>
+		<column name="price">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Price</item>
+					<item name="editor" xsi:type="array">
+						<item name="editorType" xsi:type="string">text</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</column>
+		<column name="active">
+			<argument name="data" xsi:type="array">
+				<item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Active</item>
+				<item name="config" xsi:type="array">
+					<item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+					<item name="dataType" xsi:type="string">select</item>
+					<item name="label" xsi:type="string" translate="true">Is active</item>
+				</item>
+			</argument>
+		</column>
+
+		<column name="country_id">
+			<argument name="data" xsi:type="array">
+				<item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Countries</item>
+				<item name="config" xsi:type="array">
+					<item name="label" translate="true" xsi:type="string">Country</item>
+					<item name="dataType" xsi:type="string">select</item>
+				</item>
+			</argument>
+		</column>
+		<column name="departamento">
+			<argument name="data" xsi:type="array">
+				<item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Departamentos</item>
+				<item name="config" xsi:type="array">
+					<item name="label" translate="true" xsi:type="string">Departamento</item>
+					<item name="dataType" xsi:type="string">select</item>
+				</item>
+			</argument>
+		</column>
+		<!--<column name="provincia">
+			<argument name="data" xsi:type="array">
+				<item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Provincias</item>
+				<item name="config" xsi:type="array">
+					<item name="label" translate="true" xsi:type="string">Provincia</item>
+					<item name="dataType" xsi:type="string">select</item>
+				</item>
+			</argument>
+		</column>-->
+		<column name="distrito" >
+			<argument name="data" xsi:type="array">
+				<item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Distritos</item>
+				<item name="config" xsi:type="array">
+					<item name="label" translate="true" xsi:type="string">Distrito</item>
+					<item name="dataType" xsi:type="string">select</item>
+				</item>
+			</argument>
+		</column>
+		<column name="street">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Street</item>
+					<item name="editor" xsi:type="array">
+						<item name="editorType" xsi:type="string">text</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</column>
+		<column name="telephone">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Telephone</item>
+					<item name="editor" xsi:type="array">
+						<item name="editorType" xsi:type="string">text</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</column>
+		<column name="postcode">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Post Code</item>
+					<item name="editor" xsi:type="array">
+						<item name="editorType" xsi:type="string">text</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</column>
+		<column name="email">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Email</item>
+					<item name="editor" xsi:type="array">
+						<item name="editorType" xsi:type="string">text</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</column>
+		<column name="schedule">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Schedule</item>
+					<item name="editor" xsi:type="array">
+						<item name="editorType" xsi:type="string">text</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</column>
+		<column name="extra">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="filter" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Extra</item>
+					<item name="editor" xsi:type="array">
+						<item name="editorType" xsi:type="string">text</item>
+						<item name="validation" xsi:type="array">
+							<item name="required-entry" xsi:type="boolean">false</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</column>
+	</columns>
+</listing>

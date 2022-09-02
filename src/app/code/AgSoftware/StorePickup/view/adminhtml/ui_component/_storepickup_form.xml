@@ -1,0 +1,301 @@
+<?xml version="1.0" ?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+	<argument name="data" xsi:type="array">
+		<item name="js_config" xsi:type="array">
+			<item name="provider" xsi:type="string">agsoftware_storepickup_store_pickup_form.store_pickup_form_data_source</item>
+			<item name="deps" xsi:type="string">agsoftware_storepickup_store_pickup_form.store_pickup_form_data_source</item>
+		</item>
+		<item name="label" translate="true" xsi:type="string">General Information</item>
+		<item name="config" xsi:type="array">
+			<item name="dataScope" xsi:type="string">data</item>
+			<item name="namespace" xsi:type="string">agsoftware_storepickup_store_pickup_form</item>
+		</item>
+		<item name="template" xsi:type="string">templates/form/collapsible</item>
+		<item name="buttons" xsi:type="array">
+			<item name="back" xsi:type="string">AgSoftware\StorePickup\Block\Adminhtml\Store\Pickup\Edit\BackButton</item>
+			<item name="delete" xsi:type="string">AgSoftware\StorePickup\Block\Adminhtml\Store\Pickup\Edit\DeleteButton</item>
+			<item name="save" xsi:type="string">AgSoftware\StorePickup\Block\Adminhtml\Store\Pickup\Edit\SaveButton</item>
+			<item name="save_and_continue" xsi:type="string">AgSoftware\StorePickup\Block\Adminhtml\Store\Pickup\Edit\SaveAndContinueButton</item>
+		</item>
+	</argument>
+	<dataSource name="store_pickup_form_data_source">
+		<argument name="dataProvider" xsi:type="configurableObject">
+			<argument name="class" xsi:type="string">AgSoftware\StorePickup\Model\Storepickup\DataProvider</argument>
+			<argument name="name" xsi:type="string">store_pickup_form_data_source</argument>
+			<argument name="primaryFieldName" xsi:type="string">store_pickup_id</argument>
+			<argument name="requestFieldName" xsi:type="string">store_pickup_id</argument>
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="submit_url" path="*/*/save" xsi:type="url"/>
+				</item>
+			</argument>
+		</argument>
+		<argument name="data" xsi:type="array">
+			<item name="js_config" xsi:type="array">
+				<item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+			</item>
+		</argument>
+	</dataSource>
+	<fieldset name="General">
+		<argument name="data" xsi:type="array">
+			<item name="config" xsi:type="array">
+				<item name="label" xsi:type="string"/>
+			</item>
+		</argument>
+		<field name="active">
+			 <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string">Is Active</item>
+                    <item name="dataScope" xsi:type="string">active</item>
+					<item name="formElement" xsi:type="string">select</item>
+                </item>
+                <item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Active</item>
+			</argument>
+        </field>
+		<field name="stores" >
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" xsi:type="string">Stores</item>
+					<item name="dataScope" xsi:type="string">stores</item>
+					<item name="formElement" xsi:type="string">multiselect</item>
+					<item name="size" xsi:type="string">10</item>
+					<item name="tooltip" xsi:type="array">
+						<item name="description" xsi:type="string" translate="true">Mantén presionada la tecla CTRL para selección multiple</item>
+					</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">true</item>
+					</item>
+				</item>
+                <item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Stores</item>
+			</argument>
+		</field>
+        <field name="country_id">
+			 <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string">Country</item>
+                    <item name="dataScope" xsi:type="string">country_id</item>
+					<item name="formElement" xsi:type="string">select</item>
+					<item name="imports"  xsi:type="array">
+						<item name="link" xsi:type="array">
+							<item name="disabled" xsi:type="boolean">true</item>
+						</item>
+					</item>
+                </item>
+                <item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Countries</item>
+                <item name="selected" xsi:type="string">CL</item>
+                <item name="value" xsi:type="string">CL</item>
+			</argument>
+        </field>
+		<field name="name">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Name</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataScope" xsi:type="string">name</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">true</item>
+						<item name="rule" xsi:type="array">
+							<item name="max_text_length" xsi:type="string">50</item>
+						</item>
+						<item name="rules" xsi:type="array">
+							<item name="max_text_length" xsi:type="string">50</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="departamento">
+			 <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string">Departamento Provincia o Regíon</item>
+                    <item name="dataScope" xsi:type="string">departamento</item>
+					<item name="formElement" xsi:type="string">select</item>
+					<item name="component" xsi:type="string">AgSoftware_StorePickup/js/provincia</item>
+                </item>
+                <item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Departamentos</item>
+			</argument>
+        </field>
+		<!--<field name="provincia">
+			 <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string">Provincia</item>
+                    <item name="dataScope" xsi:type="string">provincia</item>
+					<item name="formElement" xsi:type="string">select</item>
+					<item name="component" xsi:type="string">AgSoftware_StorePickup/js/distrito</item>
+                </item>
+                <item name="options" xsi:type="object">Custom\City\Model\Resource\City</item>
+			</argument>
+        </field>-->
+		<field name="distrito">
+			 <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string">Ciudad o Comuna</item>
+                    <item name="dataScope" xsi:type="string">distrito</item>
+					<item name="formElement" xsi:type="string">select</item>
+                </item>
+                <item name="options" xsi:type="object">AgSoftware\StorePickup\Model\Config\Source\Distritos</item>
+			</argument>
+        </field>
+		<field name="street">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Street</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataScope" xsi:type="string">street</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">false</item>
+						<!-- <rule name="min_text_length" xsi:type="string">30</rule>-->
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="telephone">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Telephone</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataScope" xsi:type="string">telephone</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">false</item>
+						<!-- <rule name="max_text_length" xsi:type="string">20</rule>-->
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="postcode">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Post Code</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataScope" xsi:type="string">postcode</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">false</item>
+						<!-- <rule name="max_text_length" xsi:type="string">10</rule>-->
+						<!-- <rule name="validate-number" xsi:type="string">true</rule>-->
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="email">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Email</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataScope" xsi:type="string">email</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">false</item>
+						<!-- <rule name="min_text_length" xsi:type="string">4</rule>-->
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="schedule">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Schedule</item>
+					<item name="formElement" xsi:type="string">textarea</item>
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataScope" xsi:type="string">schedule</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">false</item>
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="price">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Price</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataScope" xsi:type="string">price</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">false</item>
+						<!-- <rule name="min_text_length" xsi:type="string">4</rule>-->
+					</item>
+				</item>
+			</argument>
+		</field>
+        <field name="latitude">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" translate="true" xsi:type="string">Latitude</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">store_pickup</item>
+                    <item name="dataScope" xsi:type="string">latitude</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">false</item>
+                        <!-- <rule name="min_text_length" xsi:type="string">4</rule>-->
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="length">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" translate="true" xsi:type="string">Length</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">store_pickup</item>
+                    <item name="dataScope" xsi:type="string">length</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">false</item>
+                        <!-- <rule name="min_text_length" xsi:type="string">4</rule>-->
+                    </item>
+                </item>
+            </argument>
+        </field>
+		<field name="free">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Gratis si el pedido total es mayor que</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataScope" xsi:type="string">free</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">false</item>
+						<!-- <rule name="min_text_length" xsi:type="string">4</rule>-->
+					</item>
+					<item name="tooltip" xsi:type="array">
+						<item name="description" xsi:type="string" translate="true">Si es igual a cero no tomara la condicion</item>
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="extra">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Extra</item>
+					<item name="formElement" xsi:type="string">textarea</item>
+					<item name="source" xsi:type="string">store_pickup</item>
+					<item name="dataScope" xsi:type="string">extra</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">false</item>
+					</item>
+				</item>
+			</argument>
+		</field>
+	</fieldset>
+</form>

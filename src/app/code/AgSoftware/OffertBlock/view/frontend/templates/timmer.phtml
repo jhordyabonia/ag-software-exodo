@@ -1,0 +1,63 @@
+<div class='offertblock-<?=$block->getIdentifier()?> <?=$block->getOffertShowDays()?> cms-offert-block-timmer'>
+    <p class="title"> <?=__('Solo quedan:')?> </p>
+    <?php if($block->getOffertShowDays() == 1):?>
+        <span class="item days"><span class='number'></span><span class='text'> <?=__("days")?></span></span>
+    <?php endif;?>
+    <span class="item hours"><span class='number'></span><span class='text'> <?=__("hours");?></span></span>
+    <span class="item mins"><span class='number'></span><span class='text'> <?=__("mins")?></span></span>
+    <span class="item secounds"><span class='number'></span><span class='text'> <?=__("secounds")?></span></span>
+</div>
+<style>
+    <?=$block->getOffertTimmerCss()?>
+</style>
+<script type="text/javascript">
+    require(['jquery'],($)=>{
+    'use strict';
+      var clickToStop = 0;
+      var timmer<?=str_replace("-","_",$block->getIdentifier())?> = setInterval(()=> {
+          var showDays = <?=$block->getOffertShowDays() == 1?'true':'false'?>;
+          var today = new Date();
+          var endYear = new Date('<?=$block->getOffertEndAt()?>');//.toLocaleString("es-CL", {timeZone: "America/Santiago"}); //new Date('<?=date('m/d/Y H:i:s',strtotime($block->getOffertEndAt()))?>'); // Establece día y mes
+          var msPerDay = 24 * 60 * 60 * 1000; // Número de milisegundos por día
+          var daysLeft = Number.parseInt((endYear.getTime() - today.getTime()) / msPerDay) ;
+          var hoursLeft = showDays?23 - today.getHours():Number.parseInt((endYear.getTime() - today.getTime()) / (1000*60*60));
+          var minsLeft = endYear.getMinutes() - today.getMinutes();
+              minsLeft = 59 - (minsLeft<0?minsLeft*-1:minsLeft);
+          var secoundsLeft = 59 - today.getSeconds();
+          if(today >= endYear){
+              $('.offertblock-<?=$block->getIdentifier()?>.cms-offert-block-timmer').html('<?=$block->getOffertEndMessage()?>');
+              clearInterval(timmer<?=str_replace("-","_",$block->getIdentifier())?>);
+          }else {
+              <?php if($block->getOffertShowDays() == 1):?>
+                $('.offertblock-<?=$block->getIdentifier()?>.cms-offert-block-timmer .days .number').html(print(daysLeft));
+              <?php endif;?>
+              $('.offertblock-<?=$block->getIdentifier()?>.cms-offert-block-timmer .hours .number').html(print(hoursLeft));
+              $('.offertblock-<?=$block->getIdentifier()?>.cms-offert-block-timmer .mins .number').html(print(minsLeft));
+              $('.offertblock-<?=$block->getIdentifier()?>.cms-offert-block-timmer .secounds .number').html(print(secoundsLeft));
+          }
+        },1000);
+        $('.offertblock-<?=$block->getIdentifier()?>.cms-offert-block-timmer .secounds .number').click(stop);
+        function print(number){
+            if(!Number.isInteger(number)){
+                return "<span class='digit'>0</span><span class='digit'>0</span>";
+            }
+            let out="",splited =(out+number).split('');
+            if(splited.length == 1){
+                out +="<span class='digit'>0</span>";
+            }
+            for(let digit in splited){
+                out +="<span class='digit'>"+splited[digit]+"</span>";
+            }
+            /*if(isNan(out)){
+                out = 0;
+            }*/
+            return out;
+        }
+        function stop(){
+            clickToStop += 1;
+            if(clickToStop>15){
+                clearInterval(timmer<?=$block->getIdentifier()?>);
+            }
+        }
+    });
+</script>
