@@ -4,7 +4,16 @@
 
 & when (@media-common = true) {
     body{
-        //background-color: #1a1a1a!important;
+        &[class*="catalog-"] .product-item .tocart {
+            background: #193771;
+            border: 1px solid #103e7f;
+            font-size: 1.8rem;
+            border-radius: 4px;
+            line-height: 1;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            white-space: nowrap;
+        }
     }
 }
 

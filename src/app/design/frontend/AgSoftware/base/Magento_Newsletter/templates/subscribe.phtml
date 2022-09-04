@@ -12,32 +12,34 @@
             <div class="contenedor-espacio1">
                 <div class="colunna1 one">
                     <p>
-                        <a class="a-numero1" href="/" aria-label="Mageplaza">
-                            <img class="imagen1  img-two"
-                                data-src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/logo-darkbg.png"
-                                alt="Mageplaza logo white"
-                                src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/logo-darkbg.png">
+                        <a class="a-numero1" href="/"  aria-label="AgSoftware">
+                            <img class="imagen-logo"
+                                alt="<?=__("AgSoftware Logo")?>"
+                                src="<?=$block->getBaseUrl().'media/logo/default/option-3-1.png'?>">
                         </a>
                     </p>
 
                     <div class="tres">
-                        <a class="a-numerom" href="">support@mageplaza.com</a>
+                        <a class="a-numerom" href=""><?=__("agsoftware.online@gmail.com")?></a>
 
-                        <a class="a-numerom" href="#address">USA: 100 Church St, Manhattan, New York</a>
+                        <a class="a-numerom" href="#address"><?=__("Colombia: Cra 7A # 8 - 39, Guachené, Cauca")?></a>
 
-                        <a class="a-numerom" href="#address-2">VN: 102 Tran Phu, Ha Dong, Hanoi</a>
+                        <a class="a-numerom" href="#address-2"><?=__("Colombia: Cra 7A # 8 - 39, Guachené, Cauca")?></a>
                     </div>
 
                     <p>
+                        <?php /*
                         <a href="" target="_blank" rel="noopener">
                             <img data-src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/badge/badge-adobe-innovate.png"
                                 alt="Adobe Innovate Exchange Partner" class="img-two imge"
                                 src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/badge/badge-adobe-innovate.png">
                         </a>
+                        */?>
                     </p>
 
 
                     <p class="mismas">
+                    <?php /*
                         <img class="img-misma"
                             data-src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/badge/badge-cert-developer.png"
                             alt="badge-cert-developer"
@@ -50,14 +52,17 @@
                             data-src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/badge/badge-cert-frontend.png"
                             alt="badge-cert-frontend"
                             src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/badge/badge-cert-frontend.png">
+                        */?>
                     </p>
 
                     <p >
                         <a href="" target="_blank" rel="noopener">
+                        <?php /*
                             <img class="footer-img lazyload"
                                 data-src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/badge/badge-trustpilot.png"
                                 alt="mageplaza trustpilot"
                                 src="https://www.mageplaza.com/skin/frontend/mageplaza/default/img/badge/badge-trustpilot.png">
+                        */?>
                         </a>
                     </p>
                 </div>
@@ -104,9 +109,9 @@
                                 Partners</a></li>
                     </ul>
 
-                   
+
                 </div>
-                
+
                 <div class="block newsletter rojo">
                     <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
                     <div class="content conten_subscribe">
@@ -173,7 +178,7 @@
 
             <div class="contenedor-dos">
                 <div class="corto">
-                    <p class="dentro">© Copyright 2022 by Mageplaza. All Rights Reserved.</p>
+                    <p class="dentro">© Copyright 2022 by AgSoftware. All Rights Reserved.</p>
                     <p class="dentro">Magento® Commerce or Adobe Commerce is a registered trademark by Adobe.</p>
                 </div>
 
