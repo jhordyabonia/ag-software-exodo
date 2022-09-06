@@ -31,8 +31,23 @@
                     font-weight: 700;
                     margin-bottom: 24px;
                     letter-spacing: -0.03em;
+                    animation: text 1s 1;
                 }
 
+                @keyframes text {
+                    0%{
+                        /*padding-top: -40px;*/
+                        opacity: 1;
+                        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                    }
+                    100%{
+                        /*padding-top: 40px;*/
+                        opacity: 1;
+                        transform: translate3d(0px, 20px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                        transform-style: preserve-3d;
+                    }
+                }
                 .parrafo1 {
                     font-family: @fontFamily;
                     color: @parrafoColor;
@@ -104,6 +119,7 @@
                         border-radius: 32px;
                         box-shadow: e("1px 1px 10px 2px #7b88a814;");
                        
+
                         .value-icon {
                             width: 60px;
                             margin-bottom: 10px;
@@ -269,7 +285,7 @@
                         grid-row-gap: 16px;
 
                         .integration-wrap {
-                        position: relative; 
+                        position: relative;
                         display: flex;
                         max-width: 600px;
                         justify-content: center;
@@ -548,8 +564,8 @@
                     grid-template-columns: 1fr 1fr 1fr;
                     -ms-grid-rows: auto;
                     grid-template-rows: auto;
-                    
-                    
+
+
                 }
 
             }
@@ -862,6 +878,22 @@
         }
     }
 }
+    .contBloqueTres {
+        .cont1-blocTres{
+            .parrafo2{
+                color: @parrafoColor;
+            }
+        }
+        .cont2-blocTres {
+            .cont-shadow {
+                position: absolute;
+                top: 0%;
+                bottom: 0%;
+            }
+        }
+    }
+
+
 }
 
 //
