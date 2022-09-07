@@ -1,0 +1,33 @@
+//common
+
+& when (@media-common = true) {
+    .vendor-product-grid {
+        .content-table {
+            .row-table {
+                border-bottom: 1px solid #0000002e;
+                
+            }
+        }
+    }
+}
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__m) {
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break)
+    when
+    (@extremum = "min")
+    and
+    (@break = @screen__m) {
+}
