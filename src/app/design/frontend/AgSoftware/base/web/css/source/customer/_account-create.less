@@ -1,3 +1,11 @@
+//Variables
+@color-primary: #01007f;
+@color-boton-primary: #3b5998;
+@color-boton-secundary: #dd4b39;
+@color-oscuro: #000000;
+@color-claro: #ffffff;
+@Fuente1: 'Outfit';
+
 //
 //  Common
 //  _____________________________________________
@@ -6,6 +14,94 @@
     body{
         //background-color: #1a1a1a!important;
     }
+
+    .customer-account-create{
+        .page-wrapper {
+            .page-main {
+                font-family: 'Outfit';
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.4;
+                padding: 15px 15px 50px 15px;
+                color: @color-oscuro;
+                .page-title-wrapper {
+                    .page-title {
+                        font-size: 20px;
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                        color: @color-primary;
+                    }
+                }
+                .columns {
+                    .column.main {
+                        padding-bottom: 36px;
+                        .account-social-login {
+                            display: inline-block;
+                            padding-top: 50px;
+                            margin-bottom: 36px;
+                            .social-login_title {
+                                display: none;
+                                margin-top: 5px;
+                                .title-login_with {
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                }
+                            }
+                            .social-login_container {
+                                display: flex;
+                                flex-wrap: wrap;
+                                .login {
+                                    width: 215px;
+                                    max-width: 100%;
+                                    height: 35px;
+                                    margin-top: 7px;
+                                    border-radius: 5px;
+                                    a {
+                                        position: relative;
+                                        display: flex;
+                                        padding: 6px 12px 10px 44px;
+                                        text-decoration: none;
+                                        cursor: pointer;
+                                        color: @color-claro;
+                                        span {
+                                            position: absolute;
+                                            top: 0;
+                                            bottom: 0;
+                                            left: 0;
+                                            border-right: 1px solid fade(@color-oscuro, 33%);
+                                            svg {
+                                                width: 20px;
+                                                height: 20px;
+                                                padding: 6px 6px 0 6px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .account-google {
+                                    margin-right: 2.5px;
+                                    background-color: @color-boton-secundary;
+                                    border: 1px solid @color-boton-secundary;
+                                    &:hover {
+                                        background-color: #c23321;
+                                    }
+                                }
+                                .account-facebook {
+                                    margin-left: 2.5px;
+                                    background-color: @color-boton-primary;
+                                    border: 1px solid @color-boton-primary;
+                                    &:hover {
+                                        background-color: #2d4373;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 //
@@ -14,6 +110,7 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 
+   
 }
 
 //
@@ -21,5 +118,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    
 
 }
