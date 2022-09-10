@@ -79,6 +79,7 @@
                                 }
                                 .account-google {
                                     margin-right: 2.5px;
+                                    margin-left: 2.5px;
                                     background-color: @color-boton-secundary;
                                     border: 1px solid @color-boton-secundary;
                                     &:hover {
@@ -87,6 +88,7 @@
                                 }
                                 .account-facebook {
                                     margin-left: 2.5px;
+                                    margin-right: 2.5px;
                                     background-color: @color-boton-primary;
                                     border: 1px solid @color-boton-primary;
                                     &:hover {
@@ -126,6 +128,9 @@
                                             border-radius: 6px;
                                         }
                                     }
+                                }
+                                &:after {
+                                    display: none;
                                 }
                             }
                             .actions-toolbar {
@@ -177,8 +182,15 @@
                             padding: 35px 0;
                             .fieldset {
                                 display: inline-block;
-                                width: 50%;
+                                width: 45%;
+                            }
+                            .create.info {
                                 float: left;
+                                padding-left: 25px;
+                            }
+                            .create.account {
+                                float: right;
+                                padding-right: 25px;
                             }
                             .actions-toolbar {
                                 display: inline-block;
@@ -191,5 +203,4 @@
             }
         }
     }
-
 }
