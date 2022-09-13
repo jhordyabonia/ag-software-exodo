@@ -1,14 +1,12 @@
-<div class="container-user-guide">
+<div class="container-user-guide" data-mage-init='{"accordion":{
+                                    "openedState": "active",
+                                    "collapsible": true,
+                                    "active": false,
+                                    "animate":{ "duration" :300, "easing":"easeOutCubic"},
+                                    "multipleCollapsible": false}}'>
 
-    <div class="container-items" data-mage-init='{
-            "collapsible":{
-                "collapsible": true,
-                "openedState": "opened",
-                "active": false,
-                "animate":{ "duration" :300, "easing":"easeOutCubic"}
-            }}'>
-
-        <div class="container-row" data-role="title">
+    <div class="container-items" data-role="collapsible">
+        <div class="container-row" data-role="trigger">
             <div class="column-1">
                 <img class="icon-img"
                      alt="<?=__("logo Demo")?>"
@@ -33,16 +31,10 @@
     </div>
 
 
-    <div class="container-guide-content" data-mage-init='{
-            "collapsible":{
-                "collapsible": true,
-                "openedState": "opened",
-                "active": false,
-                "animate":{ "duration" :300, "easing":"easeOutCubic"}
-            }}'>
+    <div class="container-guide-content" data-role="collapsible">
 
-        <div class="container-row" data-role="title">
-            <div class="column-1">
+        <div class="container-row" data-role="trigger">
+            <div class="column-1" >
                 <img class="icon-img"
                      alt="<?=__("User Guide")?>"
                      src="<?='https://www.mageplaza.com/assets/images/icons-new/user-guide.svg'?>">
@@ -60,14 +52,8 @@
     </div>
 
 
-    <div class="container-version" data-mage-init='{
-            "collapsible":{
-                "collapsible": true,
-                "openedState": "opened",
-                "active": false,
-                "animate":{ "duration" :300, "easing":"easeOutCubic"}
-            }}'>
-        <div class="container-row" data-role="title">
+    <div class="container-version" data-role="collapsible">
+        <div class="container-row" data-role="trigger">
             <div class="column-1">
                 <img class="icon-img"
                     alt="<?=__("Magento Version Soported")?>"
