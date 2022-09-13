@@ -1,0 +1,160 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template  $block
+ * @var \Magento\Catalog\Model\Product $product;
+ */
+$product = $block->getProduct();
+?>
+<fieldset class="main-data">
+    <h2><?=__('General Information');?></h2>
+    <div class="input-Attribute">
+        <label for="vendor-product-form-name"><?=__("Attribute Set")?></label>
+        <div class="container-Attribute">
+        <select class="select-Attribute" name="Attribute Set" id="">
+        
+            
+        </select>
+
+        </div>
+    </div>
+    <div class="input-text">
+        <label for="vendor-product-form-name"><?=__("Name")?></label>
+        <input name="name" class="input-text first-four" id="vendor-product-form-name" value="<?=$product->getName()?>">
+    </div>
+    <div class="input-text">
+        <label for="vendor-product-form-sku"><?=__("Sku")?></label>
+        <input name="sku" class="input-text first-four" id="vendor-product-form-sku" value="<?=$product->getSku()?>">
+    </div>
+    <div class="input-text">
+        <label for="vendor-product-form-sku"><?=__("Vendor")?></label>
+        <input name="sku" class="input-text first-four" id="vendor-product-form-sku" value="<?=$product->getSku()?>">
+    </div>
+    <div class="input-text">
+        <label for="vendor-product-form-price"><?=__("Price")?></label>
+        <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        
+    <div class="actions-Advanced">
+        <button class="Advanced" type="submit">
+            <span ><?=__("Advanced pricing")?></span>
+        </button>
+    </div>
+    </div>
+    <div class="input-Tax">
+        <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
+        <div class="container-tax">
+        <select  class="select-tax" name="" id=""> 
+        <settings>
+                        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string"><?=__("None")?></item>
+                                
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
+                            </option>
+                           
+                        </options>
+                    </settings>
+        </select>
+
+        </div>
+    </div>
+    <div class="input-text">
+        <label for="vendor-product-form-price"><?=__("Quantity")?></label>
+        <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        
+        <div class="actions-Advanced">
+        <button class="Advanced" type="submit">
+            <span ><?=__("Advanced Inventory")?></span>
+        </button>
+    </div>
+    </div>
+    <div class="input-stock">
+        <label for="vendor-product-form-price"><?=__("stock Status")?></label>
+        <div class="container-stock">
+        <select  class="select-stock" name="" id=""> 
+        <settings>
+                        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string"><?=__("Out Of Stock")?></item>
+                                
+                            </option>
+                            
+                           
+                        </options>
+                    </settings>
+        </select>
+
+        </div>
+    </div>
+    <div class="input-weight input-text">
+        <label for="vendor-product-form-price"><?=__("weight")?></label>
+        <input name="price" class="input-text weight-one" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <div class="container-weight">
+        <select class="select-weight" name="" id="">
+        <settings>
+                        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string"><?=("This item has weight")?></item>
+                                
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=("This item has no weight")?></item>
+                            </option>
+                           
+                        </options>
+                    </settings>
+        </select>
+
+        </div>
+    </div>
+    <div class="input-Categories">
+        <label for="vendor-product-form-price"><?=__("Categories")?></label>
+        <div class="container-Categories">
+        <select  class="select-Categories" name="" id=""> </select>
+
+        </div>
+    </div>
+    <div class="input-Visibility">
+        <label for="vendor-product-form-price"><?=__(" Visibility")?></label>
+        <div class="container-Visibility">
+        <select  class="select-Visibility" name="" id=""> 
+        <settings>
+                        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string"><?=("No Visible Individually")?></item>
+                                
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=("Catalog")?></item>
+                            </option>
+
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=("Search")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=("Catalog,Search")?></item>
+                            </option>
+                           
+                        </options>
+                    </settings>
+        </select>
+
+        </div>
+    </div>
+    <div class="input-text">
+        <label for="vendor-product-form-price"><?=__("Set Product as New From")?></label>
+        <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+
+    </div>
+    <div class="input-manufacture">
+        <label for="vendor-product-form-price"><?=__("Country of manufacture")?></label>
+        <div class="container-manufacture">
+        <select class="select-manufacture"  name="" id=""></select>
+    </div>
+    </div>
+    
+</fieldset>
+
+    
