@@ -118,6 +118,7 @@
             border: 1px solid #e7eaf3;
 
             [data-role="collapsible"]{
+                cursor: pointer;
                 &[aria-expanded="true"]{
                     .column-2-arrow{
                         transform: rotate(89deg);
@@ -227,13 +228,17 @@
         }
     }
     .product{
-        .container-screen{
-            display: none;
-        }
         .fotorama__nav-wrap--horizontal{
-            padding: 40px 15px 15px;
+            padding: 15px;
             border: 1px solid rgb(231, 234, 243);
             border-radius: 0.3125rem;
+            &::before{
+                content: "Screenshots";
+                color: #193472;
+                font-size: 18px;
+                font-weight: 600;
+
+            }
         }
         .container-days-support{
             padding: 30px;
@@ -272,18 +277,14 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .product{
-        .container-screen{
-            display: block;
-            position: relative;
-            .txt-Screenshots{
-                position: absolute;
-                color: #193472;
-                margin: 0;
-                left: 16px;
-                bottom: 13.5rem;
-            }
+    .product-add-form .product-options-wrapper .field .control {
+        width: 100%;
+
+        .super-attribute-select{
+            padding: 12px 16px;
+            border: 2px solid #e7eaf3;
+            height: 47px;
+            border-radius: 4px;
         }
     }
-
 }
