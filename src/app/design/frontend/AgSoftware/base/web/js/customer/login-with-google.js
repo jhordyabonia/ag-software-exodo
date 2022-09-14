@@ -19,7 +19,7 @@ function onSignIn(googleUser) {
     });
 }
 
-//Funcion para disparar onSignIn
-function disp() {
+//pruebas
+function bu(onclick) {
   onSignIn();
 }
