@@ -33,3 +33,24 @@
         </div>
     </div>
 </section>
+
+
+
+
+<section class="account-social-login">
+    <div class="social-login_title">
+        <strong class="title-login_with">
+            <?php
+                echo __("sing up or sing in with")
+            ?>
+        </strong> 
+    </div>
+    <div class="social-login_container">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+        <div id="status">
+        </div>
+    </div>
+</section>
+
