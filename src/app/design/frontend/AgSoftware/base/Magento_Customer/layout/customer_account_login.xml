@@ -13,5 +13,7 @@
 
         </referenceContainer>
 
+        <move element="social-login-popup-authentication-social-login" destination="customer.login.container" after="account-social-login"/>
+
     </body>
 </page>

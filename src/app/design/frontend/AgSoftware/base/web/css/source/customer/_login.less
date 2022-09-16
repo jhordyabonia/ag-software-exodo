@@ -6,9 +6,6 @@
 @color-claro: #ffffff;
 @Fuente1: 'Outfit';
 
-
-
-
 //
 //  Common
 //  _____________________________________________
@@ -93,7 +90,6 @@
                             }
                             .account-social-login {
                                 display: inline-block;
-                                margin-bottom: 36px;
                                 float: right;
                                 .social-login_title {
                                     margin-top: 5px;
@@ -102,56 +98,9 @@
                                         font-weight: 500;
                                     }
                                 }
-                                .social-login_container {
-                                    display: flex;
-                                    flex-wrap: wrap;
+                                .block-content {
+                                    text-align: left;
                                     padding-top: 20px;
-                                    .login {
-                                        width: 215px;
-                                        max-width: 100%;
-                                        height: 35px;
-                                        margin-top: 7px;
-                                        border-radius: 5px;
-                                        a {
-                                            position: relative;
-                                            display: flex;
-                                            padding: 6px 12px 10px 44px;
-                                            text-decoration: none;
-                                            cursor: pointer;
-                                            color: @color-claro;
-                                            span {
-                                                position: absolute;
-                                                top: 0;
-                                                bottom: 0;
-                                                left: 0;
-                                                border-right: 1px solid fade(@color-oscuro, 33%);
-                                                svg {
-                                                    width: 20px;
-                                                    height: 20px;
-                                                    padding: 6px 6px 0 6px;
-                                                }
-                                            }
-                                        }
-                                    }
-                                    .account-google {
-                                        margin-right: 2.5px;
-                                        margin-left: 2.5px;
-                                        background-color: @color-boton-secundary;
-                                        border: 1px solid @color-boton-secundary;
-                                        &:hover {
-                                            background-color: #c23321;
-                                        }
-                                    }
-                                    .account-facebook {
-                                        margin-left: 2.5px;
-                                        margin-right: 2.5px;
-                                        background-color: @color-boton-primary;
-                                        border: 1px solid @color-boton-primary;
-                                        &:hover {
-                                            background-color: #2d4373;
-                                        }
-                                    }
-    
                                 }
                             }
                             .block-new-customer {
