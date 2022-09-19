@@ -1,25 +1,453 @@
 //
 //  Common
+
 //  _____________________________________________
 
 & when (@media-common = true) {
-    body{
-        //background-color: #1a1a1a!important;
+    .checkout-cart-index{
+        .page-title-wrapper{
+            .page-title{
+                font-size: 20px;
+            }
+        }
+            .page-wrapper{
+            .page-main{
+                .columns{
+                    .column{
+                        .cart-container{
+                            display: flex;
+                            flex-wrap: wrap;
+                            .cart-summary{
+                                
+                                padding: 1px 18px 25px;
+                                .summary{
+                                 font-weight: 400;
+                                }
+                                .checkout-methods-items{
+                                    .item{
+                                        .checkout{
+                                            padding: 8px;
+                                            background: #0d3371;
+                                            font-size: 1.9rem;
+                                        }
+                                    }
+                                }
+                                #block-shipping{
+                                    color: #333333;
+                                }
+                            }
+                            .form-cart{
+                                .actions{
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    .update{
+                                        background: #fff;
+                                        font-size: 2rem;
+                                        color: #9c9a9a;
+                                        padding: 7px 9px;
+                                    }
+                                }
+                                .table-wrapper{
+                                    .table{
+                                            .item{
+                                            .item-info{
+                                                [data-th="Item"]{
+                                                    .product-item-photo{
+                                                        width: 50%;
+                                                        left: 0;
+                                                        max-width: none;
+                                                        .product-image-container{
+                                                            width: 100%;
+                                                            max-width: none;
+                                                            margin: 4px 0px 0px;
+                                                            border: 1px solid #cccccc;
+                                                            border-radius: 5px;
+                                                            .product-image-photo{
+                                                                width: 157px;
+                                                                height: 157px;
+                                                                margin: 3px 2px 3px;
+                                                            }
+                                                        }
+                                                    }
+                                                   .product-item-details{
+                                                    .product-item-name{
+                                                        padding: 85px 0 0px;
+                                                        font-size: 1.8rem;
+                                                        font-weight: 600;
+                                                        
+                                                        a{
+                                                            color: #0d3371;
+                                                        }
+                                                    }
+                                                   }
+                                                }
+                                                .field{
+                                                    padding: 85px 0 0px;
+                                                    text-align: center;
+                                                    .control{
+                                                        [for="cart-37-qty"]{
+                                                            display: flex;
+                                                            .input-text{
+                                                                height: 38px;
+                                                                margin-top: -7px;
+                                                                text-align: center;
+                                                                width: 45px;
+                                                            }
+                                                            .content-select-cart{
+                                                                display: grid;
+                                                                margin-top: -7px;
+                                                                justify-items: center;
+                                                                align-items: center;
+                                                                margin-left: 4px;
+                                                                #content-select{
+                                                                    width: 15px;
+                                                                    height: 16px;
+                                                                    border: 1px solid #c2c2c2;
+                                                                    border-radius: 3px;
+                                                                }
+                                                                .margen_bootom{
+                                                                    margin-bottom: 1px;
+                                                                }
+                                                            }
+                                                        }
+                                                        
+                                                    }
+                                                }
+                                                .price-excluding-tax{
+                                                    padding: 85px 0 0px;
+                                                    text-align: center;
+                                                    .cart-price{
+                                                        .price{
+                                                            color: #333333;
+                                                            font-weight: 600;
+                                                            font-size: 20px;
+                                                        }
+                                                    }
+                                                }
+                                                .subtotal{
+                                                    .price-excluding-tax{
+                                                        padding: 85px 0 0px;
+                                                        text-align: center;
+                                                        .cart-price{
+                                                            .price{
+                                                                color: #0d3371;
+                                                                font-weight: 600;
+                                                                font-size: 20px;
+                                                            }
+                                                        }
+                                                    }  
+                                                }
+    
+                                            }
+                                            .item-actions{
+                                                .actions-toolbar{
+                                                    .action-edit{
+                                                        &::before{
+                                                            color: #213579;
+                                                        }
+                                                    }
+                                                    .action-delete{
+                                                        &::before{
+                                                            color: #213579;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        thead{
+                                            tr{
+                                                .price{
+                                                    text-align: center;
+                                                }
+                                                .qty{
+                                                    text-align: center;
+                                                }
+                                                .subtotal{
+                                                    text-align: center;
+                                                }
+                                            }    
+                                        }
+                                    }
+                                }
+                            }
+                            .cart-discount{
+                                border-bottom: 0;
+                                .block{
+                                    .title{
+                                        border: top 0;
+                                        #block-discount-heading{
+                                            font-weight: 600;
+                                            color: #0d3371;
+                                            font-size: 20px;
+                                        }
+                                        &::after{
+                                            display: none;
+                                        }
+                                    }
+                                    [aria-labelledby="block-discount-heading"]{
+                                        #discount-coupon-form{
+                                            width: 405px;
+                                                .field{
+                                                    width: 208px;
+                                                    .control{
+                                                        .input-text {
+                                                            border: 1px solid #eeeeee;
+                                                            font-size: 12px;
+                                                            border-radius: 1px;
+                                                            height: 38px;
+                                                        }
+                                                    }
+                                                }
+                                            .actions-toolbar{
+                                                .primary{
+                                                    background: #0d3371;
+                                                }
+                                                .action{
+                                                    padding: 11px 12px;
+                                                    color: #f7f4f4;
+                                                    font-size: 1.9rem;
+                                                    border: none;
+                                                    box-shadow: none;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                               
+                                
+                            }
+                            
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
+    
 }
-
 //
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+@media only screen and(max-width: 768px) {
+        .checkout-cart-index{
+            .page-wrapper{
+            .page-main{
+                .columns{
+                    .column{
+                        .cart-container{
+                            padding-left: 2%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            .cart-summary{
+                                order: 2;
+                            }
+                            .form-cart{
+                                margin-bottom: 35px;
+                                padding-left: none;
+                                .actions{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                }
+                                .table-wrapper{
+                                    border-top: none;
+                                    .table{
+                                            .item{
+                                                border-bottom: 1px solid #ccc;
+                                            .item-info{
+                                                [data-th="Item"]{
+                                                    padding: 6px 0px 6px 0px;
+                                                    text-align: center;
+                                                    border-bottom: 1px solid #d2d2d2;
 
+                                                    .product-item-photo{
+                                                        left: 0;
+                                                        max-width: none;
+                                                        top: 0px;
+                                                        width: 100%;
+                                                        .product-image-container{
+                                                            
+                                                            .product-image-photo{
+                                                                width: 90px;
+                                                                height: 80px;
+                                                            }
+                                                        }
+                                                    }
+                                                   .product-item-details{
+                                                    .product-item-name{
+                                                        font-size: 1.8rem;
+                                                        .item-options{
+                                                            width: 100%;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                        }
+                                                    }
+                                                   }
+                                                }
+                                                .field{
+                                                    
+                                                    .control{
+                                                        [for="cart-37-qty"]{
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            .input-text{
+                                                                height: 30px;
+                                                                margin-top: -7px;
+                                                                text-align: center;
+                                                                width: 40px;
+                                                            }
+                                                        }
+                                                        
+                                                    }
+                                                }
+                                                [data-th="Price"]{
+                                                    text-align: center;
+                                                    .price-excluding-tax{
+                                                        padding: 80px 0 0px;
+                                                        text-align: center;
+                                                        .cart-price{
+                                                            .price{
+                                                                color: #333333;
+                                                                font-size: 14px;
+                                                                font-weight: 600;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                
+                                                .subtotal{
+                                                    text-align: center;
+                                                    .price-excluding-tax{
+                                                        padding: 80px 0 0px;
+                                                        text-align: center;
+                                                        .cart-price{
+                                                            .price{
+                                                                color: #0d3371;
+                                                                font-size: 14px;
+                                                                font-weight: 600;
+                                                            }
+                                                        }
+                                                    }  
+                                                }
+    
+                                            }
+                                            .item-actions{
+                                                .actions-toolbar{
+                                                    .action-edit{
+                                                        &::before{
+                                                            color: #213579;
+                                                        }
+                                                    }
+                                                    .action-delete{
+                                                        &::before{
+                                                            color: #213579;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .cart-discount{
+                                order: 3;
+                                border-bottom: none;
+                                
+                                .block{
+                                    .title{
+                                        border-top: none;
+                                }
+                                [aria-labelledby="block-discount-heading"]{
+                                    #discount-coupon-form{
+                                        width: 290px;
+                                        .actions-toolbar{
+                                            .action{
+                                                padding: 11px 3px;
+                                            }
+                                        } 
+                                    }
+                                } 
+                            }  
+                        }
+                    }
+                }
+            }
+        }
+    }  
+    }
+}
+@media only screen and(max-width: 991px) {
+    .checkout-cart-index{
+        .page-wrapper{
+            .page-main{
+                .columns{
+                    .column{
+                        .cart-container{
+                            .cart-summary{
+                                width: 100%;
+                                position: initial;
+                            }
+                            .form-cart{
+                                width: 100%;
+                                padding-right: 4%;
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
 }
 
 //
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-
+@media only screen and(min-width: 991px) {
+    .checkout-cart-index{
+        .page-wrapper{
+            .page-main{
+                .columns{
+                    .column{
+                        .cart-container{
+                            
+                            .cart-summary{
+                                order: 2;
+                                width: 33.3%;
+                            
+                                .checkout-methods-items{
+                                    margin: 0px;
+                                }
+                            }
+                            .form-cart{
+                                width: 66%;
+                                float: left;
+                                order: 1;
+                                padding-right: 2%;
+    
+                                .table-wrapper{
+                                    .table{
+                                        .item{
+                                            .item-info{
+                                                .price-excluding-tax{
+                                                    text-align: center;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .cart-discount{
+                                order: 3;
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

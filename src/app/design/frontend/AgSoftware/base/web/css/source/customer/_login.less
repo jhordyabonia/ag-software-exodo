@@ -1,3 +1,11 @@
+//Variables
+@color-primary: #01007f;
+@color-boton-primary: #3b5998;
+@color-boton-secundary: #dd4b39;
+@color-oscuro: #000000;
+@color-claro: #ffffff;
+@Fuente1: 'Outfit';
+
 //
 //  Common
 //  _____________________________________________
@@ -6,6 +14,132 @@
     body{
         //background-color: #1a1a1a!important;
     }
+
+    .customer-account-login {
+        .page-wrapper {
+            .page-main {
+                font-family: 'Outfit';
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.4;
+                padding: 15px 15px 50px 15px;
+                color: @color-oscuro;
+                .page-title-wrapper {
+                    .page-title {
+                        font-size: 20px;
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                        color: @color-primary;
+                    }
+                }
+                .columns {
+                    .column.main {
+                        padding-bottom: 36px;
+                        .login-container {
+                            padding: 35px 25px 0;
+                            border-radius: 8px;
+                            border: 1px solid #ececec;
+                            border-top: 4px solid @color-primary;
+                            background: @color-claro;
+                            .block-customer-login {
+                                .block-title {
+                                    font-size: 18px;
+                                    margin-bottom: 15px;
+                                    padding-bottom: 0;
+                                    border-bottom: 0;
+                                }
+                                .block-content {
+                                    .form-login {
+                                        .fieldset {
+                                            margin-bottom: 0;
+                                            .field {
+                                                margin-bottom: 20px;
+                                                .control {
+                                                    width: 100%;
+                                                    input {
+                                                        height: 38px;
+                                                        font-size: 13px;
+                                                        line-height: 1.4;
+                                                        border: 1px solid #ccc;
+                                                        border-radius: 6px;
+                                                        background: @color-claro;
+                                                    }
+                                                }
+                                            }
+                                            .actions-toolbar {
+                                                margin-top: 7px;
+                                                .primary {
+                                                    button {
+                                                        height: 38px;
+                                                        line-height: 22px;
+                                                        border-radius: 0;
+                                                        border-color: @color-primary;
+                                                        background: @color-primary;
+                                                    }
+                                                }
+                                                .secondary {
+                                                    a {
+                                                        margin-top: 10px;
+                                                        color: @color-primary;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .account-social-login {
+                                display: inline-block;
+                                float: right;
+                                .social-login_title {
+                                    margin-top: 5px;
+                                    .title-login_with {
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                    }
+                                }
+                                .block-content {
+                                    text-align: left;
+                                    padding-top: 20px;
+                                }
+                            }
+                            .block-new-customer {
+                                display: inline-block;
+                                float: right;
+                                .block-title {
+                                    font-size: 18px;
+                                    line-height: 1.2;
+                                    padding: 0;
+                                    margin: 5px 0 15x 0;
+                                    border: none;
+                                }
+                                .block-content  {
+                                    p {
+                                        margin-bottom: 12px;
+                                    }
+                                    .actions-toolbar {
+                                        .primary {
+                                            a{
+                                                height: 38px;
+                                                border-radius: 3px;
+                                                color: @color-claro;
+                                                border-color: @color-primary;
+                                                background-color: @color-primary;
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+
 }
 
 //
@@ -13,6 +147,23 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+  
+    .customer-account-login {
+        .page-wrapper {
+            .page-main {
+                .columns {
+                    .column.main {
+                        .login-container {
+                            .account-social-login {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 
 }
 
@@ -22,4 +173,33 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
+    .customer-account-login {
+        .page-wrapper {
+            .page-main {
+                .columns {
+                    .column.main {
+                        .login-container {
+                            .block-customer-login {
+                                .block-content {
+                                    .form-login {
+                                        .fieldset {
+                                            .field {
+                                                .control {
+                                                    width: 55%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .account-social-login {
+                                width: 48%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }

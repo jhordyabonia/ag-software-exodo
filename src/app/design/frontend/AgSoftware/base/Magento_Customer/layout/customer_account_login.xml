@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="customer.login.container">
+            
+            <block name="account-social-login" template="Magento_Customer::account-social-login.phtml" before="customer.new"/>
+
+        </referenceContainer>
+
+        <move element="social-login-popup-authentication-social-login" destination="customer.login.container" after="account-social-login"/>
+
+    </body>
+</page>
