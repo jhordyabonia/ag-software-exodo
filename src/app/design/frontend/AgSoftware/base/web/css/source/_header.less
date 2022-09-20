@@ -267,15 +267,15 @@
                 background-color: @color-secundario;
                 .panel.header {
                     max-width: 1280px;
-                    height: 25px;
                     margin: 0 auto;
-                    padding: 10px 15px 11px 15px;
+                    padding: 11px 15px;
                     .header.links {
                         display: flex;
                         float: right;
                         margin: 0;
                         padding: 0;
                         li {
+                            align-self: center;
                             font-size: 11px;
                             font-family: @Fuente1;
                             text-transform: uppercase;
@@ -297,10 +297,16 @@
                         }
                         .greet.welcome {
                             padding: 0 15px;
+                            span {
+                                align-self: center;
+                            }
                         }
                         .link-image {
-                            margin-right: 15px;
+                            margin-right: 0;
                             order: 1;
+                            a {
+                                padding: 0 4px 0 15px;
+                            }
                         }
                         .authorization-link {
                             &::after {
@@ -352,7 +358,7 @@
                 .minicart-wrapper {
                     position: absolute;
                     top: 50%;
-                    right: 15px;
+                    right: 13px;
                     margin-top: -20px;
                     .action.showcart {
                         &:before {
