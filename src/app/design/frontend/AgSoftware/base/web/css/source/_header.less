@@ -11,9 +11,23 @@
 & when (@media-common = true) {
 
     body{
-        //background-color: #090090!important;
+        .actions-toolbar, .actions {
+            .primary {
+                .primary {
+                    background-color: @color-primario;
+                    border-color: @color-primario;
+                }
+            }
+        }
     }
-
+    body{
+        .actions {
+            .primary {
+                background-color: @color-primario;
+                border-color: @color-primario;
+            }
+        }
+    }
     .page-wrapper {
 
         .page-main>.page-title-wrapper .page-title {
@@ -79,9 +93,6 @@
         .page-header {
             border-bottom: 0;
             margin-bottom: 0;
-            .panel.wrapper {
-
-            }
             .header.content {
                 max-width: none;
                 margin: 0 auto;
@@ -102,8 +113,8 @@
                         }
                         .counter.qty {
                             position: absolute;
-                            right: 6px;
-                            top: 10x;
+                            right: 3px;
+                            top: 9px;
                             background: none;
                             font-size: 16px;
                             font-weight: bold;
@@ -204,6 +215,13 @@
                                         margin-left: 0;
                                     }
                                 }
+                                .submenu {
+                                    background: #f2f2f2;
+                                    .ui-menu-item {
+                                        padding: 0 20px;
+                                        border-bottom: none;
+                                    }
+                                }
                             }
                         }
                     }
@@ -231,12 +249,49 @@
                         .link-image {
                             order: 1;
                         }
+                        .customer-welcome {
+                            padding: 0;
+                            .customer-menu {
+                                .header.links {
+                                    .link-image {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
             }
         }
+        .page-main {
+            padding-top: 50px;
+            .columns {
+                .block-collapsible-nav {
+                    top: 0px;
+                    .block-collapsible-nav-title {
+                        border-top: none;
+                    }
+                }
+            }
+        }
     }
+    .cms-home {
+        .page-wrapper {
+            .page-header {
+                .header.content {
+                    .minicart-wrapper {
+                        .action.showcart {
+                            .counter.qty {
+                                right: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -267,15 +322,15 @@
                 background-color: @color-secundario;
                 .panel.header {
                     max-width: 1280px;
-                    height: 25px;
                     margin: 0 auto;
-                    padding: 10px 15px 11px 15px;
+                    padding: 11px 15px;
                     .header.links {
                         display: flex;
                         float: right;
                         margin: 0;
                         padding: 0;
                         li {
+                            align-self: center;
                             font-size: 11px;
                             font-family: @Fuente1;
                             text-transform: uppercase;
@@ -297,10 +352,16 @@
                         }
                         .greet.welcome {
                             padding: 0 15px;
+                            span {
+                                align-self: center;
+                            }
                         }
                         .link-image {
-                            margin-right: 15px;
+                            margin-right: 0;
                             order: 1;
+                            a {
+                                padding: 0 4px 0 15px;
+                            }
                         }
                         .authorization-link {
                             &::after {
@@ -323,9 +384,16 @@
                                     flex-direction: column;
                                     margin-top: 7px;
                                     li {
+                                        align-self: flex-start;
                                         a {
                                             color: #777;
-                                            padding: 8px;
+                                            padding: 8px 5px;
+                                            width: 175px;
+                                            border-left: none;
+                                            &:hover {
+                                                color: @color-secundario;
+                                                background: @color-primario;
+                                            }
                                         }
                                     }
                                     .link-image {
@@ -352,7 +420,7 @@
                 .minicart-wrapper {
                     position: absolute;
                     top: 50%;
-                    right: 15px;
+                    right: 13px;
                     margin-top: -20px;
                     .action.showcart {
                         &:before {
@@ -364,7 +432,7 @@
                         }
                         .counter.qty {
                             position: absolute;
-                            right: 6px;
+                            right: 5px;
                             top: 9px;
                             background: none;
                             font-size: 15px;
@@ -465,4 +533,20 @@
             }
         }
     }
+    .cms-home {
+        .page-wrapper {
+            .page-header {
+                .header.content {
+                    .minicart-wrapper {
+                        .action.showcart {
+                            .counter.qty {
+                                right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
