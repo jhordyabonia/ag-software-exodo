@@ -11,7 +11,7 @@
 & when (@media-common = true) {
 
     body{
-        .actions-toolbar {
+        .actions-toolbar, .actions {
             .primary {
                 .primary {
                     background-color: @color-primario;
@@ -20,7 +20,14 @@
             }
         }
     }
-
+    body{
+        .actions {
+            .primary {
+                background-color: @color-primario;
+                border-color: @color-primario;
+            }
+        }
+    }
     .page-wrapper {
 
         .page-main>.page-title-wrapper .page-title {
@@ -86,9 +93,6 @@
         .page-header {
             border-bottom: 0;
             margin-bottom: 0;
-            .panel.wrapper {
-
-            }
             .header.content {
                 max-width: none;
                 margin: 0 auto;
@@ -109,8 +113,8 @@
                         }
                         .counter.qty {
                             position: absolute;
-                            right: 6px;
-                            top: 10x;
+                            right: 3px;
+                            top: 9px;
                             background: none;
                             font-size: 16px;
                             font-weight: bold;
@@ -211,6 +215,13 @@
                                         margin-left: 0;
                                     }
                                 }
+                                .submenu {
+                                    background: #f2f2f2;
+                                    .ui-menu-item {
+                                        padding: 0 20px;
+                                        border-bottom: none;
+                                    }
+                                }
                             }
                         }
                     }
@@ -238,12 +249,49 @@
                         .link-image {
                             order: 1;
                         }
+                        .customer-welcome {
+                            padding: 0;
+                            .customer-menu {
+                                .header.links {
+                                    .link-image {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
             }
         }
+        .page-main {
+            padding-top: 50px;
+            .columns {
+                .block-collapsible-nav {
+                    top: 0px;
+                    .block-collapsible-nav-title {
+                        border-top: none;
+                    }
+                }
+            }
+        }
     }
+    .cms-home {
+        .page-wrapper {
+            .page-header {
+                .header.content {
+                    .minicart-wrapper {
+                        .action.showcart {
+                            .counter.qty {
+                                right: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -336,9 +384,16 @@
                                     flex-direction: column;
                                     margin-top: 7px;
                                     li {
+                                        align-self: flex-start;
                                         a {
                                             color: #777;
-                                            padding: 8px;
+                                            padding: 8px 5px;
+                                            width: 175px;
+                                            border-left: none;
+                                            &:hover {
+                                                color: @color-secundario;
+                                                background: @color-primario;
+                                            }
                                         }
                                     }
                                     .link-image {
@@ -377,7 +432,7 @@
                         }
                         .counter.qty {
                             position: absolute;
-                            right: 6px;
+                            right: 5px;
                             top: 9px;
                             background: none;
                             font-size: 15px;
@@ -478,4 +533,20 @@
             }
         }
     }
+    .cms-home {
+        .page-wrapper {
+            .page-header {
+                .header.content {
+                    .minicart-wrapper {
+                        .action.showcart {
+                            .counter.qty {
+                                right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
