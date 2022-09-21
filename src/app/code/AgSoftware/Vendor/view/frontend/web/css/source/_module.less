@@ -10,6 +10,20 @@
         min-height: 3.9rem;
     }
 
+    .label {
+        display: inline-block;
+        width: e("calc( (100%) * 0.25 - 30px );");
+        margin-left: 30px;
+        text-align: right;
+        display: inline-block;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 3.2rem;
+        padding: 0;
+        white-space: nowrap;
+    }
+
 .button-data{
     background-color: #514943;
     border-color: #514943;
@@ -161,7 +175,9 @@
                     cursor: pointer;
                     padding: 0.6rem 1rem 0.6rem;
                 }
-
+                    label{
+                        .label()
+                    }
 
                 .first-four {
                     width: e("calc( (144%) * 0.5 - 30px );");
@@ -201,10 +217,14 @@
             }
 
             .input-manufacture {
+                label{
+                 .label()
+                }
 
                 margin-bottom: 1.5rem;
 
                 .container-manufacture {
+
                     display: inline-block;
                     width: e("calc( (74%) * 0.5 - 30px );");
                     margin-left: 30px;
@@ -219,7 +239,9 @@
             }
 
             .input-Attribute {
-
+                label{
+                 .label()
+                }
                 margin-bottom: 1.5rem;
 
                 .container-Attribute {
@@ -236,7 +258,9 @@
             }
 
             .input-Tax {
-
+                label{
+                    .label()
+                   }
                 margin-bottom: 1.5rem;
 
                 .container-tax {
@@ -253,6 +277,9 @@
             }
 
             .input-weight {
+                label{
+                    .label()
+                   }
 
                 margin-bottom: 1.5rem;
 
@@ -270,6 +297,9 @@
             }
 
             .input-Categories {
+                label{
+                    .label()
+                   }
 
                 margin-bottom: 1.5rem;
 
@@ -287,7 +317,9 @@
             }
 
             .input-Visibility {
-
+                label{
+                    .label()
+                   }
                 margin-bottom: 1.5rem;
 
                 .container-Visibility {
@@ -305,7 +337,9 @@
             }
 
             .input-stock {
-
+                label{
+                    .label()
+                   }
                 margin-bottom: 1.5rem;
 
                 .container-stock {
@@ -322,57 +356,45 @@
             }
 
 
-        .button-configurations{
-            .button-data()
-        }
+        // .button-configurations{
+        //     .button-data()
+        // }
         
-        .arrow .list__arrow{
-            transform: rotate(180deg);
-        }
-        .arrow-v{
-            border-radius: 50%;
-            border: 1px solid;
-            padding: 3rem;
-        }
-        .list__arrow{
-            margin-left: auto;
-            transition: transform .3s;
-        }
+        // .arrow .list__arrow{
+        //     transform: rotate(180deg);
+        // }
+        // .arrow-v{
+        //     border-radius: 50%;
+        //     border: 1px solid;
+        //     padding: 3rem;
+        // }
+        // .list__arrow{
+        //     margin-left: auto;
+        //     transition: transform .3s;
+        // }
         
-        .list__show{
-            width: 100%;
-            list-style: none;
-            transition: height .4s;
-            height: 0;
-            margin: 0px;
-            padding: 0;
+        // .list__show{
+        //     width: 100%;
+        //     list-style: none;
+        //     transition: height .4s;
+        //     height: 0;
+        //     margin: 0px;
+        //     padding: 0;
 
-            label {
-                display: inline-block;
-                width: e("calc( (100%) * 0.25 - 30px );");
-                margin-left: 30px;
-                text-align: right;
-                display: inline-block;
-                font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                font-size: 1.4rem;
-                font-weight: 600;
-                line-height: 3.2rem;
-                padding: 0;
-                white-space: nowrap;
-            }
+            
 
 
-            select:after {
-                background-color: #e3e3e3;
-                border: 1px solid #adadad;
-                bottom: 0;
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 3.2rem;
-            }
-        }
+        //     select:after {
+        //         background-color: #e3e3e3;
+        //         border: 1px solid #adadad;
+        //         bottom: 0;
+        //         content: '';
+        //         position: absolute;
+        //         right: 0;
+        //         top: 0;
+        //         width: 3.2rem;
+        //     }
+        // }
  
  
         //collapse-data
