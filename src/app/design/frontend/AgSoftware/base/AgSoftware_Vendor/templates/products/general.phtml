@@ -240,6 +240,95 @@ $product = $block->getProduct();
 
     </div>
 
+<div class="list__item list__item--click">
+        <div class="list__button list__button--click">
+            <!-- <img src="assets/docs.svg" class="list__img"> -->
+            <a href="#" class="nav__link"><h3 class="nav__link"><?=__("Image Gallery Uploader")?></h3></a>
+            <span  class="list__arrow">
+            <i class="fa-solid fa-chevron-down arrow-v"></i>        
+        </span>        </div>
+
+        <ul class="list__show">
+            <li class="list__inside">
+                <div class="fieldset-wrapper">
+
+    <div class="upload-wrapper" data-bind="scope: 'image-uploader'">
+    <div class="container-span"> 
+        <span class="span-text"><?=__("browse to find  image here")?></span>
+    </div>
+
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+    <script type="text/x-magento-init">
+        {
+           ".upload-wrapper": {
+               "Magento_Ui/js/core/app": {
+                   "components": {
+                       "image-uploader": {
+                           "component":"Magento_Ui/js/form/element/file-uploader",
+                           "template": "ui/form/element/uploader/uploader",
+                           "previewTmpl":"AgSoftware_Vendor/image-preview",
+                           "dataScope" : "image-product",
+                           "uploaderConfig": {
+                                "url": "<?php echo $block->getUrl('vendor/products/upload/type/image-product/'); ?>"
+                           }
+                       }
+                   }
+               }
+           }
+        }
+    </script>
+                </div>
+            </li>
+
+        </ul>
+
+</div>
+
+<div class="list__item list__item--click">
+    <div class="list__button list__button--click">
+            <!-- <img src="assets/docs.svg" class="list__img"> -->
+            <a href="#" class="nav__link"><h3 class="nav__link"><?=__("File Uploader")?></h3></a>
+            <span  class="list__arrow">
+            <i class="fa-solid fa-chevron-down arrow-v"></i>        
+        </span>        </div>
+
+        <ul class="list__show">
+            <li class="list__inside">
+                <div class="fieldset-wrapper">
+
+    <div class="upload-wrapper" data-bind="scope: 'file-uploader'">
+    <div class="container-span"> 
+    </div>
+
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+    <script type="text/x-magento-init">
+        {
+           ".upload-wrapper": {
+               "Magento_Ui/js/core/app": {
+                   "components": {
+                       "image-uploader": {
+                           "component":"Magento_Ui/js/form/element/file-uploader",
+                           "template": "ui/form/element/uploader/uploader",
+                           "previewTmpl":"AgSoftware_Vendor/image-preview",
+                           "dataScope" : "image-product",
+                           "uploaderConfig": {
+                                "url": "<?php echo $block->getUrl('vendor/products/upload/type/image-product/'); ?>"
+                           }
+                       }
+                   }
+               }
+           }
+        }
+    </script>
+                </div>
+            </li>
+
+        </ul>
+
+</div>
+
     <div class="list__item list__item--click">
         <div class="list__button list__button--click">
             <!-- <img src="assets/bell.svg" class="list__img"> -->
@@ -316,7 +405,7 @@ $product = $block->getProduct();
         <div class="list__button list__button--click">
             <!-- <img src="assets/bell.svg" class="list__img"> -->
             <a href="#" class="nav__link">             
-                <h3><?=__("")?>Product in Websites </h3>
+                <h3><?=__("Product in Websites")?> </h3>
             </a>
             <span  class="list__arrow">
             <i class="fa-solid fa-chevron-down arrow-v"></i>        
@@ -324,12 +413,12 @@ $product = $block->getProduct();
 
         <ul class="list__show">
             <li class="list__inside">
-                <div class="fieldset-wrapper">
-                    <span><?=__("")?>Up-Sell Products</span>
+                <div class="fieldset-wrapper websites-wraperr">
+                    <span class="span-text"><?=__("Websites")?></span>
                     <div>
-                        <div>
-                            <span><?=__("")?>An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.</span>
-                            <button><?=__("")?>Add Up-Sell Products</button>
+                        <div class="Websites-before">
+                            <span class="span-text"><?=__("Main Websites")?></span>
+                           
                         </div>
                     </div>
                 </div>
