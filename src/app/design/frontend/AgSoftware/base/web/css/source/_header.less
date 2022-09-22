@@ -10,24 +10,6 @@
 
 & when (@media-common = true) {
 
-    body{
-        .actions-toolbar, .actions {
-            .primary {
-                .primary {
-                    background-color: @color-primario;
-                    border-color: @color-primario;
-                }
-            }
-        }
-    }
-    body{
-        .actions {
-            .primary {
-                background-color: @color-primario;
-                border-color: @color-primario;
-            }
-        }
-    }
     .page-wrapper {
 
         .page-main>.page-title-wrapper .page-title {
@@ -111,6 +93,9 @@
                             content: '\F408';
                             font-family: 'bootstrap-icons';
                         }
+                        &:hover:before {   
+                            transform: scale(1.03);
+                        }
                         .counter.qty {
                             position: absolute;
                             right: 3px;
@@ -145,8 +130,10 @@
                                     }
                                 }
                                 .label {
+                                    width: auto;
                                     margin-right: 10px;
                                     margin-top: 25px;
+                                    margin-left: 0;
                                     padding-right: 40px;
                                     &:before {
                                         font-size: 30px;
@@ -429,6 +416,9 @@
                             font-family: 'bootstrap-icons';
                             font-size: 35px;
                             line-height: 35px;
+                        }
+                        &:hover:before {  
+                            transform: scale(1.03);
                         }
                         .counter.qty {
                             position: absolute;
