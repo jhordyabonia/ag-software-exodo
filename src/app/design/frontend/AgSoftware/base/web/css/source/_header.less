@@ -111,8 +111,8 @@
                             content: '\F408';
                             font-family: 'bootstrap-icons';
                         }
-                        &:hover:before {
-                            color: #000;
+                        &:hover:before {   
+                            transform: scale(1.03);
                         }
                         .counter.qty {
                             position: absolute;
@@ -148,8 +148,10 @@
                                     }
                                 }
                                 .label {
+                                    width: auto;
                                     margin-right: 10px;
                                     margin-top: 25px;
+                                    margin-left: 0;
                                     padding-right: 40px;
                                     &:before {
                                         font-size: 30px;
@@ -432,6 +434,9 @@
                             font-family: 'bootstrap-icons';
                             font-size: 35px;
                             line-height: 35px;
+                        }
+                        &:hover:before {  
+                            transform: scale(1.03);
                         }
                         .counter.qty {
                             position: absolute;
