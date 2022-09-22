@@ -84,9 +84,10 @@
 
     .bloqueCuatro {
         .content-servicio {
-            padding: 80px 3%;
+            padding: 22px 3%;
             background-color: transparent;
             font-family: @fontFamily;
+            margin-bottom: -60px;
 
             .title-wrap {
                 display: flex;
@@ -204,7 +205,7 @@
                         flex-direction: column;
                         text-align: left;
                         align-items: flex-start;
-                        justify-content: center;
+                        
                         background-color: #ffffff;
                         box-shadow: e("1px 1px 10px 2px #7b88a814");
 
@@ -216,6 +217,7 @@
                         .icon-medium {
                             width: 64px;
                             margin-bottom: 24px;
+                            height: 64px;
                         }
 
                         .paragraph-large {
@@ -250,6 +252,30 @@
                         opacity: 1;
                         transform-style: preserve-3d;
                     }
+
+                    .card-senior{ 
+                        transition: width 1s, height 1s;
+                    }
+
+                    .card-senior:hover{
+                        background-color: #dcd1ff;
+                        transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                        opacity: 1;
+                        transform-style: preserve-3d;
+                    }
+
+                    .feature-block-white{
+                        transition: width 1s, height 1s;
+                    }
+
+                    .feature-block-white:hover{
+                        background-color: #dcd1ff;
+                        transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                        opacity: 1;
+                        transform-style: preserve-3d;
+                    }
+
+
                 }
 
 
@@ -263,6 +289,7 @@
         .content-compania {
             padding: 0px 3% 80px;
             font-family: Montserrat, sans-serif;
+            margin-top: -53px;
 
             .contecnt-conectados {
                 width: 100%;
@@ -332,7 +359,7 @@
 
     .contBloqueDos {
         text-align: center;
-        padding: 242px 0;
+        padding: 50px 0;
 
         .titulo2 {
             font-family: @fontFamily;
@@ -370,10 +397,13 @@
     }
 
     .contBloqueTres {
-        padding: 50px 0;
+        padding: 24px 36px;
+        margin-bottom: -61px;
+        margin-top: -65px;
 
         .cont1-blocTres {
             padding: 10px;
+            margin-top: -48px;
 
             .titulo2 {
                 font-size: 36px;
