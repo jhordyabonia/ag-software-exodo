@@ -144,8 +144,8 @@ $product = $block->getProduct();
     </div>
     <div class="input-text">
         <label for="vendor-product-form-price"><?=__("Set Product as New From")?></label>
-        <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-        <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" type="date" class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" type="date"  class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
 
     </div>
     <div class="input-manufacture">
@@ -177,39 +177,17 @@ $product = $block->getProduct();
         <ul class="list__show">
             <div class="list__inside">
                 <div class="fieldset-wrapper">
-                    <span><?=__("Related Products")?> </span>
+                    <span><?=__(" Short Description")?> </span>
                     <div>
                         <div>
-                            <span><?=__("Related products are shown to customers in addition to the item the customer is looking at.")?></span>
-                            <button><?=__("Add Related Products")?></button>
+                           <textarea name="" id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                 </div>
-                <div></div>
             </div>
-            <div>
-            <div class="fieldset-wrapper">
-                <span><?=__("Up-Sell Products")?></span>
-                <div>
-                    <div>
-                        <span><?=__("An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.")?></span>
-                        <button><?=__("Add Up-Sell Products")?></button>
-                    </div>
-                </div>
-            </div>
-            <div></div>
-        </div>
+          
         <div>
-    <div class="fieldset-wrapper">
-        <span><?=__("Up-Sell Products")?></span>
-        <div>
-            <div>
-                <span><?=__("An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.")?></span>
-                <button><?=__("Add Up-Sell Products")?></button>
-            </div>
-        </div>
-    </div>
-    <div></div>
+ 
 </div>
 
         </ul>
@@ -415,21 +393,12 @@ $product = $block->getProduct();
             <li class="list__inside">
 
                 <div class="fieldset-wrapper websites-wraperr">
-                    <span class="span-text"><?=__("Websites")?></span>
+                    <span class="span-text websites-text"><?=__("Websites")?></span>
                     <div>
                         <div class="Websites-before">
                             <span class="span-text"><?=__("Main Websites")?></span>
                            
-                <div class="fieldset-wrapper">
-                    <span><?=__("Up-Sell Products")?></span>
-                    <div>
-                        <div>
-                            <span><?=__("An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.")?></span>
-                            <button><?=__("Add Up-Sell Products")?></button>
-
-                        </div>
-                    </div>
-                </div>
+               
                 
             </li>
         </ul>
@@ -450,17 +419,38 @@ $product = $block->getProduct();
             <li class="list__inside">
                 <div class="fieldset-wrapper">
                 <div class="input-Tax">
-        <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
-        <div class="container-tax">
+         <label for=""><?=__("Layaout")?></label>
+        <div class="select-collapsible">
         <select  class="select-tax" name="" id=""> 
         <settings>
                         <options>
                             <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("None")?></item>
+                                <item name="value" xsi:type="string"><?=__("No Layaout Updates ")?></item>
                                 
                             </option>
                             <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
+                                <item name="label" xsi:type="string"><?=__("Empty")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("1 Colomn")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("2 Columns With left bar")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("2 columns with rightbar")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("3 Column")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Page -- Full width")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Category -- full width")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Category -- full width")?></item>
                             </option>
                            
                         </options>
@@ -470,17 +460,17 @@ $product = $block->getProduct();
         </div>
     </div>
     <div class="input-Tax">
-        <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
-        <div class="container-tax">
+        <label for=""><?=__(" Display Product Options In")?></label>
+        <div class="select-collapsible">
         <select  class="select-tax" name="" id=""> 
         <settings>
                         <options>
                             <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("None")?></item>
+                                <item name="value" xsi:type="string"><?=__("Product Info Column")?></item>
                                 
                             </option>
                             <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
+                                <item name="label" xsi:type="string"><?=__("Block After Info Column")?></item>
                             </option>
                            
                         </options>
@@ -490,18 +480,16 @@ $product = $block->getProduct();
         </div>
     </div>
     <div class="input-Tax">
-        <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
-        <div class="container-tax">
+        <label for=""><?=__(" Custom Layout Update")?></label>
+        <div class="select-collapsible">
         <select  class="select-tax" name="" id=""> 
         <settings>
                         <options>
                             <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("None")?></item>
+                                <item name="value" xsi:type="string"><?=__("No Update")?></item>
                                 
                             </option>
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
-                            </option>
+                            
                            
                         </options>
                     </settings>
@@ -509,26 +497,7 @@ $product = $block->getProduct();
 
         </div>
     </div>
-    <div class="input-Tax">
-        <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
-        <div class="container-tax">
-        <select  class="select-tax" name="" id=""> 
-        <settings>
-                        <options>
-                            <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("None")?></item>
-                                
-                            </option>
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
-                            </option>
-                           
-                        </options>
-                    </settings>
-        </select>
-
-        </div>
-    </div>
+   
                 </div>
                 
             </li>
@@ -540,7 +509,7 @@ $product = $block->getProduct();
         <div class="list__button list__button--click">
             <!-- <img src="assets/bell.svg" class="list__img"> -->
             <a href="#" class="nav__link">             
-                <h3><?=__("")?>Schedule Design Update </h3>
+                <h3><?=__("Shedule Desing Update")?> </h3>
             </a>
             <span  class="list__arrow">
             <i class="fa-solid fa-chevron-down arrow-v"></i>        
@@ -549,19 +518,73 @@ $product = $block->getProduct();
         <ul class="list__show">
             <li class="list__inside">
                 <div class="fieldset-wrapper">
-                <div class="input-weight input-text">
-        <label for="vendor-product-form-price"><?=__("weight")?></label>
-        <input name="price" class="input-text weight-one" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-        <div class="container-weight">
-        <select class="select-weight" name="" id="">
+                <div class="input-text">
+        <label for=""><?=__(" Schedule Update From")?></label>
+        <input name="price" type="date" class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" type="date"  class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+
+    </div>
+                <div class="input-Tax">
+         <label for=""><?=__(" New Theme")?></label>
+        <div class="select-collapsible">
+        <select  class="select-tax" name="" id=""> 
         <settings>
                         <options>
                             <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=("This item has weight")?></item>
+                                <item name="value" xsi:type="string"><?=__("--Please Select--")?></item>
                                 
                             </option>
                             <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=("This item has no weight")?></item>
+                                <item name="label" xsi:type="string"><?=__("Ag software")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Magento Blank")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Magento Luma")?></item>
+                            </option>
+                            
+                           
+                           
+                        </options>
+                    </settings>
+        </select>
+
+        </div>
+    </div>
+    <div class="input-Tax">
+        <label for=""><?=__("  New Layout")?></label>
+        <div class="select-collapsible">
+        <select  class="select-tax" name="" id=""> 
+        <settings>
+        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string"><?=__("No Layaout Updates ")?></item>
+                                
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Empty")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("1 Colomn")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("2 Columns With left bar")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("2 columns with rightbar")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("3 Column")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Page -- Full width")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Category -- full width")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Category -- full width")?></item>
                             </option>
                            
                         </options>
@@ -570,16 +593,8 @@ $product = $block->getProduct();
 
         </div>
     </div>
-    <div class="input-weight input-text">
-        <label for="vendor-product-form-price"><?=__("weight")?></label>
-        <input name="price" class="input-text weight-one" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-       
-    </div>
-    <div class="input-weight input-text">
-        <label for="vendor-product-form-price"><?=__("weight")?></label>
-        <input name="price" class="input-text weight-one" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-        
-    </div>
+    
+   
                 </div>
                 
             </li>
