@@ -11,7 +11,16 @@ $product = $block->getProduct();
         <label for="vendor-product-form-name"><?=__("Attribute Set")?></label>
         <div class="container-Attribute">
         <select class="select-Attribute" name="Attribute Set" id="">
-        
+                       <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string"><?=__("Default")?></item>
+                                
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
+                            </option>
+                           
+                        </options>
             
         </select>
 
@@ -111,7 +120,18 @@ $product = $block->getProduct();
     <div class="input-Categories">
         <label for="vendor-product-form-price"><?=__("Categories")?></label>
         <div class="container-Categories">
-        <select  class="select-Categories" name="" id=""> </select>
+        <select  class="select-Categories" name="" id=""> 
+        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string"><?=__("Default")?></item>
+                                
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
+                            </option>
+                           
+                        </options>
+        </select>
 
         </div>
     </div>
@@ -144,8 +164,8 @@ $product = $block->getProduct();
     </div>
     <div class="input-text">
         <label for="vendor-product-form-price"><?=__("Set Product as New From")?></label>
-        <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-        <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" type="date" class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" type="date"  class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
 
     </div>
     <div class="input-manufacture">
@@ -177,39 +197,17 @@ $product = $block->getProduct();
         <ul class="list__show">
             <div class="list__inside">
                 <div class="fieldset-wrapper">
-                    <span><?=__("Related Products")?> </span>
+                    <span><?=__(" Short Description")?> </span>
                     <div>
                         <div>
-                            <span><?=__("Related products are shown to customers in addition to the item the customer is looking at.")?></span>
-                            <button><?=__("Add Related Products")?></button>
+                           <textarea name="" id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                 </div>
-                <div></div>
             </div>
-            <div>
-            <div class="fieldset-wrapper">
-                <span><?=__("Up-Sell Products")?></span>
-                <div>
-                    <div>
-                        <span><?=__("An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.")?></span>
-                        <button><?=__("Add Up-Sell Products")?></button>
-                    </div>
-                </div>
-            </div>
-            <div></div>
-        </div>
+          
         <div>
-    <div class="fieldset-wrapper">
-        <span><?=__("Up-Sell Products")?></span>
-        <div>
-            <div>
-                <span><?=__("An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.")?></span>
-                <button><?=__("Add Up-Sell Products")?></button>
-            </div>
-        </div>
-    </div>
-    <div></div>
+ 
 </div>
 
         </ul>
@@ -218,6 +216,7 @@ $product = $block->getProduct();
 
     <div class="list__item list__item--click">
         <div class="list__button list__button--click">
+            <!-- <img src="assets/docs.svg" class="list__img"> -->
             <a href="#" class="nav__link"><h3 class="nav__link"><?=__("Configurations")?></h3></a>
             <span  class="list__arrow">
             <i class="fa-solid fa-chevron-down arrow-v"></i>        
@@ -239,95 +238,6 @@ $product = $block->getProduct();
 
     </div>
 
-<div class="list__item list__item--click">
-        <div class="list__button list__button--click">
-            <!-- <img src="assets/docs.svg" class="list__img"> -->
-            <a href="#" class="nav__link"><h3 class="nav__link"><?=__("Image Gallery Uploader")?></h3></a>
-            <span  class="list__arrow">
-            <i class="fa-solid fa-chevron-down arrow-v"></i>        
-        </span>        </div>
-
-        <ul class="list__show">
-            <li class="list__inside">
-                <div class="fieldset-wrapper">
-
-    <div class="upload-wrapper" data-bind="scope: 'image-uploader'">
-    <div class="container-span"> 
-        <span class="span-text"><?=__("browse to find  image here")?></span>
-    </div>
-
-        <!-- ko template: getTemplate() --><!-- /ko -->
-    </div>
-    <script type="text/x-magento-init">
-        {
-           ".upload-wrapper": {
-               "Magento_Ui/js/core/app": {
-                   "components": {
-                       "image-uploader": {
-                           "component":"Magento_Ui/js/form/element/file-uploader",
-                           "template": "ui/form/element/uploader/uploader",
-                           "previewTmpl":"AgSoftware_Vendor/image-preview",
-                           "dataScope" : "image-product",
-                           "uploaderConfig": {
-                                "url": "<?php echo $block->getUrl('vendor/products/upload/type/image-product/'); ?>"
-                           }
-                       }
-                   }
-               }
-           }
-        }
-    </script>
-                </div>
-            </li>
-
-        </ul>
-
-</div>
-
-<div class="list__item list__item--click">
-    <div class="list__button list__button--click">
-            <!-- <img src="assets/docs.svg" class="list__img"> -->
-            <a href="#" class="nav__link"><h3 class="nav__link"><?=__("File Uploader")?></h3></a>
-            <span  class="list__arrow">
-            <i class="fa-solid fa-chevron-down arrow-v"></i>        
-        </span>        </div>
-
-        <ul class="list__show">
-            <li class="list__inside">
-                <div class="fieldset-wrapper">
-
-    <div class="upload-wrapper" data-bind="scope: 'file-uploader'">
-    <div class="container-span"> 
-    </div>
-
-        <!-- ko template: getTemplate() --><!-- /ko -->
-    </div>
-    <script type="text/x-magento-init">
-        {
-           ".upload-wrapper": {
-               "Magento_Ui/js/core/app": {
-                   "components": {
-                       "image-uploader": {
-                           "component":"Magento_Ui/js/form/element/file-uploader",
-                           "template": "ui/form/element/uploader/uploader",
-                           "previewTmpl":"AgSoftware_Vendor/image-preview",
-                           "dataScope" : "image-product",
-                           "uploaderConfig": {
-                                "url": "<?php echo $block->getUrl('vendor/products/upload/type/image-product/'); ?>"
-                           }
-                       }
-                   }
-               }
-           }
-        }
-    </script>
-                </div>
-            </li>
-
-        </ul>
-
-</div>
-
     <div class="list__item list__item--click">
         <div class="list__button list__button--click">
             <!-- <img src="assets/bell.svg" class="list__img"> -->
@@ -344,7 +254,7 @@ $product = $block->getProduct();
                     <span class="relatic-span"><?=__("Related Products")?></span>
                     <div class="content-text-button">
                         <div class="text-button-click">
-                            <span class="span-text"><?=__("Related products are shown to customers in addition to the item the customer is looking at.")?></span>
+                            <span class="span-text"><?=__("")?>An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.</span>
                             <button class="button-configurations"><?=__("Add Related Products")?></button>
                         </div>
                     </div>
@@ -354,7 +264,7 @@ $product = $block->getProduct();
                     <span class="relatic-span"><?=__("Up-Sell Products")?></span>
                     <div class="content-text-button">
                         <div class="text-button-click">
-                            <span class="span-text"><?=__("An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.")?></span>
+                            <span class="span-text"><?=__("")?>An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.</span>
                             <button class="button-configurations"><?=__("Add Up-Sell Products")?></button>
                         </div>
                     </div>
@@ -364,7 +274,7 @@ $product = $block->getProduct();
                     <span class="relatic-span"><?=__("Cross-Sell Products")?></span>
                     <div class="content-text-button">
                         <div class="text-button-click">
-                            <span class="span-text"><?=__('These "impulse-buy" products appear next to the shopping cart as cross-sells to the items already in the shopping cart.')?></span>
+                            <span class="span-text"><?=__("")?>An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.</span>
                             <button class="button-configurations"><?=__("Add Cross-Sell Products")?></button>
                         </div>
                     </div>
@@ -390,7 +300,7 @@ $product = $block->getProduct();
                     <div class="content-text-button">
                         <div class="text-button-click">
                             <span><?=__("Custom options let customers choose the product variations they want.")?></span>
-                            <button class="button-configurations"><?=__("Add Up-Sell Products")?></button>
+                            <button class="button-configurations"><?=__("")?>Add Up-Sell Products</button>
                         </div>
                     </div>
                 </div>
@@ -404,8 +314,7 @@ $product = $block->getProduct();
         <div class="list__button list__button--click">
             <!-- <img src="assets/bell.svg" class="list__img"> -->
             <a href="#" class="nav__link">             
-
-                <h3><?=__("Product in Websites ")?></h3>
+                <h3><?=__("")?>Product in Websites </h3>
             </a>
             <span  class="list__arrow">
             <i class="fa-solid fa-chevron-down arrow-v"></i>        
@@ -413,23 +322,26 @@ $product = $block->getProduct();
 
         <ul class="list__show">
             <li class="list__inside">
+<<<<<<< HEAD
+                <div class="fieldset-wrapper">
+                    <span><?=__("")?>Up-Sell Products</span>
+                    <div>
+                        <div>
+                            <span><?=__("")?>An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.</span>
+                            <button><?=__("")?>Add Up-Sell Products</button>
+                        </div>
+                    </div>
+                </div>
+=======
 
                 <div class="fieldset-wrapper websites-wraperr">
-                    <span class="span-text"><?=__("Websites")?></span>
+                    <span class="span-text websites-text"><?=__("Websites")?></span>
                     <div>
                         <div class="Websites-before">
                             <span class="span-text"><?=__("Main Websites")?></span>
                            
-                <div class="fieldset-wrapper">
-                    <span><?=__("Up-Sell Products")?></span>
-                    <div>
-                        <div>
-                            <span><?=__("An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.")?></span>
-                            <button><?=__("Add Up-Sell Products")?></button>
-
-                        </div>
-                    </div>
-                </div>
+               
+>>>>>>> 5799831a374c86dfe8986f295ad284ba5e98ac65
                 
             </li>
         </ul>
@@ -440,7 +352,7 @@ $product = $block->getProduct();
         <div class="list__button list__button--click">
             <!-- <img src="assets/bell.svg" class="list__img"> -->
             <a href="#" class="nav__link">             
-                <h3><?=__("Design")?> </h3>
+                <h3><?=__("")?>Design </h3>
             </a>
             <span  class="list__arrow">
             <i class="fa-solid fa-chevron-down arrow-v"></i>        
@@ -450,17 +362,38 @@ $product = $block->getProduct();
             <li class="list__inside">
                 <div class="fieldset-wrapper">
                 <div class="input-Tax">
-        <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
-        <div class="container-tax">
+         <label for=""><?=__("Layaout")?></label>
+        <div class="select-collapsible">
         <select  class="select-tax" name="" id=""> 
         <settings>
                         <options>
                             <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("None")?></item>
+                                <item name="value" xsi:type="string"><?=__("No Layaout Updates ")?></item>
                                 
                             </option>
                             <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
+                                <item name="label" xsi:type="string"><?=__("Empty")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("1 Colomn")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("2 Columns With left bar")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("2 columns with rightbar")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("3 Column")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Page -- Full width")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Category -- full width")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Category -- full width")?></item>
                             </option>
                            
                         </options>
@@ -470,17 +403,17 @@ $product = $block->getProduct();
         </div>
     </div>
     <div class="input-Tax">
-        <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
-        <div class="container-tax">
+        <label for=""><?=__(" Display Product Options In")?></label>
+        <div class="select-collapsible">
         <select  class="select-tax" name="" id=""> 
         <settings>
                         <options>
                             <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("None")?></item>
+                                <item name="value" xsi:type="string"><?=__("Product Info Column")?></item>
                                 
                             </option>
                             <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
+                                <item name="label" xsi:type="string"><?=__("Block After Info Column")?></item>
                             </option>
                            
                         </options>
@@ -490,18 +423,16 @@ $product = $block->getProduct();
         </div>
     </div>
     <div class="input-Tax">
-        <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
-        <div class="container-tax">
+        <label for=""><?=__(" Custom Layout Update")?></label>
+        <div class="select-collapsible">
         <select  class="select-tax" name="" id=""> 
         <settings>
                         <options>
                             <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("None")?></item>
+                                <item name="value" xsi:type="string"><?=__("No Update")?></item>
                                 
                             </option>
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
-                            </option>
+                            
                            
                         </options>
                     </settings>
@@ -509,26 +440,7 @@ $product = $block->getProduct();
 
         </div>
     </div>
-    <div class="input-Tax">
-        <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
-        <div class="container-tax">
-        <select  class="select-tax" name="" id=""> 
-        <settings>
-                        <options>
-                            <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("None")?></item>
-                                
-                            </option>
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
-                            </option>
-                           
-                        </options>
-                    </settings>
-        </select>
-
-        </div>
-    </div>
+   
                 </div>
                 
             </li>
@@ -540,7 +452,7 @@ $product = $block->getProduct();
         <div class="list__button list__button--click">
             <!-- <img src="assets/bell.svg" class="list__img"> -->
             <a href="#" class="nav__link">             
-                <h3><?=__("")?>Schedule Design Update </h3>
+                <h3><?=__("Shedule Desing Update")?> </h3>
             </a>
             <span  class="list__arrow">
             <i class="fa-solid fa-chevron-down arrow-v"></i>        
@@ -549,19 +461,82 @@ $product = $block->getProduct();
         <ul class="list__show">
             <li class="list__inside">
                 <div class="fieldset-wrapper">
-                <div class="input-weight input-text">
-        <label for="vendor-product-form-price"><?=__("weight")?></label>
-        <input name="price" class="input-text weight-one" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-        <div class="container-weight">
-        <select class="select-weight" name="" id="">
+<<<<<<< HEAD
+                    <span><?=__("")?>Up-Sell Products</span>
+                    <div>
+                        <div>
+                            <span><?=__("")?>An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.</span>
+                            <button><?=__("")?>Add Up-Sell Products</button>
+                        </div>
+                    </div>
+=======
+                <div class="input-text">
+        <label for=""><?=__(" Schedule Update From")?></label>
+        <input name="price" type="date" class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" type="date"  class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+
+    </div>
+                <div class="input-Tax">
+         <label for=""><?=__(" New Theme")?></label>
+        <div class="select-collapsible">
+        <select  class="select-tax" name="" id=""> 
         <settings>
                         <options>
                             <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=("This item has weight")?></item>
+                                <item name="value" xsi:type="string"><?=__("--Please Select--")?></item>
                                 
                             </option>
                             <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=("This item has no weight")?></item>
+                                <item name="label" xsi:type="string"><?=__("Ag software")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Magento Blank")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Magento Luma")?></item>
+                            </option>
+                            
+                           
+                           
+                        </options>
+                    </settings>
+        </select>
+
+        </div>
+    </div>
+    <div class="input-Tax">
+        <label for=""><?=__("  New Layout")?></label>
+        <div class="select-collapsible">
+        <select  class="select-tax" name="" id=""> 
+        <settings>
+        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string"><?=__("No Layaout Updates ")?></item>
+                                
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Empty")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("1 Colomn")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("2 Columns With left bar")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("2 columns with rightbar")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("3 Column")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Page -- Full width")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Category -- full width")?></item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=__("Category -- full width")?></item>
                             </option>
                            
                         </options>
@@ -570,16 +545,9 @@ $product = $block->getProduct();
 
         </div>
     </div>
-    <div class="input-weight input-text">
-        <label for="vendor-product-form-price"><?=__("weight")?></label>
-        <input name="price" class="input-text weight-one" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-       
-    </div>
-    <div class="input-weight input-text">
-        <label for="vendor-product-form-price"><?=__("weight")?></label>
-        <input name="price" class="input-text weight-one" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-        
-    </div>
+    
+   
+>>>>>>> 5799831a374c86dfe8986f295ad284ba5e98ac65
                 </div>
                 
             </li>
@@ -619,7 +587,7 @@ $product = $block->getProduct();
         <div class="list__button list__button--click">
             <!-- <img src="assets/bell.svg" class="list__img"> -->
             <a href="#" class="nav__link">             
-                <h3><?=__("Downloadable Information")?> </h3>
+                <h3><?=__("")?>Downloadable Information </h3>
             </a>
             <span  class="list__arrow">
             <i class="fa-solid fa-chevron-down arrow-v"></i>        
@@ -629,7 +597,7 @@ $product = $block->getProduct();
         <ul class="list__show">
             <li class="list__inside">
                 <div class="fieldset-wrapper">
-                    <span><?=__("Up-Sell Products")?></span>
+                    <span><?=__("")?>Up-Sell Products</span>
                     <div>
                         <div>
                             <span><?=__("")?>An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.</span>

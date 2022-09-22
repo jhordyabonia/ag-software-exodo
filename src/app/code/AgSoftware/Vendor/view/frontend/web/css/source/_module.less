@@ -3,7 +3,7 @@
         -moz-appearance:none;
         -ms-appearance:none;
         appearance:none;
-        background-image: url(https://powermagento.test/static/version1663021632/adminhtml/Magento/backend/en_US/images/arrows-bg.svg), linear-gradient(#e3e3e3, #e3e3e3), linear-gradient(#adadad, #adadad);
+        background-image: url("https://exodo.local/static/version1663864477/adminhtml/Magento/backend/en_US/images/arrows-bg.svg"), linear-gradient(#e3e3e3, #e3e3e3), linear-gradient(#adadad, #adadad);
         background-position: e("calc(100% - 12px) -34px, 100%, calc(100% - 3.2rem) 0;");
         background-size: auto, 3.2rem 100%, 1px 100%;
         background-repeat: no-repeat;
@@ -194,11 +194,14 @@
                 .categories {
                     width: 47%;
                 }
+                .input-date-form{
+                    width: e("calc( (39%) * 0.5 - 30px );");
+                            min-height: 3.9rem;
+                            margin-bottom: 2.5rem;
 
-                // .Visibility{
-                //     width: 14.3%;
+                }
 
-                // }
+                
 
 
                 .actions-Advanced {
@@ -221,7 +224,7 @@
                  .label()
                 }
 
-                margin-bottom: 1.5rem;
+                margin-bottom: 2.5rem;
 
                 .container-manufacture {
 
@@ -261,7 +264,7 @@
                 label{
                     .label()
                    }
-                margin-bottom: 1.5rem;
+                margin-bottom: 2.5rem;
 
                 .container-tax {
                     display: inline-block;
@@ -281,7 +284,7 @@
                     .label()
                    }
 
-                margin-bottom: 1.5rem;
+                margin-bottom: 2.5rem;
 
                 .container-weight {
                     display: inline-block;
@@ -301,7 +304,7 @@
                     .label()
                    }
 
-                margin-bottom: 1.5rem;
+                margin-bottom: 2.5rem;
 
                 .container-Categories {
                     display: inline-block;
@@ -320,7 +323,7 @@
                 label{
                     .label()
                    }
-                margin-bottom: 1.5rem;
+                margin-bottom: 2.5rem;
 
                 .container-Visibility {
                     display: inline-block;
@@ -340,7 +343,7 @@
                 label{
                     .label()
                    }
-                margin-bottom: 1.5rem;
+                margin-bottom: 2.5rem;
 
                 .container-stock {
                     display: inline-block;
@@ -356,47 +359,7 @@
             }
 
 
-        // .button-configurations{
-        //     .button-data()
-        // }
         
-        // .arrow .list__arrow{
-        //     transform: rotate(180deg);
-        // }
-        // .arrow-v{
-        //     border-radius: 50%;
-        //     border: 1px solid;
-        //     padding: 3rem;
-        // }
-        // .list__arrow{
-        //     margin-left: auto;
-        //     transition: transform .3s;
-        // }
-        
-        // .list__show{
-        //     width: 100%;
-        //     list-style: none;
-        //     transition: height .4s;
-        //     height: 0;
-        //     margin: 0px;
-        //     padding: 0;
-
-            
-
-
-        //     select:after {
-        //         background-color: #e3e3e3;
-        //         border: 1px solid #adadad;
-        //         bottom: 0;
-        //         content: '';
-        //         position: absolute;
-        //         right: 0;
-        //         top: 0;
-        //         width: 3.2rem;
-        //     }
-        // }
- 
- 
         //collapse-data
 }
 .display-media{
@@ -409,14 +372,12 @@
 }
 
 .display-media .first-column div, .second-column div {
-    // width: 100%;
     padding: 12px 15px;
 }
 
 .nav__link{
     color: #303440;
     display: block;
-    //padding: 15px 0;
     text-decoration: none;
 }
 
@@ -430,25 +391,15 @@
     background: #F6F8FA;
 }
 
-/* .list{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 0 16px 16px 0;
-    background: #fff;
-} */
+
 
 .display-media .list h3{
     clear: both;
     color: #303030;
     cursor: pointer;
     display: block;
-    //font-size: 1.7rem;
     font-weight: 600;
     letter-spacing: .025em;
-    //padding: 1.9rem 2.8rem 1.9rem 0;
     position: relative;
     text-decoration: none;
     transition: color .15s linear;
@@ -482,7 +433,6 @@
     line-height: 20px;
     color: #7D7D7D;
     margin: 15px 20px;
-    /* border-bottom: 2px solid #EDEDED; */
     padding-bottom: 10px;
 }
 
@@ -491,7 +441,6 @@
     list-style: none;
     width: 100%;
     overflow: hidden;
-  //border: 1px solid #EDEDED;
     border-bottom:  1px solid #EDEDED;
     border-top:  1px solid #EDEDED;
 }
@@ -511,6 +460,10 @@
     width: 63%;
     color: #41362f;
     font-size: 1.4rem;
+}
+
+.websites-text{
+    width: auto;
 }
 
 .relatic-span{
@@ -535,9 +488,7 @@
 .list__button{
     display: flex;
     align-items: center;
-    /* gap: 1em; */
-    /* width: 70%; */
-    /* margin: 0 auto; */
+  
 }
 
 .button-configurations{
@@ -574,6 +525,37 @@
                 .button-data()
             }
         }
+        .input-Tax {
+            label{
+                .label()
+               }
+          
+
+            .select-collapsible {
+                display: inline-block;
+                width: e("calc( (49.1%) * 0.5 - 30px );");
+                margin-left: 1.5rem;
+
+
+                .select-tax {
+                    .input_select()
+                }
+            }
+        }
+
+        .input-text{
+            label{
+                .label()
+               }
+
+               .input-date-form{
+                width: e("calc( (39%) * 0.5 - 30px );");
+                        min-height: 3.9rem;
+                        margin-left: 3rem;
+            }
+        }
+
+        
         
     }
 
@@ -594,6 +576,21 @@
             text-align: center;
             vertical-align: top;
             width: 1.6rem;
+            margin-right: 10px;
+        }
+
+        .select-desing {
+            margin-left: 30px;
+            font-weight: 400;
+            height: auto;
+            vertical-align: baseline;
+            border: e("1px solid #adadad;");
+            cursor: pointer;
+            min-height: 2.5rem;
+            padding-right: 3.6rem;
+            cursor: pointer;
+            padding: 0.6rem 1rem 0.6rem;
+            .input_select()
         }
 
         
