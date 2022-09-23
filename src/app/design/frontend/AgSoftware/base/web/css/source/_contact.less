@@ -11,27 +11,47 @@
 
 & when (@media-common = true) {
 
-        .actions-toolbar {
+    .actions-toolbar {
+        .primary {
             .primary {
-                .primary {
-                    background: @color-primario;
-                    border-color: @color-primario;
-                }
-            }
-        }
-        .actions {
-            button.primary {
                 background: @color-primario;
                 border-color: @color-primario;
             }
         }
-        
-        .action.primary:hover, .action-primary:hover {
-            background: @color-hover;
-            border-color: @color-hover;
-        }
-
     }
+    .actions {
+        button.primary {
+            background: @color-primario;
+            border-color: @color-primario;
+        }
+    }
+    
+    .action.primary:hover, .action-primary:hover {
+        background: @color-hover;
+        border-color: @color-hover;
+    }
+
+    .contact-index-index {
+        .page-wrapper {
+            .page-main {
+                .columns {
+                    .column.main {
+                        .form.contact {
+                            .fieldset {
+                                .field {
+                                    .label {
+                                        text-align: left;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
     
 //
 //  Mobile
