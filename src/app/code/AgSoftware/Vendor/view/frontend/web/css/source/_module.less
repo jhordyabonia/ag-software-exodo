@@ -3,7 +3,7 @@
         -moz-appearance:none;
         -ms-appearance:none;
         appearance:none;
-        background-image: url(https://exodo.test/static/version1663786424/adminhtml/Magento/backend/en_US/images/arrows-bg.svg), linear-gradient(#e3e3e3, #e3e3e3), linear-gradient(#adadad, #adadad);
+        background-image: url("https://exodo.local/static/version1663864477/adminhtml/Magento/backend/en_US/images/arrows-bg.svg"), linear-gradient(#e3e3e3, #e3e3e3), linear-gradient(#adadad, #adadad);
         background-position: e("calc(100% - 12px) -32px, 100%, calc(100% - 3.2rem) 0;");
         background-size: auto, 3.2rem 100%, 1px 100%;
         background-repeat: no-repeat;
@@ -179,6 +179,19 @@
                         .label()
                     }
 
+                    .relative-content:after{
+                        color: #e22626;
+                        content: '*';
+                        display: inline-block;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        line-height: 1;
+                        margin-left: 10px;
+                        margin-top: 0.9rem;
+                        position: absolute;
+                        z-index: 1;
+                    }
+
                 .first-four {
                     width: e("calc( (144%) * 0.5 - 30px );");
                 }
@@ -251,12 +264,11 @@
                     display: inline-block;
                     width: e("calc( (148.7%) * 0.5 - 30px );");
                     margin-left: 30px;
-
-
-                    .select-Attribute {
-                        .input_select()
+                    .select-Attribute{
+                        .input_select
 
                     }
+
                 }
             }
 
@@ -357,10 +369,73 @@
                     }
                 }
             }
+             .input-boton{
+                display: flex;
+                gap: 3rem;
+
+                .Enable-Product{
+                    .label()
+                   }
+                margin-bottom: 2.5rem;
+                
+                .lbl-switch{
+                    display: inline-block;
+                    width: 43px;
+                    height:25px;
+                    background: #f1f1f1;
+                    border-radius: 100px;
+                    cursor: pointer;
+                    position: relative;
+                    border: 1px solid #c1c1c1;
+                    text-align: left;
+                }
+
+                #btn-switch:checked~ .lbl-switch{
+                    background: #09a309eb;
+                    border: 1px solid #0370c4;                
+
+                }
+                #btn-timmer:checked~ .lbl-switch{
+                    background: #09a309eb;
+                    border: 1px solid #0370c4;                
+
+                }
 
 
-        
-        //collapse-data
+                .lbl-switch:after{
+                    position: absolute;
+                    content: "";
+                    width: 22px;
+                    height: 23px;
+                    background: #f1f1f1;
+                    border-radius: 100px;
+                    border: 1px solid #c1c1c1;
+                    transition: 0.5s;
+                    
+                }
+
+                #btn-switch:checked~ .lbl-switch:after{
+                    left: 22px;
+                    border: 1px solid #0370c4;                
+                
+                }
+                #btn-timmer:checked~ .lbl-switch:after{
+                    left: 22px;
+                    border: 1px solid #0370c4;                
+                
+                }
+                
+                #btn-switch{
+                    display: none;
+                }
+                #btn-timmer{
+                    display: none;
+                }
+                
+             }
+
+           
+ //collapse-data
 }
 .display-media{
     font-size: 14px;
@@ -464,6 +539,16 @@
 
 .websites-text{
     width: auto;
+    color: #41362f;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+input[type="checkbox"] {
+    
+    width: 1.6rem;
+    height: 1.6rem;
 }
 
 .relatic-span{
@@ -517,6 +602,61 @@
     padding: 0;
     
     .fieldset-wrapper{
+
+        .input-boton{
+            display: flex;
+            gap: 1rem; 
+            margin-bottom: 2.5rem;
+            align-items: center;
+            justify-content: space-between;
+            .Enable-Product{
+                .label()
+               }
+            margin-bottom: 2.5rem;
+            
+            .lbl-switch{
+                display: inline-block;
+                width: 43px;
+                height:25px;
+                background: #f1f1f1;
+                border-radius: 100px;
+                cursor: pointer;
+                position: relative;
+                border: 1px solid #c1c1c1;
+                text-align: left;
+            }
+
+            #btn-gift:checked~ .lbl-switch{
+                background: #09a309eb;
+                border: 1px solid #0370c4;                
+
+            }
+          
+
+            .lbl-switch:after{
+                position: absolute;
+                content: "";
+                width: 22px;
+                height: 23px;
+                background: #f1f1f1;
+                border-radius: 100px;
+                border: 1px solid #c1c1c1;
+                transition: 0.5s;
+                
+            }
+
+            #btn-gift:checked~ .lbl-switch:after{
+                left: 22px;
+                border: 1px solid #0370c4;                
+            
+            }
+            
+            
+            #btn-gift{
+                display: none;
+            }
+            
+         }
         .upload-wrapper{
             display: flex;
             justify-content: space-between;
@@ -559,10 +699,11 @@
         
     }
 
-    .websites-wraperr{
+    .websites-wraperr {
         display: flex;
         justify-content: center;
         align-items: center;
+        
 
         .Websites-before:before{
             content: '\e62d';
@@ -594,6 +735,12 @@
         }
 
         
+    }
+
+    .websites-Download{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
    
 }

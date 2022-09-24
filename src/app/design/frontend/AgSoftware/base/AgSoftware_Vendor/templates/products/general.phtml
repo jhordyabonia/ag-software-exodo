@@ -7,22 +7,41 @@ $product = $block->getProduct();
 ?>
 <fieldset class="main-data">
     <h2><?=__('General Information');?></h2>
-    <div class="input-Attribute">
+    <div class="input-boton">
+     <span class=" Enable-Product"> Enable Product</span>
+         <div class="boton-chekc">
+        <input type="checkbox" id="btn-switch">
+        <label for="btn-switch" class="lbl-switch"></label>
+        </div>
+       
+    </div>
+    <div class="input-Attribute ">
         <label for="vendor-product-form-name"><?=__("Attribute Set")?></label>
         <div class="container-Attribute">
         <select class="select-Attribute" name="Attribute Set" id="">
-        
+        <settings>
+                        <options>
+                            <option name="1" xsi:type="search">
+                             
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="label" xsi:type="string"><?=("This item has no weight")?></item>
+                            </option>
+                           
+                        </options>
+                    </settings>
+        </select>
             
         </select>
 
         </div>
     </div>
     <div class="input-text">
-        <label for="vendor-product-form-name"><?=__("Name")?></label>
+        <label for="vendor-product-form-name " class="relative-content"><?=__("Product Name")?></label>
         <input name="name" class="input-text first-four" id="vendor-product-form-name" value="<?=$product->getName()?>">
     </div>
     <div class="input-text">
-        <label for="vendor-product-form-sku"><?=__("Sku")?></label>
+        <label for="vendor-product-form-sku" class="relative-content"><?=__("Sku")?></label>
         <input name="sku" class="input-text first-four" id="vendor-product-form-sku" value="<?=$product->getSku()?>">
     </div>
     <div class="input-text">
@@ -30,7 +49,7 @@ $product = $block->getProduct();
         <input name="sku" class="input-text first-four" id="vendor-product-form-sku" value="<?=$product->getSku()?>">
     </div>
     <div class="input-text">
-        <label for="vendor-product-form-price"><?=__("Price")?></label>
+        <label for="vendor-product-form-price" class="relative-content"><?=__("Price")?></label>
         <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
         
     <div class="actions-Advanced">
@@ -153,6 +172,15 @@ $product = $block->getProduct();
         <div class="container-manufacture">
         <select class="select-manufacture"  name="" id=""></select>
     </div>
+    </div>
+
+    <div class="input-boton">
+     <span class=" Enable-Product"> Enable Product</span>
+         <div class="boton-chekc">
+        <input type="checkbox" id="btn-timmer">
+        <label for="btn-timmer" class="lbl-switch"></label>
+        </div>
+       
     </div>
     
 </fieldset>
@@ -387,17 +415,21 @@ $product = $block->getProduct();
             </a>
             <span  class="list__arrow">
             <i class="fa-solid fa-chevron-down arrow-v"></i>        
-        </span>        </div>
+        </span>        
+    </div>
 
         <ul class="list__show">
             <li class="list__inside">
 
                 <div class="fieldset-wrapper websites-wraperr">
-                    <span class="span-text websites-text"><?=__("Websites")?></span>
-                    <div>
-                        <div class="Websites-before">
-                            <span class="span-text"><?=__("Main Websites")?></span>
-                           
+                
+            <label for="websites-input" class="websites-text">
+                <input type="checkbox" id="websites-input">
+                <span > Websites </span>
+
+            </label>
+            
+            </div>
                
                 
             </li>
@@ -615,14 +647,21 @@ $product = $block->getProduct();
 
         <ul class="list__show">
             <li class="list__inside">
-                <div class="fieldset-wrapper">
-                    <span><?=__("")?>Up-Sell Products</span>
-                    <div>
-                        <div>
-                            <span><?=__("")?>An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.</span>
-                            <button><?=__("")?>Add Up-Sell Products</button>
-                        </div>
-                    </div>
+                <div class="fieldset-wrapper websites-wraperr" websites-wraperr>
+                <file class="input-boton">
+                <span class=" Enable-Product"> Enable Product</span>
+
+         <div class="boton-chekc">
+        <input type="checkbox" id="btn-gift">
+        <label for="btn-gift" class="lbl-switch"></label>
+        </div>
+       
+        <label for="websites-input" class="websites-text">
+                <input type="checkbox" id="websites-input">
+                <span > Use Config Settings </span>
+
+            </label>
+    </file>
                 </div>
                 
             </li>
@@ -643,14 +682,14 @@ $product = $block->getProduct();
 
         <ul class="list__show">
             <li class="list__inside">
-                <div class="fieldset-wrapper">
-                    <span><?=__("Up-Sell Products")?></span>
-                    <div>
-                        <div>
-                            <span><?=__("")?>An up-sell item is offered to the customer as a pricier or higher-quality alternative to the product the customer is looking at.</span>
-                            <button><?=__("")?>Add Up-Sell Products</button>
-                        </div>
-                    </div>
+                <div class="fieldset-wrapper websites-Download">
+                <label for="websites-input" class="websites-text">
+                <input type="checkbox" id="websites-input">
+                <span > Is this downloadable Product? </span>
+
+            </label> 
+            <span>To enable the option set the weight to no</span>
+            
                 </div>
                 
             </li>
