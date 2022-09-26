@@ -132,6 +132,7 @@ $product = $block->getProduct();
         </select>
 
         </div>
+        <button class="button-category"><?=__("New Category")?></button>
     </div>
     <div class="input-Visibility">
         <label for="vendor-product-form-price"><?=__(" Visibility")?></label>
@@ -160,7 +161,7 @@ $product = $block->getProduct();
 
         </div>
     </div>
-    <div class="input-text">
+    <div class="input-text form-calendary">
         <label for="vendor-product-form-price"><?=__("Set Product as New From")?></label>
         <input name="price" type="date" class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
         <input name="price" type="date"  class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
