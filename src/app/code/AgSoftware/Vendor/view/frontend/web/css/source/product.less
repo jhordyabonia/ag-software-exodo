@@ -25,7 +25,7 @@
                                         margin-left: 10px;
                                     }
                                     .input-date-form {
-                                        min-width: 130px;
+                                        min-width: 160px;
                                     }
                                     .first-fou {
                                         width: 60%;
@@ -88,23 +88,69 @@
                                 }
 
                                 .input-Visibility {
-                                    label{
+                                    label {
                                         margin-left: 22px;
                                     }
                                     .container-Visibility {
                                         margin-left: 15px;
                                     }
+                                    .select-Visibility{
+                                        min-width: 200px;
+                                    }
                                 }
-                                .input-manufacture{
-                                    
-                                    label{
+                                .input-manufacture {
+                                    label {
                                         margin-right: 10px;
                                         margin-left: 5px;
                                     }
+                                    .container-manufacture{
+                                        margin-left: 35px;
+                                    }
                                 }
-                                .form-calendary{
-                                    label{
-                                        margin-right: 30px;
+                                .form-calendary {
+                                    label {
+                                        margin-right: 40px;
+                                    }
+                                }
+                            }
+                        }
+                        .display-media {
+                            .first-column {
+                                .list__item {
+                                    .list__show {
+                                        .list__inside {
+                                            padding-left: 0;
+                                            .fieldset-wrapper {
+                                                padding: 25px 7px;
+
+                                                .content-text-button {
+                                                    padding: 66px 7px;
+                                                    .text-button-click {
+                                                        padding: 27px 0px;
+                                                    }
+                                                }
+                                                .input-Tax {
+                                                    label{
+                                                        width: 56px;
+                                                    }
+                                                    .select-collapsible {
+                                                        .select-tax {
+                                                            min-width: 200px;
+                                                            margin-left: 10px;
+                                                        }
+                                                    }
+                                                }
+                                                .input-text {
+                                                    label{
+                                                        width: 142px;
+                                                    }
+                                                    .input-date-form{
+                                                        width: 28%;
+                                                        margin: 1rem;
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -175,25 +221,39 @@
                                     }
                                 }
                                 .input-Categories {
-                                    label {
-                                        // margin-left: 30px;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    
+                                    .container-Categories {
+                                        margin-left: 36px;
+                                        min-width: 200px;
+                                        margin-bottom: 0.5rem;
+                                    }
+                                    .button-category {
+                                        margin-left: 10px;
+                                        position: relative;
+                                        left: 10px;
+                                        width: 138px;
+                                        height: 40px;
+                                        margin: 0 auto;
                                     }
                                 }
-                                .form-calendary{
+                                .form-calendary {
                                     display: flex;
                                     flex-wrap: wrap;
                                     justify-content: center;
-                                    label{
+                                    label {
                                         margin-right: 30px;
                                         width: 115px;
                                     }
                                 }
-                                .input-manufacture{
+                                .input-manufacture {
                                     display: flex;
                                     flex-direction: column;
                                     align-items: center;
-                                    label{
-                                        margin-right: 30px;
+                                    label {
+                                        margin-left: 40px;
+                                        width: auto;
                                     }
                                     .container-manufacture {
                                         width: 45%;
@@ -212,7 +272,7 @@
 //  Mobile
 //  _____________________________________________
 
-@media screen and (min-width: 766px) {
+@media screen and (min-width: 769px) {
     .vendor-products-create {
         .page-wrapper {
             .page-main {
@@ -255,10 +315,8 @@
                                 }
                             }
                             .input-Categories {
-                                
                                 .container-Categories {
                                     margin-left: 10px;
-                                    
                                 }
                             }
 
@@ -273,17 +331,42 @@
                             }
                             .form-calendary {
                                 label {
-                                  
+                                    margin-left: -25px;
+                                    margin-right: 36px;
                                 }
                             }
-                            .input-manufacture{
-                                    
-                                label{
-                                    margin-right: 10px;
-                                    margin-left: 0px;
+                            .input-manufacture {
+                                label {
+                                    margin-right: 28px;
+                                    margin-left: -17px;
                                 }
-                                .container-manufacture{
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
+@media screen and (min-width: 940px) {
+    .vendor-products-create {
+        .page-wrapper {
+            .page-main {
+                .columns {
+                    .column {
+                        .main-data {
+                            .form-calendary {
+                                label {
+                                    margin-left: 1%;
+                                    margin-right: 0%;
+                                }
+                            }
+                            .input-manufacture {
+                                label {
+                                    margin-right: -1px;
+                                    margin-left: 7px;
                                 }
                             }
                         }
