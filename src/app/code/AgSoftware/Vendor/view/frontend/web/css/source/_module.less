@@ -1,5 +1,6 @@
 @import "product";
 .input_select{
+
         -webkit-appearance:none;
         -moz-appearance:none;
         -ms-appearance:none;
@@ -15,6 +16,7 @@
             border-color: #007bdb;
             background-size: auto, 3.2rem 100%, 1px 100%;
         } 
+
     }
 
     .label {
@@ -45,7 +47,8 @@
 & when (@media-common = true) {
     .vendor-products-index .page-main,
     .vendor-products-edit .page-main,
-    .vendor-products-create .page-main{
+    .vendor-products-create .page-main, 
+    .vendor-settings-index{
         .base {
             color: #41362f;
             font-size: 2.8rem;
@@ -220,6 +223,17 @@
                             margin-bottom: 2.5rem;
 
                 }
+        input[type="date"]::-webkit-calendar-picker-indicator{
+            opacity: 0;
+        }
+        
+
+        input[type="date"]{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlx3KigvrvfYcsTqdzWmYVeDqqiz0THyxChQ&usqp=CAU);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 95%;
+        }
 
                 
 
@@ -257,6 +271,10 @@
                         .input_select()
 
 
+                    }
+
+                    .select-manufacture:after{
+                        content: "'\25BC";
                     }
                 }
             }
@@ -466,8 +484,25 @@
     margin: 80px auto;
 }
 
+.display-media .first-column div, .second-column .list-settings{
+
+    .content-settings-arrow{
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .title-settings{
+        padding: 0px 10px;
+    }
+}
+
+
+
+
 .display-media .first-column div, .second-column div {
-    padding: 12px 15px;
+    padding: 12px 1px;
+    padding-right: 15px;
 }
 
 .nav__link{
@@ -501,6 +536,8 @@
     margin: 0;
     font-size: 1.7rem;
 }
+
+
 
 
 .display-media .list p{
@@ -538,6 +575,19 @@
     overflow: hidden;
     border-bottom:  1px solid #EDEDED;
     border-top:  1px solid #EDEDED;
+}
+
+.list-settings{
+    padding-left: 0;
+}
+
+.content-settings-arrow{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.title-settings{
+    padding: 0px 10px;
 }
 
 .content-text-button{
@@ -625,7 +675,7 @@ input[type="checkbox"] {
 
         .input-boton{
             display: flex;
-            gap: 1rem; 
+            gap: 3rem; 
             margin-bottom: 2.5rem;
             align-items: center;
             justify-content: space-between;
@@ -712,6 +762,17 @@ input[type="checkbox"] {
                 width: e("calc( (39%) * 0.5 - 30px );");
                         min-height: 3.9rem;
                         margin-left: 3rem;
+            }
+            input[type="date"]::-webkit-calendar-picker-indicator{
+                opacity: 0;
+            }
+            
+    
+            input[type="date"]{
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlx3KigvrvfYcsTqdzWmYVeDqqiz0THyxChQ&usqp=CAU);
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position: 95%;
             }
         }
 
