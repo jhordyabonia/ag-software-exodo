@@ -1,13 +1,22 @@
+@import "product";
 .input_select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    background-image: url('../images/arrows-bg.svg'), linear-gradient(#01007f, #01007f), linear-gradient(#adadad, #adadad);
-    background-position: calc(100% - 11px) -20px, 100%, calc(100% - 3.4rem) 0;
-    background-size: auto, 3.4rem 101%, 1px 100%;
-    background-repeat: no-repeat;
-    min-height: 3.9rem;
+
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        -ms-appearance:none;
+        appearance:none;
+        background-image: url("https://about.mbt.com/pub/static/adminhtml/Magento/backend/en_US/images/arrows-bg.svg"), linear-gradient(#e3e3e3, #e3e3e3), linear-gradient(#adadad, #adadad);
+        background-position: e("calc(100% - 12px) -32px, 100%, calc(100% - 3.2rem) 0;");
+        background-size: auto, 3.2rem 100%, 1px 100%;
+        background-repeat: no-repeat;
+        min-height: 3.9rem;
+        &:active{
+            background-image: url(https://about.mbt.com/pub/static/adminhtml/Magento/backend/en_US/images/arrows-bg.svg), linear-gradient(#e3e3e3, #e3e3e3), linear-gradient(#007bdb, #007bdb);
+            background-position: e("calc(100% - 12px) 15px, 100%, calc(100% - 3.2rem) 0;");
+            border-color: #007bdb;
+            background-size: auto, 3.2rem 100%, 1px 100%;
+        } 
+
     }
 
     .label {
@@ -38,7 +47,8 @@
 & when (@media-common = true) {
     .vendor-products-index .page-main,
     .vendor-products-edit .page-main,
-    .vendor-products-create .page-main{
+    .vendor-products-create .page-main, 
+    .vendor-settings-index{
         .base {
             color: #41362f;
             font-size: 2.8rem;
@@ -216,10 +226,11 @@
         input[type="date"]::-webkit-calendar-picker-indicator{
             opacity: 0;
         }
+        
 
         input[type="date"]{
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3CLqn9T9ku_NFjww-ezzhQXI3CpcKdvS2kQ&usqp=CAU);
-            background-size: 30px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlx3KigvrvfYcsTqdzWmYVeDqqiz0THyxChQ&usqp=CAU);
+            background-size: 20px;
             background-repeat: no-repeat;
             background-position: 95%;
         }
@@ -326,6 +337,18 @@
             }
 
             .input-Categories {
+
+                position: relative;
+                .button-category{
+                    background-color: #514943;
+                    border-color: #514943;
+                    color: #ffffff;
+                    box-shadow: 1px 1px 1px #0000004d;
+                    border-radius: 0;
+                    padding: 10px 20px;
+                    position: absolute;
+                    right: 10px;
+                }
                 label{
                     .label()
                    }
@@ -333,6 +356,7 @@
                 margin-bottom: 2.5rem;
 
                 .container-Categories {
+                    width: 40%;
                     display: inline-block;
                     width: e("calc( (74%) * 0.5 - 30px );");
                     margin-left: 30px;
@@ -460,8 +484,25 @@
     margin: 80px auto;
 }
 
+.display-media .first-column div, .second-column .list-settings{
+
+    .content-settings-arrow{
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .title-settings{
+        padding: 0px 10px;
+    }
+}
+
+
+
+
 .display-media .first-column div, .second-column div {
-    padding: 12px 15px;
+    padding: 12px 1px;
+    padding-right: 15px;
 }
 
 .nav__link{
@@ -495,6 +536,8 @@
     margin: 0;
     font-size: 1.7rem;
 }
+
+
 
 
 .display-media .list p{
@@ -532,6 +575,19 @@
     overflow: hidden;
     border-bottom:  1px solid #EDEDED;
     border-top:  1px solid #EDEDED;
+}
+
+.list-settings{
+    padding-left: 0;
+}
+
+.content-settings-arrow{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.title-settings{
+    padding: 0px 10px;
 }
 
 .content-text-button{
@@ -619,7 +675,7 @@ input[type="checkbox"] {
 
         .input-boton{
             display: flex;
-            gap: 1rem; 
+            gap: 3rem; 
             margin-bottom: 2.5rem;
             align-items: center;
             justify-content: space-between;
@@ -706,6 +762,17 @@ input[type="checkbox"] {
                 width: e("calc( (39%) * 0.5 - 30px );");
                         min-height: 3.9rem;
                         margin-left: 3rem;
+            }
+            input[type="date"]::-webkit-calendar-picker-indicator{
+                opacity: 0;
+            }
+            
+    
+            input[type="date"]{
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlx3KigvrvfYcsTqdzWmYVeDqqiz0THyxChQ&usqp=CAU);
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position: 95%;
             }
         }
 
