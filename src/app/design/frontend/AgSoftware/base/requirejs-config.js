@@ -5,7 +5,8 @@
 
 var config = {
     deps: [
-        'js/menu'
+        'js/menu',
+        'js/checkout-cart/rowsNumber'
     ],
 };
 

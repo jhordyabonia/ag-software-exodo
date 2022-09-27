@@ -18,7 +18,7 @@
                             display: flex;
                             flex-wrap: wrap;
                             .cart-summary{
-                                
+                                background-color: #f0f0ed;
                                 padding: 1px 18px 25px;
                                 .summary{
                                  font-weight: 400;
@@ -49,12 +49,17 @@
                                 }
                                 .table-wrapper{
                                     .table{
-                                            .item{
+                                        .item{
                                             .item-info{
-                                                [data-th="Item"]{
+                                                .col.item{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    padding: 15px 10px;
                                                     .product-item-photo{
-                                                        width: 50%;
+                                                        position: relative;
                                                         left: 0;
+                                                        top: 0;
+                                                        width: auto;
                                                         max-width: none;
                                                         .product-image-container{
                                                             width: 100%;
@@ -63,50 +68,43 @@
                                                             border: 1px solid #cccccc;
                                                             border-radius: 5px;
                                                             .product-image-photo{
-                                                                width: 157px;
-                                                                height: 157px;
-                                                                margin: 3px 2px 3px;
+                                                                padding: 3px;
                                                             }
                                                         }
                                                     }
                                                    .product-item-details{
+                                                    margin-left: 15px;
+                                                    padding-bottom: 0;
                                                     .product-item-name{
-                                                        padding: 85px 0 0px;
                                                         font-size: 1.8rem;
                                                         font-weight: 600;
-                                                        
                                                         a{
                                                             color: #0d3371;
                                                         }
                                                     }
                                                    }
                                                 }
+                                                .col.price, .col.qty, .col.subtotal {
+                                                    vertical-align: middle;
+                                                }
                                                 .field{
-                                                    padding: 85px 0 0px;
                                                     text-align: center;
                                                     .control{
-                                                        [for="cart-37-qty"]{
+                                                        label {
                                                             display: flex;
+                                                            align-items: center;
                                                             .input-text{
-                                                                height: 38px;
-                                                                margin-top: -7px;
+                                                                height: 42px;
+                                                                margin-top: 0;
                                                                 text-align: center;
                                                                 width: 45px;
                                                             }
-                                                            .content-select-cart{
-                                                                display: grid;
-                                                                margin-top: -7px;
-                                                                justify-items: center;
-                                                                align-items: center;
-                                                                margin-left: 4px;
-                                                                #content-select{
-                                                                    width: 15px;
-                                                                    height: 16px;
-                                                                    border: 1px solid #c2c2c2;
-                                                                    border-radius: 3px;
-                                                                }
-                                                                .margen_bootom{
-                                                                    margin-bottom: 1px;
+                                                            .arrow-input-container {
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                margin-left: 2px;
+                                                                button {
+                                                                    padding: 0 5px;
                                                                 }
                                                             }
                                                         }
@@ -114,7 +112,7 @@
                                                     }
                                                 }
                                                 .price-excluding-tax{
-                                                    padding: 85px 0 0px;
+                                                    padding: 0;
                                                     text-align: center;
                                                     .cart-price{
                                                         .price{
@@ -124,20 +122,6 @@
                                                         }
                                                     }
                                                 }
-                                                .subtotal{
-                                                    .price-excluding-tax{
-                                                        padding: 85px 0 0px;
-                                                        text-align: center;
-                                                        .cart-price{
-                                                            .price{
-                                                                color: #0d3371;
-                                                                font-weight: 600;
-                                                                font-size: 20px;
-                                                            }
-                                                        }
-                                                    }  
-                                                }
-    
                                             }
                                             .item-actions{
                                                 .actions-toolbar{
@@ -239,8 +223,6 @@
                     .column{
                         .cart-container{
                             padding-left: 2%;
-                            display: flex;
-                            flex-wrap: wrap;
                             .cart-summary{
                                 order: 2;
                             }
@@ -306,7 +288,6 @@
                                                 [data-th="Price"]{
                                                     text-align: center;
                                                     .price-excluding-tax{
-                                                        padding: 80px 0 0px;
                                                         text-align: center;
                                                         .cart-price{
                                                             .price{
@@ -321,7 +302,6 @@
                                                 .subtotal{
                                                     text-align: center;
                                                     .price-excluding-tax{
-                                                        padding: 80px 0 0px;
                                                         text-align: center;
                                                         .cart-price{
                                                             .price{
@@ -379,6 +359,10 @@
     }  
     }
 }
+
+//
+//  Desktop Mini
+//  _____________________________________________
 @media only screen and(max-width: 991px) {
     .checkout-cart-index{
         .page-wrapper{
@@ -450,4 +434,5 @@
             }
         }
     }
+    
 }
