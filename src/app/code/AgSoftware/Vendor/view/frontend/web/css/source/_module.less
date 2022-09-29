@@ -48,7 +48,8 @@
     .vendor-products-index .page-main,
     .vendor-products-edit .page-main,
     .vendor-products-create .page-main, 
-    .vendor-settings-index{
+    .vendor-settings-index,
+    .vendor-sales-index{
         .base {
             color: #41362f;
             font-size: 2.8rem;
@@ -89,8 +90,8 @@
                 }
 
                 .prymary {
-                    background-color: #eb5202;
-                    border-color: #eb5202;
+                    background-color: #01007f;
+                    border-color: #01007f;
                     color: #ffffff;
                     text-shadow: e("1px 1px 0 rgb(0 0 0 / 25%);");
                     margin-right: 4rem;
@@ -98,8 +99,8 @@
                 }
 
                 .action-toggle {
-                    background-color: #eb5202;
-                    border-color: #eb5202;
+                    background-color: #01007f;
+                    border-color: #01007f;
                     color: #ffffff;
                     text-shadow: e("1px 1px 0 rgb(0 0 0 / 25%);");
                     bottom: 0;
@@ -337,8 +338,12 @@
             }
 
             .input-Categories {
+                display: flex;
 
-                position: relative;
+                .span-button-category{
+                    margin-left: 3rem;
+                }
+               
                 .button-category{
                     background-color: #514943;
                     border-color: #514943;
@@ -346,8 +351,8 @@
                     box-shadow: 1px 1px 1px #0000004d;
                     border-radius: 0;
                     padding: 10px 20px;
-                    position: absolute;
-                    right: 10px;
+                    
+                    
                 }
                 label{
                     .label()
@@ -501,7 +506,7 @@
 
 
 .display-media .first-column div, .second-column div {
-    padding: 12px 1px;
+    padding: 12px 8px;
     padding-right: 15px;
 }
 
@@ -568,14 +573,34 @@
     padding-bottom: 10px;
 }
 
+.Credentials{
+    border-top:  none;
+
+}
+
+.Advanced{
+    border-top:  1px solid #EDEDED;
+}
 
 .list__item{
     list-style: none;
     width: 100%;
     overflow: hidden;
-    border-bottom:  1px solid #EDEDED;
-    border-top:  1px solid #EDEDED;
+     border-bottom:  2px solid #EDEDED;
+     border-top: none;
 }
+
+.mercado-pago{
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    border-bottom:  2px solid #EDEDED;
+    border-top:  none;
+    padding: 0 ;
+    
+}
+
+
 
 .list-settings{
     padding-left: 0;

@@ -34,7 +34,7 @@ $product = $block->getProduct();
     </div>
     <div class="input-text">
         <label for="vendor-product-form-sku"><?=__("Vendor")?></label>
-        <input name="sku" class="input-text first-four" id="vendor-product-form-sku" value="<?=$product->getSku()?>">
+        <input name="sku" class="input-text first-four" id="vendor-product-form-sku">
     </div>
     <div class="input-text">
         <label for="vendor-product-form-price" class="relative-content"><?=__("Price")?></label>
@@ -68,7 +68,7 @@ $product = $block->getProduct();
     </div>
     <div class="input-text">
         <label for="vendor-product-form-price"><?=__("Quantity")?></label>
-        <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" class="input-text second-input" >
         
         <div class="actions-Advanced">
         <button class="Advanced" type="submit">
@@ -96,7 +96,7 @@ $product = $block->getProduct();
     </div>
     <div class="input-weight input-text">
         <label for="vendor-product-form-price"><?=__("weight")?></label>
-        <input name="price" class="input-text weight-one" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" class="input-text weight-one" >
         <div class="container-weight">
         <select class="select-weight" name="" id="">
         <settings>
@@ -132,7 +132,8 @@ $product = $block->getProduct();
         </select>
 
         </div>
-        <button class="button-category"><?=__("New Category")?></button>
+        <span class="span-button-category"><button class="button-category"><?=__("New Category")?></button></span>
+
     </div>
     <div class="input-Visibility">
         <label for="vendor-product-form-price"><?=__(" Visibility")?></label>
@@ -163,14 +164,14 @@ $product = $block->getProduct();
     </div>
     <div class="input-text form-calendary">
         <label for="vendor-product-form-price"><?=__("Set Product as New From")?></label>
-        <input name="price" type="date" class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-        <input name="price" type="date"  class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" type="date" class="input-date-form "  >
+        <input name="price" type="date"  class="input-date-form "  >
 
     </div>
     <div class="input-manufacture">
         <label for="vendor-product-form-price"><?=__("Country of manufacture")?></label>
         <div class="container-manufacture">
-        <select class="select-manufacture"  name="" id=""></select>
+        <select class="select-manufacture"  ></select>
     </div>
     </div>
 
@@ -462,8 +463,8 @@ $product = $block->getProduct();
 
                 <div class="input-text">
         <label for=""><?=__(" Schedule Update From")?></label>
-        <input name="price" type="date" class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-        <input name="price" type="date"  class="input-date-form " id="vendor-product-form-price" value="<?=$product->getPrice()?>">
+        <input name="price" type="date" class="input-date-form " id="vendor-product-form-price" >
+        <input name="price" type="date"  class="input-date-form " id="vendor-product-form-price" >
 
     </div>
                 <div class="input-Tax">
