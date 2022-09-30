@@ -636,6 +636,8 @@
     width: 100%;
 }
 
+
+
 .span-key-tex{
     display: flex;
     width: e("calc( (100%) * 0.5 - 30px );");
@@ -926,6 +928,19 @@ input[type="checkbox"] {
         flex-direction: column;
     }
    
+}
+.container-user-guide {
+    
+
+    .container-row{
+        cursor: pointer;
+        &[aria-expanded="true"]{
+            .column-2-arrow{
+                transform: rotate(180deg);
+                transition: all 0.3s ease;
+            }
+        }
+    }
 }
 
 
