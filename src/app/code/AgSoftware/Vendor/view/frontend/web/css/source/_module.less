@@ -636,6 +636,14 @@
     width: 100%;
 }
 
+.span-key-tex{
+    display: flex;
+    width: e("calc( (100%) * 0.5 - 30px );");
+    font-size: 12px;
+    margin: -10px auto;
+    margin-right: e("calc( (94%) * 0.3 - 30px );");
+}
+
 .text-button-click{
     padding: 0;
     display: flex;
@@ -824,6 +832,28 @@ input[type="checkbox"] {
                 }
             }
         }
+       
+           
+        }
+
+        .credential{
+            input {
+                margin-left: 20px;
+                font-weight: 400;
+                height: auto;
+                vertical-align: baseline;
+                border: e("1px solid #adadad;");
+                cursor: pointer;
+                min-height: 2.5rem;
+                padding-right: 3.6rem;
+                cursor: pointer;
+                padding: 0.6rem 1rem 0.6rem;
+            }
+            .input-text{
+                width: e("calc( (100%) * 0.5 - 30px );");
+            }
+        }
+       
 
         .input-text{
             label{
@@ -921,5 +951,4 @@ input[type="checkbox"] {
     (@extremum = "min")
     and
     (@break = @screen__m) {
-}
 }
