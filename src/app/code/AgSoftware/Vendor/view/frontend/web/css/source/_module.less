@@ -22,7 +22,7 @@
     .label {
         display: inline-block;
         width: e("calc( (100%) * 0.25 - 30px );");
-        margin-left: 30px;
+        // margin-left: 30px;
         text-align: right;
         display: inline-block;
         font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -480,6 +480,7 @@
            
  //collapse-data
 }
+
 .display-media{
     font-size: 14px;
     line-height: 1.5;
@@ -487,6 +488,23 @@
     background-color: #FFFFFF;
     max-width: 1035px;
     margin: 80px auto;
+}
+
+.display-settings{
+    border:none;
+}
+
+.container-demo-content{
+    margin: 40px auto;
+}
+
+.container-row{
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-left: 5px;
 }
 
 .display-media .first-column div, .second-column .list-settings{
@@ -506,9 +524,11 @@
 
 
 .display-media .first-column div, .second-column div {
-    padding: 12px 8px;
+    padding: 12px 13px;
     padding-right: 15px;
 }
+
+
 
 .nav__link{
     color: #303440;
@@ -528,7 +548,7 @@
 
 
 
-.display-media .list h3{
+.display-media .list h3, .title-mercado-list{
     clear: both;
     color: #303030;
     cursor: pointer;
@@ -573,14 +593,6 @@
     padding-bottom: 10px;
 }
 
-.Credentials{
-    border-top:  none;
-
-}
-
-.Advanced{
-    border-top:  1px solid #EDEDED;
-}
 
 .list__item{
     list-style: none;
@@ -768,9 +780,38 @@ input[type="checkbox"] {
 
             .select-collapsible {
                 display: inline-block;
-                width: e("calc( (49.1%) * 0.5 - 30px );");
+                width: e("calc( (87.1%) * 0.5 - 19px );");
                 margin-left: 1.5rem;
 
+
+                .select-tax {
+                    .input_select()
+                }
+            }
+        }
+
+        .input-managent{
+            display: flex;
+            align-items: center;
+            padding-left: 0px;
+            margin-left: -100px;
+
+            label{
+                width: e("calc( (101.2%) * 0.5 - 20px );");
+                margin-left: 30px;
+                text-align: right;
+                display: inline-block;
+                font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 1.4rem;
+                font-weight: 600;
+                line-height: 3.2rem;
+                padding: 0;
+                white-space: nowrap;
+               }
+               .select-managent {
+                display: inline-block;
+                width: e("calc( (76.1%) * 0.5 - 20px );");
+                margin-left: 1.5rem;
 
                 .select-tax {
                     .input_select()
