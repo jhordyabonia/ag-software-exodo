@@ -27,9 +27,11 @@ $product = $block->getProduct();
         <div class="container-demo-content" data-role="content">
                 <div class="container-links">
                     <a class="links links-frontend"
-                       target="_blank" href="<?=$product->getData('demo_video')?>">
+                       target="_blank" href="<?=$product->getData('demo_pdf')?>">
                         <?=__("Frontend")?></a>
-                    <a class="links links-backend"><?=__("Video")?></a>
+                    <a class="links links-backend"
+                       target="_blank" href="<?=$product->getData('demo_video')?>>
+                       <?=__("Video")?></a>
                 </div>
                 <div class="container-hosted">
                     <span class="hosted-in|fo"><?=__("This demo is hosted on")?></span>
