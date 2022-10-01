@@ -48,9 +48,9 @@
                         <argument name="add_attribute" xsi:type="string">itemprop="description"</argument>
                     </arguments>
                 </block>
-                <block name="links.product.descriptions" template="Magento_Catalog::product/links_desc_produc.phtml" before="product.info.price"/>
-                <block name="recurces.user.guide" template="Magento_Catalog::product/resources_user_guide.phtml" after="product.info.price"/>
-                <block name="chat.new" template="Magento_Catalog::product/chat_new.phtml" after="recurces.user.guide"/>
+                <block class="Magento\Catalog\Block\Product\View" name="links.product.descriptions" template="Magento_Catalog::product/links_desc_produc.phtml" before="product.info.price"/>
+                <block class="Magento\Catalog\Block\Product\View" name="recurces.user.guide" template="Magento_Catalog::product/resources_user_guide.phtml" after="product.info.price"/>
+                <block class="Magento\Catalog\Block\Product\View" name="chat.new" template="Magento_Catalog::product/chat_new.phtml" after="recurces.user.guide"/>
 
                 <container name="product.info.price" label="Product info auxiliary container" htmlTag="div" htmlClass="product-info-price">
                     <container name="product.info.stock.sku" label="Product auxiliary info" htmlTag="div" htmlClass="product-info-stock-sku">
