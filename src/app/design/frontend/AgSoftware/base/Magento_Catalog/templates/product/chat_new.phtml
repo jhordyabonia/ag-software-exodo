@@ -8,7 +8,7 @@ $product = $block->getProduct();
 <div class="container-chat-new">
     <div class="content-chat">
         <img class="icon-img" src="<?= $this->getViewFileUrl('Magento_Catalog::images/chat-now.svg')?>">
-        <a class="text-chat" target="_blank" href="https://api.whatsapp.com/send?phone=<?=$product->getData('whatsapp')?>">
+        <a class="text-chat" target="_blank" href="https://wa.me/<?=$product->getData('whatsapp')?>">
             <?php
                 echo __("Chat now")
             ?>
