@@ -1,9 +1,10 @@
 <?xml version="1.0" ?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="vendor_index"/>
-    <body>
+    <update handle="sales_order_history"/>
+    <!--<body>
 		<referenceContainer name="content">
 			<block name="sales.index" class="AgSoftware\Vendor\Block\Sales\Index" template="AgSoftware_Vendor::sales/index.phtml"/>
 		</referenceContainer>
-	</body>
+	</body>-->
 </page>

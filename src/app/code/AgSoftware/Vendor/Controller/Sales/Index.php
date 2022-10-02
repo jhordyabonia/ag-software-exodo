@@ -11,7 +11,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\View\Result\PageFactory;
 
-class Index implements HttpGetActionInterface
+class Index extends \Magento\Sales\Controller\Order\History
 {
 
     /**
@@ -24,19 +24,19 @@ class Index implements HttpGetActionInterface
      *
      * @param PageFactory $resultPageFactory
      */
-    public function __construct(PageFactory $resultPageFactory)
+    /*public function __construct(PageFactory $resultPageFactory)
     {
         $this->resultPageFactory = $resultPageFactory;
-    }
+    }*/
 
     /**
      * Execute view action
      *
      * @return ResultInterface
      */
-    public function execute()
+    /*public function execute()
     {
         return $this->resultPageFactory->create();
-    }
+    }*/
 }
 
