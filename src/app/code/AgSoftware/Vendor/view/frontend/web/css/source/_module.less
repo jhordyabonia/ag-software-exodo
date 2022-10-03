@@ -480,6 +480,7 @@
            
  //collapse-data
 }
+
 .display-media{
     font-size: 14px;
     line-height: 1.5;
@@ -487,6 +488,28 @@
     background-color: #FFFFFF;
     max-width: 1035px;
     margin: 80px auto;
+}
+
+.display-settings{
+    border:none;
+}
+
+.container-user-guide{
+    border-top: 2px solid #EDEDED;
+    padding-top: 12px;
+}
+
+.container-demo-content{
+    margin: 40px auto;
+}
+
+.container-row{
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 5px;
+    padding-left: 5px;
 }
 
 .display-media .first-column div, .second-column .list-settings{
@@ -506,9 +529,11 @@
 
 
 .display-media .first-column div, .second-column div {
-    padding: 12px 8px;
+    padding: 12px 13px;
     padding-right: 15px;
 }
+
+
 
 .nav__link{
     color: #303440;
@@ -528,7 +553,7 @@
 
 
 
-.display-media .list h3{
+.display-media .list h3, .title-mercado-list{
     clear: both;
     color: #303030;
     cursor: pointer;
@@ -573,14 +598,6 @@
     padding-bottom: 10px;
 }
 
-.Credentials{
-    border-top:  none;
-
-}
-
-.Advanced{
-    border-top:  1px solid #EDEDED;
-}
 
 .list__item{
     list-style: none;
@@ -619,6 +636,16 @@
     width: 100%;
 }
 
+
+
+.span-key-tex{
+    display: flex;
+    width: e("calc( (100%) * 0.5 - 30px );");
+    font-size: 12px;
+    margin: -10px auto;
+    margin-right: e("calc( (94%) * 0.3 - 30px );");
+}
+
 .text-button-click{
     padding: 0;
     display: flex;
@@ -646,7 +673,7 @@ input[type="checkbox"] {
     height: 1.6rem;
 }
 
-.relatic-span{
+.relatic-span, .integration{
     color: #41362f;
     font-weight: 600;
     font-size: 1.7rem;
@@ -768,7 +795,7 @@ input[type="checkbox"] {
 
             .select-collapsible {
                 display: inline-block;
-                width: e("calc( (49.1%) * 0.5 - 30px );");
+                width: e("calc( (87.1%) * 0.5 - 19px );");
                 margin-left: 1.5rem;
 
 
@@ -777,6 +804,58 @@ input[type="checkbox"] {
                 }
             }
         }
+
+        .input-managent{
+            display: flex;
+            align-items: center;
+            padding-left: 0px;
+            margin-left: -75px;
+
+            label{
+                width: e("calc( (101.2%) * 0.5 - 20px );");
+                margin-left: 30px;
+                text-align: right;
+                display: inline-block;
+                font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                font-size: 1.4rem;
+                font-weight: 600;
+                line-height: 3.2rem;
+                padding: 0;
+                white-space: nowrap;
+               }
+               
+               .select-managent {
+                display: inline-block;
+                width: e("calc( (76.1%) * 0.5 - 20px );");
+                margin-left: 1.5rem;
+
+                .select-tax {
+                    .input_select()
+                }
+            }
+        }
+       
+           
+        }
+
+        .credential{
+            input {
+                margin-left: 20px;
+                font-weight: 400;
+                height: auto;
+                vertical-align: baseline;
+                border: e("1px solid #adadad;");
+                cursor: pointer;
+                min-height: 2.5rem;
+                padding-right: 3.6rem;
+                cursor: pointer;
+                padding: 0.6rem 1rem 0.6rem;
+            }
+            .input-text{
+                width: e("calc( (100%) * 0.5 - 30px );");
+            }
+        }
+       
 
         .input-text{
             label{
@@ -850,6 +929,19 @@ input[type="checkbox"] {
     }
    
 }
+.container-user-guide {
+    
+
+    .container-row{
+        cursor: pointer;
+        &[aria-expanded="true"]{
+            .column-2-arrow{
+                transform: rotate(180deg);
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
 
 
     }
@@ -874,5 +966,4 @@ input[type="checkbox"] {
     (@extremum = "min")
     and
     (@break = @screen__m) {
-}
 }
