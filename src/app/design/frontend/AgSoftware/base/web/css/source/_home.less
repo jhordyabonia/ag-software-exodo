@@ -189,208 +189,22 @@
 // Tablet
 // ----------------------------------------------
 @media (min-width: 480px) {
-    .bloqueUno {
-        .contBloqueuno {
-            .container1 {
-                .titulo1 {
-                    font-size: 52px;
-                }
-            }
-        }
-    }
-    .containerImg2{
-        grid-template-columns: 1fr 1fr;
-        .cont_Img {
-            display: flex;
-            align-items: center;
-        }
-    }
-    .contBloqueTres{
-        display: flex;
-        flex-direction: column;
-        .cont1-blocTres{
-            order: 2;
-        }
-        .cont2-blocTres{
-            order: 1;
-        }
-    }
+    
 }
 //
 //  Desktop
 //  _____________________________________________
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
 
-    .cms-home.cms-index-index.page-layout-cms-full-width .nav-sections {
-        margin-bottom: 0;
-        visibility: collapse;
-    }
-
-    .bloqueUno {
-        .contBloqueuno {
-            .containerImg {
-                position: relative;
-
-                .imgIzquierda {
-                    display: block;
-                    position: absolute;
-                    top: -23%;
-                    left: 13%;
-                }
-
-                .imgDerecha {
-                    display: block;
-                    position: absolute;
-                    right: 14%;
-                    top: -32%;
-                }
-            }
-        }
-    }
-    .contBloqueDos {
-        padding: 70px 0;
-
-        .containerImg2 {
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-            .cont_Img {
-                padding: 15px;
-            }
-        }
-    }
-    .bloqueTres {
-        .contBloqueTres {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            align-items: center;
-
-            .cont1-blocTres {
-                order: 1;
-            }
-
-            .cont2-blocTres {
-                order: 2;
-            }
-        }
-    }
+   
+    
 
 }
 //
 //  Desktop
 //  _____________________________________________
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
-    .bloqueCuatro {
-        .content-servicio {
-
-            .container-card {
-                .w-layout-grid {
-                    display: grid;
-                    -ms-grid-columns: 1fr 1fr;
-                    grid-template-columns: 1fr 1fr;
-                    -ms-grid-rows: auto auto;
-                    grid-template-rows: auto auto;
-                    grid-row-gap: 16px;
-                    grid-column-gap: 16px;
-                }
-
-                .content-feature {
-                    -ms-grid-columns: 1fr 1fr 1fr;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    -ms-grid-rows: auto;
-                    grid-template-rows: auto;
-
-
-                }
-
-            }
-        }
-    }
-    .bloqueCinco {
-        .feature-section-blue {
-            .container-small {
-                max-width: 1200px;
-                width: 100%;
-                margin: 0 auto;
-
-                .title-wrap-large-centre {
-                    margin: 0 auto 50px;
-                    text-align: center;
-                    max-width: 620px;
-                }
-
-                .w-layout-grid {
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                    grid-column-gap: 21px;
-
-                    .feature-block-white {
-                        .content-img {
-                            text-align: left;
-                            width: 100%;
-                        }
-                    }
-
-                }
-
-
-
-            }
-
-
-        }
-    }
-
-
-
-.bloqueSeis{
-    .content-compania{
-        .contecnt-conectados{
-            .bg-container-conectados{
-                .grid-integrations{
-                    grid-template-columns: 1.3fr 1fr;
-                    grid-template-rows: auto;
-                    grid-row-gap: 16px;
-                    grid-column-gap: 16px;
-                    .integration-wrap{
-                        height: 670px;
-                        margin: 0 auto;
-                        .img-mobile{
-                            display: none;
-                        }
-
-                        .img-tablet{
-                            display: block;
-                        }
-
-                        div{
-                            display: none;
-                        }
-                    }
-
-
-                }
-                .content-text-wrapper{
-                    padding: 20px;
-                    height: 151px;
-                    margin: auto;
-                }
-            }
-        }
-    }
-}
-    .contBloqueTres {
-        .cont1-blocTres{
-            .parrafo2{
-                color: @parrafoColor;
-            }
-        }
-        .cont2-blocTres {
-            .cont-shadow {
-                position: absolute;
-                top: 0%;
-                bottom: 0%;
-            }
-        }
-    }
+    
 
 
 }
@@ -400,68 +214,6 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =768px) {
-    .bloqueCinco {
-        .feature-section-blue {
-            .container-small {
-                max-width: 1200px;
-                width: 100%;
-                margin: 0 auto;
-
-
-                .title-wrap-large-centre {
-                    margin: 0 auto 40px;
-                    text-align: center;
-                    max-width: 620px;
-                }
-
-                .w-layout-grid {
-                    grid-template-columns: 1fr 1fr;
-                    grid-column-gap: 21px;
-                    grid-row-gap: 32px;
-
-                    .feature-block-white {
-                        .content-img {
-                            text-align: left;
-                            width: 100%;
-                        }
-                    }
-
-                }
-
-
-
-            }
-
-
-        }
-    }
+    
 }
 
-.bloqueSeis{
-    .content-compania{
-        padding: 30px 3%;
-        background-color: transparent;
-        font-family: Montserrat, sans-serif;
-        .contecnt-conectados{
-            .bg-container-conectados{
-                .grid-integrations{
-                    .integration-wrap{
-                        height: 670px;
-                        margin: 0 auto;
-                        .img-mobile{
-                            display: none;
-                        }
-
-                        .img-tablet{
-                            display: block;
-                        }
-
-                        div{
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
