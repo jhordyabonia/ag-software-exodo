@@ -7,456 +7,182 @@
 //  Common
 //  _____________________________________________
 & when (@media-common =true) {
-    .bloqueUno {
-        text-align: center;
-        align-items: center;
+   .cms-home {
 
-        .contBloqueuno {
-            background-image: url("https://uploads-ssl.webflow.com/5ff9f08ad0f45f13b2c0e743/5ff9f08a3928de6bc9400858_Pattern.svg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 1810px;
-            background-position-y: 153px;
-            width: 100%;
-            text-align: center;
-
-            .container1 {
-                margin-bottom: 45px;
-
-                .titulo1 {
-                    font-family: @fontFamily;
-                    font-size: 36px;
-                    color: @title-Color;
-                    line-height: 1.2;
-                    font-weight: 700;
-                    margin-bottom: 24px;
-                    letter-spacing: -0.03em;
-                    animation: text 1s 1;
-                }
-
-                @keyframes text {
-                    0%{
-                        /*padding-top: -40px;*/
-                        opacity: 1;
-                        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                        transform-style: preserve-3d;
-                    }
-                    100%{
-                        /*padding-top: 40px;*/
-                        opacity: 1;
-                        transform: translate3d(0px, 20px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                        transform-style: preserve-3d;
-                    }
-                }
-                .parrafo1 {
-                    font-family: @fontFamily;
-                    color: @parrafoColor;
-                    font-size: 18px;
-                    line-height: 1.5;
-                    font-weight: 400;
-                    margin-bottom: 30px;
-                }
-
-                .botton1 {
-                    font-size: 16px;
-                    color: @ColorSecundario;
-                    padding: 12px 40px;
-                    border-radius: 6px;
-                    border: 1px solid @ColorSecundario;
-                    background-color: transparent;
-                    margin-bottom: 20px;
-                    min-height: 60px;
-                }
-            }
-
-            .containerImg {
-                .imgIzquierda {
-                    display: none;
-                }
-
-                .imgDerecha {
-                    display: none;
-                }
-            }
-        }
+    .mfp-move-from-top.mfp-ready.mfp-bg {
+        opacity: 0.38;
+    }
+    .mfp-bg{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1042;
+        overflow: hidden;
+        position: fixed;
+        background: #0C0C0C;
+        opacity: 0.38;
+    
     }
 
 
-    .bloqueCuatro {
-        .content-servicio {
-            padding: 80px 3%;
-            background-color: transparent;
-            font-family: @fontFamily;
+    .mfp-content {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 auto;
+        text-align: left;
+        z-index: 1045;
+        margin-top: 50px;
 
-            .title-wrap {
-                display: flex;
-                margin: 0px auto 30px auto;
-                justify-content: center;
-                align-items: center;
-                color: @title-Color;
-                text-align: center;
-
-                .heading-9 {
-                    margin: 20px 0px;
-                    font-size: 34px;
-                    line-height: 1.1;
-                    font-weight: 500;
-                    letter-spacing: -0.03em
-                }
-            }
-
-            .container-card {
-                width: 100%;
-                max-width: 1280px;
-                margin: 0px auto;
-
-                .w-layout-grid {
-                    display: grid;
-
-                    .feature-card {
-                        padding: 24px 36px;
-                        background-color: #ffffff;
-                        border-radius: 32px;
-                        box-shadow: e("1px 1px 10px 2px #7b88a814");
-
-                        .value-icon {
-                            width: 60px;
-                            margin-bottom: 10px;
-                        }
-
-                        .value-icon-large {
-                            width: 90px;
-                            margin-bottom: 10px;
-                        }
-
-                        .paragraph-large.paragraph-bold {
-                            margin-bottom: 12px;
-                            font-family: @fontFamily;
-                            color: @title-Color;
-                            font-size: 28px;
-                            font-weight: 700;
-                        }
-
-                        .paragraph {
-                            font-family: @fontFamily;
-                            font-size: 18px;
-                            line-height: 1.6;
-                            font-weight: 400;
-                            margin-bottom: 10px;
-                            color: @parrafoColor;
-                        }
-
-                        .link-arrow {
-                            display: flex;
-                            margin-top: 20px;
-                            padding: 18px 0;
-                            -webkit-align-items: center;
-                            -ms-flex-align: center;
-                            align-items: center;
-                            color: @ColorSecundario;
-                            font-size: 18px;
-                            font-weight: 600;
-                            text-decoration: none;
-
-                            .arrow {
-                                margin-left: 14px;
-                            }
-
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    .bloqueCinco {
-
-        .feature-section-blue {
-            background-repeat: no-repeat;
-            padding: 30px 3% 100px;
-
-            .container-small {
-                .title-wrap-large-centre {
-                    margin-bottom: 40px;
-                    text-align: center;
-                    display: flex;
-
-                    .heading-9 {
-                        font-family: @fontFamily;
-                        font-size: 34px;
-                        margin: 20px 0;
-                        line-height: 1.1;
-                        letter-spacing: -0.03em;
-                        font-weight: 500;
-                    }
-
-                }
-
-                .w-layout-grid {
-                    display: grid;
-
-                    .feature-block-white {
-                        max-width: 400px;
-                        margin: 0 auto;
-                        padding: 24px 32px 32px;
-                        display: flex;
-                        flex-direction: column;
-                        text-align: left;
-                        align-items: flex-start;
-                        justify-content: center;
-                        background-color: #ffffff;
-                        box-shadow: e("1px 1px 10px 2px #7b88a814");
-
-                        .content-img {
-                            text-align: center;
-                            width: 100%;
-                        }
-
-                        .icon-medium {
-                            width: 64px;
-                            margin-bottom: 24px;
-                        }
-
-                        .paragraph-large {
-                            margin-bottom: 4px;
-                            font-family: @fontFamily;
-                            color: @title-Color;
-                            font-size: 22px;
-                            line-height: 30px;
-                            font-weight: 500;
-                            letter-spacing: -0.01em;
-                            text-decoration: none;
-                        }
-
-                        .paragraph {
-                            font-family: @fontFamily;
-                            font-size: 18px;
-                            line-height: 1.6;
-                            font-weight: 400;
-                            margin-bottom: 10px;
-                            color: @parrafoColor;
-                        }
-                    }
-
-                    .fix{
-                        background-color: #f3efff;
-                        transition: width 1s, height 1s;
-                    }
-
-                    .fix:hover{
-                        background-color: #dcd1ff;
-                        transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-                        opacity: 1;
-                        transform-style: preserve-3d;
-                    }
-                }
-
-
-            }
-        }
-
-
-    }
-
-    .bloqueSeis {
-        .content-compania {
-            padding: 0px 3% 80px;
-            font-family: Montserrat, sans-serif;
-
-            .contecnt-conectados {
-                width: 100%;
-                max-width: 1280px;
-                margin: 0 auto;
-
-                .bg-container-conectados {
-                    display: flex;
-                    position: relative;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: stretch;
-
-
-                    .grid-integrations{
-                        display: grid;
-                        grid-template-columns: 1fr;
-                        grid-template-rows: auto auto;
-                        grid-row-gap: 16px;
-
-                        .integration-wrap {
-                        position: relative;
-                        display: flex;
-                        max-width: 600px;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-                        height: 490px;
-
-                        .img-tablet{
-                            display: none;
-                        }
-                        div{
-                            display: none;
-                        }
-
-                        }
-                        .content-text-wrapper{
-                            padding: 10px;
-
-                            .content-h1{
-                                font-size: 36px;
-                                line-height: 1.3em;
-                                font-family: Montserrat, sans-serif;
-                                letter-spacing: -0.03em;
-                                color: #1b1b1f;
-                                margin: 20px 0;
-                                font-weight: 500;
-                            }
-
-                            .paragraph {
-                                font-family: Montserrat, sans-serif;
-                                font-size: 18px;
-                                line-height: 1.6;
-                                font-weight: 400;
-                                margin-bottom: 10px;
-                                color: #7b88a8;
-                            }
-
-
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .contBloqueDos {
-        text-align: center;
-        padding: 242px 0;
-
-        .titulo2 {
-            font-family: @fontFamily;
-            color: @title-Color;
-            font-size: 34px;
-            line-height: 1.3em;
-            margin: 10px 0 24px;
-            font-weight: 500;
-        }
-
-        .parrafo2 {
-            font-family: @fontFamily;
-            color: @parrafoColor;
-            font-size: 18px;
-            line-height: 1.5;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-
-        .containerImg2 {
-            display: grid;
-            gap: 16px;
-
-            .cont_Img {
-                min-height: 100px;
-                max-width: 260px;
-                margin: auto;
-
-                ._Img {
-                    width: 143px;
-                }
-            }
-
-        }
-    }
-
-    .contBloqueTres {
-        padding: 50px 0;
-
-        .cont1-blocTres {
-            padding: 10px;
-
-            .titulo2 {
-                font-size: 36px;
-                font-family: @fontFamily;
-                color: @title-Color;
-                line-height: 1.3em;
-                font-weight: 500;
-                margin: 20px 0;
-                letter-spacing: -0.03em;
-            }
-
-            .parrafo2 {
-                font-family: Montserrat, sans-serif;
-                font-size: 18px;
-                line-height: 1.6;
-                font-weight: 400;
-                color: @title-Color;
-            }
-
-            .cont-link {
-                display: flex;
-                margin: 20px 0 0 0;
-                padding: 18px 0;
-                align-items: center;
-
-                .a-link {
-                    margin-right: 14px;
-                    font-family: @fontFamily;
-                    color: @ColorSecundario;
-                    font-size: 18px;
-                    font-weight: 600;
-                    text-decoration: none;
-                }
-            }
-        }
-
-        .cont2-blocTres {
+        .white-popup{
             position: relative;
-            img {
-                border-radius: 24px;
-            }
-            .cont-shadow {
-                position: absolute;
-                left: 0;
-                top: -35%;
-                right: -10%;
-                bottom: -35%;
-                z-index: -1;
-                width: 88%;
-                max-width: 850px;
-                min-height: 401px;
-                margin-right: auto;
-                margin-left: auto;
-                border-radius: 32px;
-                background-color: #fff7f2;
-            }
-            img {
-                border-radius: 24px;
-            }
-        }
+            background: #FFF;
+            padding: 0;
+            width: auto;
+            max-width: 546px;
+            margin: 0 auto;
+            border-radius: 8px;
+            width: 546px;
+            height: 490px;
 
-    }
+            .block-container{
 
-}
+                .social-login-title {
+                    display: none;
+                 }
+                 
+                .block {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
 
-//
-//  Mobile
-//  _____________________________________________
-.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
-    .mainHome {
-        margin-top: 30px;
-    }
-    .bloqueCinco {
-        .feature-section-blue {
-            .container-small {
-                width: 100%;
-                margin: 0 auto;
+                    .block-title{
+                        margin-top: 30px;
+                        border-bottom: none !important;
+                        text-align: center;
+                        padding-top: 15px;
 
-                .w-layout-grid {
-                    grid-template-columns: 1fr;
+                        #block-customer-login-heading{
+                            font-family: 'Barlow';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 130%;
+                            color: #0C0C0C;
+                        }
+                    }
+
+                    .block-content{
+                        .form-customer-login{
+                            .fieldset {
+                                .email, .password{
+                                    margin: 0px 0 7px;
+                                    .label{
+                                        font-family: 'Barlow';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 14px;
+                                        line-height: 170%;
+                                        text-align: left;
+                                        color: #434447;
+                                    }
+
+                                    .control{
+
+                                        input[type="email"]{
+                                            width: 373px;
+                                            height: 48px;
+                                            border: 1px solid #EAECEE;
+                                            border-radius: 8px;
+                                        }
+
+                                        [type="password"]{
+                                            width: 373px;
+                                            height: 48px;
+                                            border: 1px solid #EAECEE;
+                                            border-radius: 8px;
+                                        }
+                                    }
+                                }
+
+                                .password{
+                                    padding-bottom: 24px;
+
+                                }
+
+
+                                .actions-toolbar{
+                                    display: flex;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    margin: 12px 0px 12px 0px;
+                                    .primary{
+                                        .login{
+                                            width: 198px;
+                                            height: 48px;
+                                            background-color: #0D717F !important;
+                                            border-radius: 30px;
+
+                                            .create{
+                                                span{
+                                                    font-family: 'Barlow';
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 16px;
+                                                    color: #0D717F;
+                                                }
+                                            }
+                                           
+                                        }
+
+
+                                    }
+                                    .secondary{
+                                        position: absolute;
+                                        right: 16%;
+                                        bottom: 37%;
+
+                                        .remind{
+                                            span{
+                                                font-family: 'Barlow';
+                                                font-style: normal;
+                                                font-weight: 500;
+                                                font-size: 16px;
+                                                line-height: 16px;
+                                                color: #0D717F;
+                                            }
+                                        }
+                                    }
+
+                                    .primary{
+                                        .create{
+                                                span{
+                                                    font-family: 'Barlow';
+                                                    font-style: normal;
+                                                    font-weight: 500;
+                                                    font-size: 16px;
+                                                    line-height: 16px;
+                                                    color: #0D717F;
+                                                }
+                                            }
+                                           
+                                        }
+                                   
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
+    }
+        
+        filter: alpha(opacity=80);
     }
 }
 //
