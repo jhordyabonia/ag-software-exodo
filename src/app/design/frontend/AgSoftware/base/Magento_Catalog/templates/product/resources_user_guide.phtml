@@ -4,6 +4,9 @@
  *@var \Magento\Catalog\Model\Product $product
  */
 $product = $block->getProduct();
+if($product->getData('service')){
+    return;
+}
 ?>
 <div class="container-user-guide" data-mage-init='{"accordion":{
                                     "openedState": "active",
