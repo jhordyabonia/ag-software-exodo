@@ -63,7 +63,7 @@
 #request-popup .block-container .block .block-title {
     padding-bottom: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
+    
 }
 
 #social-login-popup .fieldset,
@@ -104,7 +104,7 @@
 }
 
 #social-login-popup .mfp-close {
-    color: #ffffff;
+    color: #0C0C0C ;
 }
 
 #social-login-popup .message.error > *:first-child:before {
