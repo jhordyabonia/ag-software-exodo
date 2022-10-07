@@ -3,35 +3,44 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-    .page-wrapper {
-        .page-main {
-            .page-title-wrapper {
-                text-align: center;
-                .page-title {
-                    display: none;
-                }
-                .thanks-imagen {
-                    width: 50%;
-                    padding: 60px 0px 15px 100px;
-                }
-            }
-            .columns {
-                .column {
-                    .checkout-success {
-                        text-align: center;
+    .checkout-onepage-success {
+        .page-wrapper {
+            .page-main {
+                .page-title-wrapper {
+                    text-align: center;
+
+                    .page-title {
+                        display: none;
+                    }
+
+                    .thanks-imagen {
                         width: 50%;
-                        margin: 0 auto;
-                        p {
-                            margin-bottom: 15px;
-                        }
-                        .actions-toolbar {
+                        padding: 60px 0px 15px 100px;
+                    }
+                }
+
+                .columns {
+                    .column {
+                        .checkout-success {
                             text-align: center;
-                            .primary {
-                                margin: 0;
-                                float: none;
-                                .continue {
+                            width: 50%;
+                            margin: 0 auto;
+
+                            p {
+                                margin-bottom: 15px;
+                            }
+
+                            .actions-toolbar {
+                                text-align: center;
+
+                                .primary {
                                     margin: 0;
                                     float: none;
+
+                                    .continue {
+                                        margin: 0;
+                                        float: none;
+                                    }
                                 }
                             }
                         }
@@ -47,24 +56,28 @@
 //  _____________________________________________
 
 @media only screen and(max-width: 769px) {
-    .page-wrapper {
-        .page-main {
-            .page-title-wrapper {
-                .thanks-imagen {
-                    width: 70%;
-                    padding: 0 0 2px;
+    .checkout-onepage-success {
+        .page-wrapper {
+            .page-main {
+                .page-title-wrapper {
+                    .thanks-imagen {
+                        width: 70%;
+                        padding: 0 0 2px;
+                    }
                 }
-            }
-            .columns {
-                .column {
-                    .checkout-success {
-                        text-align: center;
-                        width: 90%;
-                        margin: 0 auto;
-                        .actions-toolbar {
-                            .primary {
-                                .continue {
-                                    width: auto;
+
+                .columns {
+                    .column {
+                        .checkout-success {
+                            text-align: center;
+                            width: 90%;
+                            margin: 0 auto;
+
+                            .actions-toolbar {
+                                .primary {
+                                    .continue {
+                                        width: auto;
+                                    }
                                 }
                             }
                         }
