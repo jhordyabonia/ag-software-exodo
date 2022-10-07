@@ -3,8 +3,42 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-    body{
-        //background-color: #1a1a1a!important;
+    .page-wrapper {
+        .page-main {
+            .page-title-wrapper {
+                text-align: center;
+                .page-title {
+                    display: none;
+                }
+                .thanks-imagen {
+                    width: 50%;
+                    padding: 60px 0px 15px 100px;
+                }
+            }
+            .columns {
+                .column {
+                    .checkout-success {
+                        text-align: center;
+                        width: 50%;
+                        margin: 0 auto;
+                        p {
+                            margin-bottom: 15px;
+                        }
+                        .actions-toolbar {
+                            text-align: center;
+                            .primary {
+                                margin: 0;
+                                float: none;
+                                .continue {
+                                    margin: 0;
+                                    float: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -12,14 +46,38 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-
+@media only screen and(max-width: 769px) {
+    .page-wrapper {
+        .page-main {
+            .page-title-wrapper {
+                .thanks-imagen {
+                    width: 70%;
+                    padding: 0 0 2px;
+                }
+            }
+            .columns {
+                .column {
+                    .checkout-success {
+                        text-align: center;
+                        width: 90%;
+                        margin: 0 auto;
+                        .actions-toolbar {
+                            .primary {
+                                .continue {
+                                    width: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 //
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
 }
