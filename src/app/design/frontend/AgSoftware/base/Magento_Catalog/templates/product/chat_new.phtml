@@ -1,6 +1,17 @@
+<?php
+/**
+ *@var \Magento\Catalog\Block\Product\View $block
+ *@var \Magento\Catalog\Model\Product $product
+ */
+$product = $block->getProduct();
+?>
 <div class="container-chat-new">
     <div class="content-chat">
-        <img class="icon-img" src="https://www.mageplaza.com/assets/images/icons-new/chat-now.svg">
-        <a class="text-chat">Chat now</a>
+        <img class="icon-img" src="<?= $this->getViewFileUrl('Magento_Catalog::images/chat-now.svg')?>">
+        <a class="text-chat" target="_blank" href="https://wa.me/<?=$product->getData('whatsapp')?>">
+            <?php
+                echo __("Chat now")
+            ?>
+        </a>
     </div>
 </div>

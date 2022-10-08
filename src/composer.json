@@ -21,6 +21,7 @@
         "magento/composer-root-update-plugin": "~2.0",
         "magento/product-community-edition": "2.4.5",
         "mageplaza/module-core": "^1.4",
+        "mageplaza/module-smtp": "^4.7",
         "mercadopago/magento2-plugin": "3.*"
     },
     "autoload": {

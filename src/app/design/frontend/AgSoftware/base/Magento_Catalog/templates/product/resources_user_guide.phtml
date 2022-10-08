@@ -1,3 +1,13 @@
+<?php
+/**
+ *@var \Magento\Catalog\Block\Product\View $block
+ *@var \Magento\Catalog\Model\Product $product
+ */
+$product = $block->getProduct();
+if($product->getData('service')){
+    return;
+}
+?>
 <div class="container-user-guide" data-mage-init='{"accordion":{
                                     "openedState": "active",
                                     "collapsible": true,
@@ -10,7 +20,7 @@
             <div class="column-1">
                 <img class="icon-img"
                      alt="<?=__("logo Demo")?>"
-                     src="<?='https://www.mageplaza.com/assets/images/icons-new/demo.svg'?>">
+                     src="<?= $this->getViewFileUrl('Magento_Catalog::images/demo.svg')?>">
                 <span><?=__("Demo")?></span>
             </div>
             <span class="column-2-arrow">➜</span>
@@ -19,12 +29,18 @@
 
         <div class="container-demo-content" data-role="content">
                 <div class="container-links">
-                    <a class="links links-frontend"><?=__("Frontend")?></a>
-                    <a class="links links-backend"><?=__("Backend")?></a>
+                    <a class="links links-frontend"
+                       target="_blank" href="<?=$product->getData('demo_pdf')?>">
+                        <?=__("Document")?></a>
+                    <a class="links links-backend"
+                       target="_blank" href="<?=$product->getData('demo_video')?>">
+                       <?=__("Video")?></a>
                 </div>
                 <div class="container-hosted">
                     <span class="hosted-in|fo"><?=__("This demo is hosted on")?></span>
-                    <a class="hosted-links"><?=__("Cloudways")?></a>
+                    <a class="hosted-links"
+                       target="_blank" href="<?=$product->getData('demo_pdf')?>">
+                        <?=__("Document")?></a>
                 </div>
         </div>
 
@@ -37,7 +53,7 @@
             <div class="column-1" >
                 <img class="icon-img"
                      alt="<?=__("User Guide")?>"
-                     src="<?='https://www.mageplaza.com/assets/images/icons-new/user-guide.svg'?>">
+                     src="<?= $this->getViewFileUrl('Magento_Catalog::images/user-guide.svg')?>">
                 <span><?=__("User Guide")?></span>
             </div>
             <span class="column-2-arrow">➜</span>
@@ -45,8 +61,12 @@
 
         <div class="container-user-guide" data-role="content">
             <div class="guide-links">
-                <a class="links"><?=__("User Guide")?></a>
-                <a class="links"><?=__("Installation Guide")?></a>
+                <a class="links"
+                   target="_blank" href="<?=$product->getData('user_guide')?>">
+                    <?=__("User Guide")?></a>
+                <a class="links"
+                   target="_blank" href="<?=$product->getData('install_guide')?>">
+                    <?=__("Installation Guide")?></a>
             </div>
         </div>
     </div>
@@ -57,7 +77,7 @@
             <div class="column-1">
                 <img class="icon-img"
                     alt="<?=__("Magento Version Soported")?>"
-                    src="<?='https://www.mageplaza.com/assets/images/icons-new/support.svg'?>">
+                    src="<?= $this->getViewFileUrl('Magento_Catalog::images/support.svg')?>">
                 <span><?=__("Magento Version Soported")?></span>
             </div>
             <span class="column-2-arrow">➜</span>
@@ -67,8 +87,8 @@
             <div class="container-informacion-version">
                 <img class="img-version"
                      alt="<?=__("Magento logo")?>"
-                     src="<?='https://www.mageplaza.com/assets/img/magento-icon.png'?>">
-                <span class="tex-version"><?=__("CE/EE/B2B/Cloud/ Adobe Commerce 2.2.x, 2.3.x, 2.4.x")?></span>
+                     src="<?= $this->getViewFileUrl('Magento_Catalog::images/magento-icon.png')?>">
+                <span class="tex-version"><?=$product->getData('magento_versions')?></span>
             </div>
         </div>
     </div>

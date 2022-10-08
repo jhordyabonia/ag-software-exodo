@@ -10,6 +10,7 @@
     .bloqueUno {
         text-align: center;
         align-items: center;
+        padding: 24px 36px;
 
         .contBloqueuno {
             background-image: url("https://uploads-ssl.webflow.com/5ff9f08ad0f45f13b2c0e743/5ff9f08a3928de6bc9400858_Pattern.svg");
@@ -19,6 +20,7 @@
             background-position-y: 153px;
             width: 100%;
             text-align: center;
+           
 
             .container1 {
                 margin-bottom: 45px;
@@ -83,10 +85,12 @@
 
 
     .bloqueCuatro {
+        margin: 40px 0;
         .content-servicio {
-            padding: 80px 3%;
+          /*  padding: 22px 3%;*/
             background-color: transparent;
             font-family: @fontFamily;
+            margin-bottom: -60px;
 
             .title-wrap {
                 display: flex;
@@ -101,7 +105,8 @@
                     font-size: 34px;
                     line-height: 1.1;
                     font-weight: 500;
-                    letter-spacing: -0.03em
+                    letter-spacing: -0.03em;
+                    padding:24px 36px;
                 }
             }
 
@@ -171,10 +176,10 @@
     }
 
     .bloqueCinco {
-
+        margin: 40px 0;
         .feature-section-blue {
             background-repeat: no-repeat;
-            padding: 30px 3% 100px;
+        
 
             .container-small {
                 .title-wrap-large-centre {
@@ -204,7 +209,7 @@
                         flex-direction: column;
                         text-align: left;
                         align-items: flex-start;
-                        justify-content: center;
+                        
                         background-color: #ffffff;
                         box-shadow: e("1px 1px 10px 2px #7b88a814");
 
@@ -216,6 +221,7 @@
                         .icon-medium {
                             width: 64px;
                             margin-bottom: 24px;
+                            height: 64px;
                         }
 
                         .paragraph-large {
@@ -250,6 +256,30 @@
                         opacity: 1;
                         transform-style: preserve-3d;
                     }
+
+                    .card-senior{ 
+                        transition: width 1s, height 1s;
+                    }
+
+                    .card-senior:hover{
+                        background-color: #dcd1ff;
+                        transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                        opacity: 1;
+                        transform-style: preserve-3d;
+                    }
+
+                    .feature-block-white{
+                        transition: width 1s, height 1s;
+                    }
+
+                    .feature-block-white:hover{
+                        background-color: #dcd1ff;
+                        transform: translate3d(0px, 0px, 0px) scale3d(1.1, 1.1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                        opacity: 1;
+                        transform-style: preserve-3d;
+                    }
+
+
                 }
 
 
@@ -263,6 +293,7 @@
         .content-compania {
             padding: 0px 3% 80px;
             font-family: Montserrat, sans-serif;
+            margin-top: -53px;
 
             .contecnt-conectados {
                 width: 100%;
@@ -332,7 +363,8 @@
 
     .contBloqueDos {
         text-align: center;
-        padding: 242px 0;
+        padding: 24px 36px;
+        
 
         .titulo2 {
             font-family: @fontFamily;
@@ -370,10 +402,13 @@
     }
 
     .contBloqueTres {
-        padding: 50px 0;
+        padding: 24px 36px;
+        margin-bottom: -61px;
+        margin-top: 40px;
 
         .cont1-blocTres {
             padding: 10px;
+            margin-top: -48px;
 
             .titulo2 {
                 font-size: 36px;
@@ -522,7 +557,8 @@
         }
     }
     .contBloqueDos {
-        padding: 70px 0;
+       margin: 40px 0;
+       
 
         .containerImg2 {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -537,6 +573,8 @@
             display: grid;
             grid-template-columns: 1fr 1.3fr;
             align-items: center;
+            padding: 21px;
+            margin: 40px 0;
 
             .cont1-blocTres {
                 order: 1;
