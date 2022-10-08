@@ -43,7 +43,7 @@ $mainImageData = $mainImage ?
         <div class="container-money-back">
             <div class="text-center">
                 <img class="mt-1 img-peso"
-                     src="https://www.mageplaza.com/assets/images/icons-new/money-back.svg">
+                     src="<?= $this->getViewFileUrl('Magento_Catalog::images/money-back.svg')?>">
                 <p class="text-center">
                     <?=__("60-day Money Back")?>
                 </p>
@@ -53,7 +53,7 @@ $mainImageData = $mainImage ?
         <div class="container-update">
             <div class="text-center">
                 <img class="mt-1 img-arraw"
-                     src="https://www.mageplaza.com/assets/images/icons-new/updates.svg">
+                     src="<?= $this->getViewFileUrl('Magento_Catalog::images/updates.svg')?>">
                 <p class="text-center">
                     <?=__("Frequent Update")?>
                 </p>
@@ -63,9 +63,9 @@ $mainImageData = $mainImage ?
         <div class="container-suport">
             <div class="text-center">
                 <img class="mt-1 img-reloj"
-                     src="https://www.mageplaza.com/assets/images/icons-new/support.svg">
+                     src="<?= $this->getViewFileUrl('Magento_Catalog::images/support.svg')?>">
                 <p class="text-center">
-                    <?=__("365-day Support")?>    
+                    <?=__("365-day Support")?>
                 </p>
             </div>
         </div>

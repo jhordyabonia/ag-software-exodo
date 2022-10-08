@@ -1624,7 +1624,7 @@ y el descriptor del producto puede ser de hasta 18, 14 o 9 caracteres respectiva
 "Your Customization","Su personalización",module,Magento_Bundle
 "Availability","Disponibilidad",module,Magento_Bundle
 "In stock","Disponible",module,Magento_Bundle
-"Out of stock","No está disponible",module,Magento_Bundle
+"Out of stock","Ver más",module,Magento_Bundle
 "Summary","Resumen",module,Magento_Bundle
 "%1 x %2","%1 x %2",module,Magento_Bundle
 "Availability:","Disponibilidad:",module,Magento_Bundle
@@ -2293,7 +2293,7 @@ y el descriptor del producto puede ser de hasta 18, 14 o 9 caracteres respectiva
 "Remove Product","Eliminar artículo",module,Magento_Catalog
 "Add to Cart","Añadir al carrito",module,Magento_Catalog
 "In stock","Disponible",module,Magento_Catalog
-"Out of stock","No está disponible",module,Magento_Catalog
+"Out of stock","Ver más",module,Magento_Catalog
 "Add to Wish List","Añadir a la Lista de Deseos",module,Magento_Catalog
 "You have no items to compare.","No tiene ningún artículo para comparar.",module,Magento_Catalog
 "Remove This Item","Eliminar este artículo",module,Magento_Catalog
@@ -3177,7 +3177,7 @@ Tiempo en segundos entre actualizaciones de widgets.,module,Magento_Catalog
 "Please choose a condition to add.","Por favor, elige una condición para añadir.",module,Magento_CatalogWidget
 "Add to Cart","Añadir al carrito",module,Magento_CatalogWidget
 "In stock","Disponible",module,Magento_CatalogWidget
-"Out of stock","No está disponible",module,Magento_CatalogWidget
+"Out of stock","Ver más",module,Magento_CatalogWidget
 "Add to Wish List","Añadir a la Lista de Deseos",module,Magento_CatalogWidget
 "Add to Compare","Añadir para comparar",module,Magento_CatalogWidget
 "Catalog Products List","Lista de productos de catálogo",module,Magento_CatalogWidget
@@ -3214,7 +3214,7 @@ Tiempo en segundos entre actualizaciones de widgets.,module,Magento_CatalogWidge
 "A letter with further instructions will be sent to your email.","Se enviara un correo con mas instrucciones a su cuenta de correo.",module,Magento_Checkout
 "You added %1 to your shopping cart.","Añadiste %1 a tu cesta.",module,Magento_Checkout
 "We can't add this item to your shopping cart right now.","No podemos añadir este artículo a su carrito de compras ahora mismo.",module,Magento_Checkout
-"Out of stock","No está disponible",module,Magento_Checkout
+"Out of stock","Ver más",module,Magento_Checkout
 "We can't find the quote item.","No podemos encontrar el artículo cotizado.",module,Magento_Checkout
 "We cannot configure the product.","No se puede configurar el artículo.",module,Magento_Checkout
 "You used coupon code ""%1"".","Se utiliza el código de cupón ""%1"".",module,Magento_Checkout
@@ -6121,7 +6121,7 @@ Plantilla de correo electrónico elegida en función de la devolución del tema 
 "Unselect all","Desmarcar todo",module,Magento_Downloadable
 "Availability","Disponibilidad",module,Magento_Downloadable
 "In stock","Disponible",module,Magento_Downloadable
-"Out of stock","No está disponible",module,Magento_Downloadable
+"Out of stock","Ver más",module,Magento_Downloadable
 "Go to <a href=""%1"">My Downloadable Products</a>","Ir a <a href=""%1"">mis artículos descargables</a>",module,Magento_Downloadable
 "Downloadable Products","Productos descargables",module,Magento_Downloadable
 "Order #","Pedido nº ",module,Magento_Downloadable
@@ -6697,7 +6697,7 @@ Plantilla de correo electrónico elegida en función de la devolución del tema 
 "All Websites [%1]","Todos los sitios web [%1]",module,Magento_GiftCard
 "%1 [%2]","%1 [%2]",module,Magento_GiftCard
 "Availability:","Disponibilidad:",module,Magento_GiftCard
-"Out of stock","No está disponible",module,Magento_GiftCard
+"Out of stock","Ver más",module,Magento_GiftCard
 "Choose an Amount...","Elegir una cantidad...",module,Magento_GiftCard
 "Other Amount...","Otra cantidad...",module,Magento_GiftCard
 "Amount in %1","Cantidad en %1",module,Magento_GiftCard
@@ -7427,7 +7427,7 @@ Plantilla de correo electrónico elegida en función de la devolución del tema 
 "Actions","Acciones",module,Magento_GroupedProduct
 "Associated Products","Artículos asociados",module,Magento_GroupedProduct
 "Availability:","Disponibilidad:",module,Magento_GroupedProduct
-"Out of stock","No está disponible",module,Magento_GroupedProduct
+"Out of stock","Ver más",module,Magento_GroupedProduct
 "Product Name","Nombre del producto",module,Magento_GroupedProduct
 "Qty","Cantidad",module,Magento_GroupedProduct
 "No options of this product are available.","No hay opciones disponibles de este artículo.",module,Magento_GroupedProduct
@@ -8658,7 +8658,7 @@ esto no afectará al filtro de precios.",module,Magento_LayeredNavigation
 "Associated Products","Artículos asociados",module,Magento_NegotiableQuote
 "Choose an Option...","Elegir una opción...",module,Magento_NegotiableQuote
 "Availability:","Disponibilidad:",module,Magento_NegotiableQuote
-"Out of stock","No está disponible",module,Magento_NegotiableQuote
+"Out of stock","Ver más",module,Magento_NegotiableQuote
 "Amount","Importe",module,Magento_NegotiableQuote
 "Choose an Amount...","Elegir una cantidad...",module,Magento_NegotiableQuote
 "Other Amount...","Otra cantidad...",module,Magento_NegotiableQuote
@@ -10842,7 +10842,7 @@ target=""_blank""> DevDocs' Información de la versión</a>.,module,Magento_Rele
 "Recently Viewed","Vistos recientemente",module,Magento_Reports
 "Add to Cart","Añadir al carrito",module,Magento_Reports
 "In stock","Disponible",module,Magento_Reports
-"Out of stock","No está disponible",module,Magento_Reports
+"Out of stock","Ver más",module,Magento_Reports
 "Add to Wish List","Añadir a la Lista de Deseos",module,Magento_Reports
 "Add to Compare","Añadir para comparar",module,Magento_Reports
 "Recently Compared","Comparados recientemente",module,Magento_Reports
@@ -16085,7 +16085,7 @@ formElements/*[name(.)=../../@formElement]/settings/title,module,Magento_Ui
 "Add to Cart","Añadir al carrito",module,Magento_Wishlist
 "Availability","Disponibilidad",module,Magento_Wishlist
 "In stock","Disponible",module,Magento_Wishlist
-"Out of stock","No está disponible",module,Magento_Wishlist
+"Out of stock","Ver más",module,Magento_Wishlist
 "Edit","Editar",module,Magento_Wishlist
 "Remove Item","Eliminar elemento",module,Magento_Wishlist
 "Remove item","Quitar artículo",module,Magento_Wishlist
@@ -16646,5 +16646,5 @@ or in,o en,module,Algolia_AlgoliaSearch
 "160h (1 month) +US$ 1.450,00","160h (1 mes) +US$ 1.450,00"
 "320h (2 month) +US$ 4.450,00","320h (2 meses) +US$ 4.450,00"
 "640h (6 month) +US$ 8.450,00","640h (6 meses) +US$ 8.450,00"
-"",""
+"Document","Documento"
 "",""

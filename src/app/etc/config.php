@@ -330,6 +330,8 @@ return [
         'AgSoftware_StorePickup' => 1,
         'AgSoftware_Vendor' => 1,
         'Mageplaza_Core' => 1,
+        'Mageplaza_Core' => 1,
+        'Mageplaza_Smtp' => 1,
         'Mageplaza_SocialLogin' => 1,
         'MercadoPago_Core' => 1,
         'PayPal_Braintree' => 1,
