@@ -329,7 +329,7 @@ return [
         'AgSoftware_OffertBlock' => 1,
         'AgSoftware_StorePickup' => 1,
         'AgSoftware_Vendor' => 1,
-        'Jhordy_Blog' => 1,
+        'Mageplaza_Core' => 1,
         'Mageplaza_Core' => 1,
         'Mageplaza_Smtp' => 1,
         'Mageplaza_SocialLogin' => 1,
