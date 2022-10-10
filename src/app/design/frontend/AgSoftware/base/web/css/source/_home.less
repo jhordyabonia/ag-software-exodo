@@ -183,21 +183,6 @@
             img {
                 border-radius: 24px;
             }
-            .cont-shadow {
-                position: absolute;
-                left: 0;
-                top: -35%;
-                right: -10%;
-                bottom: -35%;
-                z-index: -1;
-                width: 88%;
-                max-width: 850px;
-                min-height: 401px;
-                margin-right: auto;
-                margin-left: auto;
-                border-radius: 32px;
-                background-color: #fff7f2;
-            }
             img {
                 border-radius: 24px;
             }
@@ -238,6 +223,7 @@
 
                 .w-layout-grid {
                     display: grid;
+                    gap: 15px;
 
                     .feature-card {
                         padding: 24px 36px;
@@ -300,8 +286,6 @@
         margin: 0;
         .feature-section-blue {
             background-repeat: no-repeat;
-        
-
             .container-small {
                 .title-wrap-large-centre {
                     margin-bottom: 40px;
@@ -318,9 +302,9 @@
                     }
 
                 }
-
                 .w-layout-grid {
                     display: grid;
+                    gap: 15px;
 
                     .feature-block-white {
                         max-width: 400px;
@@ -329,8 +313,7 @@
                         display: flex;
                         flex-direction: column;
                         text-align: left;
-                        align-items: flex-start;
-                        
+                        align-items: flex-start; 
                         background-color: #ffffff;
                         box-shadow: e("1px 1px 10px 2px #7b88a814");
 
@@ -530,6 +513,25 @@
     .mainHome {
         margin-top: 30px;
     }
+    .contBloqueTres {
+        .cont2-blocTres {
+            .cont-shadow {
+                position: absolute;
+                left: 0;
+                top: -13%;
+                right: -33%;
+                bottom: -35%;
+                z-index: -1;
+                width: 60%;
+                max-width: 850px;
+                height: 120%;
+                margin-right: auto;
+                margin-left: auto;
+                border-radius: 32px;
+                background-color: #fff7f2;
+            }
+        }
+    }
     .bloqueCinco {
         .feature-section-blue {
             .container-small {
@@ -676,6 +678,21 @@
 
             .cont2-blocTres {
                 order: 2;
+                .cont-shadow {
+                    position: absolute;
+                    left: 0;
+                    top: -35%;
+                    right: -10%;
+                    bottom: -35%;
+                    z-index: -1;
+                    width: 88%;
+                    max-width: 850px;
+                    min-height: 401px;
+                    margin-right: auto;
+                    margin-left: auto;
+                    border-radius: 32px;
+                    background-color: #fff7f2;
+                }
             }
         }
     }
@@ -689,20 +706,23 @@
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
     
-    .contBloqueTres {
-        .cont1-blocTres{
-            .parrafo2{
-                color: @parrafoColor;
+    .bloqueTres {
+        .contBloqueTres {
+            .cont1-blocTres{
+                .parrafo2{
+                    color: @parrafoColor;
+                }
             }
-        }
-        .cont2-blocTres {
-            .cont-shadow {
-                position: absolute;
-                top: 0%;
-                bottom: 0%;
+            .cont2-blocTres {
+                .cont-shadow {
+                    position: absolute;
+                    top: 0%;
+                    bottom: 0%;
+                }
             }
         }
     }
+    
     .bloqueCuatro {
         .content-servicio {
 
