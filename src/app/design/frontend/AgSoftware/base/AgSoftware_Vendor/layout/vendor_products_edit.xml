@@ -3,7 +3,9 @@
     <update handle="vendor_index"/>
     <body>
 		<referenceContainer name="content">
+
 			<block name="products.edit" class="AgSoftware\Vendor\Block\Products\Edit" template="AgSoftware_Vendor::products/edit.phtml">
+            
                 <block name="products.edit.actions" template="AgSoftware_Vendor::products/actions.phtml"/>
                 <block name="products.edit.general" template="AgSoftware_Vendor::products/general.phtml"/>
                 <block name="products.edit.content" template="AgSoftware_Vendor::products/content.phtml"/>
@@ -18,12 +20,7 @@
                 <block name="products.edit.shedule" template="AgSoftware_Vendor::products/shedule.phtml"/>
                 <block name="products.edit.websites" template="AgSoftware_Vendor::products/websites.phtml"/>
 
-
-
-
-
-
-            </block>
+             </block>
         </referenceContainer>
 	</body>
 </page>
