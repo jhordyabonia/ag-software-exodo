@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="vendor_index"/>
+    <body>
+		<referenceContainer name="content">
+
+			<block name="products.edit" class="AgSoftware\Vendor\Block\Products\Edit" template="AgSoftware_Vendor::products/edit.phtml">
+            
+                <block name="products.edit.actions" template="AgSoftware_Vendor::products/actions.phtml"/>
+                <block name="products.edit.general" template="AgSoftware_Vendor::products/general.phtml"/>
+                <block name="products.edit.content" template="AgSoftware_Vendor::products/content.phtml"/>
+                <block name="products.edit.gallery" template="AgSoftware_Vendor::products/gallery.phtml"/>
+                <block name="products.edit.file_uploader" template="AgSoftware_Vendor::products/file_uploader.phtml"/>
+                <block name="products.edit.Configurations" template="AgSoftware_Vendor::products/Configurations.phtml"/>
+                <block name="products.edit.cuztomizable" template="AgSoftware_Vendor::products/cuztomizable.phtml"/>
+                <block name="products.edit.design" template="AgSoftware_Vendor::products/design.phtml"/>
+                <block name="products.edit.dowloadble" template="AgSoftware_Vendor::products/dowloadble.phtml"/>
+                <block name="products.edit.gitf_options" template="AgSoftware_Vendor::products/gitf_options.phtml"/>
+                <block name="products.edit.related_products" template="AgSoftware_Vendor::products/related_products.phtml"/>
+                <block name="products.edit.shedule" template="AgSoftware_Vendor::products/shedule.phtml"/>
+                <block name="products.edit.websites" template="AgSoftware_Vendor::products/websites.phtml"/>
+
+             </block>
+        </referenceContainer>
+	</body>
+</page>
