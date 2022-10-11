@@ -8,6 +8,8 @@
                 <block name="products.edit.general" template="AgSoftware_Vendor::products/general.phtml"/>
                 <block name="products.edit.gallery" template="AgSoftware_Vendor::products/gallery.phtml"/>
                 <block name="products.edit.file_uploader" template="AgSoftware_Vendor::products/file_uploader.phtml"/>
+                <block name="products.edit.content" template="AgSoftware_Vendor::products/content.phtml"/>
+
             </block>
         </referenceContainer>
 	</body>
