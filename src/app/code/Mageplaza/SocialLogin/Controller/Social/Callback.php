@@ -53,7 +53,7 @@ class Callback extends AbstractSocial
             Hybrid_Endpoint::process($request);
         }
 
-        Hybrid_Endpoint::process();
+       // Hybrid_Endpoint::process([]);
     }
 
     /**
