@@ -1,0 +1,48 @@
+<fieldset  class="display-media">
+    <div class="list">
+        <div class="first-column">
+<div class="list__item list__item--click">
+        <div class="list__button list__button--click">
+            <!-- <img src="assets/docs.svg" class="list__img"> -->
+            <h3 class="nav__link"><?=__("File Uploader")?></h3>
+            <span  class="list__arrow">
+            <i class="fa-solid fa-chevron-down arrow-v"></i>        
+        </span>        </div>
+
+        <ul class="list__show">
+            <li class="list__inside">
+                <div class="fieldset-wrapper">
+    <div class="upload-wrapper" data-bind="scope: 'file-uploader'">
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    </div>
+    <script type="text/x-magento-init">
+        {
+           ".upload-wrapper": {
+               "Magento_Ui/js/core/app": {
+                   "components": {
+                       "file-uploader": {
+                           "component":"Magento_Ui/js/form/element/file-uploader",
+                           "template": "ui/form/element/uploader/uploader",
+                           "previewTmpl":"AgSoftware_Vendor/file-preview",
+                           "dataScope" : "file-product",
+                           "uploaderConfig": {
+                                "url": "<?php echo $block->getUrl('vendor/products/upload/type/file-product/'); ?>"
+                           }
+                       }
+                   }
+               }
+           }
+        }
+    </script>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+ 
+        </div>
+    </div>
+</fieldset>
