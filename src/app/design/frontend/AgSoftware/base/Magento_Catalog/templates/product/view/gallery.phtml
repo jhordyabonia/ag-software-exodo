@@ -9,6 +9,7 @@
  *
  * @var $block \Magento\Catalog\Block\Product\View\Gallery
  */
+$product = $block->getProduct();
 ?>
 
 <?php
@@ -37,9 +38,12 @@ $mainImageData = $mainImage ?
     />
 
 </div>
+
+<?php if(!$product->getData('service')):?>
 <div class="container-days-support">
 
     <div class="container-row-days">
+        <?php if(!$product->getData('return_money')):?>
         <div class="container-money-back">
             <div class="text-center">
                 <img class="mt-1 img-peso"
@@ -49,7 +53,9 @@ $mainImageData = $mainImage ?
                 </p>
             </div>
         </div>
+        <?php endif;?>
 
+        <?php if(!$product->getData('updates')):?>
         <div class="container-update">
             <div class="text-center">
                 <img class="mt-1 img-arraw"
@@ -59,7 +65,9 @@ $mainImageData = $mainImage ?
                 </p>
             </div>
         </div>
+        <?php endif;?>
 
+        <?php if(!$product->getData('support')):?>
         <div class="container-suport">
             <div class="text-center">
                 <img class="mt-1 img-reloj"
@@ -69,11 +77,12 @@ $mainImageData = $mainImage ?
                 </p>
             </div>
         </div>
+        <?php endif;?>
 
     </div>
 
 </div>
-
+<?php endif;?>
 
 
 <script type="text/x-magento-init">
