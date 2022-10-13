@@ -44,7 +44,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @codeCoverageIgnore
      */
     public function getCustomerName($customerId){
-        if($customerId != null){
+        if($customerId > 0){
             $customer = $this->customerRepository->getById($customerId);
             if($customer->getFirstname()){
                 return $customer->getFirstName()." ".$customer->getLastName();
