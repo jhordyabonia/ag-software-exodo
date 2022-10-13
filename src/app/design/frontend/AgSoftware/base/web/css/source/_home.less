@@ -9,15 +9,16 @@
 //  _____________________________________________
 
 & when (@media-common =true) {
-
-    .cms-home {
+    div.popup-footer {
+        width: 1280px;
+    }
+    /*.cms-home {
         .block-static-block {
         display: flex;
         flex-direction: column;
-        gap: 100px;
     }
-    }
-    
+    }*/
+
     .bloqueUno {
         text-align: center;
         align-items: center;
@@ -31,7 +32,7 @@
             background-position-y: 153px;
             width: 100%;
             text-align: center;
-           
+
 
             .container1 {
                 margin-bottom: 45px;
@@ -98,7 +99,7 @@
         text-align: center;
         margin: 0;
         padding: 0 36px;
-        
+
 
         .titulo2 {
             font-family: @fontFamily;
@@ -313,7 +314,7 @@
                         display: flex;
                         flex-direction: column;
                         text-align: left;
-                        align-items: flex-start; 
+                        align-items: flex-start;
                         background-color: #ffffff;
                         box-shadow: e("1px 1px 10px 2px #7b88a814");
 
@@ -361,7 +362,7 @@
                         transform-style: preserve-3d;
                     }
 
-                    .card-senior{ 
+                    .card-senior{
                         transition: width 1s, height 1s;
                     }
 
@@ -509,7 +510,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
-    
+
     .mainHome {
         margin-top: 30px;
     }
@@ -603,11 +604,11 @@
                             .img-mobile{
                                 display: none;
                             }
-    
+
                             .img-tablet{
                                 display: block;
                             }
-    
+
                             div{
                                 display: none;
                             }
@@ -654,7 +655,7 @@
     }
     .contBloqueDos {
        margin: 40px 0;
-       
+
 
         .containerImg2 {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -705,7 +706,7 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
-    
+
     .bloqueTres {
         .contBloqueTres {
             .cont1-blocTres{
@@ -722,7 +723,7 @@
             }
         }
     }
-    
+
     .bloqueCuatro {
         .content-servicio {
 

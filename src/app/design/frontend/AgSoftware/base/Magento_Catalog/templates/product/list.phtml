@@ -77,11 +77,8 @@ $_helper = $block->getData('outputHelper');
 
                             <div class="product description product-item-description">
 
-                                <?= /* @noEscape */ $_helper->productAttribute(
-                                    $_product,
-                                    $_product->getShortDescription(),
-                                    'short_description'
-                                ) ?>
+                                <?= /* @noEscape */
+                                    $_product->getData('summary') ?>
                                 <a href="<?= $escaper->escapeUrl($_product->getProductUrl()) ?>"
                                    title="<?= /* @noEscape */ $_productNameStripped ?>"
                                    class="action more"><?= $escaper->escapeHtml(__('Learn More')) ?>
