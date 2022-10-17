@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8cc2536d89e4a223fddc4f741cf89b2",
+    "content-hash": "82a41b36e00c7a83fcaac061c5185984",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -2085,6 +2085,68 @@
                 }
             ],
             "time": "2022-08-28T14:45:39+00:00"
+        },
+        {
+            "name": "hybridauth/hybridauth",
+            "version": "v3.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hybridauth/hybridauth.git",
+                "reference": "0d6e31482c544e5ed2bdc83bd3c033054129c482"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hybridauth/hybridauth/zipball/0d6e31482c544e5ed2bdc83bd3c033054129c482",
+                "reference": "0d6e31482c544e5ed2bdc83bd3c033054129c482",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "^4.8.35 || ^6.5 || ^8.0"
+            },
+            "suggest": {
+                "firebase/php-jwt": "Needed to support Apple provider",
+                "phpseclib/phpseclib": "Needed to support Apple provider"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hybridauth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miled",
+                    "email": "hybridauth@gmail.com"
+                }
+            ],
+            "description": "PHP Social Authentication Library",
+            "homepage": "https://hybridauth.github.io",
+            "keywords": [
+                "Authentication",
+                "OpenId",
+                "api",
+                "apple",
+                "authorization",
+                "facebook",
+                "google",
+                "oauth",
+                "social",
+                "twitter"
+            ],
+            "support": {
+                "gitter": "https://gitter.im/hybridauth/hybridauth",
+                "issues": "https://github.com/hybridauth/hybridauth/issues",
+                "source": "https://github.com/hybridauth/hybridauth/tree/v3.8.2"
+            },
+            "time": "2022-08-18T19:48:17+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -16689,6 +16751,74 @@
                 "source": "https://github.com/magento/zf1/tree/1.15.1"
             },
             "time": "2022-06-21T01:22:39+00:00"
+        },
+        {
+            "name": "mageplaza/magento-2-social-login",
+            "version": "4.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-social-login.git",
+                "reference": "72a0dd25284d8f107b85f9c37b7b86f2f7570000"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-social-login/zipball/72a0dd25284d8f107b85f9c37b7b86f2f7570000",
+                "reference": "72a0dd25284d8f107b85f9c37b7b86f2f7570000",
+                "shasum": ""
+            },
+            "require": {
+                "hybridauth/hybridauth": "^3.8.2",
+                "mageplaza/module-core": "^1.4.12"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\SocialLogin\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Social Login extension is designed for quick login to your Magento 2 store without procesing complex register steps",
+            "keywords": [
+                "Amazon Login",
+                "Facebook login",
+                "FourSquare Login",
+                "Google login",
+                "LinkedIn Login",
+                "Microsoft Live Login",
+                "Social Login",
+                "Twitter login",
+                "Yahoo Login",
+                "facebook",
+                "google",
+                "login",
+                "magento 2",
+                "magento 2 social login",
+                "mageplaza",
+                "social proof",
+                "twitter"
+            ],
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-social-login/issues",
+                "source": "https://github.com/mageplaza/magento-2-social-login/tree/v4.1.6"
+            },
+            "time": "2022-09-30T08:22:37+00:00"
         },
         {
             "name": "mageplaza/module-core",
