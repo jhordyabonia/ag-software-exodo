@@ -13,7 +13,7 @@
 
 #### Magento Settings
 
-1. Download the 2Checkout payment module (AgSoftware) _described  to up_
+1. Download the Cms Offert Block module (AgSoftware) _described  to up_
 2. Keep it into directory to “app/code/” your Magento root directory.
 3. On your server, install the module by running `php bin/magento module:enable AgSoftware_OffertBlock` and `php bin/magento setup:upgrade` in your magento root directory.
 3. Sign in to your Magento admin.
