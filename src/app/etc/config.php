@@ -328,7 +328,7 @@ return [
         'AgSoftware_EmailTemplates' => 1,
         'AgSoftware_OffertBlock' => 1,
         'AgSoftware_StorePickup' => 1,
-        'AgSoftware_Vendor' => 1,
+        'AgSoftware_Vendor' => 0,
         'Mageplaza_Core' => 1,
         'Mageplaza_Smtp' => 1,
         'Mageplaza_SocialLogin' => 1,
