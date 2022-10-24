@@ -45,6 +45,10 @@
 
         .page-header {
             border-top: 3px solid @color-primario;
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            z-index:10;
             .panel.wrapper {
                 font-size: 11px;
                 color: @color-variante;
@@ -93,7 +97,7 @@
                             content: '\F408';
                             font-family: 'bootstrap-icons';
                         }
-                        &:hover:before {   
+                        &:hover:before {
                             transform: scale(1.03);
                         }
                         .counter.qty {
@@ -262,6 +266,11 @@
                 }
             }
         }
+        .page-main-full-width{
+            .columns{
+                margin-top: 70px;
+            }
+        }
     }
     .cms-home {
         .page-wrapper {
@@ -299,6 +308,11 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
     .page-wrapper {
+        .page-main-full-width{
+            .columns{
+                margin-top: 171px;
+            }
+        }
         .page-header {
             display: block;
             border-top: 3px solid @color-primario;
@@ -417,7 +431,7 @@
                             font-size: 35px;
                             line-height: 35px;
                         }
-                        &:hover:before {  
+                        &:hover:before {
                             transform: scale(1.03);
                         }
                         .counter.qty {
