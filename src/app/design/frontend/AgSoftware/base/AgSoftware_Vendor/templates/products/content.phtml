@@ -6,7 +6,7 @@
             <!-- <img src="assets/docs.svg" class="list__img"> -->
             <h3 class="nav__link"><?=__("Content")?></h3>
             <span  class="list__arrow">
-            <i class="fa-solid fa-chevron-down arrow-v"></i>        
+            <i class="fa-solid fa-chevron-down arrow-v"></i>
         </span>        </div>
 
         <ul class="list__show">
@@ -15,16 +15,15 @@
                 <span><?=__(" Short Description")?> </span>
                     <div>
                         <div>
-                           <textarea name="" id="" cols="30" rows="10"></textarea>
+                           <textarea name="short_description" id="" cols="30" rows="10"><?=$block->getProduct()->getShortDescription()?></textarea>
                         </div>
                     </div>
                 </div>
             </li>
 
         </ul>
-</div>  
+</div>
         </div>
     </div>
 </fieldset>
 
- 

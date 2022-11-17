@@ -120,7 +120,9 @@ class Save implements HttpPostActionInterface
             if($this->customerSession->getProductImage()) {
                 foreach ($this->customerSession->getProductImage() as $image) {
                     $imgUrl = $this->prepareImage($image);
-                    $product->addImageToMediaGallery($imgUrl, ['image', 'small_image', 'thumbnail'], false, false);
+                    if($imgUrl) {
+                        $product->addImageToMediaGallery($imgUrl, ['image', 'small_image', 'thumbnail'], false, false);
+                    }
                 }
                 //$this->productRepository->save($product);
             }
@@ -130,24 +132,34 @@ class Save implements HttpPostActionInterface
                 }else{
                     $this->messageManager->addSuccessMessage(__("OK, producto %1 editado",$product->getName()));
                 }
+                $product = $this->productRepository->get($sku);
+                $file = $this->customerSession->getProductZip();
+                if($file) {
+                    $file = $this->prepareModule($file);
+                    if($file) {
+                        /**
+                         * @var \Magento\Downloadable\Api\Data\LinkInterface $link_interface
+                         */
+                        $link_interface  = $this->linkFactory->create();
+
+                        $nameLink = '2.4.X';//$data['name_link'];
+
+                        $link_interface->setPrice(0);
+                        $link_interface->setNumberOFDownloads(0);
+                        $link_interface->setIsShareable(0);
+                        $link_interface->setLinkType(\Magento\Downloadable\Helper\Download::LINK_TYPE_FILE);
+                        $link_interface->setSortOrder(1);
+                        $link_interface->setTitle($nameLink);
+                        $link_interface->setData('link_file',$file);
+                        $link_interface->setData('product_id',$product->getId());
+                        $link_interface->save();
+                        //$this->linkRepository->save($product->getSku(),$link_interface);
+                    }
+                }
             } else {
                 $this->messageManager->addErrorMessage(__("No se pudo guardar el produto, contacta con administracíon"));
             }
-            $file = $this->customerSession->getProductZip();
-            if($file) {
-                $file = $this->prepareModule($this->customerSession->getProductZip());
-                if($file) {
-                    $link_interface  = $this->linkFactory->create();
-                    $link_interface->setPrice(0);
-                    $link_interface->setNumberOFDownloads(0);
-                    $link_interface->setIsShareable(0);
-                    $link_interface->setLinkType(\Magento\Downloadable\Helper\Download::LINK_TYPE_FILE);
-                    $link_interface->setData('link_file',$file);
-                    $link_interface->setData('product_id',$product->getId());
-                    $link_interface->save();
-                    //$this->linkRepository->save($product->getSku(),$link_interface);
-                }
-            }
+
         }catch (\Exception $e){
             $this->messageManager->addErrorMessage("Err ". $e->getMessage());
             $redirect->setUrl($this->redirect->getRefererUrl());
@@ -165,8 +177,11 @@ class Save implements HttpPostActionInterface
         $image_type = substr(strrchr($imageFilename, "."), 1);
         $filename = md5($imagePath . strtotime('now')) . '.' . $image_type;
         $filepath = $this->mediaDir . '/catalog/product/' . $filename;
-        rename(trim($this->mediaDir.'/agsoftware_vendor/uploads/' . $imageFilename),$filepath);
-        return $filepath;
+        if(file_exists($this->mediaDir.'/agsoftware_vendor/uploads/' . $imageFilename)) {
+            rename(trim($this->mediaDir . '/agsoftware_vendor/uploads/' . $imageFilename), $filepath);
+            return $filepath;
+        }
+        return "";
     }
 
     private function prepareModule($file){
