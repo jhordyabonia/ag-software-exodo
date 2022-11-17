@@ -13,30 +13,50 @@ $product = $block->getProduct();
         <?=$block->getChildBlock('products.edit.general')
                  ->setProduct($product)
                  ->toHtml() ?>
-        
-        <?=$block->getChildHtml('products.edit.content') ?>
 
-        <?=$block->getChildHtml('products.edit.gallery') ?>
+        <?=$block->getChildBlock('products.edit.content')
+            ->setProduct($product)
+            ->toHtml() ?>
 
-        <?=$block->getChildHtml('products.edit.file_uploader') ?>
+        <?=$block->getChildBlock('products.edit.gallery')
+            ->setProduct($product)
+            ->toHtml()?>
 
-        <?=$block->getChildHtml('products.edit.Configurations') ?>
+        <?=$block->getChildBlock('products.edit.file_uploader')
+            ->setProduct($product)
+            ->toHtml()?>
 
-        <?=$block->getChildHtml('products.edit.cuztomizable') ?>
+        <?=""/*$block->getChildBlock('products.edit.Configurations')
+            ->setProduct($product)
+            ->toHtml()?>
 
-        <?=$block->getChildHtml('products.edit.design') ?>
+        <?=$block->getChildBlock('products.edit.cuztomizable')
+            ->setProduct($product)
+            ->toHtml()?>
 
-        <?=$block->getChildHtml('products.edit.dowloadble') ?>
+        <?=$block->getChildBlock('products.edit.design')
+            ->setProduct($product)
+            ->toHtml()?>
 
-        <?=$block->getChildHtml('products.edit.gitf_options') ?>
+        <?=$block->getChildBlock('products.edit.dowloadble')
+            ->setProduct($product)
+            ->toHtml()?>
 
-        <?=$block->getChildHtml('products.edit.related_products') ?>
+        <?=$block->getChildBlock('products.edit.gitf_options')
+            ->setProduct($product)
+            ->toHtml()?>
 
-        <?=$block->getChildHtml('products.edit.shedule') ?>
+        <?=$block->getChildBlock('products.edit.related_products')
+            ->setProduct($product)
+            ->toHtml()?>
 
-        <?=$block->getChildHtml('products.edit.websites') ?>
+        <?=$block->getChildBlock('products.edit.shedule')
+            ->setProduct($product)
+            ->toHtml()?>
 
+        <?=$block->getChildBlock('products.edit.websites')
+            ->setProduct($product)
+            ->toHtml()*/?>
 
-      
     </form>
 </div>

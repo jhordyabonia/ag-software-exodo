@@ -7,23 +7,23 @@ $product = $block->getProduct();
 ?>
 <fieldset class="main-data">
     <h2><?=__('General Information');?></h2>
-    <div class="input-boton">
+    <!-- <div class="input-boton">
      <span class=" Enable-Product"><?=__("Enable Product")?> </span>
          <div class="boton-chekc">
         <input type="checkbox" id="btn-switch">
         <label for="btn-switch" class="lbl-switch"></label>
         </div>
-       
+
     </div>
-    <div class="input-Attribute ">
+   <div class="input-Attribute ">
         <label for="vendor-product-form-name"><?=__("Attribute Set")?></label>
         <div class="container-Attribute">
         <select class="select-Attribute" name="Attribute Set" id="">
-   
+
         </select>
 
         </div>
-    </div>
+    </div>-->
     <div class="input-text input-product">
         <label for="vendor-product-form-name " class="relative-content"><?=__("Product Name")?></label>
         <input name="name" class="input-text first-four" id="vendor-product-form-name" value="<?=$product->getName()?>">
@@ -32,34 +32,34 @@ $product = $block->getProduct();
         <label for="vendor-product-form-sku" class="relative-content"><?=__("Sku")?></label>
         <input name="sku" class="input-text first-four" id="vendor-product-form-sku" value="<?=$product->getSku()?>">
     </div>
+    <!--
     <div class="input-text">
         <label for="vendor-product-form-sku"><?=__("Vendor")?></label>
         <input name="sku" class="input-text first-four" id="vendor-product-form-sku">
     </div>
+    -->
     <div class="input-text">
         <label for="vendor-product-form-price" class="relative-content"><?=__("Price")?></label>
         <input name="price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
-        
-    <div class="actions-Advanced">
-        <button class="Advanced" type="submit">
-            <span ><?=__("Advanced pricing")?></span>
-        </button>
     </div>
+    <div class="input-text">
+        <label for="vendor-product-form-price" class=""><?=__("Special Price")?></label>
+        <input name="special_price" class="input-text second-input" id="vendor-product-form-price" value="<?=$product->getPrice()?>">
     </div>
-    <div class="input-Tax">
+    <!--<div class="input-Tax">
         <label for="vendor-product-form-price"><?=__("Tax Class")?></label>
         <div class="container-tax">
-        <select  class="select-tax" name="" id=""> 
+        <select  class="select-tax" name="" id="">
         <settings>
                         <options>
-                            <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("None")?></item>
-                                
+                            <option name="1" >
+                                <item name="value" ><?=__("None")?></item>
+
                             </option>
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
+                            <option name="2" >
+                                <item name="label" ><?=__("Taxable Goods")?></item>
                             </option>
-                           
+
                         </options>
                     </settings>
         </select>
@@ -69,7 +69,7 @@ $product = $block->getProduct();
     <div class="input-text">
         <label for="vendor-product-form-price"><?=__("Quantity")?></label>
         <input name="price" class="input-text second-input" >
-        
+
         <div class="actions-Advanced">
         <button class="Advanced" type="submit">
             <span ><?=__("Advanced Inventory")?></span>
@@ -79,15 +79,15 @@ $product = $block->getProduct();
     <div class="input-stock">
         <label for="vendor-product-form-price"><?=__("stock Status")?></label>
         <div class="container-stock">
-        <select  class="select-stock" name="" id=""> 
+        <select  class="select-stock" name="" id="">
         <settings>
                         <options>
-                            <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("Out Of Stock")?></item>
-                                
+                            <option name="1" >
+                                <item name="value" ><?=__("Out Of Stock")?></item>
+
                             </option>
-                            
-                           
+
+
                         </options>
                     </settings>
         </select>
@@ -101,67 +101,51 @@ $product = $block->getProduct();
         <select class="select-weight" name="" id="">
         <settings>
                         <options>
-                            <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=("This item has weight")?></item>
-                                
+                            <option name="1" >
+                                <item name="value" ><?=("This item has weight")?></item>
+
                             </option>
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=("This item has no weight")?></item>
+                            <option name="2" >
+                                <item name="label" ><?=("This item has no weight")?></item>
                             </option>
-                           
+
                         </options>
                     </settings>
         </select>
 
         </div>
     </div>
+    -->
     <div class="input-Categories">
         <label for="vendor-product-form-price"><?=__("Categories")?></label>
         <div class="container-Categories">
-        <select  class="select-Categories" name="" id=""> 
-        <options>
-                            <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=__("Default")?></item>
-                                
-                            </option>
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=__("Taxable Goods")?></item>
-                            </option>
-                           
-                        </options>
+        <select  class="select-Categories" name="" id="" multiple size="6">
+            <optgroup label="<?=__("Modules")?>">
+                <option value="<?=__("Frontend")?>" ><?=__("Frontend")?></option>
+                <option value="<?=__("Backend")?>" ><?=__("Backend")?></option>
+                <option value="<?=__("Fullstack")?>" ><?=__("General/Fullstack")?></option>
+            </optgroup>
+            <optgroup label="<?=__("Themes")?>">
+                <option value="<?=__("themes")?>" ><b><?=__("Themes")?></b></option>
+            </optgroup>
         </select>
 
         </div>
-        <span class="span-button-category"><button class="button-category"><?=__("New Category")?></button></span>
+        <!--<span class="span-button-category"><button class="button-category"><?=__("New Category")?></button></span>-->
 
     </div>
     <div class="input-Visibility">
         <label for="vendor-product-form-price"><?=__(" Visibility")?></label>
         <div class="container-Visibility">
-        <select  class="select-Visibility" name="" id=""> 
-        <settings>
-                        <options>
-                            <option name="1" xsi:type="array">
-                                <item name="value" xsi:type="string"><?=("No Visible Individually")?></item>
-                                
-                            </option>
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=("Catalog")?></item>
-                            </option>
-
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=("Search")?></item>
-                            </option>
-                            <option name="2" xsi:type="array">
-                                <item name="label" xsi:type="string"><?=("Catalog,Search")?></item>
-                            </option>
-                           
-                        </options>
-                    </settings>
+        <select  class="select-Visibility" name="" id="">
+            <option name="2"  value="2"  ><?=("Catalog")?></option>
+            <option name="2"  value="3" ><?=("Search")?></option>
+            <option name="2" selected value="4" ><?=("Catalog, Search")?> </option>
         </select>
 
         </div>
     </div>
+    <!--
     <div class="input-text form-calendary">
         <label for="vendor-product-form-price"><?=__("Set Product as New From")?></label>
         <input name="price" type="date" class="input-date-form "  >
@@ -181,9 +165,9 @@ $product = $block->getProduct();
         <input type="checkbox" id="btn-timmer">
         <label for="btn-timmer" class="lbl-switch"></label>
         </div>
-       
+
     </div>
-    
+    -->
 </fieldset>
 
 
