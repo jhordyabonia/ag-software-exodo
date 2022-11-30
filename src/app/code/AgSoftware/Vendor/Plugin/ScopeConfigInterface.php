@@ -23,6 +23,7 @@ class ScopeConfigInterface
     ) {
 
         $out = false;
+        $key = $key?$key:"";
         $_key = explode('/',$key);
         if(count($_key) > 1){
             if($_key[0] == 'payment' && str_starts_with('mercadopago',$_key[1])){
