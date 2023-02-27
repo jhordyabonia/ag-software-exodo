@@ -49,10 +49,10 @@ class bloquesHomev2 implements DataPatchInterface, PatchRevertableInterface
          */
         
         $data = [];
-        $data[ 'contenedor-BloqueHome' ] = [
+        $data[ 'contenedor-BloqueHomeId' ] = [
             "title" => "contenedor BloqueHome",
-            "identifier" => "contenedor-BloqueHome",
-            "store_id" => "All Store Views",
+            "identifier" => "contenedor-BloqueHomeId",
+            "store_id" => "2",
             "content" => file_get_contents(__DIR__.'/html/traducionPageHome.html'),
             "is_active" => "1",
             "offert_end_message" => "null",
