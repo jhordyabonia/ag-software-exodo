@@ -49,11 +49,11 @@ class BloquesCmsHomev1 implements DataPatchInterface, PatchRevertableInterface
          */
         
         $data = [];
-        $data[ 'agile-development' ] = [
-            "title" => "agile development",
-            "identifier" => "agile-development",
+        $data[ 'traducion-page-home' ] = [
+            "title" => "traducion page home",
+            "identifier" => "traducion-page-home",
             "store_id" => "All Store Views",
-            "content" => file_get_contents(__DIR__.'/html/agileDevelopment.html'),
+            "content" => file_get_contents(__DIR__.'/html/traducionPageHome.html'),
             "is_active" => "1"
         ];
        
