@@ -189,23 +189,32 @@
                     .redes-sociales {
                         display: flex;
 
+                        .link-social {
+                            width: 20px;
+                            height: 20px;
+                            margin: 0 20px 0 0;
+                        }
 
                         .bi {
                             color: #77838f;
-                            margin-right: 20px;
 
                             &:hover {
                                 color: #0b58a4;
                                 background-color: grey;
-                                height: 40px;
-                                width: 40px;
                                 border-radius: 50%;
+                                transform: scale(1.4, 1.4) translateZ(0px) translate3d(0px, 0px, 0px);
+                                transition-duration: 200ms;
+                                transition-property: transform, box-shadow;
+                                transition-timing-function: ease-out;
                             }
-
                         }
 
+                        .bi-twitter:hover,
+                        .bi-youtube:hover {
+                            box-sizing: border-box;
+                            padding: 2px;
+                        }
                     }
-
                 }
             }
 

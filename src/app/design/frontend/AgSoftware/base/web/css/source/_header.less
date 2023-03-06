@@ -45,6 +45,10 @@
 
         .page-header {
             border-top: 3px solid @color-primario;
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            z-index:10;
             .panel.wrapper {
                 font-size: 11px;
                 color: @color-variante;
@@ -251,18 +255,28 @@
 
             }
         }
+
         .page-main {
-            padding-top: 50px;
+            padding-top: 70px;
+
             .columns {
                 .block-collapsible-nav {
                     top: 0px;
+
                     .block-collapsible-nav-title {
                         border-top: none;
                     }
                 }
             }
         }
+
+        .page-main-full-width{
+            .columns{
+                margin-top: 70px;
+            }
+        }
     }
+    
     .cms-home {
         .page-wrapper {
             .page-header {
@@ -299,6 +313,11 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
 
     .page-wrapper {
+        .page-main-full-width{
+            .columns{
+                margin-top: 171px;
+            }
+        }
         .page-header {
             display: block;
             border-top: 3px solid @color-primario;
@@ -476,9 +495,12 @@
                 }
             }
         }
+        
         .nav-sections {
             margin-bottom: 15px;
             background-color: #FFFFFF;
+            height: 175px;
+
             .section-items {
                 .section-item-content {
                     .navigation {
