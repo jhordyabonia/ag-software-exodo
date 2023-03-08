@@ -1,28 +1,21 @@
-//let input = document.getElementById('cart-35-qty');
-let input = document.querySelector('input[data-role="cart-item-qty"]');
-let decreaseBtn = document.getElementById('decreaseBtn');
-let increaseBtn = document.getElementById('increaseBtn');
+//let input = document.getElementById(`cart-35-qty`);
 
-decreaseBtn.addEventListener('click', decreaseNumber, true);
-increaseBtn.addEventListener('click', increaseNumber, true);
+function increase() {
+    
+    let input = document.querySelector('.input-text.qty');
 
-
-function increaseNumber(valuePar) {
-
-    let startValue = input.value;
-
-    startValue++;
-
-    input.value = startValue;
+    input.value++;
     
 }
 
-function decreaseNumber(valuePar) {
+function decrease() {    
 
-    let startValue = input.value;
+    let input = document.querySelector('.input-text.qty');
 
-    startValue--;
-
-    input.value = startValue;
+    if (input.value == 1) {
+        input.value = 1;
+    } else {
+        input.value--;
+    }
     
 }
