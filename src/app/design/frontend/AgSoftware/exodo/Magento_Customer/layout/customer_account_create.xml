@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Create New Customer Account</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+
+            <!-- contenedor padre para titulo de social login y lo botones para logearse -->
+            <container name="social-login-container" htmlTag="div" htmlClass="social-login-container" before="-">
+                <block name="login-social-prefile-title" template="Magento_Customer::login-social-prefile-title.phtml" before="-"/>
+            </container>
+
+            <!-- agregar bloque phtml remernber-me-box -->
+            <block name="remenber-me-box" template="Magento_Customer::remenber-me-box.phtml" after="-"/>
+        </referenceContainer>
+
+        <!-- mover el contendor de los bototnes de social login al contenedor padre del social login -->
+        <move element="social-login-popup-authentication-social-create" destination="social-login-container" after="-"/>
+        
+        <!-- mover bloque remenber-me-box a form.additional.info -->
+
+         <!-- mover bloque remenber-me-box a form.additional.info -->
+        <move element="remenber-me-box" destination="form.additional.info" before="-"/>
+
+   </body>
+</page>

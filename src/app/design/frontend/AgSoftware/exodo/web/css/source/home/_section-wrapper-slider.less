@@ -1,0 +1,69 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    #html-body.cms-home.cms-index-index {
+        .section-slider {
+            padding: 150px 0;
+            .heading-title {
+                text-align: center;
+                h2 {
+                    color: #000;
+                    font-size: 58px;
+                    letter-spacing: 0px;
+                    font-family: "Open Sans", sans-serif;
+                    font-weight: 900;
+                    line-height: 0.9;
+                    padding: 0 0 30px 0;
+                    margin: 0 0 2rem 0;
+                }
+                .subtitle-slide-2 {
+                    padding-bottom: 30px;
+                    margin: 0 0 1rem 0;
+                }
+            }
+            
+            .slider-page-main {
+                .slick-list.draggable {
+                       // transform: translate3d(-400px, 0px, 0px)!important;
+                        .slick-track {
+                            // width: 10600px !important;
+                        padding: 0 100px;
+                        .slick-slide{
+                                width: 333.333px !important;
+                                margin-right: 100px;
+                        }
+                    }
+                }
+               
+            }
+         
+        }
+    }
+}
+//
+//  Mobile
+//  _____________________________________________
+
+// .media-width(@extremum, @break)
+//     when
+//     (@extremum = "max")
+//     and
+//     (@break = @screen__m) {
+//     #html-body.cms-home {
+//     }
+// }
+//
+//  Desktop
+//  _____________________________________________
+
+// .media-width(@extremum, @break) when (@extremum = "min") and (@break = @screen__m) {
+//     #html-body.cms-home {
+//     }
+// }
+
+// .media-width(@extremum, @break) when (@extremum = "min") and (@break = @screen__l) {
+//     #html-body.cms-home {
+//     }
+// }

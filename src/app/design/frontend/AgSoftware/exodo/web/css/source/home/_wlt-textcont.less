@@ -1,0 +1,122 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .cms-home.cms-index-index {
+        .last-welt-container {
+            background: #fafafa;
+            padding: 80px 15px 80px;
+            .container-heading-wlt {
+                width: 100%;
+                max-width: 800px;
+                box-shadow: e("0px 0px 97px -17px #b0b0b0");
+                display: inline-block;
+                text-align: center;
+                padding: 70px 25px;
+                position: relative;
+                letter-spacing: 0.5;
+                &::before {
+                    .card-quote-before ( 60px, 60px, -36px, 0, initial, 0, 180deg  );
+                }
+                &::after {
+                    margin: 0 auto;
+                    .card-quote-after ( initial, 0, -50px, 140px, 180deg );
+                }
+                &__title {
+                    .config-font ( @fuente1, 2.4rem, 800, inherit, 1.1, 0, #303030 );
+                    margin-bottom: 15px;
+                    text-transform: uppercase;
+                }
+                &__subtitule {
+                    display: block;
+                    margin-bottom: 30px;
+                    p#XRXP8BS{
+                        .config-font ( @fuente2, 1.4rem, 800, inherit, 1.1, 0, @color-primario );
+                    }
+                }
+                &__text {
+                    p {
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0, @color-oscuro );
+                    }
+                }
+                &__before-center {
+                    margin-top: 45px;
+                }
+            }
+        }
+    }
+}
+//
+//  Mobile
+//  _____________________________________________
+
+@media (min-width: 320px) and  (max-width: 480px) {
+    #html-body.cms-home.cms-index-index  {
+        .last-welt-container {
+            .container-heading-wlt {
+                &::after {
+                margin: 0 auto;
+                .card-quote-after ( initial, 0, -50px, 0, 180deg );
+                }
+            }
+        }
+         
+     }
+ }
+
+ 
+//
+//  Desktop
+//  _____________________________________________
+
+@media (min-width: 768px)  {
+    .cms-home.cms-index-index {
+        .last-welt-container {
+            padding: 100px 15px;
+            .container-heading-wlt {
+                margin: 0 auto;
+                padding: 50px 15px 0;
+                &::before {
+                    .card-quote-before ( 94px, 68px, initial, 45px, -36px, auto, 180deg  );
+                }
+                &::after {
+                    .card-quote-after ( -50px, 0, initial, 140px, 0deg );
+                    border-bottom:50px solid #fafafa;
+                    border-left: 38px solid transparent;
+                    border-right: 0 solid transparent;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 769px)  {
+    .cms-home.cms-index-index {
+        .last-welt-container {
+            .container-heading-wlt {
+                 padding: 70px;
+                 margin-bottom: 100px;
+                &::after {
+                    .card-quote-after ( -50px, auto, initial, 140px, 0deg );
+                    border-bottom:50px solid #fafafa;
+                    border-left: 38px solid transparent;
+                    border-right: 0 solid transparent;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px)  {
+    .cms-home.cms-index-index {
+        .last-welt-container {
+            padding: 150px 0 0;
+            .container-heading-wlt {
+                 margin-bottom: 150px;
+            }
+        }
+    }
+}
+
+

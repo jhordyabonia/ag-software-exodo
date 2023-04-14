@@ -1,0 +1,59 @@
+<?php
+ $products = [ 1, 2, 3, 4, 5 ]
+?>
+
+<div id="viewedFloat" class="viewed-float__container">
+    <span id="viewed" class="viewed-float__text modal-active">
+        <?= __("Recently viewed") ?>
+    </span>
+</div>
+
+<div id="viewed-modal" class="viewed-modal viewed-modal--inactive viewed-modal--bg-white">
+
+    <span class="viewed-modal__clear viewed-modal__clear--font">
+        <?= __("Clear All") ?>
+    </span>
+
+    <div class="viewed-modal__wrapper">
+
+        <?php
+        if (!empty($products)) :
+            if ($products > 0) : ?>
+                    <ol class="product-items">
+                        <?php foreach ($products as $product) : ?>
+                            <li class="product-item">
+                                <div class="product-item-info">
+                                    <a href="#"  class="product-item-photo">
+                                        <span  class="product-item-photo__container">
+                                            <span class="product-item__wrapper">
+                                                <img class="product-item__image-photo" src="https://www.weltpixel.com/media/catalog/product/cache/bc8b38f8ca81fec35820cfadad431eb0/1/5/15._advancer_recently_viewed_products_bar_1_1.png" alt="Magento 2 Recently Viewed Products Extension.">
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <div class="product-item-details">
+                                        <strong class="product-item-name">
+                                            <a href="#" class="product-item-link">
+                                                <span class="m2-title">
+                                                Magento 2
+                                            </span>
+                                                recently viewed products extension.
+                                            </a>
+                                        </strong>
+
+                                    </div>
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
+                    </ol>
+                </div>
+            <?php else : ?>
+                <p>No recently viewed products were found.</p>
+            <?php endif; ?>
+        <?php else : ?>
+            <p>The value of the variable to print the products is false</p>
+        <?php endif; ?>
+
+
+    </div>
+
+</div>

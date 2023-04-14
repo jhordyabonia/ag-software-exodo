@@ -1,0 +1,104 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    body {
+        .social-login-container {
+            .account-social-login {
+                .social-btn {
+                    .btn-social {
+                        height: 35.02px;
+                        cursor: pointer;
+                        outline: 0;
+                        margin: 0 auto;
+                        letter-spacing: 0.5px;
+                        transition: all .2s ease;
+                        border-radius: 2px;
+                        font-family: inherit;
+                        box-shadow: 0 0 5px #999;
+                        &:hover {
+                            transform: scale(1.03);
+                            outline: 0;
+                        }
+                    }
+                    .btn-facebook {
+                        .fa-facebook  {
+                            display: none;
+                            border-right: 1px solid #fff;
+                        }
+                        .fa-facebook-f {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            bottom: 0;
+                            width: 32px;
+                            line-height: 34px;
+                            text-align: center;
+                            border-right: 1px solid #fff;
+                        }
+                    }
+                    .btn-google {
+                        background-color: @color-claro;
+                        color: @color-oscuro;
+                        .fa-google {
+                            border-right: 1px solid #e7e7e7;
+                        }
+                        .fa-facebook-f {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .login-container, .form-create-account {
+            .actions-toolbar {
+                .primary {
+                    .primary {
+                        text-transform: uppercase;
+                        transition-duration: .3s;
+                        transition-property: background-color;
+                        background-color: @color-primario;
+                        border: 1px solid @color-primario;
+                        border-radius: 0;
+                        .config-font ( @fuente2, 12px, 400, normal, 3rem, 0, @color-titulo );
+                        span {
+                            font-size: 14px;
+                        }
+                        &:hover {
+                            background-color: @color-claro;
+                            border: 1px solid @color-primario;
+                            color: @color-primario;
+                        }
+                    }
+                    .create {
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .secondary {
+                    width: 100%;
+                    margin: 0;
+                    a {
+                        .config-font ( @fuente2, 12px, 400, normal, 1.42857143, 0, #444 );
+                    }
+                }
+            }
+        }
+      
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}

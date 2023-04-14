@@ -1,0 +1,207 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    body.cms-home {
+        .customer-support {
+            padding: 50px 0;
+            .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+            &__image {
+            }
+            &__content {
+            }
+            &__content--container {
+                padding: 0 15px;
+                h2 {
+                    margin: 0;
+                    margin-bottom: 50px;
+                    .config-font ( @fuente1, 3rem, 900, normal, 0.9, 0px, @color-oscuro );
+                }
+                div.fist-item {
+                    border-top: none;
+                }
+                [data-role="collapsible"] {
+                    border-top: 1px dotted #ddd;
+                    p {
+                        position: relative;
+                        padding: 10px 0 10px 20px;
+                        margin-bottom: 0;
+                        line-height: 24px;
+                        font-weight: 700;
+                        color: #444;
+                        cursor: pointer;
+                        &::before {
+                            width: 14px;
+                            position: absolute;
+                            left: 0;
+                            content: '\F26B';
+                            font-family: 'bootstrap-icons';
+                            font-size: 14px;
+                            font-weight: 400;
+                            text-align: center;
+                        }
+                    }
+                }
+                [data-role="collapsible"][aria-expanded="true"] {
+                    p::before {
+                        content: '\F623';
+                    }
+                }
+                [data-role="content"] {
+                    padding: 0 0 15px 20px;
+                    p {
+                        margin: 30px 0;
+                    }
+                    .margin-0 {
+                        margin: 0;
+                        a {
+                            text-decoration: none;
+                            color: #444;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+
+@media  (min-width: 480px) {
+    body.cms-home {
+        .customer-support {
+            padding: 50px 0;
+            &__content--container {
+                padding: 0 40px;
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body#html-body.cms-home {
+        .customer-support {
+            padding: 100px 0;
+            .pagebuilder-column-line {
+                flex-direction: column;
+            }
+            &__image {
+                width: 100%;
+            }
+            &__content {
+               width: 100%;
+            }
+            &__content--container {
+                h2 {
+                    font-size: 58px;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop
+//  _____________________________________________
+@media  (min-width: 840px) {
+    body#html-body.cms-home {
+        .customer-support {
+            &__image {
+            }
+            &__content {
+            }
+            &__content--container {
+                h2 {
+                    margin: 0;
+                    margin: 50px 0;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop Big
+//  _____________________________________________
+@media  (min-width: 992px) {
+    body#html-body.cms-home {
+        .customer-support {
+            .pagebuilder-column-line {
+                flex-direction: row;
+            }
+            &__image {
+                width: 50%;
+                order: 1;
+            }
+            &__content {
+                width: 50%;
+                order: 2;
+                &--container {
+                    h2 {
+                        width: 104%;
+ /*                       margin: 0;
+                        margin-bottom: 50px;*/
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop Big
+//  _____________________________________________
+@media  (min-width: 994px) {
+    body#html-body.cms-home {
+        .customer-support {
+            .pagebuilder-column-line {
+                flex-direction: row;
+            }
+            &__image {
+                width: 50%;
+                order: 2;
+            }
+            &__content {
+               width: 50%;
+               order: 1;
+                &--container {
+                    h2 {
+                        width: 104%;
+/*                        margin: 0;
+                        margin-bottom: 50px;*/
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop Big More
+//  _____________________________________________
+@media  (min-width: 1200px) {
+    body#html-body.cms-home {
+        .customer-support {
+            padding: 150px 0;
+            &__content--container {
+                margin-left: 8.3333%;
+                h2 {
+                    width: 100%;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

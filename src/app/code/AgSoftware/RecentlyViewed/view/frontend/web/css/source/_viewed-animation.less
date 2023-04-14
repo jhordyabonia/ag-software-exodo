@@ -1,0 +1,37 @@
+#recently-viewed {
+    transition: all 0.3s ease-in-out;
+}
+
+#recently-viewed.recently-viewed--hidden {
+    transform: translateY(100%);
+}
+
+#recently-viewed.animated {
+    animation-duration: 0.5s;
+}
+
+#recently-viewed.slideInUp {
+    animation-name: slideInUp;
+}
+
+#recently-viewed.slideOutDown {
+    animation-name: slideOutDown;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}

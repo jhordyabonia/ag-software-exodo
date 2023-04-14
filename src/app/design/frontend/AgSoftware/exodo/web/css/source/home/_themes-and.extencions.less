@@ -1,0 +1,263 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    body.cms-home {
+        .themes-and-extencions {
+            display: flex;
+            text-align: center;
+            &__content {
+                &--title {
+                    .primary__title {
+                        margin: 4% 0 2rem;
+                        text-transform: uppercase;
+                        .config-font ( @fuente1, 3rem, 800, normal, 1.2, 0px, @color-oscuro );
+                    }
+                    .secondary__title {
+                        text-transform: initial;
+                        .config-font ( @fuente2, 2.4rem, 400, normal, 1.1, 0px, #303030 );
+                    }
+                }
+                &--button {
+                    margin: 0 15px;
+                    .button__ancla {
+                        width: 100%;
+                        height: 69px;
+                        display: inline-block;
+                        margin: 0 0 20px;
+                        padding: 16px 20px;
+                        text-align: left;
+                        text-decoration: none;
+                        background-color: @color-primario;
+                        &--title {
+                            display: block;
+                            margin-bottom: 10px;
+                            text-transform: uppercase;
+                            .config-font ( @fuente1, 1.5rem, 900, normal, 1, 1px, @color-titulo );
+                        }
+                        &--text {
+                            display: block;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-transform: uppercase;
+                            .config-font ( @fuente1, 1rem, 400, normal, 1, 1px, @color-titulo );
+                        }
+                        &:hover {
+                            .button__ancla--title  {
+                                color: @color-primario;
+                            }
+                            .button__ancla--text {
+                                color: @color-primario;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    body.cms-home {
+        .themes-and-extencions {
+            flex-direction: column;
+            text-align: center;
+            &__content {
+                &--title {
+                    margin: 0 10px;
+                    .primary__title {
+                        margin: 4% 0 2rem;
+                        text-transform: uppercase;
+                        .config-font ( @fuente1, 3rem, 800, normal, 1.2, 0px, @color-oscuro );
+                    }
+                    .secondary__title {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Deskto
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body#html-body.cms-home {
+        .themes-and-extencions {
+            flex-direction: row;
+            &__content {
+                width: 41.66666667%;
+                position: relative;
+                left: 8.33333333%;
+                &--title {
+                    text-align: left;
+                    letter-spacing: 0;
+                    .primary__title {
+                        margin-top: 10%;
+                    }
+                    .secondary__title {
+                        position: relative;
+                        z-index: 1;
+                        margin-bottom: 80px;
+                    }
+                }
+                &--button {
+                    position: relative;
+                    text-align: left;
+                    width: auto;
+                    white-space: nowrap;
+                    .button__ancla {
+                        width: 312px;
+                        padding: 16px 20px;
+                    }
+                }
+            }
+            div.pagebuilder-column:has(.themes-and-extencions__image) {
+                background-image: none;
+                position: relative;
+                width: 58.33333333%;
+            }
+            &__image {
+                img.pagebuilder-mobile-hidden {
+                    display: none !important;
+                }
+                img.pagebuilder-mobile-only {
+                    display: block !important;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Destop Big
+//  _____________________________________________
+@media (min-width: 840px) {
+    body#html-body.cms-home {
+        .themes-and-extencions {
+            &__content {
+                &--title {
+                    .primary__title {
+                        line-height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Small Tablet
+//  _____________________________________________
+@media (min-width: 481px) {
+    body#html-body.cms-home {
+        .themes-and-extencions {
+            &__content {
+                &--button {
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0;
+                    .button__ancla {
+                        width: auto;
+                        margin: 5px 5px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Big Desktop
+//  _____________________________________________
+@media (min-width: 1200px) {
+    body#html-body.cms-home {
+        .themes-and-extencions {
+            background: url(https://www.weltpixel.com/pub/media/wysiwyg/homepage-v2/h42.png) no-repeat 53%;
+            background-size: contain !important;
+            background-position: 53%;
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            margin-top: 50px;
+            overflow: auto;
+            &__content {
+                &--title {
+                    .primary__title {
+                        margin-top: 20px;
+                        padding: 0;
+                        margin-bottom: 0;
+                        font-size: 5.8rem;
+                    }
+                }
+                &--button {
+                    text-align: left;
+                    .button__ancla {
+                        height: 75px;
+                        padding: 18px 30px;
+                        &--title {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+            }
+            div.pagebuilder-column:has(.themes-and-extencions__image) {
+                width: 50%;
+                left: 8.33333333%;
+                z-index: -1;
+            }
+            &__image {
+                img.pagebuilder-mobile-hidden {
+                    width: 100%;
+                    display: block !important;
+                }
+                img.pagebuilder-mobile-only {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Big Desktop
+//  _____________________________________________
+@media (min-width: 1366px) {
+    body#html-body.cms-home {
+        .themes-and-extencions {
+            &__content {
+                &--button {
+                    .button__ancla {
+                        height: 93px;
+                        padding: 24px 34px;
+                        &--title {
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Big Desktop
+//  _____________________________________________
+@media (min-width: 1230px) {
+    body#html-body.cms-home {
+        .themes-and-extencions {
+            &__content {
+                &--title {
+                    .primary__title {
+                        padding: 75px 0 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+

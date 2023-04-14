@@ -1,0 +1,112 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body{
+        // background-color: #090090!important;
+    }
+
+    body#html-body.cms-home {
+        .post-list {
+            width: 100%;
+            max-width: 80%;
+            margin: 0 auto;
+            .pagebuilder-column-line {
+                justify-content: center;
+                margin-bottom: 50px;
+                padding-top: 20px;
+            }
+            &__items {
+                max-width: 100%;
+                margin-bottom: 20px;
+                padding: 10px 15px;
+            }
+            .server-side {
+                order: 2;
+            }
+            .google-analytics-4 {
+                order: 3;
+            }
+            .product-update {
+                order: 1;
+            }
+            &--image {
+                min-height: 250px;
+                a {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                }
+                img.pagebuilder-mobile-only, img.pagebuilder-mobile-hidden {
+                    height: 220px;
+                }
+            }
+            &--title {
+                h2 {
+                    margin-top: 0;
+                    text-transform: uppercase;
+                    .config-font ( @fuente1, 2rem, 800, inherit, 1.1, 0px, @color-oscuro );
+                    a {
+                        color: inherit;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &--text {
+                margin-bottom: 40px;
+                .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #444 );
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+//
+//  Tablet
+//  _____________________________________________
+
+
+@media  (min-width: 769px) and (max-width: 800px) {
+
+    body#html-body.cms-home {
+        .post-list {
+            .pagebuilder-column-line {
+                flex-direction: column;
+            }
+            &__items {
+                width: 100%;
+            }
+            &--image {
+                a {
+                    margin: 15px 0;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}

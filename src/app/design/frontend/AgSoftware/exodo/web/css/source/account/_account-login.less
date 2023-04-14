@@ -1,0 +1,283 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body.customer-account-login {
+        .page-main {
+            padding-top: 20px;
+        }
+        .page-title-wrapper {
+            .page-title {
+                margin-bottom: 20px;
+                span {
+                    text-transform: uppercase;
+                    .config-font ( @fuente1, 2rem, 800, normal, 1.2, 0px, @color-primario );
+                }
+            }
+        }
+        .columns {
+            .column.main {
+                padding-bottom: 0;
+            }
+            .social-login-container {
+                width: 96.5%;
+                max-width: 623px;
+                padding: 0 10px;
+                margin-bottom: 24px;
+                .social-login--title {
+                    padding-bottom: 12px;
+                    margin-bottom: 15px;
+                    border-bottom: 1px solid #e8e8e8;
+                    strong {
+                        text-transform: uppercase;
+                        .config-font ( @fuente2, 12px, 400, normal, 1.42857143, 0.5px, #303030 );
+                    }
+                }
+                .account-social-login {
+                    margin-bottom: 0;
+                    .actions-toolbar {
+                        width: 100%;
+                        margin-top: 0;
+                        margin-bottom: 7px;
+                    }
+                }
+            }
+            .login-container {
+                max-width: 729.07px;
+                width: 100%;
+                padding: 1.2%;
+                .block-customer-login {
+                    margin-bottom: 40px;
+                    .block-title {
+                        strong {
+                            text-transform: uppercase;
+                            .config-font ( @fuente2, 12px, 400, normal, 1.42857143, 0.5px, #303030 );
+                        }
+                    }
+                    .block-content {
+                        .form-login {
+                            .fieldset {
+                                &:after {
+                                    text-align: center;
+                                    padding-top: 30px;
+                                }
+                            }
+                            .field {
+                                .config-font ( @fuente2, 12px, 400, normal, 1.42857143, normal, #303030 );
+                            }
+                            #remember-me-box {
+                                .label {
+                                    span {
+                                        font-weight: 400;
+                                    }
+                                }
+                                .wrapper {
+                                    display: block;
+                                }
+                            }
+                            .label {
+                                .config-font ( @fuente2, 12px, 600, normal, 1.42857143, normal, #303030 );
+                            }
+                            .label[for="show-password"] {
+                                span {
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+                .block-new-customer {
+                    .block-title {
+                        strong {
+                            text-transform: uppercase;
+                            .config-font ( @fuente2, 12px, 400, normal, 1.42857143, 0.5px, #303030 );
+                        }
+                    }
+                    .block-content {
+                        p {
+                            .config-font ( @fuente2, 12px, 400, normal, 1.42857143, 0.5px, #303030 );
+                        }
+                    }
+                }
+                /* .actions-toolbar {
+                    .primary {
+                        .primary {
+                            text-transform: uppercase;
+                            transition-duration: .3s;
+                            transition-property: background-color;
+                            background-color: @color-primario;
+                            border: 1px solid @color-primario;
+                            border-radius: 0;
+                            .config-font ( @fuente2, 12px, 400, normal, 3rem, 0, @color-titulo );
+                            span {
+                                font-size: 14px;
+                            }
+                            &:hover {
+                                background-color: @color-claro;
+                                border: 1px solid @color-primario;
+                                color: @color-primario;
+                            }
+                        }
+                        .create {
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    .secondary {
+                        width: 100%;
+                        margin: 0;
+                        a {
+                            .config-font ( @fuente2, 12px, 400, normal, 1.42857143, 0, #444 );
+                        }
+                    }
+                } */
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body.customer-account-login {
+        .columns {
+            .login-container {
+                display: flex;
+                flex-direction: column;
+                max-width: 92.5%;
+                .block {
+                    width: 100%;
+                    .control {
+                        width: 100%;
+                    }
+                    .actions-toolbar {
+                        .primary {
+                            width: 100%;
+                            .primary {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .block-content {
+                        .form-login {
+                            .fieldset {
+                                &:after {
+                                    padding-top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop Personalizado
+//  _____________________________________________
+
+@media (min-width: 841px) {
+    body#html-body.customer-account-login {
+        .page-main {
+            max-width: 1200px;
+        }
+        .page-title-wrapper {
+            .page-title {
+                margin-bottom: 0;
+                .base {
+                    font-size: 58px;
+                }
+            }
+        }
+        .columns {
+            .column.main {
+                display: flex;
+            }
+            .social-login-container {
+                width: 32%;
+                padding: 1.2%;
+                margin-bottom: 24px;
+                .social-login--title {
+                    font-size: 1.8rem;
+                }
+                .account-social-login {
+                    max-width: 100%;
+                    padding: 1.2%;
+                    .block-content {
+                        text-align: left;
+                        .actions-toolbar {
+                            max-width: 75%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .login-container {
+                width: 63%;
+                display: block;
+                .block {
+                    .control {
+                        width: 80%;
+                    }
+                }
+                .block-customer-login {
+                    float: left;
+                    width: 48%;
+                }
+                .block-new-customer {
+                    float: right;
+                    width: 48%;
+                }
+                .actions-toolbar {
+                    .primary {
+                        width: auto;
+                        .primary {
+                            width: auto;
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    .secondary {
+                        width: auto;
+                    }
+                }
+                .block-content {
+                    .form-login {
+                        .fieldset {
+                            &:after {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1231px) {
+    body#html-body.customer-account-login {
+        .page-title-wrapper {
+            .page-title {
+                padding: 75px 0 10px 0;
+                .base {
+                    color: @color-oscuro;
+                }
+            }
+        }
+    }
+}

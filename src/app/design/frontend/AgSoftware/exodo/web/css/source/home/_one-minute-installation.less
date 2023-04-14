@@ -1,0 +1,61 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    #html-body.cms-home {
+        .container-video {
+            background-color: @color-titulo;
+            width: 83.33333333%;
+            padding: 0 15px 80px;
+            position: relative;
+            left: 8.33333333%;
+            //float: left;
+            &__title{
+                padding: 0 0 80px;
+                text-align: center;
+                text-transform: uppercase;
+                .config-font ( @fuente1, 3rem, 800, normal, 1.1, 0, @color-oscuro );
+            }
+            &__feature-box{
+                max-width: 1000px;
+                margin: 0 auto;
+                box-shadow: e("0 0px 15px 5px #efefef");
+            }
+            .pagebuilder-column-line {
+                .pagebuilder-column {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    #html-body.cms-home {
+        .pagebuilder-column-group.container-video {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+@media (min-width: 1230px) {
+    #html-body.cms-home {
+        .container-video{
+            &__title{
+                font-size: 48px;
+            }
+        }
+    }
+
+}
+

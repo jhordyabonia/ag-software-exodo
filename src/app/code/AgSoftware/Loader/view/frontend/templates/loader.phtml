@@ -1,0 +1,19 @@
+<div id="loader" data-role="loader" class="loading-mask main-loader">
+    <div class="loader">
+        <!--<div class="loader-image"></div>
+        <div class="loader-text"><?php /*echo __('Cargando...') */?></div>-->
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<script>
+    require(['jquery', 'loader'], function ($) {
+        'use strict';
+
+        $('#loader').loader({
+            icon: 'AgSoftware_Loader/images/loader.gif'
+        });
+    });
+</script>

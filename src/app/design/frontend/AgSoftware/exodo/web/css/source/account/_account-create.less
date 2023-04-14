@@ -1,0 +1,208 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    body.customer-account-create {
+        .page-main {
+            padding-top: 20px;
+        }
+            .page-title-wrapper {
+                .page-title {
+                    margin-bottom: 20px;
+                    span {
+                        text-transform: uppercase;
+                        .config-font ( @fuente1, 2rem, 800, normal, 1.2, 0px, @color-primario );
+                }
+            }
+        }
+        .columns {
+            .column.main { padding-bottom: 0px;
+                .social-login-container {
+                    max-width: 623px;
+                    .social-login--title {
+                        margin-bottom: 15px;
+                        padding-bottom: 12px;
+                        border-bottom: 1px solid #c6c6c6;
+                        text-transform: uppercase;
+                        strong {
+                            .config-font ( @fuente2, 2.2rem, 400, normal, 1.1, 0.5px, #333333);
+                        }
+                    }
+                    .account-social-login {
+                        margin-bottom: 20px;
+                        .block-content {
+                            .actions-toolbar {
+                                width: 100%;
+                            }
+                        }
+                   }
+                }
+                .form.create {
+                    .fieldset {
+                        .legend {
+                            span {
+                                .config-font ( @fuente2, 2.2rem, 400, normal, 1.2, 0.5px, #303030);
+                            }
+                        }
+                        .required, .choice.newsletter {
+                            font-family: @fuente2;
+                        }
+                        div[data-bind="scope"] {
+                            display: none;
+                        }
+                        .newsletter {
+                            margin: 0;
+                        }
+                        .field.choice {
+                            input[title="Allow remote shopping assistance"],
+                            input[name="show-password"], 
+                            label[for="assistance_allowed_checkbox"],
+                            label[for="show-password"]
+                            span[data-bind="i18n: 'Show Password'"], 
+                            .field-tooltip.toggle 
+                             {
+                                display: none;
+                            }
+                        }
+                        .field.persistent {
+                            .label {
+                                font-family: @fuente2;
+                            }
+                            .tooltip.wrapper {
+                                .tooltip.toggle {
+                                    display: block;
+                                }
+                            }
+                        }
+                        
+                        .password.required {
+                            .control {
+                                div[data-role="password-strength-meter"] {
+                                    .password-strength-meter {
+                                        font-family: @fuente2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .create.account {
+                        margin: 0;
+                
+                    }
+                    .fieldset.additional_info {
+                        margin: 0;
+                        &::after {
+                            margin: 10px 0 0;
+                            content: attr(data-hasrequired);
+                            display: block;
+                            letter-spacing: normal;
+                            word-spacing: normal;
+                            color: #e02b27;
+                            font-size: 1.2rem;
+                            margin: 35px 0;
+                        }
+                    }
+                    .actions-toolbar {
+                        .primary {
+                            .primary {
+                                background-color: @color-primario;
+                                border: 1px solid @color-primario;
+                                color:@color-titulo;
+                                transition-duration: .3s;
+                                transition-property: background-;
+                                .config-font ( @fuente2, 1.4rem, 400, normal, 30px, 0px, @color-titulo);
+                                span {
+                                    text-transform: uppercase
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+@media (min-width: 768px) and (max-width: 840px){
+    
+}
+
+
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    body.customer-account-login {
+
+     
+    }
+
+}
+
+
+//
+//  Deskto Personalizado
+//  _____________________________________________
+
+@media (min-width: 841px) {
+
+    body.customer-account-create  {
+        .page-main {
+            max-width: 1200px;
+        }
+        .page-title-wrapper {
+            .page-title {
+                margin: 0;
+                span {
+                  font-size: 58px;
+            }
+        }
+    }
+    .columns {
+        max-width: 1200px;
+        margin: 0 auto;
+        .column.main {
+            .social-login-container {
+                width: 32%;
+                float: right;
+                margin: 0 0 0 25px;
+                .account-social-login {
+                    .block-content {
+                        text-align: left;
+                        .actions-toolbar {
+                            width: 75%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    }
+
+}
+
+@media (min-width: 1231px) {
+    body.customer-account-create  {
+        .page-title-wrapper {
+            .page-title {
+                padding: 75px 0 10px 0px;                
+                span {
+                  color: @color-oscuro;
+            }
+        }
+    }
+    }
+}

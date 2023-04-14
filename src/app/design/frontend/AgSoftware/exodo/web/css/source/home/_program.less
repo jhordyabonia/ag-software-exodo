@@ -1,0 +1,143 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .cms-home.cms-index-index {
+        .partner-program {
+            display: flex;
+            padding: 80px 15px 0;
+            background: #fafafa;
+            .partner-title-1 {
+                .config-font ( @fuente1, 30px, 900, normal, .9, 0, @color-oscuro);
+                 padding: 50px 15px 0 15px;
+                 margin: 50px 0 0;
+                 text-align: center;
+                 text-transform: uppercase;
+            }
+            .margin {
+                margin: 0;
+                padding: 0;
+            }
+            .affiliate-cont {
+                margin: 50px 0 80px 0;
+                font-family:  @fuente2;
+                letter-spacing: .5px;
+                color: #303030;
+                box-shadow: e("0px 0px 97px -17px #b0b0b0");
+                .text-center {
+                    text-align: center;
+                    .logo-welt-partner {
+                        padding: 50px 0;
+                    }
+                }
+                .partner-title {
+                    .config-font ( @fuente2, 2.4rem, 400, inherit, .1.1, 0, @color-oscuro);
+                    text-align: center;
+                    padding: 0 0 25px;
+                    margin: 0;
+                    text-transform: uppercase;
+                }
+                .prg-wok {
+                    padding-top: 50px;
+                }
+                ul {
+                    padding-left: 40px;
+                }
+                h3 {
+                    padding-top: 50px;
+                }
+                ol {
+                    padding: 0 40px 50px;
+                }
+                .btn-partner {
+                    padding: 0 0 50px 0;
+                    .button-now {
+                        display: inline-block;
+                        padding: 10px 15px;
+                        margin: 0;
+                        border-radius: inherit;
+                        background-color: @color-titulo;
+                        border: @color-primario 1px solid;
+                        cursor: pointer;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 3rem, 0, @color-primario);
+                        vertical-align: middle;
+                        text-transform: uppercase;
+                        &:hover {
+                            color: @color-titulo;
+                            background-color: #073756;
+                            border: #073756 1px solid;
+                        }
+                    }
+                }
+            }
+        }
+      
+    }
+}
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = "max") and (@break = @screen__m) {
+   .cms-home.cms-index-index  {
+        .partner-program {
+            .partner-title-1 {
+                font-size: 30px;
+            }
+        }
+      
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+@media (min-width: 769px)  and (max-width: 1200px) {
+    #html-body.cms-home {
+        .partner-program {
+            .partner-title-1 {
+                padding: 100px 0 0;
+                font-size: 58px;
+            }
+            .margin {
+                margin: 0;
+                padding: 0 0 100px;
+            }
+            .affiliate-cont {
+                width: 85%;
+                margin: 0 auto 80px;
+            }
+        }
+      
+
+    }
+}
+
+@media (min-width: 1200px)  {
+    #html-body.cms-home {
+        [data-pb-style=A46HKVM] {
+            width: 83.33333333%;
+            float: left;
+            position: relative;
+            left: 8.33333333%;
+        }
+        .partner-program {
+            .partner-title-1 {
+                font-size: 58px;
+                margin-top: 150px;
+                padding: 0;
+            }
+            .margin {
+                margin: 0 0 150px;
+            }
+           
+            .affiliate-cont {
+                margin: 0 auto 150px;
+                width: 55%;
+            }
+        }
+      
+
+    }
+}

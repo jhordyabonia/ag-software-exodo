@@ -1,0 +1,195 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body{
+        // background-color: #090090!important;
+    }
+
+    body.cms-home {
+
+        .industry-partners {
+            padding-bottom: 50px;
+            &__content {
+                margin: 50px 0 0;
+                padding: 0 15px;
+            }
+            &__image {
+                img.pagebuilder-mobile-only {
+                    max-width: 300px;
+                }
+            }
+            &--title {
+                margin: 0;
+                text-transform: uppercase;
+                .config-font ( @fuente1, 3rem, 900, normal, 0.9, 0px, @color-oscuro );
+            }
+            &--subtitle {
+                margin: 0 0 50px;
+                text-transform: uppercase;
+                .config-font ( @fuente1, 3rem, 900, normal, 0.9, 0px, @color-oscuro );
+            }
+            &--text {
+                margin: 0 0 30px ;
+                .config-font ( @fuente2, 1.6rem, 400, normal, 1.42857143, 0.5px, #303030 );
+            }
+        }
+    }
+
+}
+
+
+
+//
+//  Small Tablet
+//  _____________________________________________
+
+
+@media  (min-width: 481px) {
+
+    body.cms-home {
+
+        .industry-partners {
+            &__content {
+                padding: 0 40px;
+            }
+        }
+    }
+
+}
+
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    body.cms-home {
+
+        .industry-partners {
+            padding: 100px 0;
+            &__content {
+                margin: 0;
+            }
+            &__image {
+                padding-right: 20px;
+                .pagebuilder-mobile-hidden{
+                    max-width: 100%;
+                }
+            }
+            &--title {
+                padding: 50px 0 0;
+                font-size: 5.8rem;
+            }
+            &--subtitle {
+                width: 106%;
+                font-size: 5.8rem;
+
+            }
+        }
+    }
+
+}
+
+//
+//  Small Desktop
+//  _____________________________________________
+
+@media  (min-width: 840px) {
+    body#html-body.cms-home {
+        div.industry-partners {
+            &__content {
+                .industry-partners--title {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Small Desktop
+//  _____________________________________________
+
+@media  (min-width: 993px) {
+    body#html-body.cms-home {
+        div.industry-partners {
+            &__content {
+                width: 41%;
+                left: 8.33333333%;
+                position: relative;
+            }
+            &__image {
+                width: 41%;
+                position: relative;
+                left: 16.66666667%;
+            }
+            .industry-partners--title {
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+
+//
+//  Normal Desktop
+//  _____________________________________________
+
+@media  (min-width: 1200px) {
+    body#html-body.cms-home {
+        div.industry-partners {
+            padding: 150px 0;
+            &__content {
+                .industry-partners--title {
+                    margin-top: 120px;
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Big Desktop
+//  _____________________________________________
+
+@media  (min-width: 1366px) {
+    body#html-body.cms-home {
+        div.industry-partners {
+            &__image {
+                img {
+                    float: left;
+                }
+            }
+            .industry-partners--title {
+                margin-top: 150px;
+                padding: 0
+            }
+            &__content {
+                .industry-partners--title {
+                    margin-top: 150px;
+                    padding: 0
+                }
+            }
+            &--text {
+                max-width: 570px;
+            }
+        }
+    }
+}

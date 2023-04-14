@@ -1,0 +1,45 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.bin
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="footer">
+
+            <block class="Magento\Cms\Block\Block" name="pree-footer-weltpixel" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">pree-footer-weltpixel</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="footer-weltpixel" after="pree-footer-weltpixel">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-weltpixel</argument>
+                </arguments>
+            </block>
+
+            <referenceBlock name="footer_links" remove="true"/>
+            <referenceBlock name="copyright" remove="true"/>
+            <referenceBlock name="form.subscribe" remove="true"/>
+
+        </referenceContainer>
+
+        <referenceContainer name="header.container">
+            <container name="header_right" htmlTag="div" htmlClass="header_right" before="-">
+                <block name="minicart" template="Magento_Checkout::cart/minicart.phtml" before="-"/>
+                <block name="user" template="Magento_Theme::user.phtml" before="minicart"/>
+
+            </container>
+
+            <referenceBlock name="header.panel.wrapper" remove="false"/>
+
+        </referenceContainer>
+
+        <move element="page.top" destination="header-wrapper"  after="logo"/>
+        <move element="header_right" destination="header-wrapper"  after="page.top"/>
+        <move element="top.search" destination="header_right"  before="-"/>
+
+    </body>
+</page>

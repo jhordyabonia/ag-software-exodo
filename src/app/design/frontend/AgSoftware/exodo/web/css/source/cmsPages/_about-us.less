@@ -1,0 +1,566 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+
+    body#html-body.cms-about-us {
+
+        .page-main-full-width {
+            padding-top: 20px;
+            .column.main {
+                padding-bottom: 0;
+            }
+        }
+
+        /* ESTILOS GENERALES PARA LA PAGINA */
+        .about-us {
+
+            &__container {
+                background: #fafafa;
+            }
+
+            &__title, &__review {
+                width: 200px;
+                padding: 20px 0;
+                margin-bottom: 20px;
+                .config-font( @fuente1, 2rem, 900, inherit, 1.2, 0px, @color-oscuro );
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 40px;
+                    height: 2px;
+                    margin: 32px 0 24px;
+                    background-color: #073756;
+                }
+            }
+
+            &__review {
+                font-size: 58px;
+                line-height: 0.9;
+            }
+
+            &__text, &__testi-meta {
+                padding-right: 10%;
+                .config-font( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+            }
+
+            &__wrapper {
+                padding: 0 15px;
+            }
+
+            &__image {
+                padding: 0 15px;
+            }
+
+        }
+
+        /* ESTILOS ESPECIFICOS POR MODIFICADORES */
+        .bg-black {
+            background: @color-oscuro;
+            .about-us__review {
+                color: @color-claro;
+            }
+            .about-us__text {
+                color: @color-claro;
+            }
+            .about-us__image {
+                text-align: right;
+            }
+        }
+
+        .about-us__text--blue {
+            color: #073756;
+            margin: 5px 0px 0px 0px;
+            text-transform: uppercase;
+            font-size: 1em;
+            line-height: 1.3125;
+            font-weight: 700;
+        }
+
+        .get-touch__text--nowrap {
+            white-space: nowrap;
+        }
+
+        .about-us__get-touch-btn--blue {
+            color: @color-claro;
+            background: @color-primario;
+            &:hover {
+                color: @color-primario;
+                background: @color-claro;
+            }
+        }
+
+        .about-us__get-touch-btn--white {
+            color: @color-primario;
+            background: @color-claro;
+            &:hover {
+                color: @color-claro;
+                background: @color-primario;
+            }
+        }
+
+        .image {
+            width: 50%;
+            padding: 0 15px;
+
+            .img-parent {
+                box-shadow: e("0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)");
+                border-radius: 10px;
+                transition: .1s ease-in-out;
+
+                .bg-img {
+                    display: block;
+                }
+
+                .bg-img-hover {
+                    display: none;
+                }
+
+                img {
+                    border-radius: 10px;
+                }
+
+                &:hover {
+
+                    .bg-img {
+                        display: none;
+                    }
+
+                    .bg-img-hover {
+                        display: block;
+                    }
+
+                }
+
+            }
+
+            .caption {
+                margin-bottom: 40px;
+                margin-top: 20px;
+                text-align: center;
+
+                &__name {
+                    padding-top: 10px;
+                    margin-bottom: 0;
+                    .config-font ( @fuente1, 20px, 900, normal, 1.5, 0.5px, @color-oscuro );
+                }
+
+                &__function {
+                    .config-font ( @fuente2, 16px, normal, normal, 1.2, 0.5px, @color-oscuro );
+                }
+
+                &__social {
+                    display: flex;
+                    justify-content: center;
+                    overflow: hidden;
+                    margin-bottom: 8px;
+
+                    .icons {
+
+                        &-itiems {
+                            height: 37px;
+                            margin-right: 5px;
+                            transition: all .3s ease;
+                            &:hover {
+                                transform: translateY(-38px);
+                            }
+                        }
+
+                        &-card {
+                            transition: all .3s ease;
+                            display: flex;
+                            flex-direction: column;
+
+                            .fa-brands {
+                                width: 38px;
+                                height: 38px;
+                                text-align: center;
+                                color: #555;
+                                border-radius: 3px;
+
+                                &:before {
+                                    font-size: 18px;
+                                    line-height: 40px;
+                                }
+                            }
+
+                            .icon-traslate--twitter {
+                                color: #fff;
+                                background-color: #1D9BF0;
+                            }
+
+                            .icon-traslate--linkedin {
+                                color: #fff;
+                                background-color: #0A66C2;
+                            }
+
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        /* ESTILOS ESPECIFICOS POR BLOQEUS Y CLASES */
+        .about {
+            padding: 80px 0 40px 15px;
+            &__testi-meta {
+                text-align: right;
+            }
+            &__image {
+                padding-right: 0;
+                padding-left: 15px;
+            }
+        }
+
+        .our-mission {
+            padding: 80px 0 40px 15px;
+            &__review {
+                padding: 20px 0;
+                word-wrap: initial;
+            }
+            &__text {
+                font-size: 21px;
+                font-style: italic;
+                font-weight: 900;
+                letter-spacing: 1.5px;
+            }
+
+            &__image {
+                margin-top: 30px;
+                img {
+                    margin-right: 15%;
+                }
+            }
+        }
+
+        .meet-team {
+            padding: 80px 0 40px 0;
+            &__wrapper {
+                padding-left: 0;
+            }
+            &__review {
+                width: 100%;
+                /*padding: 0 20px;*/
+                text-align: center;
+                &:after {
+                    margin: 32px auto;
+                }
+            }
+            &__text {
+                padding-right: 0;
+                text-align: center;
+            }
+            &__images {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 80px 5%;
+            }
+        }
+
+        .living-space {
+
+            .about-us__review {
+                width: 100%;
+                padding: 100px 0 25px 0;
+                margin: 0 0 20px;
+                &:after {
+                    display: none;
+                }
+            }
+
+            .slider-seption {
+                padding: 0;
+                margin-bottom: -6px;
+            }
+
+            .slider {
+                width: 100%;
+            }
+
+            .slick-slide {
+                margin: 0;
+            }
+
+            .slick-prev {
+                left: 15px;
+            }
+
+            .slick-next {
+                right: 15px;
+            }
+
+            .slick-arrow {
+                &:before {
+                    font-size: 25px;
+                }
+                &:hover {
+                    background: rgba(252, 252, 252, 0.7);
+                }
+                &:hover:before {
+                    color: #555;
+                }
+            }
+
+            .slick-dots {
+                display: none!important;
+            }
+
+        }
+
+        .location {
+            padding: 80px 15px 40px;
+            background: #ffffff;
+            &__review {
+                width: 100%;
+                padding: 75px 0 35px 0;
+                text-transform: uppercase;
+                text-align: center;
+                &:after {
+                    display: none;
+                }
+            }
+            &__title {
+                width: 100%;
+                padding: 0;
+                margin: 20px 0 10px 0;
+                text-transform: uppercase;
+                word-wrap: initial;
+                .config-font( @fuente2, 2.4rem, 400, normal, 1.1, 0px, @color-oscuro );
+                &:after {
+                    display: none;
+                }
+            }
+            &__section {
+                display: flex;
+                padding: 0 15px;
+            }
+            &__image {
+                width: 25%;
+            }
+            &__wrapper {
+                width: 75%;
+            }
+        }
+
+        .get-touch {
+            padding: 80px 0 40px 15px;
+            &__text {
+                padding: 0;
+            }
+            &__review {
+                width: 100%;
+            }
+            a {
+                display: inline-block;
+                margin: 50px 70px 0 0;
+                padding: 10px 24px;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                text-decoration: none;
+                border: 1px solid @color-primario;
+            }
+            &__image {
+                padding-right: 0;
+            }
+        }
+
+    }
+
+}
+
+//
+//  Mobile Personalizado
+//  _____________________________________________
+@media  (max-width: 468px) {
+
+    body#html-body.cms-about-us {
+
+        /* ESTILOS GENERALES PARA LA PAGINA */
+        .about-us {
+
+            &__review {
+                font-size: 42px;
+            }
+
+        }
+
+        /* ESTILOS ESPECIFICOS POR BLOQEUS Y CLASES */
+        .meet-team {
+            &__images {
+               padding-bottom: 40px;
+            }
+        }
+
+        .our-mission {
+            &__image {
+                img {
+                    margin-right: 0;
+                }
+
+            }
+        }
+
+        .get-touch {
+            a {
+                padding: 16px;
+            }
+        }
+
+    }
+
+}
+
+//
+//  Mobile Personalizado
+//  _____________________________________________
+@media  (max-width: 730px) {
+
+    body#html-body.cms-about-us {
+
+        /* ESTILOS ESPECIFICOS POR BLOQEUS Y CLASES */
+        .get-touch {
+            a {
+                margin-right: 20px;
+            }
+        }
+
+    }
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    body#html-body.cms-about-us {
+
+        .image {
+            width: 25%;
+        }
+
+        .about {
+            padding-bottom: 80px;
+        }
+
+        .our-mission {
+            padding-bottom: 80px;
+        }
+
+        .meet-team {
+            padding-bottom: 80px;
+        }
+
+        .location {
+            padding-bottom: 80px;
+            &__section {
+                width: 50%;
+                &--hq {
+                    float: left;
+                }
+            }
+        }
+
+        .get-touch {
+            padding-bottom: 80px;
+        }
+
+    }
+
+}
+
+//
+//  Destop Personalizado
+//  _____________________________________________
+@media  (min-width: 841px) {
+
+    body#html-body.cms-about-us {
+
+        .about {
+            &__title {
+                font-size: 58px;
+                word-wrap: initial;
+            }
+
+        }
+
+    }
+
+}
+
+//
+//  Destop Personalizado
+//  _____________________________________________
+@media  (min-width: 992px) {
+
+    body#html-body.cms-about-us {
+
+        .about {
+            display: flex;
+           &__wrapper {
+               width: 50%;
+           }
+            &__image {
+                width: 50%;
+                img {
+                    margin-top: 10%;
+                }
+            }
+        }
+
+        .our-mission {
+            &__wrapper {
+                width: 50%;
+            }
+        }
+
+        .get-touch {
+            display: flex;
+            &__wrapper {
+                width: 50%;
+            }
+            &__image {
+                width: 50%;
+                img {
+                    margin-top: 10%;
+                }
+            }
+        }
+
+    }
+
+}
+
+//
+//  Destop Personalizado
+//  _____________________________________________
+@media  (min-width: 1200px) {
+
+    body#html-body.cms-about-us {
+
+        .about {
+            padding-left: 10%;
+        }
+
+        .our-mission {
+            padding-left: 10%;
+        }
+
+        .meet-team {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .get-touch {
+            padding-left: 10%;
+        }
+
+    }
+
+}

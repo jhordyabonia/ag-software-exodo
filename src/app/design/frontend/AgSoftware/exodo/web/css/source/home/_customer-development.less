@@ -1,0 +1,154 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    body.cms-home {
+        div[data-content-type="row"]:has(.customer-development) {
+            max-width: 100%;
+        }
+        .customer-development {
+            &__title {
+                margin-top: 50px;
+                padding: 0 15px;
+            }
+            &__content {
+                [data-role="title"] {
+                    position: relative;
+                    display: inline-grid;
+                    justify-items: center;
+                    .title-buttons--close-expand {
+                        width: 200px;
+                        position: absolute;
+                        top: 31%;
+                        display: inline-flex;
+                        gap: 3px;
+                        justify-content: center;
+                        text-transform: uppercase;
+                        border: 1px solid @color-primario;
+                        cursor: pointer;
+                        i {
+                            align-items: baseline;
+                            text-transform: uppercase;
+                            font-family: @fuente1;
+                            font-size: 14px;
+                            line-height: 44px;
+                            font-weight: 700;
+                        }
+                        &::before {
+                            font-family: 'bootstrap-icons';
+                            font-size: 14px;
+                            line-height: 47px;
+                            font-weight: 700;
+                        }
+                    }
+                    &:active {
+                        opacity: 0.8;
+                    }
+                }
+                [aria-expanded="false"] {
+                    .title-buttons--close-expand {
+                        background-color: @color-claro;
+                        color: @color-primario;
+                        .expand {
+                            display: inline-flex;
+                        }
+                        .close {
+                            display: none;
+                        }
+                        &::before {
+                            content: '\F26B';
+                        }
+                    }
+                }
+                [aria-expanded="true"] {
+                    .title-buttons--close-expand {
+                        background-color: @color-primario;
+                        color: @color-claro;
+                        .expand {
+                            display: none;
+                        }
+                        .close {
+                            display: inline-flex;
+                        }
+                        &::before {
+                            content: '\F623';
+                        }
+                    }
+                }
+            }
+            &--title {
+                margin: 0 0 50px;
+                text-transform: uppercase;
+                .config-font ( @fuente1, 30px, 900, normal, 0.9, 0px, @color-oscuro )
+            }
+        }
+    }
+}
+
+//
+//  Deskto
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body.cms-home {
+        .customer-development {
+            &__title {
+                margin-top: 0;
+                padding: 0 40px;
+            }
+            &__content {
+                [data-role="title"] {
+                    width: 100%;
+                    .title-buttons--close-expand {
+                        top: 70%;
+                        left: 65.3%;
+                    }
+                    .pagebuilder-mobile-hidden {
+                        width: 100%;
+                    }
+                }
+                [data-role="content"] {
+                    .pagebuilder-mobile-hidden {
+                        width: 100%;
+                    }
+                }
+            }
+            &--title {
+                font-size: 58px;
+            }
+        }
+    }
+}
+
+//
+//  Deskto Custom
+//  _____________________________________________
+@media  (min-width: 840px) {
+    body.cms-home {
+        .customer-development {
+            &--title {
+                margin: 50px 0;
+            }
+        }
+    }
+}
+
+//
+//  Deskto Custom Big
+//  _____________________________________________
+@media  (min-width: 1200px) {
+
+    body.cms-home {
+        .customer-development {
+            &__content {
+                [data-role="title"] {
+                    width: 100%;
+                    .title-buttons--close-expand {
+                        left: 75.3%;
+                        top: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+}

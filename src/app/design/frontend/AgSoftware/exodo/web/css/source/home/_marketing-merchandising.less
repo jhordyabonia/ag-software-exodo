@@ -1,0 +1,200 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    body.cms-home {
+        .marketing-merchandising {
+            padding: 50px 0;
+            &__image {
+                order: 1;
+            }
+            &__content {
+                order: 2;
+                &--container {
+                    padding: 0 15px;
+                    [data-role="collapsible"] {
+                        border-top: 1px dotted #ddd;
+                        p {
+                            position: relative;
+                            padding: 10px 0 10px 20px;
+                            margin-bottom: 0;
+                            cursor: pointer;
+                            .config-font ( @fuente2, 14px, 700, normal, 24px, 0.5px, #444 );
+                            &::before {
+                                width: 14px;
+                                position: absolute;
+                                left: 0;
+                                content: '\F26B';
+                                font-family: 'bootstrap-icons';
+                                font-size: 14px;
+                                font-weight: 400;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    [data-role="collapsible"][aria-expanded="true"] {
+                        p::before {
+                            content: '\F623';
+                        }
+                    }
+                    .fist-item {
+                        border-top: none;
+                    }
+                    [data-role="content"] {
+                        padding: 0 0 15px 20px;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 1.4, 0.5px, #303030 );
+                        b {
+                            display: inline-block;
+                            margin-top: 30px;
+                        }
+                        p {
+                            margin: 30px 0;
+                        }
+                    }
+                    h2 {
+                        margin: 0;
+                        margin-bottom: 50px;
+                        .config-font ( @fuente1, 30px, 900, normal, 0.9, 0px, @color-oscuro );
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (min-width: 480px) {
+    body.cms-home {
+        .marketing-merchandising {
+            &__content {
+                &--container {
+                    padding: 0 40px;
+                    h2 {
+                        /*font-size: 50px;*/
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Custom Tablet
+//  _____________________________________________
+@media  (min-width: 840px) {
+    body.cms-home {
+        .marketing-merchandising {
+            &__content {
+                &--container {
+                    h2 {
+                        margin: 50px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Deskto
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body#html-body.cms-home {
+        .marketing-merchandising {
+            padding: 100px 0;
+            .pagebuilder-column-line {
+                flex-direction: column;
+            }
+            &__image {
+                width: 100%;
+            }
+            &__content {
+               width: 100%;
+                &--container {
+                    h2 {
+                       font-size: 58px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Deskto Custom Big
+//  _____________________________________________
+@media  (min-width: 992px) {
+    body#html-body.cms-home {
+        .marketing-merchandising {
+            .pagebuilder-column-line {
+                flex-direction: row;
+            }
+            &__image {
+                width: 50%;
+                order: 1;
+            }
+            &__content {
+                width: 50%;
+                order: 2;
+            }
+        }
+    }
+}
+
+//
+//  Deskto Custom Big
+//  _____________________________________________
+@media  (min-width: 994px) {
+    body#html-body.cms-home {
+        .marketing-merchandising {
+            .pagebuilder-column-line {
+                flex-direction: row;
+            }
+            &__image {
+                width: 50%;
+                order: 2;
+            }
+            &__content {
+               width: 50%;
+               order: 1;
+                &--container {
+                    h2 {
+                        width: 110%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Deskto Custom Big More
+//  _____________________________________________
+@media  (min-width: 1200px) {
+    body#html-body.cms-home {
+        .marketing-merchandising {
+            padding: 150px 0;
+            &__content {
+                &--container {
+                    margin-left: 8.3333%;
+                    h2 {
+                        margin: 0;
+                        margin-bottom: 50px;
+                        font-size: 58px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    body.cms-home {
+        .quote-2 {
+            padding: 50px 15px 0 15px;
+            text-align: center;
+            background-color: @background-gay;
+            .pagebuilder-column-line {
+                justify-content: center;
+            }
+            &__card {
+                .card-quote ( 30px 0 80px 0, 70px 25px );
+                &::before {
+                    .card-quote-before ( 60px, 60px, -36px, 0, initial, 0, 180deg  );
+                }
+                &::after {
+                    margin: 0 auto;
+                    .card-quote-after ( initial, 0, -50px, 0, 180deg );
+                }
+            }
+            &--title {
+                margin: 20px 0 15px 0;
+                text-transform: uppercase;
+                .config-font ( @fuente1, 24px, 800, normal, 1.1, 0px, #303030 );
+
+            }
+            &--review-title {
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                .config-font ( @fuente2, 14px, 800, normal, 1.42857143, 0.5px, @color-primario );
+                p {
+                    margin-bottom: 0;
+                }
+            }
+            &--text {
+                .config-font ( @fuente2, 14px, 400, normal, 1.42857143, 0.5px, @color-oscuro );
+            }
+            &--name-author {
+                margin-top: 45px;
+                font-size: 16px;
+                p::before {
+                    content: " - ";
+                }
+            }
+        }
+    }
+}
+
+
+
+//
+//  Small Tablet
+//  _____________________________________________
+@media  (min-width: 480px) and (max-width: 768px) {
+    body#html-body.cms-home {
+        .quote-2 {
+            &__card {
+                &::after {
+                    .card-quote-after ( initial, 0, -50px, 140px, 180deg );
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body#html-body.cms-home {
+        .quote-2 {
+            padding: 100px 15px;
+            &__card {
+                .card-quote ( 0 0 100px 0, 70px );
+                &::before {
+                    .card-quote-before ( 95px, 68px, -36px, 45px, initial, initial, 180deg  );
+                }
+                &::after {
+                    .card-quote-after ( -50px, initial, initial, 140px, 0deg );
+                }
+            }
+        }
+    }
+}
+
+//
+//  DESKTOP PERSONALIZADO
+//  _____________________________________________
+@media  (min-width: 1200px) {
+    body#html-body.cms-home {
+        .quote-2 {
+            padding: 150px 0px 0px 0px;
+            &__card {
+                margin-bottom: 150px;
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    body#html-body.cms-legal-notice {
+
+        .page-main-full-width {
+            padding-top: 20px;
+            .columns {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .column.main {
+                padding-bottom: 0;
+            }
+        }
+
+        .legal-notice {
+
+            &__container {
+                margin: 30px 0;
+                padding: 0 15px;
+            }
+
+            &__title {
+                border-bottom: 2px solid @color-primario;
+                text-transform: uppercase;
+                .config-font( @fuente1, 2rem, 800, inherit, 1.2, 0px, @color-primario );
+            }
+
+            &__review {
+                p {
+                    margin: 0;
+                    .config-font( @fuente2, 18px, 700, normal, 1.42857143, 0.5px, #303030 );
+                }
+            }
+
+            &__text {
+                p {
+                    white-space: nowrap;
+                    .config-font( @fuente2, 18px, 400, normal, 1.42857143, 0.5px, #303030 );
+                    .mb-0 {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &__email-link {
+                color: #444;
+            }
+
+            &__divider {
+                position: relative;
+                hr[data-element="line"], [data-pb-style="H3FF6ID"] {
+                    width: 97.5%;
+                    position: absolute;
+                    left: auto;
+                }
+                &--top {
+                    height: 10px;
+                    margin-bottom: 25px;
+                }
+                &--bottom {
+                    height: 20px;
+                    margin-bottom: 35px;
+                }
+            }
+
+        }
+
+    }
+
+
+}
+
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    body#html-body.cms-legal-notice {
+        .legal-notice {
+            &__title {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}
+
+
+//
+//  Destop Personalizado
+//  _____________________________________________
+@media  (min-width: 841px) {
+
+    body#html-body.cms-legal-notice {
+        .page-main-full-width {
+            padding-top: 0;
+        }
+        .legal-notice {
+            &__title {
+                font-size: 58px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+}
+
+//
+//  Destop Personalizado
+//  _____________________________________________
+@media  (min-width: 1231px) {
+
+    body#html-body.cms-legal-notice {
+        .legal-notice {
+            &__title {
+                padding: 10px 0;
+                font-weight: 900;
+                line-height: 0.9;
+                color: @color-oscuro;
+            }
+        }
+    }
+
+}

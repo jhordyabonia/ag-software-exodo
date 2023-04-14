@@ -1,0 +1,291 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    body.cms-home {
+        div[data-content-type="row"]:has(.overflowhidden) {
+            max-width: 100%;
+            background: @background-gay;
+        }
+        .overflowhidden {
+            .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+        }
+        .overflowhidden__list {
+            width: 100%;
+            margin: 0;
+            padding: 30px 0;
+            .pagebuilder-column-line {
+                gap: 30px;
+                .item-list {
+                    align-items: center;
+                    &--image {
+                        max-width: 100px;
+                    }
+                    &--title {
+                        margin: 0;
+                        .config-font ( @fuente1, 20px, 800, normal, 1.1, 0px, @color-oscuro );
+                    }
+                    &--subtitle {
+                        margin: 0;
+                        .config-font ( @fuente1, 20px, 800, normal, 1.1, 0px, @color-oscuro );
+                        strong {
+                            font-weight: inherit;
+                        }
+                    }
+                    &--text {
+                        font-family: @fuente1;;
+                        letter-spacing: 0.5px;
+                        text-transform: capitalize;
+                        color: @color-oscuro;;
+                        p {
+                            margin: 0;
+                        }
+                    }
+                    &--span {
+                        font-family: @fuente1;
+                        color: @color-primario;;
+                        p {
+                            margin-bottom: 0;
+                            span {
+                                strong {
+                                    font-weight: 800;
+                                    font-size: 35px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .overflowhidden__glad-solutions {
+            padding: 0 15px;
+            text-align: center;
+            .pagebuilder-column-line {
+                justify-content: center;
+                .glad-solutions {
+                    &__content {
+                        .card-quote ( 30px 0 80px 0, 70px 25px );
+                        &::before {
+                           .card-quote-before ( 60px, 60px, -22px, 0, initial, 0, 0deg  );
+                        }
+                        &::after {
+                            .card-quote-after ( initial, 80px, -50px, initial, 180deg );
+                        }
+                    }
+                    &--title {
+                        margin: 20px 0 15px 0;
+                        text-transform: uppercase;
+                        .config-font ( @fuente1, 24px, 800, normal, 1.1, 0px, #303030 );
+
+                    }
+                    &--review-title {
+                        margin-bottom: 30px;
+                        text-transform: uppercase;
+                        .config-font ( @fuente2, 14px, 800, normal, 1.42857143, 0.5px, @color-primario );
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                    &--text {
+                        .config-font ( @fuente2, 14px, 400, normal, 1.42857143, 0.5px, @color-oscuro );
+                    }
+                    &--name-author {
+                        margin-top: 45px;
+                        font-size: 16px;
+                        span::before {
+                            content: " - ";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Small Deskto
+//  _____________________________________________
+@media  (min-width: 480px) {
+    body#html-body.cms-home {
+        .overflowhidden__glad-solutions {
+            .pagebuilder-column-line {
+                .glad-solutions {
+                    &__content {
+                        &::after {
+                            right: 140px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Small Deskto
+//  _____________________________________________
+@media  (min-width: 481px) {
+    body#html-body.cms-home {
+        .overflowhidden__list {
+            .pagebuilder-column-line {
+                .item-list {
+                    &--title {
+                        font-size: 3rem;
+                    }
+                    &--subtitle {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body#html-body.cms-home {
+        .overflowhidden__list {
+            margin: 100px auto;
+            padding: 0;
+            .pagebuilder-column-line {
+                gap: 0px;
+                h2.item-list {
+                    &--title {
+                        font-size: 21px;
+                    }
+                    &--subtitle {
+                        font-size: 21px;
+                    }
+
+                }
+                .item-list {
+                    &--text {
+                        p {
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+        .overflowhidden  {
+            .glad-solutions {
+                &__content {
+                    .card-quote ( 35px auto 100px auto, 70px );
+                    &::before {
+                        .card-quote-before ( 95px, 68px, -36px, initial, initial, 45px, 0deg  );
+                    }
+                    &::after {
+                        .card-quote-after ( initial, 140px, -50px, initial, 180deg );
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Small Deskto
+//  _____________________________________________
+@media  (min-width: 769px) {
+    body#html-body.cms-home {
+        .overflowhidden__list {
+            .pagebuilder-column-line {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                .item-list {
+                    max-width: 260px;
+                }
+                h2.item-list {
+                    &--title {
+                        margin-top: 25px;
+                    }
+                    &--subtitle {
+                        margin-bottom: 10px;
+                    }
+                }
+                .most-popular, .premium-soluctions {
+                    width: 50%;
+                }
+                .premium-soluctions {
+                    margin: 0 4%;
+                }
+                .magento-2-extencions {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Small Deskto
+//  _____________________________________________
+@media  (min-width: 840px) {
+    body#html-body.cms-home {
+        .overflowhidden__list {
+            .pagebuilder-column-line {
+                .premium-soluctions {
+                    margin: 0 7%;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Small Deskto
+//  _____________________________________________
+@media  (min-width: 1200px) {
+    body#html-body.cms-home {
+        .overflowhidden__list {
+            margin: 150px auto;
+            .pagebuilder-column-line {
+                .item-list {
+                    max-width: fit-content;
+                    &--image {
+                        max-width: 180px;
+                    }
+                    &--text {
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .overflowhidden  {
+            .glad-solutions {
+                &__content {
+                    margin-top: 0;
+                    margin-bottom: 150px;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Small Deskto
+//  _____________________________________________
+@media  (min-width: 1440px) {
+    body#html-body.cms-home {
+        .overflowhidden__list {
+            .pagebuilder-column-line {
+                .premium-soluctions {
+                    margin: 0 10%;
+                }
+            }
+        }
+    }
+}

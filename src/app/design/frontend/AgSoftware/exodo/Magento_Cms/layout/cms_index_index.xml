@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+
+            <container name="blocks.home.container" htmlTag="div" htmlClass="blocks-home__container">
+
+                <block class="Magento\Cms\Block\Block" name="themes-and-extencions">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">themes-and-extencions</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="vide-Home">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">vide-Home</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="google-analytics-4">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">google-analytics-4</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="overflow-auto">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">overflow-auto</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="overflow-hidden">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">overflow-hidden</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="build-growth">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">build-growth</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="support-documentation">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">support-documentation</argument>
+                    </arguments>
+                </block>
+
+                <block name="slider.items" template="AgSoftware_SlickSlider::slider.phtml"/>
+
+                <block class="Magento\Cms\Block\Block" name="quote-2">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">quote-2</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="no-padding">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">no-padding</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="industry-partners">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">industry-partners</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="cont-Wp2">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">cont-Wp2</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="customer-development">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">customer-development</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="section-collapsible-8">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">section-collapsible-8</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="marketing-merchandising">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">marketing-merchandising</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="section-collapse">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">section-collapse</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="customer-support">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">customer-support</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="agile-development">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">agile-development</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="integrations-content">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">integrations-content</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="container-heading-wlt">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">container-heading-wlt</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="awesome-extensions">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">awesome-extensions</argument>
+                    </arguments>
+                </block>
+
+                  <block class="Magento\Cms\Block\Block" name="heading-title-awards">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">heading-title-awards</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="post-list">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">post-list</argument>
+                    </arguments>
+                </block>
+
+                <block class="Magento\Cms\Block\Block" name="parter-Container">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">parter-Container</argument>
+                    </arguments>
+                </block>
+
+            </container>
+
+        </referenceContainer>
+    </body>
+</page>

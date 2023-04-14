@@ -1,0 +1,283 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    body.cms-home {
+        .awesome-extensions {
+            &__wrapper {
+                .pagebuilder-column-line {
+                    padding: 0 15px;
+                    text-align: center;
+                }
+                .wrapper--title {
+                    h2 {
+                        text-transform: uppercase;
+                        margin: 50px 0;
+                        .config-font ( @fuente1, 3rem, 900, normal, 0.9, 0px, @color-oscuro );
+                    }
+                }
+                .wrapper--text {
+                    p {
+                        margin-bottom: 10px;
+                        .config-font ( @fuente2, 1.4rem, 400, normal,  1.42857143, 0.5px, #303030 );
+                    }
+                }
+            }
+            &__sections {
+                .pagebuilder-column-line {
+                    padding: 0 15px;
+                }
+            }
+            &__section-magento2 {
+                text-align: center;
+                .awesome-extensions {
+                    &__sections-content {
+                        margin-bottom: 50px;
+                    }
+                    &--span {
+                        margin-top: 50px;
+                        margin-bottom: 0;
+                        .config-font ( @fuente1, 1.4rem, 700, normal, 1.42857143, 0.5px, @color-primario );
+                    }
+                    &--title {
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: @color-oscuro;
+                        h3 {
+                            margin: 20px 0 10px;
+                            .config-font ( @fuente1, 2.4rem, 900, normal, 1.1, 0px, inherit );
+                        }
+                    }
+                    &--text  {
+                        margin-bottom: 10px;
+                        padding-top: 40px;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 30px, 0.5px, #303030 );
+                    }
+                }
+            }
+            &__container-button {
+                text-align: center;
+                .ancla-button {
+                    text-decoration: none;
+                    .button-primary {
+                        width: 200px;
+                        margin-top: 50px;
+                        padding: 10px 15px;
+                        text-transform: uppercase;
+                        letter-spacing: 0px;
+                        background-color: @color-primario;
+                        border: #073756 1px solid;
+                        border-radius: 0;
+                        transition-duration: .3s;
+                        transition-property: background-color;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 3rem, 0, @color-claro )
+                    }
+                }
+            }
+            .quote-4 {
+                padding: 0 15px;
+                text-align: center;
+                .pagebuilder-column-line {
+                    justify-content: center;
+                }
+                &__card {
+                    .card-quote ( 50px 0 80px 0, 70px 25px );
+                    &::before {
+                        .card-quote-before ( 60px, 60px, -22px, 0, initial, 0, 0deg  );
+                    }
+                    &::after {
+                        margin: 0 auto;
+                        .card-quote-after ( initial, 80px, -50px, initial, 180deg );
+                    }
+                }
+                &--title {
+                    margin: 20px 0 15px 0;
+                    text-transform: uppercase;
+                    .config-font ( @fuente1, 24px, 800, normal, 1.1, 0px, #303030 );
+                }
+                &--review-title {
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                    .config-font ( @fuente2, 14px, 800, normal, 1.42857143, 0.5px, @color-primario );
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+                &--text {
+                    .config-font ( @fuente2, 14px, 400, normal, 1.42857143, 0.5px, @color-oscuro );
+                }
+                &--name-author {
+                    margin-top: 45px;
+                    font-size: 16px;
+                    p::before {
+                        content: " - ";
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Small Tablet
+//  _____________________________________________
+@media  (min-width: 480px) and (max-width: 768px) {
+    body.cms-home {
+        .awesome-extensions {
+            &__wrapper {
+                .pagebuilder-column-line {
+                    padding: 0 40px;
+                }
+            }
+            .quote-4 {
+                &__card {
+                    &::after {
+                       right: 140px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body#html-body.cms-home {
+        .awesome-extensions {
+            padding-top: 100px;
+            &__wrapper {
+                .pagebuilder-column-line {
+                    padding: 0 40px;
+                }
+                .wrapper--title {
+                    h2 {
+                        font-size: 5.8rem;
+                    }
+                }
+            }
+            &__sections {
+                .pagebuilder-column-line {
+                    flex-wrap: wrap;
+                }
+            }
+            &__section-magento2 {
+                width: 100%;
+                .awesome-extensions {
+                    &__sections-content {
+                    }
+                    &--span {
+                        margin-top: 100px;
+                    }
+                    &--title {
+                        text-decoration: none;
+                        color: @color-oscuro;
+                        h3 {
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+            &__container-button {
+                .ancla-button {
+                    .button-primary {
+                        margin-top: 100px;
+                    }
+                }
+            }
+            .quote-4 {
+                .pagebuilder-column-line {
+                    padding: 100px 0;
+                }
+                &__card {
+                    .card-quote ( 0, 70px);
+                    &::before {
+                        .card-quote-before ( 95px, 68px, initial, initial, -36px, 45px, 0deg  );
+                    }
+                    &::after {
+                        margin: 0 auto;
+                        .card-quote-after ( -50px, 140px, initial, initial, 0deg );
+                        border-left: 0 solid transparent;
+                        border-right: 38px solid transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Big Destop
+//  _____________________________________________
+@media  (min-width: 992px) {
+    body#html-body.cms-home {
+        .awesome-extensions {
+            &__sections {
+                .pagebuilder-column-line {
+                    flex-wrap: wrap;
+                    padding: 0;
+                }
+            }
+            &__section-magento2 {
+                width: 50%;
+                padding: 0 15px;
+                .awesome-extensions {
+                    &--text  {
+                        height: 180px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Destop y Mas
+//  _____________________________________________
+@media  (min-width: 1200px) {
+    body#html-body.cms-home {
+        div[data-content-type="row"]:has(.awesome-extensions) {
+            max-width: 100%;
+        }
+        .awesome-extensions {
+            padding-top: 0;
+            margin: 150px 0;
+            &__sections {
+                padding: 0 150px;
+            }
+            .enhanced__quick-cart, .mega-menu {
+                padding-right: 40px;
+            }
+            .ajax-search__autocomplete, .azy-loading__enhanced {
+                padding-left: 40px;
+            }
+            .quote-4 {
+                .pagebuilder-column-line {
+                    padding: 150px 0 100px 0;
+                }
+            }
+            &__section-magento2 {
+                .awesome-extensions {
+                    &__sections-content {
+                        margin-bottom: 0;
+                    }
+                    &__sections-image {
+                        text-align: left;
+                    }
+                    &--span {
+                        margin-top: 0;
+                        padding-top: 150px;
+                    }
+                }
+            }
+        }
+    }
+}

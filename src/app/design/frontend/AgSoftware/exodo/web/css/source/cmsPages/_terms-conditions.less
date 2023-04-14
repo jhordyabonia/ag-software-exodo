@@ -1,0 +1,146 @@
+//
+// Mixing
+//
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    body#html-body.cms-term-and-conditions {
+
+        .page-main-full-width {
+            padding-top: 20px;
+
+            .columns {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+        }
+        .column.main {
+            margin-top: 104px;
+        }
+        .terms-contents {
+            .container();
+        }
+
+        .container-conditions {
+
+            &__title {
+               
+                h1 {
+                    .title();
+                    .config-font( @fuente1, 2rem, 800, inherit, 1.2, 0px, @color-primario );
+                }
+            }
+            &__title2 {
+                .sub-title();
+                .config-font( @fuente1, 3rem, 800, inherit, 1.1, 0px, @color-oscuro );
+            }
+
+            &__text {
+                .config-font( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+            }
+
+            &__itemlist {
+                padding-left: 0;
+                margin-left: 1.75em;
+                position: relative;
+                .config-font( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+
+                li {
+                     list-style: none;
+                     display: flex;
+                     
+                    .fa-caret-right {
+                        left: -1.75em;
+                        text-align: center;
+                        top: 3px;
+                        width: 0px;
+                        position: relative;
+                    }
+
+                    a, b, strong {
+                        .config-font( @fuente2, 1.4rem, 900, normal, 1.42857143, 0.5px, #444);
+                        display: contents
+                    }
+                }
+            }
+
+            &__divider {
+                .divider();
+            }
+
+            .text-left {
+                text-align: left;
+                &::after {
+                    right: auto;
+                    left: 30px;
+                }
+
+               .container-conditions_chevron {
+                    cursor: inherit;
+                    &:hover {
+                        color: #e5e5e5;;
+                    }
+                }
+            }
+
+            // &_circle{
+            //     .chevron();
+            // }
+
+            &_chevron {
+                .chevron();
+            }
+        }
+    }
+
+}
+
+//
+// Break point for custom desktop
+//  _____________________________________________
+
+@media  (min-width: 841px) {
+
+    body#html-body.cms-term-and-conditions {
+        .page-main-full-width {
+            padding-top: 0;
+        }
+        .container-conditions  {
+            &__title {
+                h1 {
+                    font-size: 58px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+}
+
+//
+// Breaking point for large custom desktop
+//  _____________________________________________
+
+@media  (min-width: 1231px) {
+
+    body#html-body.cms-term-and-conditions {
+        .container-conditions {
+            &__title {
+                h1 {
+                    padding: 10px 0;
+                    font-weight: 900;
+                    line-height: 0.9;
+                    color: @color-oscuro;
+                }
+            }
+        }
+    }
+
+}
+
+
+

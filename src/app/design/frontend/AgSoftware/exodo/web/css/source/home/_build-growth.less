@@ -1,0 +1,294 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    body#html-body.cms-home {
+        div[data-content-type="row"]:has(.build-growth) {
+            max-width: 100%;
+        }
+        .build-growth {
+            &__wrapper {
+                margin-top: 50px;
+                .wrapper {
+                    &--title {
+                        margin: 0;
+                        .config-font ( @fuente1, 3rem, 800, normal, 1.1, 0px, @color-oscuro );
+                    }
+                    &--rewrite {
+                        margin: 0;
+                        margin-bottom: 50px;
+                        .config-font ( @fuente1, 3rem, 800, normal, 1.1, 0px, @color-oscuro );
+                    }
+                    &--text {
+                        padding: 0 10px;
+                        margin-bottom: 10px;
+                        .config-font ( @fuente2, 1.4rem, 400, normal, 1.42857143, 0.5px, #303030 );
+                    }
+                    &--text-pb {
+                        margin-bottom: 100px;
+                    }
+                }
+            }
+            .gallery-banners {
+                margin-bottom: 2.5rem;
+                &__item{
+                    margin: auto;
+                    max-width: 520px;
+                }
+                &__banner {
+                   /*  max-width: 520px; */
+                    height: 319px;
+                    opacity: 0.95;
+                    overflow: hidden;
+                    box-shadow: e("0px 0px 97px -17px #b0b0b0;");
+                    a[data-element="link"] {
+                        display: grid;
+                        height: 100%;
+                        div[data-element="wrapper"]{
+                            transition: all 2.5s;
+                            &:hover {
+                                background-position-y: bottom;
+                            }
+                        }
+                    }
+                }
+                &__wrapper {
+                    .wrapper {
+                        &--ancla {
+                            display: grid;
+                            text-decoration: none;
+                            .config-font ( @fuente2, 1.4rem, 900, normal, 30px, 0.5px, @color-oscuro );
+                        }
+                        &--magento2 {
+                            margin-top: 35px;
+                            color: @color-primario;
+                        }
+                        &--category {
+                            margin-bottom: 75px
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+//
+//  Small Mobile
+//  _____________________________________________
+@media  (min-width: 480px) {
+    body#html-body.cms-home {
+        .build-growth {
+            &__wrapper {
+                .wrapper {
+                    &--text {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+
+
+
+//
+//  Deskto
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body#html-body.cms-home {
+        .build-growth {
+            &__wrapper {
+                margin-top: 100px;
+                .wrapper {
+                    &--rewrite {
+                        margin-bottom: 100px;
+                    }
+                }
+            }
+            .gallery-banners {
+                .pagebuilder-column-line {
+                    display: flex;
+                    gap: 5px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                &__item {
+                    width: calc(16%);
+                    align-self: end;
+                    margin: 0;
+                }
+                .items--margin-bottom {
+                    margin: 0 34px 0 0;
+                }
+                .items--bg-contain {
+                    .gallery-banners__banner {
+                        a[data-element="link"] {
+                            div {
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop Big More
+//  _____________________________________________
+@media  (min-width: 910px) {
+    body#html-body.cms-home {
+        .build-growth {
+            .gallery-banners {
+                .item__fashion-slider {
+                    .gallery-banners__banner {
+                        a[data-element="link"] {
+                            div {
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop Big More
+//  _____________________________________________
+@media  (min-width: 954px) {
+    body#html-body.cms-home {
+        .build-growth {
+            .gallery-banners {
+                .item__single-product {
+                    .gallery-banners__banner {
+                        a[data-element="link"] {
+                            div {
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop Big More
+//  _____________________________________________
+@media  (min-width: 1035px) {
+    body#html-body.cms-home {
+        .build-growth {
+            .gallery-banners {
+                .item__accesories {
+                    .gallery-banners__banner {
+                        a[data-element="link"] {
+                            div {
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop Big More
+//  _____________________________________________
+@media  (min-width: 1154px) {
+    body#html-body.cms-home {
+        .build-growth {
+            .gallery-banners {
+                .item__fashion-clean, .item__fashion-classy {
+                    .gallery-banners__banner {
+                        a[data-element="link"] {
+                            div {
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop Big More
+//  _____________________________________________
+@media  (min-width: 1200px) {
+    body#html-body.cms-home {
+        .build-growth {
+            &__wrapper {
+                margin-top: 150px;
+                .wrapper {
+                    &--title {
+                        font-size: 5.8rem;
+                        line-height: 0.9;
+                    }
+                    &--rewrite {
+                        font-size: 5.8rem;
+                        line-height: 0.9;
+                        margin-bottom: 0;
+                    }
+                    &--text-pd {
+                        margin: 100px 0 50px;
+                    }
+                    &--text-pm {
+                        margin: 0;
+                    }
+                    &--text-pb {
+                        margin: 0;
+                        padding-bottom: 100px;
+                    }
+                }
+            }
+            .gallery-banners {
+                &__item {
+                    width: calc(29%);
+                    margin: 0 34px;
+                }
+                .items--bg-contain {
+                    .gallery-banners__banner {
+                        a[data-element="link"] {
+                            div {
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Custom Destop Big Mores
+//  _____________________________________________
+@media  (min-width: 1201px) {
+    body#html-body.cms-home {
+        .build-growth {
+            .gallery-banners {
+                .items--margin-bottom {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

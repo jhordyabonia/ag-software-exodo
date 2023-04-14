@@ -1,0 +1,176 @@
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+    body.cms-home {
+        .google-Analytics-4 {
+            max-width: 100%;
+            padding: 5px;
+            background-color: @background-gay;
+            .pagebuilder-column-line {
+                padding: 50px 0;
+            }
+            &__content {
+                align-self: center;
+            }
+            &__title {
+                margin-bottom: 0;
+                text-transform: uppercase;
+                .config-font ( @fuente1, 40px, 800, normal, 59px, 0px, @color-oscuro );
+            }
+            &__subtitle {
+                margin-top: 0;
+                text-transform: uppercase;
+                .config-font ( @fuente1, 40px, 800, normal, 59px, 0px, @color-oscuro );
+            }
+            &__text {
+                /*margin-bottom: 10px;*/
+                p {
+                    .config-font ( @fuente2, 14px, 400, normal, 1.5, 0.5px, #575757 );
+                }
+            }
+            &__container-buttons {
+                display: block;
+                margin: 0 15px;
+                .ancla-button {
+                    position: relative;
+                    height: auto;
+                    display: inline-block;
+                    margin: 5px;
+                    padding: 24px 34px;
+                    transition: all .2s ease-in-out;
+                    text-align: left;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    text-shadow: e('1px 1px 1px rgb(0 0 0 / 20%)');
+                    white-space: nowrap;
+                    cursor: pointer;
+                    border: none;
+                    background-color: @color-primario;
+                    .config-font ( @fuente1, 22px, 900, normal, 1, 1px, @color-titulo );
+                    span {
+                        display: inline-block;
+                        text-shadow: none;
+                    }
+                }
+                &:hover {
+                    .ancla-button {
+                        color: @color-primario;;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    body#html-body.cms-home {
+        .google-Analytics-4 {
+            /*max-width: 100%;*/
+            .pagebuilder-column-line {
+                max-width: 100%;
+            }
+            &__content {
+                max-width: 100%;
+                width: 100%;
+                align-self: center;
+            }
+        }
+    }
+}
+
+//
+//   MOBILE PERSONALIZADO
+//  _____________________________________________
+@media (max-width: 480px) {
+    body#html-body.cms-home {
+        .google-Analytics-4 {
+            &__container-buttons {
+                .ancla-button {
+                    padding: 11px 24px;
+                    font-size: 16px;
+                    width: 100%;
+                    margin: 0 auto 20px auto;
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//   MOBILE PERSONALIZADO
+//  _____________________________________________
+@media (min-width: 481px) {
+    body#html-body.cms-home {
+        .google-Analytics-4 {
+            &__container-buttons {
+                margin: 0;
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body#html-body.cms-home {
+        .google-Analytics-4 {
+            .pagebuilder-column-line {
+                flex-direction: column;
+            }
+            &__content {
+                width: 100%;
+            }
+            &__text {
+                p {
+                    text-align: justify;
+                    font-size: 14px;
+                }
+            }
+            &__image {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//
+//   DESKTOP PERSONALIZADO
+//  _____________________________________________
+@media (min-width: 1001px) {
+    body#html-body.cms-home {
+        .google-Analytics-4 {
+            .pagebuilder-column-line {
+                flex-direction: row;
+                max-width: 80%;
+                margin: 0 auto;
+            }
+            &__content {
+                max-width: 50%;
+                align-self: center;
+            }
+            &__title {
+                margin-top: 25px;
+                font-size: 48px;
+            }
+            &__subtitle {
+                font-size: 48px;
+            }
+            &__text {
+                p {
+                    text-align: start;
+                    font-size: 18px;
+                    letter-spacing: 0px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

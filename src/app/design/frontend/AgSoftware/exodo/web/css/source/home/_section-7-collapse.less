@@ -1,0 +1,156 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .cms-home.cms-index-index {
+        .section-7-collapse {
+            padding: 150px 0;
+            width: 100%;
+            background: #fafafa;
+            &__text-content {
+                .nopadding-collapsible {
+                    padding: 0 15px;
+                    &__title {
+                        margin: 0 0 50px;
+                        .config-font
+                            ( @fuente1, 30px, 900, normal, 0.9, 0, @color-oscuro);
+                    }
+                    &__container {
+                        letter-spacing: 0.5px;
+                        .active-title {
+                            .acctitle {
+                                .config-font
+                                    ( @fuente2, 14px, 700, normal, 24px, 0,  #444);
+                                display: block;
+                                position: relative;
+                                margin: 0;
+                                padding: 10px 0 10px 20px;
+                                border-top: 1px dotted #ddd;
+                                cursor: pointer;
+                                .icon-remove-circle {
+                                    &::before {
+                                        content: "\F623";
+                                        width: 14px;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        text-align: center;
+                                        font-family: "bootstrap-icons";
+                                        text-transform: none;
+                                        font-size: 14px;
+                                        font-style: normal;
+                                        line-height: 44px;
+                                        font-weight: 400;
+                                    }
+                                }
+                                .icon-ok-circle {
+                                    &::before {
+                                        content: "\F26B";
+                                        width: 14px;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        text-align: center;
+                                        font-family: "bootstrap-icons";
+                                        text-transform: none;
+                                        font-size: 14px;
+                                        font-style: normal;
+                                        line-height: 44px;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                            .border-none {
+                                border: none;
+                               // border-bottom: 1px dotted #ddd;
+                            }
+                        }
+                        .active-content {
+                            padding: 0 0 15px 20px;
+                            font-family: @fuente2;
+                            .acc-b-top {
+                                margin-top: 30px;
+                                margin-bottom: 0;
+                            }
+                            .acc-b-bottom {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+                }
+                .nopadding-collapsible__container[aria-expanded="true"] {
+                        .icon-ok-circle {
+                            &::before {
+                                content: "\F26B";
+                                display: none;
+                            }
+                        }
+                    }
+                    .nopadding-collapsible__container[aria-expanded="false"] {
+                        .icon-remove-circle {
+                            &::before {
+                                content: "\F623";
+                                display: none;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+}
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    #html-body.cms-home.cms-index-index {
+        .section-7-collapse {
+            padding: 50px 0;
+        }
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #html-body [data-pb-style=NFJQO8U], [data-pb-style=FN14H7E] {
+        flex-direction: column; 
+    }
+    #html-body.cms-home.cms-index-index {
+        .section-7-collapse {
+           
+            &__img {
+                width: 100%;
+            }
+            &__text-content {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    #html-body.cms-home.cms-index-index {
+        .section-7-collapse {
+            &__text-content {
+                .nopadding-collapsible {
+                    padding: 0 40px;
+                    &__title {
+                        font-size: 58px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px)  and (max-width: 1200px){
+    #html-body.cms-home.cms-index-index {
+        .section-7-collapse {
+            padding: 100px 0;
+        }
+    }
+}
+
