@@ -7,7 +7,8 @@ var config = {
     deps: [
         'js/modal',
         'js/filtro',
-        'js/chevronTop'
+        'js/chevronTop',
+        'js/headerDinamic'
     ],
 };
 

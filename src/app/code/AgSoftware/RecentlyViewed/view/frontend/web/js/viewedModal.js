@@ -3,24 +3,27 @@ jQuery(function($) {
     $(document).ready(function() {
         var viewed = $('#viewed');
         var modal = $('#viewed-modal');
+        const recentlyViewed = $('#recently-viewed');
 
         function viewedModal() {
 
             if ( modal.hasClass('viewed-modal--active') ) {
-                modal.addClass('animated');
-                modal.addClass('slideOutDownModal');
-                modal.removeClass('slideInUpModal');
+                recentlyViewed.addClass('animated');
+                recentlyViewed.addClass('slideOutDownModal');
+                recentlyViewed.removeClass('slideInUpModal');
                 setTimeout(function() {
                     modal.removeClass('viewed-modal--active');
                     modal.addClass('viewed-modal--inactive');
                 }, 500);
             } else {
-                modal.addClass('slideInUpModal');
-                modal.removeClass('slideOutDownModal');
-                setTimeout(function() {
+                recentlyViewed.addClass('slideInUpModal');
+                recentlyViewed.removeClass('slideOutDownModal');
+                modal.addClass('viewed-modal--active');
+                modal.removeClass('viewed-modal--inactive');
+                /*setTimeout(function() {
                     modal.addClass('viewed-modal--active');
                     modal.removeClass('viewed-modal--inactive');
-                }, 500);
+                }, 500);*/
             }
 
         }

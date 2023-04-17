@@ -24,7 +24,7 @@
 & when (@media-common = true) {
     .page-wrapper{
         .page-header{
-            position: fixed;
+            position: relative;
             width: 100%;
             z-index: 102;
             background-color: @color-titulo;
@@ -269,10 +269,10 @@
                             line-height: 35px;
                             color: @color-primario;
                             margin: 0;
-                            display: none;
+                            display: block;
                         }
                         &::before {
-                            display:block;
+                            display:none;
                         }
                     }
                 }

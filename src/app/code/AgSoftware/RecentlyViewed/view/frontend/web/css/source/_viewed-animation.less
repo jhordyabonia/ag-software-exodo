@@ -1,37 +1,76 @@
-#recently-viewed {
-    transition: all 0.3s ease-in-out;
-}
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
 
-#recently-viewed.recently-viewed--hidden {
-    transform: translateY(100%);
-}
+    // ANIMATION MOSTRAR Y OCULTAR BOTON FLOTANTE CON FUNCON DE SCROLL HEIGTH
+    #recently-viewed {
+        transition: all 0.3s ease-in-out;
+    }
 
-#recently-viewed.animated {
-    animation-duration: 0.5s;
-}
-
-#recently-viewed.slideInUp {
-    animation-name: slideInUp;
-}
-
-#recently-viewed.slideOutDown {
-    animation-name: slideOutDown;
-}
-
-@keyframes slideInUp {
-    from {
+    #recently-viewed.recently-viewed--hidden {
         transform: translateY(100%);
     }
-    to {
-        transform: translateY(0);
-    }
-}
 
-@keyframes slideOutDown {
-    from {
-        transform: translateY(0);
+    #recently-viewed.animated {
+        animation-duration: 0.5s;
     }
-    to {
-        transform: translateY(100%);
+
+    #recently-viewed.slideInUp {
+        animation-name: slideInUp;
     }
+
+    #recently-viewed.slideOutDown {
+        animation-name: slideOutDown;
+    }
+
+    @keyframes slideInUp {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideOutDown {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(100%);
+        }
+    }
+
+    // ANIMATION MOSTRAR Y OCULTAR MODAL AL DAR CLICK EN EL FLOTANTE
+    #recently-viewed.animated {
+        animation-duration: 0.5s;
+    }
+
+    #recently-viewed.slideInUpModal {
+        animation-name: slideInUpModal;
+    }
+
+    #recently-viewed.slideOutDownModal {
+        animation-name: slideOutDownModal;
+    }
+
+    @keyframes slideInUpModal {
+        from {
+            transform: translateY(92%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideOutDownModal {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(90%);
+        }
+    }
+
 }

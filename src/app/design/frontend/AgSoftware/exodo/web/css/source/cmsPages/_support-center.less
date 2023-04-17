@@ -1,0 +1,389 @@
+//
+// Mixing
+//
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    body#html-body.cms-support-center {
+        .column.main {
+            margin-top: 104px;
+        }
+
+        /* general page styles */
+
+        h2 {
+            .config-font( @fuente3, 57px, 900, normal, 57px, 0px, #333333);
+            margin: 0;
+            padding-bottom: 40px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-search {
+            background-image: url(https://theme.zdassets.com/theme_assets/713347/ae15c6d68bbecc31b6eb5438ba749c5f89f312ab.png);
+            background-position: center;
+            background-size: cover;
+            height: 300px;
+            padding: 0 20px;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 40px;
+            &__hero {
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                max-width: 610px;
+                margin: 0 auto;
+                h2 {
+                    // .config-font( @fuente3, 57px, 900, normal, 57px, 0px, #333333);
+                    // margin: 0;
+                    // padding-bottom: 40px;
+                }
+            }
+            .search-full {
+                border: 2px solid @color-primario;
+                border-radius: 30px;
+                position: relative;
+                &::before {
+                    content: '\F52A';
+                    font-family: bootstrap-icons;
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                input[type="search"] {
+                    width: 100%;
+                    padding: 0 20px 0 40px;
+                    height: 40px;
+                    border-radius: 30px;
+                    box-sizing: border-box;
+                    color: @color-primario;
+                    border: 1px solid @color-titulo;
+                    font-size: 14px;
+                    font-weight: 300;                
+                    -webkit-appearance: none;
+                    &:focus {
+                        border: 1px solid rgba(7, 55, 86, 1);
+                        color: #555;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 5%;
+
+            &__section {
+                margin-bottom: 40px;
+                .blocks {
+                    &__list {
+                        list-style: none;
+                        padding: 0;
+
+                        .blocks-item {
+                            border: 1px solid @color-primario;
+                            border-radius: 4px;
+                            box-sizing: border-box;
+                            color: @color-primario;
+                            display: flex;
+                            flex: 1 0 340px;
+                            flex-direction: column;
+                            justify-content: center;
+                            margin: 0 0 30px;
+                            max-width: 100%;
+                            text-align: center;
+                            &:hover {
+                                background-color: @color-primario;
+                                color: @color-titulo;
+                            }
+
+                            &__link {
+                                color: @color-primario;
+                                padding: 20px 30px;
+
+                                h4 {
+                                    margin: 0;
+                                    font-size: 16px;
+                                    letter-spacing: 0px;
+                                    word-break: break-all;
+                                    white-space: pre;
+                                }
+                            }
+
+                          
+                        }
+                    }
+                }
+
+                .articles {
+                    h3 {
+                        margin: 0 0 18px;
+                    }
+                    .promoted-articles__item:last-child a {
+                        border: 0;
+                    }
+                    .promoted-articles {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        // list-style: none;
+                        // margin: 0;
+                        // padding: 0;
+
+                        &__item {
+                            flex: 1 0 auto;
+                            a {
+                                border-bottom: 1px solid #ddd;
+                                color: rgba(51, 51, 51, 1);
+                                display: block;
+                                padding: 15px 0;
+                                font-size: 15px;
+                                font-weight: 400;
+                                line-height: 1.5;
+                            }
+                           
+                        }
+                    }
+                }
+
+                .conten-activity {
+                    border-top: 1px solid #ddd;
+                    padding: 30px 0;
+
+                    .title-recent {
+                        line-height: 1.5;
+                        text-align: center;
+                        margin: 0 0 10px;
+                    }
+
+                    .activity-list {
+                        &__item {
+                            border-bottom: 1px solid #ddd;
+                            overflow: auto;
+                            padding: 20px 0;
+
+                            .activity-link {
+                                margin: 6px 0;
+                                color: rgba(51, 51, 51, 1);
+                                display: inline-block;
+                                width: 100%;
+                                text-decoration: none;
+                            }
+
+                            .activity-meta {
+                                margin: 15px 0 0 0;
+                                float: none;
+                                &__comment {
+                                    padding-left: 5px;
+                                }
+
+                                div {
+                                    color: #666;
+                                    display: inline-block;
+                                    font-size: 13px;
+                                    font-weight: 300;
+                                    span {
+                                        display: flex;
+                                        &::before {
+                                            content: '\F265';
+                                            color: rgba(7, 55, 86, 1);
+                                            font-family: bootstrap-icons;
+                                            display: inline-block;
+                                            font-size: 15px;
+                                            padding-right: 3px;
+                                        }
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+               
+            }
+            
+            .community {
+                border-top: 1px solid #ddd;
+                padding: 30px 0;
+                text-align: center;
+                //margin-bottom: 40px;
+                text-align: center;
+
+                .community-link {
+                    border: 1px solid #073756;
+                    color: #073756;
+                    padding: 15px;
+                    margin: 50px;
+                    display: inline-block;
+                    border-radius: 3px;
+                    text-decoration: none;
+                    &:hover {
+                        background: #073756;
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+
+                .community-image {
+                    min-height: 300px;
+                    background-image: url(https://theme.zdassets.com/theme_assets/713347/df2c1fa0ccff128c9ddd70d5931a3a570d877a37.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//
+// Breakpoint for custom Tablet
+//  _____________________________________________
+
+@media  (min-width: 768px) {
+    body#html-body.cms-support-center {
+        .section-search {
+           margin-bottom: 60px;
+        }
+
+        .container {
+            &__section {
+                margin-bottom: 60px;
+                .blocks {
+                    &__list {
+                        margin: 0 -15px;
+                        .blocks-item {
+                            margin: 0 15px 30px;
+                        }
+                    }
+                }
+                .conten-activity {
+                    .activity-list {
+                        &__item {
+                            .activity-link {
+                                width: 69%;
+                                margin: 0;
+                            }
+
+                            .activity-meta {
+                                margin: 0;
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+//
+// custom breakpoint
+//  _____________________________________________
+
+@media  (min-width: 788px) {
+    body#html-body.cms-support-center {
+
+        .container {
+            &__section {
+                .blocks {
+                    &__list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+//
+//  Deskto
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    body#html-body.cms-support-center {
+        .section-search {
+           margin-bottom: 60px;
+        }
+
+        .container {
+            &__section {
+                .articles {
+                    h3 {
+                        margin: 0 0 18px;
+                    }
+                    .promoted-articles {
+                        flex-direction: row;
+
+                        &__item {
+                            align-self: flex-end;
+                            flex: 0 0 auto;
+                            padding-right: 30px;
+                            width: 33%;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+//
+// Breakpoint for custom desktop
+//  _____________________________________________
+
+@media  (min-width: 841px) {
+    body#html-body {
+        .about-ags {
+            padding: 5% 25%;
+            &__title {
+                padding: 10px 0;
+                font-weight: 900;
+                line-height: 0.9;
+            }
+        }
+    }
+
+}
+
+//
+// Breaking point for large custom desktop
+//  _____________________________________________
+
+@media  (min-width: 1231px) {
+
+    body#html-body.cms-careers {
+        .about-ags {
+            padding: 5% 25%;
+            &__title {
+                font-size: 58px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+}
+
+
+

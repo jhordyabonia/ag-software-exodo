@@ -1,105 +1,148 @@
-.viewed-modal {
-    &--bg-white {
-        padding: 20px 20px 5px 20px;
-        background: #ffffff;
-    }
-    &--active {
-        display: block;
-    }
-    &--inactive {
-        display: none;
-    }
-    &__clear {
-        position: absolute;
-        right: 7px;
-        top: 31px;
-        margin: 10px;
-        padding: 7px;
-        cursor: pointer;
-        z-index: 9;
-    }
-    &__clear--font {
-        font-family: 'Montserrat',sans-serif;
-        font-size: 1.4rem;
-        font-weight: 400;
-        line-height: 1.42857143;
-        letter-spacing: 0.5px;
-        font-style: normal;
-        color: #303030;
-        &:hover {
-            color: #000;
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+
+    .viewed-modal {
+        &--bg-white {
+            padding: 0px;
+            padding-top: 20px;
+            background: #ffffff;
         }
-    }
-    &__wrapper {
-        height: 284px;
-    }
-    .product-item {
-        display: inline-block;
-        min-width: 180px;
-        width: 10%;
-        height: auto;
-        margin-right: 50px;
-        margin-bottom: 20px;
-        text-align: center;
-        white-space: normal;
-        &-details {
-            margin: 5px 0;
+        &--active {
+            display: block;
         }
-        &-name {
-            font-family: 'Open Sans',sans-serif;
-            font-size: 14px;
-            letter-spacing: 0.3px;
-            font-weight: bold;
-            text-align: center;
-            line-height: normal;
-            text-transform: uppercase;
-            text-decoration: none;
-            white-space: nowrap;
-            word-wrap: break-word;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            outline: none;
-            color: #000;
-            .m2-title{
-                display: block;
-                font-size: 12px;
-                text-transform: uppercase;
-                color: #073756;
+        &--inactive {
+            display: none;
+        }
+        &__clear {
+            position: absolute;
+            right: 7px;
+            top: 31px;
+            margin: 10px;
+            padding: 7px;
+            cursor: pointer;
+            z-index: 9;
+        }
+        &__clear--font {
+            font-family: 'Montserrat',sans-serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1.42857143;
+            letter-spacing: 0.5px;
+            font-style: normal;
+            color: #303030;
+            &:hover {
+                color: #000;
             }
         }
-        &-link {
-            color: #000;
-            text-decoration: none;
+        &__wrapper {
+            height: auto;
+        }
+        .product-items {
+            &--scroll-y {
+                white-space: nowrap;
+                overflow-y: hidden;
+                overflow-x: scroll;
+            }
+            &--scroll-barra::-webkit-scrollbar {
+                height: 6px;
+            }
+            &--scroll-barra::-webkit-scrollbar-thumb {
+                background: #000000;
+                border-radius: 5px;
+            }
+        }
+        .product-item {
+            display: inline-block;
+            min-width: 130px;
+            width: 10%;
+            height: 217px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+            white-space: normal;
+            &:nth-child(n+2) {
+                margin-left: 30px;
+            }
+            &__wrapper {
+                height: 143px;
+                display: block;
+            }
+            &-details {
+                margin: 0;
+            }
+            &-name {
+                font-family: 'Open Sans',sans-serif;
+                font-size: 14px;
+                letter-spacing: 0.3px;
+                font-weight: bold;
+                text-align: center;
+                line-height: normal;
+                text-transform: uppercase;
+                text-decoration: none;
+                white-space: nowrap;
+                word-wrap: break-word;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                outline: none;
+                color: #000;
+                .m2-title{
+                    display: block;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    color: #073756;
+                }
+            }
+            &-link {
+                color: #000;
+                text-decoration: none;
+            }
         }
     }
+
 }
 
-#viewed-modal.animated {
-    animation-duration: 0.5s;
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
 }
 
-#viewed-modal.slideInUpModal {
-    animation-name: slideInUpModal;
-}
+//
+//  Desktop Personalizado
+//  _____________________________________________
+@media (min-width: 841px) {
 
-#viewed-modal.slideOutDownModal {
-    animation-name: slideOutDownModal;
-}
-
-@keyframes slideInUpModal {
-    from {
-        transform: translateY(100%);
+    .viewed-modal {
+        &--bg-white {
+            padding: 20px 20px 5px 20px;
+        }
+        &__wrapper {
+            height: auto;
+        }
+        .product-items {
+            height: 288.39px;
+        }
+        .product-item {
+            min-width: 180px;
+            height: auto;
+            margin-right: 0;
+            margin-bottom: 20px;
+            margin-left: 0;
+            &__wrapper {
+                width: 180px;
+                height: 198px;
+                display: block;
+                img {
+                    height: 225px;
+                }
+            }
+            &-details {
+                margin: 5px 0;
+            }
+        }
     }
-    to {
-        transform: translateY(0);
-    }
-}
 
-@keyframes slideOutDownModal {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(100%);
-    }
 }

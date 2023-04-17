@@ -44,9 +44,8 @@
 
         <referenceContainer name="header.container">
             <container name="header_right" htmlTag="div" htmlClass="header_right" before="-">
-                <block name="minicart" template="Magento_Checkout::cart/minicart.phtml" before="-"/>
+                <!--<block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" template="Magento_Checkout::cart/minicart.phtml" before="-"/>-->
                 <block name="user" template="Magento_Theme::user.phtml" before="minicart"/>
-
             </container>
 
             <referenceBlock name="header.panel.wrapper" remove="false"/>
@@ -56,6 +55,9 @@
         <move element="page.top" destination="header-wrapper"  after="logo"/>
         <move element="header_right" destination="header-wrapper"  after="page.top"/>
         <move element="top.search" destination="header_right"  before="-"/>
+
+        <!--mover bloque minacart al contenedor header_right para no afectar funcionalidad-->
+        <move element="minicart" destination="header_right"  after="-"/>
 
     </body>
 </page>

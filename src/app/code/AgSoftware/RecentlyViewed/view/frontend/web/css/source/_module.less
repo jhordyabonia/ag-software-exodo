@@ -13,16 +13,23 @@
 */
 @import "_viewed-modal.less";
 
-.recently-viewed  {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    transition: all .3s;
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
 
-    &--hidden {
-        display: none;
+    .recently-viewed  {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        transition: all .3s;
+
+        &--hidden {
+            display: none;
+        }
+
     }
 
 }

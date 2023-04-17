@@ -1,22 +1,42 @@
-.viewed-float {
-    &__container {
-        display: flex;
-        width: 100%;
+//
+//  Common
+//  _____________________________________________
+& when (@media-common = true) {
+
+    .viewed-float {
+        &__container {
+            display: flex;
+            width: 100%;
+        }
+        &__text {
+            position: relative;
+            padding: 5px 10px;
+            font-family: 'Montserrat',sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.42857143;
+            text-align: center;
+            font-style: normal;
+            letter-spacing: 0.5px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            background-color: #073756;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
     }
-    &__text {
-        position: relative;
-        padding: 5px 10px;
-        font-family: 'Montserrat',sans-serif;
-        font-size: 1.4rem;
-        font-weight: 700;
-        line-height: 1.42857143;
-        text-align: center;
-        font-style: normal;
-        letter-spacing: 0.5px;
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
-        background-color: #073756;
-        color: #FFFFFF;
-        cursor: pointer;
+
+}
+
+//
+//  Desktop Personalizado
+//  _____________________________________________
+@media (max-width: 839px) {
+
+    .viewed-float {
+        &__container {
+            display: none;
+        }
     }
+
 }
