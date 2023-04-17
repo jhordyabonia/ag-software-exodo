@@ -16,6 +16,8 @@
         <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" src_type="url" />
         <link rel="stylesheet" type="text/css" src="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Open+Sans:ital,wght@1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" src_type="url" />
         <script src="AgSoftware_SlickSlider::js/common.js" async="async" />
+        <script src="AgSoftware_SlickSlider::js/autoplay.js" async="async" />
+        <script src="AgSoftware_SlickSlider::js/custom.js" async="async" />
         <link rel="stylesheet" type="text/css" src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" src_type="url" />
         <css src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" src_type="url"/>
     </head>

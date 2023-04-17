@@ -7,13 +7,13 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 
-        <referenceContainer name="content">
+        <!--<referenceContainer name="main.content">
 
-            <container name="recently.viewed" htmlTag="div" htmlId="recently-viewed" htmlClass="recently-viewed recently-viewed--hidden">
+            <container name="recently.viewed" htmlTag="div" htmlId="recently-viewed" htmlClass="recently-viewed recently-viewed&#45;&#45;hidden">
                 <block name="recentlyviewed" template="AgSoftware_RecentlyViewed::recently_viewed.phtml"/>
             </container>
 
-        </referenceContainer>
+        </referenceContainer>-->
 
     </body>
 </page>

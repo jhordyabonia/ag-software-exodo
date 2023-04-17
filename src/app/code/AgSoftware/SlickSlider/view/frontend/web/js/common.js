@@ -28,3 +28,4 @@ require(['jquery', 'jquery/ui', 'slick'], function($) {
         });
     });
 });
+

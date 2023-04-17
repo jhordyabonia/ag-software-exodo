@@ -9,20 +9,157 @@
 
 & when (@media-common = true) {
     body#html-body.cms-careers {
+        .column.main {
+            margin-top: 125px; //estilos para borrar una ves se termine
+        }
 
-          
+        .container-black {
+            background: black;
+            width: 100%;
+            min-height: 200px;
+            padding: 20px 0;
+        }
+        .develop {
+            background: #FFF;
+            width: 100%;
+            min-height: 200px;
+        }
+
+        .about-ags {
+            color: #ffffff;
+
+            &__center {
+                text-align: center;
+                .config-font( @fuente2, 1.8rem, 400, normal, 1.42857143, 0.5px, @color-titulo);
+
+                .action.primary {
+                    padding: 7px 15px;
+                    .config-font( @fuente2, 1.4rem, 400, normal, 3rem, 0.5px, @color-titulo);
+                    background-color: @color-primario;
+                    border: 1px solid @color-primario;
+                    border-radius: inherit;
+                    &:hover {
+                        color: @color-primario;
+                        background: @color-claro;
+                    }
+                }
+            }
+
+            &__title {
+                margin-bottom: 2rem;
+                .config-font( @fuente1, 2rem, 800, inherit, 1.2, 0px, @color-titulo);
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            &__title2 {
+                .config-font( @fuente1, 3rem, 800, inherit, 1.1, 0px, @color-oscuro );
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            &__title3 {
+                .config-font( @fuente1, 3rem, 800, inherit, 1.1, 0px, @color-titulo);
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            &__text { 
+                padding-top: 10px;
+                border-top: 1px dotted #ddd;
+
+                .text_content {
+                    padding: 0 0 15px 20px;
+                }
+                .text_content > p {
+                   
+                    .config-font( @fuente2, 1.8rem, 400, normal, 1.42857143, 0.5px, @color-oscuro);
+                }
+
+                .text_content > ul {
+                    .config-font( @fuente2, 1.8rem, 400, normal, 1.42857143, 0.5px, @color-oscuro);
+                    padding-left: 40px;
+
+                }
+            } 
+        }
+
+        .color-text {
+            color: #000;
+        }
+
+        .slider-seption {
+            padding: 0;
+            margin-bottom: -6px;
+        }
+
+        .slider {
+            width: 100%;
+        }
+
+        .slick-slide {
+            margin: 0;
+        }
+
+        .slick-prev, .slick-next {
+            top: 50%;
+        }
+
+        .slick-prev {
+            left: 15px;
+        }
+
+        .slick-next {
+            right: 15px;
+        }
+        .custom{
+            .slick-arrow {
+                display: none !important;
+               
+            }
+        }
+
+        .slick-dots {
+            display: none!important;
+        }
     }
 
 }
 
 //
-// Break point for custom desktop
+// Breakpoint for custom mobile
+//  _____________________________________________
+
+@media  (min-width: 480px) {
+    body#html-body.cms-careers {
+        .about-ags {
+            padding: 5% 3%;
+
+            &__center {
+                .btn-apply {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        
+    }
+
+}
+
+//
+// Breakpoint for custom desktop
 //  _____________________________________________
 
 @media  (min-width: 841px) {
-
     body#html-body.cms-careers {
-        
+        .about-ags {
+            padding: 5% 25%;
+            &__title {
+                padding: 10px 0;
+                font-weight: 900;
+                line-height: 0.9;
+            }
+        }
     }
 
 }
@@ -34,7 +171,13 @@
 @media  (min-width: 1231px) {
 
     body#html-body.cms-careers {
-        
+        .about-ags {
+            padding: 5% 25%;
+            &__title {
+                font-size: 58px;
+                margin-bottom: 40px;
+            }
+        }
     }
 
 }

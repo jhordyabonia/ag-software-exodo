@@ -6,6 +6,22 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+
+        <referenceContainer name="main.content">
+
+            <container name="recently.viewed" htmlTag="div" htmlId="recently-viewed" htmlClass="recently-viewed recently-viewed--hidden">
+                <block name="recently_viewed" template="AgSoftware_RecentlyViewed::recently_viewed.phtml"/>
+            </container>
+
+        </referenceContainer>
+
+        <referenceContainer name="content">
+
+            <block name="main.loader" template="AgSoftware_Loader::loader.phtml" before="recently.viewed" />
+            <block name="chevron.up" template="AgSoftware_ChevronUp::chevron-up.phtml" before="-" />
+
+        </referenceContainer>
+
         <referenceContainer name="footer">
 
             <block class="Magento\Cms\Block\Block" name="pree-footer-weltpixel" before="-">

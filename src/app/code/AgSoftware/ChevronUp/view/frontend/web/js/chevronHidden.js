@@ -1,11 +1,15 @@
-const chevronButton = document.querySelector('#chevronButton');
+jQuery(function($) {
 
-function chevronHidden (  ) {
-    if (scrollY <= 359) {
-        chevronButton.classList.add('chevron--hidden');
-    } else {
-        chevronButton.classList.remove('chevron--hidden');
+    const chevronButton = $('#chevronButton');
+
+    function chevronHidden() {
+        if ($(window).scrollTop() <= 359) {
+            chevronButton.addClass('chevron--hidden');
+        } else {
+            chevronButton.removeClass('chevron--hidden');
+        }
     }
-}
 
-window.addEventListener('scroll', chevronHidden, false);
+    $(window).on('scroll', chevronHidden);
+
+});

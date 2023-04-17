@@ -5,7 +5,9 @@ jQuery(function($) {
         var modal = $('#viewed-modal');
 
         function viewedModal() {
+
             if ( modal.hasClass('viewed-modal--active') ) {
+                modal.addClass('animated');
                 modal.addClass('slideOutDownModal');
                 modal.removeClass('slideInUpModal');
                 setTimeout(function() {
@@ -20,10 +22,11 @@ jQuery(function($) {
                     modal.removeClass('viewed-modal--inactive');
                 }, 500);
             }
+
         }
 
         viewed.click(viewedModal);
-    });
 
+    });
 
 });

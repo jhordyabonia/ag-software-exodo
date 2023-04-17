@@ -74,14 +74,32 @@
     }
 }
 
-#viewed-modal.slideOutDownModal {
-    transform: translateY(100%) scale(1);
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
+#viewed-modal.animated {
+    animation-duration: 0.5s;
 }
 
 #viewed-modal.slideInUpModal {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-    transition: all 0.5s ease-in-out;
+    animation-name: slideInUpModal;
+}
+
+#viewed-modal.slideOutDownModal {
+    animation-name: slideOutDownModal;
+}
+
+@keyframes slideInUpModal {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutDownModal {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
 }

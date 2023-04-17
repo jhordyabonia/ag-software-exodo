@@ -1,19 +1,11 @@
-const chevronTops = document.querySelectorAll('.chevron-top');
+jQuery(function($) {
 
-function chevronScrollTop() {
+    const chevronTops = $('.chevron-top');
 
-    document.documentElement.scrollTop;
-
-    if (document.documentElement.scrollTop > 0) {
-
-        window.requestAnimationFrame(chevronScrollTop);
-
-        window.scrollTo(0, document.documentElement.scrollTop - (document.documentElement.scrollTop / 5) );
-
+    function chevronScrollTop() {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
     }
 
-}
+    chevronTops.on('click', chevronScrollTop);
 
-chevronTops.forEach( chevronTop => {
-    chevronTop.addEventListener('click', chevronScrollTop);
-} );
+});

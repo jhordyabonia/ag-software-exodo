@@ -1,17 +1,16 @@
-const chevronUp = document.querySelector('#chevronUp');
+jQuery(function($) {
 
-function chevronScrollUp() {
+    const chevronUp = $('#chevronUp');
 
-    document.documentElement.scrollTop;
-
-    if (document.documentElement.scrollTop > 0) {
-
-        window.requestAnimationFrame(chevronScrollUp);
-
-        window.scrollTo(0, document.documentElement.scrollTop - (document.documentElement.scrollTop / 5) );
-
+    function chevronScrollUp() {
+        $('html').scrollTop();
+        if ($('html').scrollTop() > 0) {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 1000);
+        }
     }
 
-}
+    chevronUp.on('click', chevronScrollUp);
 
-chevronUp.addEventListener('click', chevronScrollUp);
+});

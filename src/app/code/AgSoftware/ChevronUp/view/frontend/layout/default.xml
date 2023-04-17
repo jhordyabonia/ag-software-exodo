@@ -7,9 +7,9 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 
-        <referenceContainer name="content">
+        <!--<referenceContainer name="content">
             <block name="chevron.up" template="AgSoftware_ChevronUp::chevron-up.phtml" before="-" />
-        </referenceContainer>
+        </referenceContainer>-->
 
     </body>
 </page>
